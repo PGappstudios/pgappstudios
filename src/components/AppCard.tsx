@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 interface AppCardProps {
   title: string;
@@ -9,6 +10,8 @@ interface AppCardProps {
   platforms: string[];
   url?: string;
   className?: string;
+  initials?: string;
+  initialsColor?: string;
 }
 
 const AppCard: React.FC<AppCardProps> = ({ 
@@ -17,7 +20,9 @@ const AppCard: React.FC<AppCardProps> = ({
   image, 
   platforms,
   url,
-  className
+  className,
+  initials,
+  initialsColor
 }) => {
   return (
     <div 
@@ -27,11 +32,26 @@ const AppCard: React.FC<AppCardProps> = ({
       )}
     >
       <div className="aspect-video bg-gradient-to-br from-pg-purple/20 to-pg-blue/20 flex items-center justify-center overflow-hidden">
-        <img 
-          src={image} 
-          alt={`${title} screenshot`} 
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-        />
+        {image ? (
+          <img 
+            src={image} 
+            alt={`${title} screenshot`} 
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : initials ? (
+          <Avatar className="w-24 h-24">
+            <AvatarFallback 
+              style={{ backgroundColor: initialsColor || '#9b87f5' }}
+              className="text-white text-2xl font-bold"
+            >
+              {initials}
+            </AvatarFallback>
+          </Avatar>
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-gray-400">
+            No image available
+          </div>
+        )}
       </div>
       
       <div className="p-6">

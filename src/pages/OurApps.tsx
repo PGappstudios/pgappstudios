@@ -84,6 +84,8 @@ const OurApps: React.FC = () => {
                 image={app.image}
                 platforms={app.platforms}
                 url={app.url}
+                initials={app.initials}
+                initialsColor={app.initialsColor}
                 className="animate-on-scroll opacity-0"
               />
             ))}

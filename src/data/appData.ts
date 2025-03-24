@@ -7,6 +7,8 @@ export interface App {
   platforms: string[];
   category: 'ios' | 'web' | 'both';
   url: string;
+  initials?: string;
+  initialsColor?: string;
 }
 
 export const allApps: App[] = [
@@ -50,18 +52,22 @@ export const allApps: App[] = [
     id: 5,
     title: "World Time Meetings",
     description: "Simplify scheduling across time zones with this intuitive meeting planner for global teams.",
-    image: "/lovable-uploads/e2066ab5-aa3c-4712-92f6-54b3551bc3f0.png",
+    image: "",
     platforms: ["Web App"],
     category: 'web',
-    url: "https://www.worldtimemeeting.com/"
+    url: "https://www.worldtimemeeting.com/",
+    initials: "WTM",
+    initialsColor: "#0EA5E9" // Ocean Blue
   },
   {
     id: 6,
     title: "Random Generator Tools",
     description: "Collection of randomization tools for various purposes, from decision-making to creative brainstorming.",
-    image: "/lovable-uploads/e2066ab5-aa3c-4712-92f6-54b3551bc3f0.png",
+    image: "",
     platforms: ["Web App"],
     category: 'web',
-    url: "https://www.randomwheely.com/"
+    url: "https://www.randomwheely.com/",
+    initials: "RGT",
+    initialsColor: "#8B5CF6" // Vivid Purple
   }
 ];
