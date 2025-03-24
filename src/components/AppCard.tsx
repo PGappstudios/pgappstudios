@@ -7,6 +7,7 @@ interface AppCardProps {
   description: string;
   image: string;
   platforms: string[];
+  url?: string;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ const AppCard: React.FC<AppCardProps> = ({
   description, 
   image, 
   platforms,
+  url,
   className
 }) => {
   return (
@@ -36,7 +38,7 @@ const AppCard: React.FC<AppCardProps> = ({
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pg-purple transition-colors duration-300">{title}</h3>
         <p className="text-gray-400 text-sm mb-4">{description}</p>
         
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {platforms.map((platform, index) => (
             <span 
               key={index}
@@ -46,6 +48,17 @@ const AppCard: React.FC<AppCardProps> = ({
             </span>
           ))}
         </div>
+        
+        {url && (
+          <a 
+            href={url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-sm font-medium"
+          >
+            Visit App →
+          </a>
+        )}
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ interface App {
   image: string;
   platforms: string[];
   category: 'ios' | 'web' | 'both';
+  url: string;
 }
 
 const OurApps: React.FC = () => {
@@ -21,51 +22,57 @@ const OurApps: React.FC = () => {
   const allApps: App[] = [
     {
       id: 1,
-      title: "NeoTask",
-      description: "A futuristic task management app with AI-powered prioritization and smart reminders.",
+      title: "MegaConverter: Unit & Data",
+      description: "Powerful unit conversion tool for everyday measurements, scientific calculations, and data transformations.",
       image: "/lovable-uploads/52881a08-349e-4feb-817b-799b028ec8ae.png",
       platforms: ["iOS App"],
-      category: 'ios'
+      category: 'ios',
+      url: "https://apps.apple.com/pt/app/megaconverter-unit-data/id6738279962?l=en-GB"
     },
     {
       id: 2,
-      title: "QuantumChat",
-      description: "Secure messaging platform with end-to-end encryption and disappearing messages.",
+      title: "Star Seekers",
+      description: "Explore the night sky with this interactive stargazing app that helps you identify celestial objects.",
       image: "/lovable-uploads/ca55fb9d-fb6c-4a3a-a372-746b5f119630.png",
-      platforms: ["Web App"],
-      category: 'web'
+      platforms: ["iOS App"],
+      category: 'ios',
+      url: "https://apps.apple.com/pt/app/star-seekers/id6738390556?l=en-GB"
     },
     {
       id: 3,
-      title: "PulseTrack",
-      description: "Health monitoring application that tracks vital signs and provides personalized insights.",
+      title: "BabyID AI",
+      description: "Use advanced AI to capture and track your baby's milestones and growth through intelligent photo analysis.",
       image: "/lovable-uploads/5417ea4a-f8da-4570-97fe-8deeb9698d04.png",
-      platforms: ["iOS App", "Web App"],
-      category: 'both'
+      platforms: ["iOS App"],
+      category: 'ios',
+      url: "https://apps.apple.com/pt/app/babyid-ai/id6741074866?l=en-GB"
     },
     {
       id: 4,
-      title: "StellarNav",
-      description: "Advanced navigation system with AR capabilities and real-time traffic analysis.",
+      title: "DocyScan",
+      description: "Streamlined document scanning solution with intelligent text recognition and organization features.",
       image: "/lovable-uploads/52881a08-349e-4feb-817b-799b028ec8ae.png",
       platforms: ["iOS App"],
-      category: 'ios'
+      category: 'ios',
+      url: "https://apps.apple.com/pt/app/docyscan/id6740208487?l=en-GB"
     },
     {
       id: 5,
-      title: "CodeForge",
-      description: "Collaborative coding platform with AI-assisted suggestions and real-time pair programming.",
+      title: "World Time Meetings",
+      description: "Simplify scheduling across time zones with this intuitive meeting planner for global teams.",
       image: "/lovable-uploads/ca55fb9d-fb6c-4a3a-a372-746b5f119630.png",
       platforms: ["Web App"],
-      category: 'web'
+      category: 'web',
+      url: "https://www.worldtimemeeting.com/"
     },
     {
       id: 6,
-      title: "HoloLearn",
-      description: "Educational platform using AR technology to create immersive learning experiences.",
+      title: "Random Generator Tools",
+      description: "Collection of randomization tools for various purposes, from decision-making to creative brainstorming.",
       image: "/lovable-uploads/5417ea4a-f8da-4570-97fe-8deeb9698d04.png",
-      platforms: ["iOS App", "Web App"],
-      category: 'both'
+      platforms: ["Web App"],
+      category: 'web',
+      url: "https://www.randomwheely.com/"
     }
   ];
   
@@ -171,6 +178,7 @@ const OurApps: React.FC = () => {
                 description={app.description}
                 image={app.image}
                 platforms={app.platforms}
+                url={app.url}
                 className="animate-on-scroll opacity-0"
               />
             ))}
@@ -190,7 +198,7 @@ const OurApps: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="neon-button group animate-on-scroll opacity-0"
+            className="neon-button"
           >
             <span className="z-10 relative">Contact Us</span>
           </a>
