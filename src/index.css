@@ -64,11 +64,17 @@
   }
 
   .neon-button {
-    @apply relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium transition-all bg-transparent rounded-full shadow-md hover:shadow-xl active:shadow-lg border border-pg-purple text-white group;
+    @apply relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium transition-all bg-transparent rounded-full shadow-md hover:shadow-xl active:shadow-lg border border-pg-purple text-white;
   }
 
+  /* The group class needs to be applied directly in HTML, not via @apply */
   .neon-button::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pg-purple via-pg-pink to-pg-purple rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pg-purple via-pg-pink to-pg-purple rounded-full opacity-0 transition-opacity duration-300;
+  }
+
+  /* We'll use :hover instead of group-hover since we can't use group with @apply */
+  .neon-button:hover::before {
+    @apply opacity-100;
   }
 
   .neon-button span {
