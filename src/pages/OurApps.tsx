@@ -31,8 +31,8 @@ const OurApps: React.FC = () => {
     },
     {
       id: 2,
-      title: "Star Seekers",
-      description: "Explore the night sky with this interactive stargazing app that helps you identify celestial objects.",
+      title: "Star Seekers: A Galaxy of Fun in One App!",
+      description: "Embark on a celestial journey with Star Seekers! Explore thrilling mini-games and compete with friends on our Records Board. Download now and reach for the stars!",
       image: "/lovable-uploads/ca55fb9d-fb6c-4a3a-a372-746b5f119630.png",
       platforms: ["iOS App"],
       category: 'ios',
