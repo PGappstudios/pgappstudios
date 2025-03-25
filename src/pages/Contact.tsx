@@ -8,19 +8,37 @@ const Contact: React.FC = () => {
   const { toast } = useToast();
   const form = useRef<HTMLFormElement>(null);
   
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!form.current) return;
 
+    // Get form data
+    const formData = new FormData(form.current);
+    const templateParams = {
+      from_name: formData.get('user_name'),
+      from_email: formData.get('user_email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      to_email: 'pgmetastudios@gmail.com'
+    };
+
     try {
-      await emailjs.sendForm(
+      // Send email using EmailJS
+      const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
+        templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
+      console.log('Email sent successfully:', result);
+      
       toast({
         title: "Message Sent Successfully",
         description: "Thank you for your message. We'll get back to you soon!",
