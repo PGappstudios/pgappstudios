@@ -1,18 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null);
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your message. We'll get back to you soon!",
-      duration: 5000,
-    });
+    
+    if (!form.current) return;
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message Sent Successfully",
+        description: "Thank you for your message. We'll get back to you soon!",
+        duration: 5000,
+      });
+
+      // Reset form
+      form.current.reset();
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    }
   };
 
   const observerRef = React.useRef<IntersectionObserver | null>(null);
@@ -153,12 +178,13 @@ const Contact: React.FC = () => {
             
             <div className="glass-card p-8 opacity-0 animate-on-scroll">
               <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-400 text-sm mb-2">Name</label>
+                    <label htmlFor="user_name" className="block text-gray-400 text-sm mb-2">Name</label>
                     <input
-                      id="name"
+                      id="user_name"
+                      name="user_name"
                       type="text"
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pg-purple"
                       placeholder="Your name"
@@ -166,9 +192,10 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-gray-400 text-sm mb-2">Email</label>
+                    <label htmlFor="user_email" className="block text-gray-400 text-sm mb-2">Email</label>
                     <input
-                      id="email"
+                      id="user_email"
+                      name="user_email"
                       type="email"
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pg-purple"
                       placeholder="Your email"
@@ -181,6 +208,7 @@ const Contact: React.FC = () => {
                   <label htmlFor="subject" className="block text-gray-400 text-sm mb-2">Subject</label>
                   <input
                     id="subject"
+                    name="subject"
                     type="text"
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pg-purple"
                     placeholder="Subject"
@@ -192,6 +220,7 @@ const Contact: React.FC = () => {
                   <label htmlFor="message" className="block text-gray-400 text-sm mb-2">Message</label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pg-purple resize-none"
                     placeholder="Your message"
@@ -199,8 +228,11 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 
-                <button type="submit" className="neon-button group w-full">
-                  <span className="z-10 relative">Send Message</span>
+                <button
+                  type="submit"
+                  className="w-full py-4 px-6 rounded-full bg-pg-purple hover:bg-pg-purple/80 text-white font-semibold transition-colors duration-300"
+                >
+                  Send Message
                 </button>
               </form>
             </div>
