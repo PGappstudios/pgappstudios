@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <GoogleAnalytics gaId="G-ZMG5C34BH8" />
       </TooltipProvider>
     </QueryClientProvider>
   );
