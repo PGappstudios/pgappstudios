@@ -68,5 +68,17 @@ export const allApps: App[] = [
     url: "https://www.randomwheely.com/",
     initials: "RGT",
     initialsColor: "#8B5CF6" // Vivid Purple
+  },
+  {
+    id: 7,
+    title: "Travel Goofy",
+    description: "Find the best deals on flights, hotels, tours, and more with TravelGoofy.",
+    image: "/travel.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.travelgoofy.com/",
+    initials: "TG",
+    initialsColor: "#22C55E" // Green color for travel theme
   }
 ];
+
