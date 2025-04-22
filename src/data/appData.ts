@@ -79,6 +79,16 @@ export const allApps: App[] = [
     url: "https://www.travelgoofy.com/",
     initials: "TG",
     initialsColor: "#22C55E" // Green color for travel theme
+  },
+  {
+    id: 8,
+    title: "Retro Markets 80s",
+    description: "Iconic 80's Products. Journey back to the decade of neon colors, big hair, and revolutionary gadgets.",
+    image: "/retro.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.retromarket80s.com/",
+    initials: "RM",
+    initialsColor: "#EC4899" // Pink color for retro 80s theme
   }
 ];
-
