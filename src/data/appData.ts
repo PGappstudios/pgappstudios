@@ -95,7 +95,7 @@ export const allApps: App[] = [
     id: 9,
     title: "Geni Finance",
     description: "Geni Finance empowers you with tools to understand, manage, and grow your money with confidence and clarity.",
-    image: "/geni-finance.png",
+    image: "/geni.png",
     platforms: ["Web App"],
     category: 'web',
     url: "https://www.genifinance.com/home",
