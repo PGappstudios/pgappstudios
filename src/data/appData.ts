@@ -90,5 +90,16 @@ export const allApps: App[] = [
     url: "https://www.retromarket80s.com/",
     initials: "RM",
     initialsColor: "#EC4899" // Pink color for retro 80s theme
+  },
+  {
+    id: 9,
+    title: "Geni Finance",
+    description: "Geni Finance empowers you with tools to understand, manage, and grow your money with confidence and clarity.",
+    image: "/Logo Geni Finance.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.genifinance.com/home",
+    initials: "GF",
+    initialsColor: "#F59E0B" // Amber/gold for finance theme
   }
 ];
