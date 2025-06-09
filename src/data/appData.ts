@@ -106,7 +106,7 @@ export const allApps: App[] = [
     id: 10,
     title: "Tiny Steps Tracker",
     description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
-    image: "/tinysteps.png",
+    image: "/tiny.png",
     platforms: ["Web App"],
     category: 'web',
     url: "https://www.tinystepstracker.com/",
