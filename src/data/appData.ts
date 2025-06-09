@@ -101,5 +101,16 @@ export const allApps: App[] = [
     url: "https://www.genifinance.com/home",
     initials: "GF",
     initialsColor: "#F59E0B" // Amber/gold for finance theme
+  },
+  {
+    id: 10,
+    title: "Tiny Steps Tracker",
+    description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
+    image: "/tinysteps.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.tinystepstracker.com/",
+    initials: "TST",
+    initialsColor: "#06B6D4" // Cyan color for child development theme
   }
 ];
