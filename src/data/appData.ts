@@ -104,13 +104,11 @@ export const allApps: App[] = [
   },
   {
     id: 10,
-    title: "Tiny Steps Tracker",
-    description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
-    image: "/tiny.png",
-    platforms: ["Web App"],
-    category: 'web',
-    url: "https://www.tinystepstracker.com/",
-    initials: "TST",
-    initialsColor: "#06B6D4" // Cyan color for child development theme
+    title: "Aquafasty Diet Plan",
+    description: "Track water, steps & fasting with Aquafasty! Start your weight loss journey today with smart hydration, healthy habits, and clean eating support.",
+    image: "/aquafasty.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB"
   }
 ];
