@@ -106,7 +106,7 @@ export const allApps: App[] = [
     id: 10,
     title: "Aquafasty Diet Plan",
     description: "Track water, steps & fasting with Aquafasty! Start your weight loss journey today with smart hydration, healthy habits, and clean eating support.",
-    image: "/aquafasty.png",
+    image: "/drinklogo.png",
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB"
