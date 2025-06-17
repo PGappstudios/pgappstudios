@@ -110,5 +110,16 @@ export const allApps: App[] = [
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB"
+  },
+  {
+    id: 11,
+    title: "Tiny Steps Tracker",
+    description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
+    image: "/tinysteps.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.tinystepstracker.com/",
+    initials: "TST",
+    initialsColor: "#10B981" // Emerald green for child development theme
   }
 ];
