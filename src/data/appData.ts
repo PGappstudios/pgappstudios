@@ -68,5 +68,69 @@ export const allApps: App[] = [
     url: "https://www.randomwheely.com/",
     initials: "RGT",
     initialsColor: "#8B5CF6" // Vivid Purple
+  },
+  {
+    id: 7,
+    title: "Travel Goofy",
+    description: "Find the best deals on flights, hotels, tours, and more with TravelGoofy.",
+    image: "/travel.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.travelgoofy.com/",
+    initials: "TG",
+    initialsColor: "#22C55E" // Green color for travel theme
+  },
+  {
+    id: 8,
+    title: "Retro Markets 80s",
+    description: "Iconic 80's Products. Journey back to the decade of neon colors, big hair, and revolutionary gadgets.",
+    image: "/retro.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.retromarket80s.com/",
+    initials: "RM",
+    initialsColor: "#EC4899" // Pink color for retro 80s theme
+  },
+  {
+    id: 9,
+    title: "Geni Finance",
+    description: "Geni Finance empowers you with tools to understand, manage, and grow your money with confidence and clarity.",
+    image: "/geni.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.genifinance.com/home",
+    initials: "GF",
+    initialsColor: "#F59E0B" // Amber/gold for finance theme
+  },
+  {
+    id: 10,
+    title: "Aquafasty Diet Plan",
+    description: "Track water, steps & fasting with Aquafasty! Start your weight loss journey today with smart hydration, healthy habits, and clean eating support.",
+    image: "/aquafasty.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB"
+  },
+  {
+    id: 11,
+    title: "Tiny Steps Tracker",
+    description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
+    image: "/tinysteps.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.tinystepstracker.com/",
+    initials: "TST",
+    initialsColor: "#10B981" // Emerald green for child development theme
+  },
+  {
+    id: 12,
+    title: "Wine Sage AI",
+    description: "Discover perfect wine pairings for any meal or occasion. Choose your food and find the ideal wine match with our intelligent wine recommendation system.",
+    image: "/drinklogo.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.winesageai.com/",
+    initials: "WS",
+    initialsColor: "#800020" // Burgundy color for wine theme
   }
 ];
