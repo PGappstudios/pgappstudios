@@ -126,7 +126,7 @@ export const allApps: App[] = [
     id: 12,
     title: "Wine Sage AI",
     description: "Discover perfect wine pairings for any meal or occasion. Choose your food and find the ideal wine match with our intelligent wine recommendation system.",
-    image: "/drinklogo.png",
+    image: "/winelogo.png",
     platforms: ["Web App"],
     category: 'web',
     url: "https://www.winesageai.com/",
