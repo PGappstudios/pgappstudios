@@ -132,5 +132,16 @@ export const allApps: App[] = [
     url: "https://www.winesageai.com/",
     initials: "WS",
     initialsColor: "#800020" // Burgundy color for wine theme
+  },
+  {
+    id: 13,
+    title: "AI Future - AI Tools Directory",
+    description: "Discover the best AI tools across different categories. A curated collection of cutting-edge AI tools for writing, video, marketing, SEO, and design to help you work smarter.",
+    image: "/ailogo.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://www.artificialintelligencefuture.com/",
+    initials: "AF",
+    initialsColor: "#6366F1" // Indigo color for AI/tech theme
   }
 ];
