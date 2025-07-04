@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -75,7 +74,7 @@ const OurApps: React.FC = () => {
           <AppFilterTabs activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
           
           {/* Apps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {visibleApps.map((app) => (
               <AppCard
                 key={app.id}

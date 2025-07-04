@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
@@ -39,10 +38,10 @@ const AppCard: React.FC<AppCardProps> = ({
             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
         ) : initials ? (
-          <Avatar className="w-24 h-24">
+          <Avatar className="w-16 h-16">
             <AvatarFallback 
               style={{ backgroundColor: initialsColor || '#9b87f5' }}
-              className="text-white text-2xl font-bold"
+              className="text-white text-lg font-bold"
             >
               {initials}
             </AvatarFallback>
@@ -54,15 +53,15 @@ const AppCard: React.FC<AppCardProps> = ({
         )}
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pg-purple transition-colors duration-300">{title}</h3>
-        <p className="text-gray-400 text-sm mb-4">{description}</p>
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-pg-purple transition-colors duration-300 line-clamp-2">{title}</h3>
+        <p className="text-gray-400 text-xs mb-3 line-clamp-3">{description}</p>
         
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-1 mb-3">
           {platforms.map((platform, index) => (
             <span 
               key={index}
-              className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300"
+              className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-white/5 text-gray-300"
             >
               {platform}
             </span>
@@ -74,7 +73,7 @@ const AppCard: React.FC<AppCardProps> = ({
             href={url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-sm font-medium"
+            className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-xs font-medium"
           >
             Visit App →
           </a>
