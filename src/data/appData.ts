@@ -143,5 +143,16 @@ export const allApps: App[] = [
     url: "https://www.artificialintelligencefuture.com/",
     initials: "AF",
     initialsColor: "#6366F1" // Indigo color for AI/tech theme
+  },
+  {
+    id: 14,
+    title: "Recipes for Gods",
+    description: "From quick weeknight dinners to impressive weekend treats, find your next favorite recipe in our carefully curated collection of delicious dishes.",
+    image: "/recipes.png",
+    platforms: ["Web App"],
+    category: 'web',
+    url: "https://recipes4gods.com/",
+    initials: "RG",
+    initialsColor: "#DC2626" // Red color for food/recipe theme
   }
 ];
