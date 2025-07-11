@@ -98,7 +98,7 @@ export const allApps: App[] = [
     image: "/geni.png",
     platforms: ["Web App"],
     category: 'web',
-    url: "https://www.genifinance.com/home",
+    url: "https://genifinance.com/home",
     initials: "GF",
     initialsColor: "#F59E0B" // Amber/gold for finance theme
   },
@@ -118,7 +118,7 @@ export const allApps: App[] = [
     image: "/tiny.png",
     platforms: ["Web App"],
     category: 'web',
-    url: "https://www.tinystepstracker.com/",
+    url: "https://tinystepstracker.com/",
     initials: "TST",
     initialsColor: "#10B981" // Emerald green for child development theme
   },
