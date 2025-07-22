@@ -48,17 +48,24 @@ export class BlogService {
       const posts = await Promise.all(
         markdownFiles.map(async (file: any) => {
           try {
-            const contentResponse = await fetch(`${GITHUB_RAW_BASE}/${file.name}`);
+            // Properly encode the filename for the URL
+            const encodedFileName = encodeURIComponent(file.name);
+            const contentResponse = await fetch(`${GITHUB_RAW_BASE}/${encodedFileName}`);
             if (!contentResponse.ok) {
-              console.warn(`Failed to fetch ${file.name}`);
+              console.warn(`Failed to fetch ${file.name}: ${contentResponse.status}`);
               return null;
             }
 
             const markdownContent = await contentResponse.text();
             const { data: frontmatter, content } = matter(markdownContent);
 
-            // Generate ID from filename
-            const id = file.name.replace('.md', '').replace(/^\d{4}-\d{2}-\d{2}-?/, '');
+            // Generate ID from filename - clean up the filename for use as ID/slug
+            const cleanFileName = file.name.replace('.md', '').replace(/^\d{4}-\d{2}-\d{2}-?/, '');
+            const id = cleanFileName.toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+              .replace(/\s+/g, '-') // Replace spaces with hyphens
+              .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+              .trim();
 
             return {
               id,
