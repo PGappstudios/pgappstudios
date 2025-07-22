@@ -1,0 +1,7 @@
+# Deployment Trigger
+# This file is used to trigger deployments when the blog system is updated
+# Last updated: 2025-07-22 - Blog integration with GitHub markdown files
+
+Blog system now reads from GitHub markdown files in content/posts/
+Make.com automation creates posts automatically
+Dynamic loading with proper error handling
