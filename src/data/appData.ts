@@ -154,5 +154,16 @@ export const allApps: App[] = [
     url: "https://recipes4gods.com/",
     initials: "RG",
     initialsColor: "#DC2626" // Red color for food/recipe theme
-  }
+  },
+  {
+  id: 15,
+  title: "Fishing & Hunting Tips",
+  description: "Discover expert strategies, gear reviews, and seasonal insights for fishing and hunting around the world. Perfect for beginners and seasoned outdoorsmen alike.",
+  image: "/fishinghunting.png",
+  platforms: ["Web App"],
+  category: 'web',
+  url: "https://www.fishingandhuntingtips.com/",
+  initials: "FHT",
+  initialsColor: "#065F46" // Deep green for outdoors and nature theme
+}
 ];
