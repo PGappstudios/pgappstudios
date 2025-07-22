@@ -1,148 +1,254 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { blogPosts } from '@/data/blogData';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { BlogService, BlogPost as BlogPostType } from '@/lib/blogService';
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
-  const post = blogPosts.find(post => post.id === Number(id));
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  if (!post) {
+  useEffect(() => {
+    const fetchPost = async () => {
+      if (!id) {
+        setError('No post ID provided');
+        setLoading(false);
+        return;
+      }
+
+      try {
+        setLoading(true);
+        setError(null);
+        const fetchedPost = await BlogService.getPostBySlug(id);
+        
+        if (!fetchedPost) {
+          setError('Post not found');
+        } else {
+          setPost(fetchedPost);
+        }
+      } catch (err) {
+        setError('Failed to load blog post. Please try again later.');
+        console.error('Error fetching blog post:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [id]);
+
+  const getCategoryColor = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'apps':
+        return 'bg-blue-100 text-blue-800';
+      case 'development':
+        return 'bg-green-100 text-green-800';
+      case 'technology':
+        return 'bg-purple-100 text-purple-800';
+      default:
+        return 'bg-orange-100 text-orange-800';
+    }
+  };
+
+  if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#0A0118] to-[#1E0142]">
-        <Navbar />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-bold text-white mb-6">Post Not Found</h1>
-          <Link 
-            to="/blog"
-            className="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-          >
-            Return to Blog
-          </Link>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+            <p className="text-white text-lg">Loading blog post...</p>
+          </div>
         </div>
-        <Footer />
+      </div>
+    );
+  }
+
+  if (error || !post) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 max-w-md mx-auto">
+              <p className="font-bold">Error</p>
+              <p>{error || 'Post not found'}</p>
+            </div>
+            <Link 
+              to="/blog" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors inline-block"
+            >
+              Back to Blog
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A0118] to-[#1E0142]">
-      <Navbar />
-      <article className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto">
-          <Link 
-            to="/blog"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8"
-          >
-            <svg 
-              className="w-5 h-5 mr-2" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Back to Blog
-          </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="container mx-auto px-4 max-w-4xl">
+        {/* Back to Blog Link */}
+        <Link 
+          to="/blog" 
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors"
+        >
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blog
+        </Link>
 
-          <header className="mb-12">
-            <div className="flex items-center gap-2 mb-4">
-              <span className={`px-3 py-1 text-sm rounded-full ${
-                post.category === 'Apps' ? 'bg-purple-600' :
-                post.category === 'Technology' ? 'bg-blue-600' :
-                'bg-green-600'
-              }`}>
+        {/* Article Header */}
+        <article className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
+          <header className="mb-8">
+            {/* Meta Information */}
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(post.category)}`}>
                 {post.category}
               </span>
-              <time className="text-gray-400 text-sm">{post.date}</time>
+              <span className="text-gray-400 text-sm">{post.readTime} min read</span>
+              <span className="text-gray-400 text-sm">
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </span>
             </div>
-            <h1 className="text-4xl font-bold text-white mb-4">{post.title}</h1>
+
+            {/* Title */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              {post.title}
+            </h1>
+
+            {/* Excerpt */}
+            {post.excerpt && (
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                {post.excerpt}
+              </p>
+            )}
+
+            {/* Author */}
             <div className="flex items-center text-gray-400">
               <span>By {post.author}</span>
             </div>
+
+            {/* Tags */}
+            {post.tags && post.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-6">
+                {post.tags.map((tag) => (
+                  <span 
+                    key={tag} 
+                    className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </header>
 
-          <div className="prose prose-invert max-w-none">
-            {/* Introduction */}
-            <p className="text-gray-300 text-lg leading-relaxed mb-12">
-              {post.content.introduction}
-            </p>
-
-            {/* Key Features */}
-            <div className="bg-white/5 rounded-lg p-8 my-12">
-              <h2 className="text-2xl font-semibold text-white mb-6">Key Features</h2>
-              <ul className="grid gap-4">
-                {post.content.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-300">
-                    <svg
-                      className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <span>{feature}</span>
+          {/* Article Content */}
+          <div className="prose prose-invert prose-lg max-w-none">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                h1: ({ children }) => (
+                  <h1 className="text-3xl font-bold text-white mt-8 mb-4 first:mt-0">
+                    {children}
+                  </h1>
+                ),
+                h2: ({ children }) => (
+                  <h2 className="text-2xl font-bold text-white mt-8 mb-4 first:mt-0">
+                    {children}
+                  </h2>
+                ),
+                h3: ({ children }) => (
+                  <h3 className="text-xl font-bold text-white mt-6 mb-3">
+                    {children}
+                  </h3>
+                ),
+                h4: ({ children }) => (
+                  <h4 className="text-lg font-bold text-white mt-4 mb-2">
+                    {children}
+                  </h4>
+                ),
+                p: ({ children }) => (
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {children}
+                  </p>
+                ),
+                ul: ({ children }) => (
+                  <ul className="text-gray-300 mb-4 pl-6 space-y-2">
+                    {children}
+                  </ul>
+                ),
+                ol: ({ children }) => (
+                  <ol className="text-gray-300 mb-4 pl-6 space-y-2 list-decimal">
+                    {children}
+                  </ol>
+                ),
+                li: ({ children }) => (
+                  <li className="text-gray-300">
+                    {children}
                   </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Details */}
-            <div className="space-y-8 mb-12">
-              {post.content.details.map((detail, index) => (
-                <p key={index} className="text-gray-300 leading-relaxed">
-                  {detail}
-                </p>
-              ))}
-            </div>
-
-            {/* Conclusion */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">Conclusion</h2>
-              <p className="text-gray-300 leading-relaxed">
-                {post.content.conclusion}
-              </p>
-            </div>
-
-            {/* Share Section */}
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <h3 className="text-lg font-semibold text-white mb-4">Share this article</h3>
-              <div className="flex gap-4">
-                <button className="p-2 text-gray-400 hover:text-purple-400 transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
-                </button>
-                <button className="p-2 text-gray-400 hover:text-purple-400 transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </button>
-                <button className="p-2 text-gray-400 hover:text-purple-400 transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                ),
+                strong: ({ children }) => (
+                  <strong className="text-white font-semibold">
+                    {children}
+                  </strong>
+                ),
+                em: ({ children }) => (
+                  <em className="text-gray-200 italic">
+                    {children}
+                  </em>
+                ),
+                code: ({ children }) => (
+                  <code className="bg-gray-800 text-blue-300 px-2 py-1 rounded text-sm">
+                    {children}
+                  </code>
+                ),
+                pre: ({ children }) => (
+                  <pre className="bg-gray-800 text-gray-300 p-4 rounded-lg overflow-x-auto mb-4">
+                    {children}
+                  </pre>
+                ),
+                blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-blue-500 pl-4 my-4 text-gray-300 italic">
+                    {children}
+                  </blockquote>
+                ),
+                a: ({ href, children }) => (
+                  <a 
+                    href={href} 
+                    className="text-blue-400 hover:text-blue-300 underline transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {children}
+                  </a>
+                ),
+              }}
+            >
+              {post.content}
+            </ReactMarkdown>
           </div>
+        </article>
+
+        {/* Back to Blog Footer */}
+        <div className="text-center">
+          <Link 
+            to="/blog" 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block"
+          >
+            Read More Articles
+          </Link>
         </div>
-      </article>
-      <Footer />
+      </div>
     </div>
   );
 };
 
-export default BlogPost; 
+export default BlogPost;
