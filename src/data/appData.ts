@@ -159,7 +159,7 @@ export const allApps: App[] = [
   id: 15,
   title: "Fishing & Hunting Tips",
   description: "Discover expert strategies, gear reviews, and seasonal insights for fishing and hunting around the world. Perfect for beginners and seasoned outdoorsmen alike.",
-  image: "/fishinghunting.png",
+  image: "/fishandhuntlogo.png",
   platforms: ["Web App"],
   category: 'web',
   url: "https://www.fishingandhuntingtips.com/",
