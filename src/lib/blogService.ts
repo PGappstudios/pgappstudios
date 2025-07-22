@@ -25,12 +25,17 @@ export class BlogService {
   private static readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
   static async getAllPosts(): Promise<BlogPost[]> {
+    console.log('🔍 BlogService: Starting getAllPosts()');
+    
     // Return cached data if still valid
     if (this.cache && Date.now() - this.lastFetch < this.CACHE_DURATION) {
+      console.log('📦 BlogService: Returning cached data', this.cache.length, 'posts');
       return this.cache;
     }
 
     try {
+      console.log('🌐 BlogService: Fetching from GitHub API:', GITHUB_API_BASE);
+      
       // Fetch list of files from GitHub
       const response = await fetch(GITHUB_API_BASE);
       if (!response.ok) {
@@ -38,26 +43,37 @@ export class BlogService {
       }
 
       const files = await response.json();
+      console.log('📁 BlogService: Found', files.length, 'files total');
       
       // Filter markdown files only
       const markdownFiles = files.filter((file: any) => 
         file.name.endsWith('.md') && file.name !== '.gitkeep'
       );
+      console.log('📝 BlogService: Found', markdownFiles.length, 'markdown files');
+      console.log('📝 BlogService: Markdown files:', markdownFiles.map((f: any) => f.name));
 
       // Fetch content for each markdown file
       const posts = await Promise.all(
         markdownFiles.map(async (file: any) => {
           try {
+            console.log('📥 BlogService: Fetching content for:', file.name);
+            
             // Properly encode the filename for the URL
             const encodedFileName = encodeURIComponent(file.name);
-            const contentResponse = await fetch(`${GITHUB_RAW_BASE}/${encodedFileName}`);
+            const rawUrl = `${GITHUB_RAW_BASE}/${encodedFileName}`;
+            console.log('🔗 BlogService: Raw URL:', rawUrl);
+            
+            const contentResponse = await fetch(rawUrl);
             if (!contentResponse.ok) {
-              console.warn(`Failed to fetch ${file.name}: ${contentResponse.status}`);
+              console.warn(`❌ BlogService: Failed to fetch ${file.name}: ${contentResponse.status}`);
               return null;
             }
 
             const markdownContent = await contentResponse.text();
+            console.log('✅ BlogService: Successfully fetched content for:', file.name, 'Length:', markdownContent.length);
+            
             const { data: frontmatter, content } = matter(markdownContent);
+            console.log('📋 BlogService: Parsed frontmatter for:', file.name, frontmatter);
 
             // Generate ID from filename - clean up the filename for use as ID/slug
             const cleanFileName = file.name.replace('.md', '').replace(/^\d{4}-\d{2}-\d{2}-?/, '');
@@ -67,7 +83,7 @@ export class BlogService {
               .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
               .trim();
 
-            return {
+            const post = {
               id,
               title: frontmatter.title || 'Untitled',
               excerpt: frontmatter.excerpt || '',
@@ -82,8 +98,11 @@ export class BlogService {
               metaKeywords: frontmatter.metaKeywords || '',
               content
             } as BlogPost;
+            
+            console.log('✨ BlogService: Created post object:', { title: post.title, id: post.id, slug: post.slug });
+            return post;
           } catch (error) {
-            console.error(`Error processing ${file.name}:`, error);
+            console.error(`💥 BlogService: Error processing ${file.name}:`, error);
             return null;
           }
         })
@@ -94,10 +113,13 @@ export class BlogService {
         .filter((post): post is BlogPost => post !== null)
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+      console.log('🎉 BlogService: Successfully processed', this.cache.length, 'posts');
+      console.log('🎉 BlogService: Post titles:', this.cache.map(p => p.title));
+
       this.lastFetch = Date.now();
       return this.cache;
     } catch (error) {
-      console.error('Error fetching blog posts:', error);
+      console.error('💥 BlogService: Error fetching blog posts:', error);
       
       // Return empty array on error, but don't cache it
       return [];
@@ -122,6 +144,7 @@ export class BlogService {
   }
 
   static clearCache(): void {
+    console.log('🗑️ BlogService: Clearing cache');
     this.cache = null;
     this.lastFetch = 0;
   }
