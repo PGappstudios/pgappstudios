@@ -165,5 +165,16 @@ export const allApps: App[] = [
   url: "https://www.fishingandhuntingtips.com/",
   initials: "FHT",
   initialsColor: "#065F46" // Deep green for outdoors and nature theme
+},
+{
+  id: 16,
+  title: "AI Taskly",
+  description: "Boost productivity with 5 powerful GPT-4 tools for marketers, HR teams, analysts, and creators. Save 10+ hours weekly with advanced AI automation.",
+  image: "aitasklylogo.png",
+  platforms: ["Web App"],
+  category: 'web',
+  url: "https://ai-taskly.com/",
+  initials: "AT",
+  initialsColor: "#4F46E5" // Indigo blue to represent AI innovation and tech
 }
 ];
