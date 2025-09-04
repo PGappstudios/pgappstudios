@@ -176,5 +176,16 @@ export const allApps: App[] = [
   url: "https://ai-taskly.com/",
   initials: "AT",
   initialsColor: "#4F46E5" // Indigo blue to represent AI innovation and tech
+},
+{
+  id: 17,
+  title: "Voice To Caption: AI Writer",
+  description: "Turn your voice into AI-powered captions with smart hashtags, perfectly formatted for Instagram, TikTok, X, LinkedIn, Threads, and more.",
+  image: "voicelogo.png",
+  platforms: ["iOS App"],
+  category: 'ios',
+  url: "https://apps.apple.com/pt/app/voice-to-caption-ai-writer/id6751542069?l=en-GB",
+  initials: "VC",
+  initialsColor: "#9C4FE8" // Purple to match the brand gradient and creativity
 }
 ];
