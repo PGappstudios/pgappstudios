@@ -92,17 +92,6 @@ export const allApps: App[] = [
     initialsColor: "#EC4899" // Pink color for retro 80s theme
   },
   {
-    id: 9,
-    title: "Geni Finance",
-    description: "Geni Finance empowers you with tools to understand, manage, and grow your money with confidence and clarity.",
-    image: "/geni.png",
-    platforms: ["Web App"],
-    category: 'web',
-    url: "https://genifinance.com/home",
-    initials: "GF",
-    initialsColor: "#F59E0B" // Amber/gold for finance theme
-  },
-  {
     id: 10,
     title: "Aquafasty Diet Plan",
     description: "Track water, steps & fasting with Aquafasty! Start your weight loss journey today with smart hydration, healthy habits, and clean eating support.",
@@ -110,17 +99,6 @@ export const allApps: App[] = [
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB"
-  },
-  {
-    id: 11,
-    title: "Tiny Steps Tracker",
-    description: "From first smiles to first steps, capture and celebrate every milestone with our comprehensive child development tracker designed for modern parents.",
-    image: "/tiny.png",
-    platforms: ["Web App"],
-    category: 'web',
-    url: "https://tinystepstracker.com/",
-    initials: "TST",
-    initialsColor: "#10B981" // Emerald green for child development theme
   },
   {
     id: 12,
@@ -165,17 +143,6 @@ export const allApps: App[] = [
   url: "https://www.fishingandhuntingtips.com/",
   initials: "FHT",
   initialsColor: "#065F46" // Deep green for outdoors and nature theme
-},
-{
-  id: 16,
-  title: "AI Taskly",
-  description: "Boost productivity with 5 powerful GPT-4 tools for marketers, HR teams, analysts, and creators. Save 10+ hours weekly with advanced AI automation.",
-  image: "aitasklylogo.png",
-  platforms: ["Web App"],
-  category: 'web',
-  url: "https://ai-taskly.com/",
-  initials: "AT",
-  initialsColor: "#4F46E5" // Indigo blue to represent AI innovation and tech
 },
 {
   id: 17,
