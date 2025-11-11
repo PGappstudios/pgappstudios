@@ -154,5 +154,49 @@ export const allApps: App[] = [
   url: "https://apps.apple.com/pt/app/voice-to-caption-ai-writer/id6751542069?l=en-GB",
   initials: "VC",
   initialsColor: "#9C4FE8" // Purple to match the brand gradient and creativity
+},
+  {
+  id: 18,
+  title: "Baby Learning Games 1 - 4",
+  description: "Fun educational mini-games for babies and toddlers ages 1 to 4. Safe, colorful, and designed to spark early learning and joy.",
+  image: "babylearninglogo.png",
+  platforms: ["iOS App"],
+  category: 'ios',
+  url: "https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB",
+  initials: "BLG",
+  initialsColor: "#FF9EC4"
+},
+  {
+  id: 19,
+  title: "Bible: Test Your Faith",
+  description: "Strengthen your faith with daily Bible questions, inspiring verses, and a gentle quiz experience designed for all ages.",
+  image: "biblelogo.png",
+  platforms: ["iOS App"],
+  category: 'ios',
+  url: "https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB",
+  initials: "BTYF",
+  initialsColor: "#4A6EDB"
+},
+  {
+  id: 20,
+  title: "Soccer Legends",
+  description: "Test your football knowledge with fun quizzes, epic challenges, and legendary players from every era of the beautiful game.",
+  image: "soccerlegendslogo.png",
+  platforms: ["iOS App"],
+  category: 'ios',
+  url: "https://apps.apple.com/pt/app/soccer-legends/id6753688926?l=en-GB",
+  initials: "SL",
+  initialsColor: "#1EB53A"
+},
+  {
+  id: 21,
+  title: "Basketball Legends",
+  description: "Challenge your basketball knowledge with fun quizzes featuring historic players, epic moments, and the greatest legends of the court.",
+  image: "basketballlegendslogo.png",
+  platforms: ["iOS App"],
+  category: 'ios',
+  url: "https://apps.apple.com/pt/app/basketball-legends/id6753718461?l=en-GB",
+  initials: "BL",
+  initialsColor: "#F7931A"
 }
 ];
