@@ -198,5 +198,16 @@ export const allApps: App[] = [
   url: "https://apps.apple.com/pt/app/basketball-legends/id6753718461?l=en-GB",
   initials: "BL",
   initialsColor: "#F7931A"
+},
+  {
+  id: 22,
+  title: "Portugal Lifestyle: Learn it",
+  description: "Learn real European Portuguese with slang, culture, history, food, places, and fun mini-games. Explore Portugal while mastering the language the way it’s actually spoken.",
+  image: "portugallifestylelogo.png",
+  platforms: ["iOS App"],
+  category: "ios",
+  url: "https://apps.apple.com/pt/app/portugal-lifestyle-learn-it/id6755307562?l=en-GB",
+  initials: "PL",
+  initialsColor: "#006699"
 }
 ];
