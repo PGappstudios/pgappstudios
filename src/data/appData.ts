@@ -39,15 +39,6 @@ export const allApps: App[] = [
     url: "https://apps.apple.com/pt/app/docyscan/id6740208487?l=en-GB"
   },
   {
-    id: 3,
-    title: "BabyID AI",
-    description: "Use advanced AI to capture and track your baby's milestones and growth through intelligent photo analysis.",
-    image: "/Baby Growth.png",
-    platforms: ["iOS App"],
-    category: 'ios',
-    url: "https://apps.apple.com/pt/app/babyid-ai/id6741074866?l=en-GB"
-  },
-  {
     id: 5,
     title: "World Time Meetings",
     description: "Simplify scheduling across time zones with this intuitive meeting planner for global teams.",
