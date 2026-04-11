@@ -2,8 +2,24 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSEO } from '@/lib/useSEO';
 
 const Index: React.FC = () => {
+  useSEO({
+    title: 'PG App Studios | iOS Apps — Learn Portuguese, Fitness, Games & More',
+    description: 'PG App Studios creates innovative iOS apps for everyday users. Learn European Portuguese, track fasting & walking, play pickleball, quiz yourself on the Bible, soccer, and basketball. Download on the App Store.',
+    canonical: 'https://www.pgappstudios.com/',
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PG App Studios",
+      "url": "https://www.pgappstudios.com",
+      "logo": "https://www.pgappstudios.com/PGlogo.png",
+      "description": "PG App Studios builds innovative iOS apps and websites for everyday smartphone users.",
+      "founder": { "@type": "Person", "name": "Pedro Gregório" }
+    }
+  });
+
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {

@@ -5,8 +5,47 @@ import AppCard from '@/components/AppCard';
 import AppFilterTabs from '@/components/AppFilterTabs';
 import AppsCTA from '@/components/AppsCTA';
 import { allApps, type App } from '@/data/appData';
+import { useSEO } from '@/lib/useSEO';
 
 const OurApps: React.FC = () => {
+  const iosApps = allApps.filter(app => app.category === 'ios');
+  const appJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "PG App Studios — iOS Apps",
+    "description": "All iOS apps developed by PG App Studios, available on the Apple App Store.",
+    "url": "https://www.pgappstudios.com/our-apps",
+    "numberOfItems": iosApps.length,
+    "itemListElement": iosApps.map((app, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": app.title,
+        "description": app.description,
+        "operatingSystem": "iOS",
+        "applicationCategory": "MobileApplication",
+        "url": app.url,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "PG App Studios"
+        }
+      }
+    }))
+  };
+
+  useSEO({
+    title: 'Our Apps | PG App Studios — iOS Apps on the App Store',
+    description: 'Browse all iOS apps by PG App Studios: Portugal Lifestyle, DinkUp (pickleball), GritVit (fitness dating), Star Seekers 2, Fasting and Walking, Bible quiz, Soccer Legends, Basketball Legends, and more.',
+    canonical: 'https://www.pgappstudios.com/our-apps',
+    jsonLd: appJsonLd
+  });
+
   const [activeFilter, setActiveFilter] = useState<'all' | 'ios' | 'web'>('all');
   const [visibleApps, setVisibleApps] = useState<App[]>([]);
   

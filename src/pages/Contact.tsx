@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSEO } from '@/lib/useSEO';
 
 const Contact: React.FC = () => {
+  useSEO({
+    title: 'Contact PG App Studios | Get in Touch with Pedro Gregório',
+    description: 'Contact PG App Studios — the team behind Portugal Lifestyle, DinkUp, GritVit, and more iOS apps. Reach out at pgmetastudios@gmail.com.',
+    canonical: 'https://www.pgappstudios.com/contact',
+  });
   const observerRef = React.useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {

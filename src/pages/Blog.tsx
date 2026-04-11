@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSEO } from '@/lib/useSEO';
 import {
   Pagination,
   PaginationContent,
@@ -16,6 +17,12 @@ import { BlogService, BlogPost } from '@/lib/blogService';
 const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
+  useSEO({
+    title: 'Blog | PG App Studios — iOS App Development Tips & News',
+    description: 'Read the PG App Studios blog for iOS app development insights, updates on our apps, and tips for building successful mobile applications.',
+    canonical: 'https://www.pgappstudios.com/blog',
+  });
+
   const [currentPage, setCurrentPage] = useState(1);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
