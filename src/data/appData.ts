@@ -144,7 +144,7 @@ export const allApps: App[] = [
   {
   id: 31,
   title: "Gritvit",
-  description: "The official Gritvit website.",
+  description: "GritVit is a fitness dating app that connects people through their passion for working out and an active lifestyle.",
   image: "GritVit.png",
   platforms: ["Website"],
   category: "web",
