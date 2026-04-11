@@ -145,12 +145,10 @@ export const allApps: App[] = [
   id: 31,
   title: "Gritvit",
   description: "The official Gritvit website.",
-  image: "",
+  image: "GritVit.png",
   platforms: ["Website"],
   category: "web",
-  url: "https://www.gritvit.com/",
-  initials: "GV",
-  initialsColor: "#E11D48"
+  url: "https://www.gritvit.com/"
 },
   {
   id: 32,
