@@ -128,7 +128,7 @@ Fitness tracking is always free. Premium features unlock after completing a 7-da
 
 Most language apps teach Brazilian Portuguese. If you're moving to Portugal, already living there, or simply want to learn the real thing — **Portugal Lifestyle** is the app built for you.
 
-**Download free:** [iOS App Store](https://apps.apple.com/pt/app/portugal-lifestyle-learn-it/id6755307562?l=en-GB) | [portugal-lifestyle.com](https://www.portugal-lifestyle.com/)
+**Download free:** [iOS App Store](https://apps.apple.com/pt/app/portugal-lifestyle-learn-it/id6755307562?l=en-GB) | [Google Play](https://play.google.com/store/apps/details?id=com.pgappstudios.portugal_lifestyle_pro&pcampaignid=web_share) | [portugal-lifestyle.com](https://www.portugal-lifestyle.com/)
 
 ## Why European Portuguese Is Different
 
