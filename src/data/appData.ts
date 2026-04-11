@@ -118,23 +118,19 @@ export const allApps: App[] = [
   id: 25,
   title: "Fasting and Walking",
   description: "Combine intermittent fasting with daily walking to build healthy habits and reach your wellness goals.",
-  image: "",
+  image: "fastingwalkinglogo.png",
   platforms: ["iOS App"],
   category: "ios",
-  url: "https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB",
-  initials: "FW",
-  initialsColor: "#10B981"
+  url: "https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB"
 },
   {
   id: 23,
   title: "DinkUp",
   description: "The app for pickleball players. Find games, connect with players, and level up your pickleball experience.",
-  image: "",
+  image: "dinkuplogo.png",
   platforms: ["iOS App"],
   category: "ios",
-  url: "https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB",
-  initials: "DU",
-  initialsColor: "#F97316"
+  url: "https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB"
 },
   {
   id: 24,
