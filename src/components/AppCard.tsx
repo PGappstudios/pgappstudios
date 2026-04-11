@@ -12,6 +12,7 @@ interface AppCardProps {
   className?: string;
   initials?: string;
   initialsColor?: string;
+  isWebsite?: boolean;
 }
 
 const AppCard: React.FC<AppCardProps> = ({
@@ -23,7 +24,8 @@ const AppCard: React.FC<AppCardProps> = ({
   androidUrl,
   className,
   initials,
-  initialsColor
+  initialsColor,
+  isWebsite
 }) => {
   return (
     <div 
@@ -78,7 +80,7 @@ const AppCard: React.FC<AppCardProps> = ({
               rel="noopener noreferrer"
               className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-xs font-medium"
             >
-              App Store →
+              {isWebsite ? 'Visit Website →' : 'App Store →'}
             </a>
           )}
           {androidUrl && (

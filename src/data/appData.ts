@@ -133,6 +133,35 @@ export const allApps: App[] = [
   url: "https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB"
 },
   {
+  id: 30,
+  title: "Portugal Lifestyle",
+  description: "The official website for Portugal Lifestyle — learn European Portuguese, explore culture, food, and places.",
+  image: "portugallifestylelogo.png",
+  platforms: ["Website"],
+  category: "web",
+  url: "https://www.portugal-lifestyle.com/"
+},
+  {
+  id: 31,
+  title: "Gritvit",
+  description: "The official Gritvit website.",
+  image: "",
+  platforms: ["Website"],
+  category: "web",
+  url: "https://www.gritvit.com/",
+  initials: "GV",
+  initialsColor: "#E11D48"
+},
+  {
+  id: 32,
+  title: "DinkUp",
+  description: "The official DinkUp website — the app for pickleball players.",
+  image: "dinkuplogo.png",
+  platforms: ["Website"],
+  category: "web",
+  url: "https://www.dinkup.app/"
+},
+  {
   id: 24,
   title: "Portugal Lifestyle Pro",
   description: "Master European Portuguese with immersive lessons, real culture, and everyday language. Available on iOS and Android.",

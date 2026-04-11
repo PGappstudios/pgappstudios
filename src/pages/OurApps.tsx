@@ -86,6 +86,7 @@ const OurApps: React.FC = () => {
                 androidUrl={app.androidUrl}
                 initials={app.initials}
                 initialsColor={app.initialsColor}
+                isWebsite={app.category === 'web'}
                 className="animate-on-scroll opacity-0"
               />
             ))}
