@@ -72,15 +72,15 @@ const AppCard: React.FC<AppCardProps> = ({
           ))}
         </div>
         
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-2 mt-1">
           {url && (
             <a
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-xs font-medium"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-pg-purple/15 border border-pg-purple/40 text-pg-purple hover:bg-pg-purple hover:text-white transition-all duration-200 text-xs font-semibold min-h-[32px]"
             >
-              {isWebsite ? 'Visit Website →' : 'App Store →'}
+              {isWebsite ? 'Visit Website' : '⬇ App Store'}
             </a>
           )}
           {androidUrl && (
@@ -88,9 +88,9 @@ const AppCard: React.FC<AppCardProps> = ({
               href={androidUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-pg-purple hover:text-pg-pink transition-colors text-xs font-medium"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-pg-purple/15 border border-pg-purple/40 text-pg-purple hover:bg-pg-purple hover:text-white transition-all duration-200 text-xs font-semibold min-h-[32px]"
             >
-              Google Play →
+              ⬇ Google Play
             </a>
           )}
         </div>

@@ -54,10 +54,10 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Top Apps</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://apps.apple.com/pt/app/dinkup-find-pickleball-players/id6743594999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp — Pickleball</a>
+                <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6502581727" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6502581727" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
+                <a href="https://apps.apple.com/pt/app/dinkup-find-pickleball-players/id6743594999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp — Pickleball</a>
               </li>
               <li>
                 <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting & Walking</a>
