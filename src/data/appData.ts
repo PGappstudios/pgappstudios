@@ -133,6 +133,15 @@ export const allApps: App[] = [
   url: "https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB"
 },
   {
+  id: 26,
+  title: "Star Seekers 2",
+  description: "The sequel to Star Seekers — more mini-games, more challenges, and even more fun. Compete with friends and reach for the stars!",
+  image: "/lovable-uploads/star-seekers.png",
+  platforms: ["iOS App"],
+  category: "ios",
+  url: "https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB"
+},
+  {
   id: 30,
   title: "Portugal Lifestyle",
   description: "The official website for Portugal Lifestyle — learn European Portuguese, explore culture, food, and places.",
