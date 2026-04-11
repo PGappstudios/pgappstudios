@@ -481,21 +481,12 @@ Anyone starting a weight loss journey, intermittent fasters who want to track hy
 ];
 
 export class BlogService {
-  private static cache: BlogPost[] | null = null;
-  private static lastFetch: number = 0;
-  private static readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
-
   static async getAllPosts(): Promise<BlogPost[]> {
-    console.log('🔍 BlogService: Starting getAllPosts()');
-    
-    // Return cached data if still valid
-    if (this.cache && Date.now() - this.lastFetch < this.CACHE_DURATION) {
-      console.log('📦 BlogService: Returning cached data', this.cache.length, 'posts');
-      return this.cache;
-    }
+    return [...localPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }
 
+  static async _legacyGetAllPosts(): Promise<BlogPost[]> {
     try {
-      console.log('🌐 BlogService: Fetching from GitHub API:', GITHUB_API_BASE);
       
       // Add headers for better API access
       const headers: HeadersInit = {
