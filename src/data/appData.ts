@@ -136,7 +136,7 @@ export const allApps: App[] = [
   id: 26,
   title: "Star Seekers 2",
   description: "The sequel to Star Seekers — more mini-games, more challenges, and even more fun. Compete with friends and reach for the stars!",
-  image: "/lovable-uploads/star-seekers.png",
+  image: "ss2.png",
   platforms: ["iOS App"],
   category: "ios",
   url: "https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB"
