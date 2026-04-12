@@ -86,14 +86,6 @@ const Index: React.FC = () => {
               <Link to="/our-apps" className="neon-button group">
                 <span className="z-10 relative">Browse All Apps</span>
               </Link>
-              <a
-                href="https://apps.apple.com/developer/pedro-gregorio/id1738279962"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300"
-              >
-                View on App Store
-              </a>
             </div>
 
             {/* App count badge */}
