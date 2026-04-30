@@ -54,19 +54,19 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Top Apps</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6502581727" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
+                <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/dinkup-find-pickleball-players/id6743594999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp — Pickleball</a>
+                <a href="https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp — Pickleball</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting & Walking</a>
+                <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting & Walking</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/star-seekers-2/id6759613787" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Star Seekers 2</a>
+                <a href="https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Star Seekers 2</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/developer/pedro-gregorio/id1738279962" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">View all on App Store →</a>
+                <Link to="/our-apps" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">View all on App Store →</Link>
               </li>
             </ul>
           </div>
@@ -76,16 +76,16 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">More Apps</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://apps.apple.com/pt/app/gritvit-fitness-dating-app/id6742892994" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">GritVit — Fitness Dating</a>
+                <a href="https://www.gritvit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">GritVit — Fitness Dating</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Aquafasty Diet Plan</a>
+                <a href="https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Aquafasty Diet Plan</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Baby Learning Games</a>
+                <a href="https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Baby Learning Games</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/bible-quiz-christian-trivia/id6503043803" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Bible Quiz</a>
+                <a href="https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Bible Quiz</a>
               </li>
               <li>
                 <a href="mailto:pgmetastudios@gmail.com" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">pgmetastudios@gmail.com</a>
