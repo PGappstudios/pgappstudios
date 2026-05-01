@@ -63,9 +63,6 @@ const Footer: React.FC = () => {
                 <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting & Walking</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Star Seekers 2</a>
-              </li>
-              <li>
                 <Link to="/our-apps" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">View all on App Store →</Link>
               </li>
             </ul>

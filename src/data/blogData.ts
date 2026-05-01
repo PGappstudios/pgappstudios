@@ -39,30 +39,6 @@ export const blogPosts: BlogPost[] = [
     }
   },
   {
-    id: 2,
-    title: "Star Seekers: A New Era of Mobile Gaming",
-    excerpt: "Explore the exciting world of Star Seekers and its innovative approach to casual gaming with competitive elements.",
-    date: "March 1, 2025",
-    author: "PG App Studios",
-    category: "Apps",
-    content: {
-      introduction: "Star Seekers brings a fresh perspective to mobile gaming by combining casual gameplay mechanics with competitive elements. Set in a vast cosmic universe, players embark on an adventure to discover new stars, build their space empire, and compete with friends in exciting challenges.",
-      features: [
-        "Immersive space exploration with procedurally generated galaxies",
-        "Real-time multiplayer battles and competitions",
-        "Unique star collection and trading system",
-        "Daily challenges and seasonal events",
-        "Cross-platform cloud saves and achievements"
-      ],
-      details: [
-        "Star Seekers' unique gameplay mechanics make it easy to pick up but challenging to master. Each galaxy presents new opportunities for discovery and advancement.",
-        "The social features allow players to form alliances, trade rare stars, and participate in community events. Our real-time battle system brings excitement to every encounter.",
-        "Regular updates introduce new content, including special events, rare stars, and gameplay improvements based on community feedback."
-      ],
-      conclusion: "Join millions of players in Star Seekers and start your cosmic adventure today. With regular updates and an engaging community, there's always something new to discover in this expansive universe."
-    }
-  },
-  {
     id: 3,
     title: "DocyScan: Revolutionizing Document Management",
     excerpt: "Learn how DocyScan is transforming document scanning and organization with advanced OCR technology.",

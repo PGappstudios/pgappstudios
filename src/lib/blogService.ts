@@ -206,47 +206,6 @@ Core tracking is free. All Access available at €1.99 or €22.99.
 **[Download Fasting and Walking Free →](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)**`
   },
   {
-    id: "star-seekers-2-space-shooter-ios",
-    title: "Star Seekers 2: The Addictive Space Shooter Arcade Game for iPhone",
-    excerpt: "Star Seekers 2 is an action-packed iOS space shooter with epic boss battles, ship upgrades, and multiple galaxy levels. Free to play — can you conquer the galaxy?",
-    author: "PG App Studios",
-    date: "2026-04-07",
-    readTime: 5,
-    tags: ["Games", "iOS", "Space", "Arcade", "Action", "Shooter", "Boss Battles"],
-    category: "Apps",
-    featured: false,
-    slug: "star-seekers-2-space-shooter-ios",
-    metaDescription: "Star Seekers 2 is a free iOS space shooter arcade game with progressive boss battles, ship upgrades, multiple galaxy levels, and offline gameplay. Download free on the App Store.",
-    metaKeywords: "space shooter iOS, arcade game iPhone, Star Seekers 2, space game app, boss battle game iOS, free arcade game iPhone, top-down shooter iOS, space arcade game",
-    content: `# Star Seekers 2: The Addictive Space Shooter Arcade Game for iPhone
-
-**Download free:** [Star Seekers 2 on the App Store](https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB)
-
-## Gameplay Features
-
-### Fast-Paced Arcade Combat
-Top-down space shooter with smooth controls, escalating difficulty, and satisfying combat across multiple galaxies.
-
-### Epic Boss Battles
-Every world ends with a unique boss requiring strategy and timing — each has distinct attack patterns, weak points, and phases.
-
-### Unlock & Upgrade Your Fleet
-Collect credits, unlock ships with unique power variations, and upgrade weapons and abilities.
-
-### Multiple Galaxy Levels
-Distinct galaxies with increasing enemy complexity and new challenges at every level.
-
-### Play Offline, Anywhere
-Fully offline — perfect for commutes, flights, or anywhere without Wi-Fi.
-
-## Free to Play
-Free to download. Credit packs available from €0.99 to €11.99.
-
-**Compatible with:** iPhone (iOS 13+), iPad, Mac (M1+), Vision OS
-
-**[Download Star Seekers 2 Free →](https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB)**`
-  },
-  {
     id: "voice-to-caption-ai-writer-ios",
     title: "Voice To Caption AI Writer: Turn Your Voice Into Social Media Captions Instantly",
     excerpt: "Voice To Caption uses AI to transform your spoken words into perfectly formatted captions with smart hashtags for Instagram, TikTok, X, LinkedIn, Threads, and more.",

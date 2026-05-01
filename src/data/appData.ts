@@ -124,24 +124,6 @@ export const allApps: App[] = [
     initialsColor: "#1EB53A"
   },
   {
-    id: 2,
-    title: "Star Seekers: A Galaxy of Fun in One App!",
-    description: "Embark on a celestial journey with Star Seekers! Explore thrilling mini-games and compete with friends on our Records Board. Download now and reach for the stars!",
-    image: "/lovable-uploads/star-seekers.png",
-    platforms: ["iOS App"],
-    category: 'ios',
-    url: "https://apps.apple.com/pt/app/star-seekers/id6738390556?l=en-GB"
-  },
-  {
-    id: 26,
-    title: "Star Seekers 2",
-    description: "The sequel to Star Seekers — more mini-games, more challenges, and even more fun. Compete with friends and reach for the stars!",
-    image: "ss2.png",
-    platforms: ["iOS App"],
-    category: "ios",
-    url: "https://apps.apple.com/pt/app/star-seekers-2/id6759613787?l=en-GB"
-  },
-  {
     id: 17,
     title: "Voice To Caption: AI Writer",
     description: "Turn your voice into AI-powered captions with smart hashtags, perfectly formatted for Instagram, TikTok, X, LinkedIn, Threads, and more.",

@@ -7,12 +7,12 @@ import { allApps } from '@/data/appData';
 import AppCard from '@/components/AppCard';
 import { BlogService } from '@/lib/blogService';
 
-const featuredAppIds = [23, 31, 22, 26, 25, 17];
+const featuredAppIds = [23, 31, 22, 25, 17];
 
 const Index: React.FC = () => {
   useSEO({
     title: 'PG App Studios | iOS Apps — Learn Portuguese, Pickleball, Fitness, Games & More',
-    description: 'PG App Studios builds iOS apps used daily by real people. Download DinkUp (pickleball), Portugal Lifestyle (learn European Portuguese), Fasting & Walking, Star Seekers 2, and more on the App Store.',
+    description: 'PG App Studios builds iOS apps used daily by real people. Download DinkUp (pickleball), Portugal Lifestyle (learn European Portuguese), Fasting & Walking, and more on the App Store.',
     canonical: 'https://www.pgappstudios.com/',
     jsonLd: {
       "@context": "https://schema.org",

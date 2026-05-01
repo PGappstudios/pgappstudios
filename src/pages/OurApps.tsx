@@ -41,7 +41,7 @@ const OurApps: React.FC = () => {
 
   useSEO({
     title: 'Our Apps | PG App Studios — iOS Apps on the App Store',
-    description: 'Browse all iOS apps by PG App Studios: Portugal Lifestyle, DinkUp (pickleball), GritVit (fitness dating), Star Seekers 2, Fasting and Walking, Bible quiz, Soccer Legends, Basketball Legends, and more.',
+    description: 'Browse all iOS apps by PG App Studios: Portugal Lifestyle, DinkUp (pickleball), GritVit (fitness dating), Fasting and Walking, Bible quiz, Soccer Legends, Basketball Legends, and more.',
     canonical: 'https://www.pgappstudios.com/our-apps',
     jsonLd: appJsonLd
   });
