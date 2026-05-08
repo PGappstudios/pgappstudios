@@ -58,7 +58,7 @@ export const allApps: App[] = [
   {
     id: 27,
     title: "CycleBuddy",
-    description: "Find riders nearby, join group rides, and chat with your crew. AI-powered route planning in an app, built for cyclists who ride smarter.",
+    description: "Find riders nearby, join group rides, and chat with your crew. Built for cyclists who ride smarter.",
     image: "cyclebuddylogo.png",
     platforms: ["iOS App"],
     category: "ios",
