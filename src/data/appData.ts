@@ -56,6 +56,15 @@ export const allApps: App[] = [
     initialsColor: "#4A6EDB"
   },
   {
+    id: 27,
+    title: "CycleBuddy",
+    description: "Find riders nearby, join group rides, and chat with your crew. AI-powered route planning in an app, built for cyclists who ride smarter.",
+    image: "cyclebuddylogo.png",
+    platforms: ["iOS App"],
+    category: "ios",
+    url: "https://apps.apple.com/pt/app/cyclebuddy/id6762289803?l=en-GB"
+  },
+  {
     id: 23,
     title: "DinkUp",
     description: "The app for pickleball players. Find games, connect with players, and level up your pickleball experience.",
