@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { useSEO } from '@/lib/useSEO';
 import { allApps } from '@/data/appData';
 import AppCard from '@/components/AppCard';
+import PhoneMarquee from '@/components/PhoneMarquee';
 import { BlogService } from '@/lib/blogService';
 
 const featuredAppIds = [23, 31, 22, 25, 17];
@@ -73,9 +74,41 @@ const Index: React.FC = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6 bg-hero-pattern">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6 bg-hero-pattern overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-pg-purple/20 rounded-full blur-[100px]" />
+        </div>
+
+        {/* Floating iPhones (decorative) */}
+        <div aria-hidden="true" className="hidden lg:block absolute left-[3%] top-32 hero-phone opacity-80" style={{ ['--tilt' as string]: '-10deg', animationDuration: '7s' }}>
+          <div className="phone-frame" style={{ width: '132px', transform: 'rotate(-10deg)' }}>
+            <div className="phone-screen">
+              <div className="flex-1 flex items-center justify-center pt-6">
+                <img src="/portugallifestylelogo.png" alt="" loading="lazy" width={100} height={100} className="w-[78%] aspect-square object-cover rounded-2xl" />
+              </div>
+              <p className="text-white/90 text-[10px] font-semibold text-center pb-3">Portugal Lifestyle</p>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" className="hidden lg:block absolute right-[3%] top-40 hero-phone opacity-80" style={{ ['--tilt' as string]: '10deg', animationDuration: '8.5s', animationDelay: '1.2s' }}>
+          <div className="phone-frame" style={{ width: '132px', transform: 'rotate(10deg)' }}>
+            <div className="phone-screen">
+              <div className="flex-1 flex items-center justify-center pt-6">
+                <img src="/dinkuplogo.png" alt="" loading="lazy" width={100} height={100} className="w-[78%] aspect-square object-cover rounded-2xl" />
+              </div>
+              <p className="text-white/90 text-[10px] font-semibold text-center pb-3">DinkUp</p>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" className="hidden xl:block absolute right-[16%] top-16 hero-phone opacity-50" style={{ ['--tilt' as string]: '6deg', animationDuration: '9.5s', animationDelay: '2s' }}>
+          <div className="phone-frame" style={{ width: '92px', transform: 'rotate(6deg)' }}>
+            <div className="phone-screen">
+              <div className="flex-1 flex items-center justify-center pt-5">
+                <img src="/cyclebuddylogo.png" alt="" loading="lazy" width={70} height={70} className="w-[76%] aspect-square object-cover rounded-xl" />
+              </div>
+              <p className="text-white/80 text-[8px] font-semibold text-center pb-2">CycleBuddy</p>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -107,7 +140,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Featured Apps Section */}
-      <section className="py-20 px-6 bg-pg-dark relative">
+      <section className="py-20 px-6 bg-black/25 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,41,247,0.08)_0%,rgba(10,1,24,0)_70%)]"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
@@ -146,6 +179,9 @@ const Index: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* iPhone showcase — every app gliding by */}
+      <PhoneMarquee />
 
       {/* About Section */}
       <section className="py-20 px-6 relative">
@@ -187,7 +223,7 @@ const Index: React.FC = () => {
 
       {/* Latest Blog Posts */}
       {recentPosts.length > 0 && (
-        <section className="py-20 px-6 bg-pg-dark relative">
+        <section className="py-20 px-6 bg-black/25 relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,41,247,0.05)_0%,rgba(10,1,24,0)_70%)]"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="text-center mb-12">
