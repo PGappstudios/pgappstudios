@@ -12,8 +12,8 @@ const featuredAppIds = [24, 23, 31, 22, 25, 17];
 
 const Index: React.FC = () => {
   useSEO({
-    title: 'Learn European Portuguese with Portugal Lifestyle Pro | PG App Studios',
-    description: 'Home of Portugal Lifestyle Pro — learn real European Portuguese with Portugal\'s culture and history built in. Plus pickleball, fitness and game apps.',
+    title: 'PG App Studios | iOS Apps — Learn Portuguese, Pickleball, Fitness, Games & More',
+    description: 'PG App Studios builds iOS apps for everyday life — learn European Portuguese, find pickleball games, track fasting and more. Free on the App Store.',
     canonical: 'https://www.pgappstudios.com/',
     jsonLd: {
       "@context": "https://schema.org",
@@ -86,9 +86,9 @@ const Index: React.FC = () => {
           <div className="phone-frame" style={{ width: '132px', transform: 'rotate(-10deg)' }}>
             <div className="phone-screen">
               <div className="flex-1 flex items-center justify-center pt-6">
-                <img src="/portugallifestylelogo.png" alt="" loading="lazy" width={100} height={100} className="w-[78%] aspect-square object-cover rounded-2xl" />
+                <img src="/plp-pro-logo.png" alt="" loading="lazy" width={100} height={100} className="w-[78%] aspect-square object-cover rounded-2xl" />
               </div>
-              <p className="text-white/90 text-[10px] font-semibold text-center pb-3">Portugal Lifestyle</p>
+              <p className="text-white/90 text-[10px] font-semibold text-center pb-3">Portugal Lifestyle Pro</p>
             </div>
           </div>
         </div>
@@ -124,15 +124,15 @@ const Index: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-delay-3">
-              Home of <strong className="text-white">Portugal Lifestyle Pro</strong> — the app that teaches real European Portuguese with Portugal's culture and history built in. Plus pickleball, fitness, games and more. All free on the App Store.
+              We build iOS apps for everyday life — learn European Portuguese, find pickleball courts, track your fasting, play arcade games, quiz your faith, and more. All free on the App Store.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
-              <Link to="/apps/portugal-lifestyle-pro" className="neon-button group">
-                <span className="z-10 relative">Learn European Portuguese</span>
+              <Link to="/our-apps" className="neon-button group">
+                <span className="z-10 relative">Browse All Apps</span>
               </Link>
-              <Link to="/our-apps" className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300 text-center">
-                Browse All Apps
+              <Link to="/apps/portugal-lifestyle-pro" className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300 text-center">
+                Learn European Portuguese
               </Link>
             </div>
 
@@ -193,7 +193,7 @@ const Index: React.FC = () => {
                 <div className="phone-screen">
                   <div className="flex-1 flex items-center justify-center pt-8">
                     <img
-                      src="/portugallifestylelogo.png"
+                      src="/plp-pro-logo.png"
                       alt=""
                       loading="lazy"
                       width={180}

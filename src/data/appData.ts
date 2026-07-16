@@ -337,7 +337,7 @@ export const allApps: App[] = [
     id: 24,
     title: "Portugal Lifestyle Pro",
     description: "Master European Portuguese with immersive lessons, real culture, and everyday language. Available on iOS and Android.",
-    image: "portugallifestylelogo.png",
+    image: "/plp-pro-logo.png",
     platforms: ["iOS App", "Android App"],
     category: "ios",
     url: "https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB",
