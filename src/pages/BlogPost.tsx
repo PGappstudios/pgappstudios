@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { BlogService, BlogPost as BlogPostType } from '@/lib/blogService';
+import { useSEO } from '@/lib/useSEO';
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
@@ -40,6 +41,43 @@ const BlogPost = () => {
 
     fetchPost();
   }, [id]);
+
+  const postUrl = post ? `https://www.pgappstudios.com/blog/${post.slug}` : 'https://www.pgappstudios.com/blog';
+  useSEO({
+    title: post ? `${post.title} | PG App Studios Blog` : 'Blog | PG App Studios',
+    description: post?.metaDescription || post?.excerpt || 'Guides and updates from PG App Studios.',
+    canonical: postUrl,
+    jsonLd: post
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.metaDescription || post.excerpt,
+            datePublished: post.date,
+            dateModified: post.date,
+            author: { '@type': 'Organization', name: 'PG App Studios' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'PG App Studios',
+              logo: { '@type': 'ImageObject', url: 'https://www.pgappstudios.com/PGlogo.png' },
+            },
+            mainEntityOfPage: postUrl,
+            url: postUrl,
+            keywords: post.metaKeywords,
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pgappstudios.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.pgappstudios.com/blog' },
+              { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+            ],
+          },
+        ]
+      : undefined,
+  });
 
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {

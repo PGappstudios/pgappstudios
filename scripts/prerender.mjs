@@ -39,6 +39,54 @@ const ROUTES = [
   '/apps/baby-learning-games',
 ];
 
+// Blog posts (keep in sync with blogService.ts + blogPostsExtra batches).
+const BLOG_SLUGS = [
+  // original posts
+  'dinkup-pickleball-app',
+  'gritvit-fitness-dating-app',
+  'portugal-lifestyle-learn-european-portuguese',
+  'fasting-and-walking-app-ios',
+  'voice-to-caption-ai-writer-ios',
+  'soccer-legends-quiz-ios',
+  'basketball-legends-quiz-ios',
+  'bible-test-your-faith-ios',
+  'baby-learning-games-ios',
+  'aquafasty-diet-plan-ios',
+  // added July 2026
+  'learn-european-portuguese-beginners-guide',
+  'european-vs-brazilian-portuguese-differences',
+  'does-duolingo-teach-european-portuguese',
+  'essential-european-portuguese-phrases-travellers',
+  'european-portuguese-pronunciation-guide',
+  'a2-portuguese-citizenship-test-guide',
+  'european-portuguese-slang-guide',
+  'moving-to-portugal-from-us-2026',
+  'portugal-d7-vs-d8-visa-guide',
+  'how-to-get-nif-portugal',
+  'aima-appointment-guide-portugal',
+  'cost-of-living-portugal-2026',
+  'best-places-to-live-portugal-expats',
+  'how-to-find-pickleball-players-near-you',
+  'pickleball-for-beginners-guide',
+  'pickleball-etiquette-rules',
+  'how-to-organize-pickleball-game',
+  'why-fitness-dating-apps-growing',
+  'meet-gym-partner-shared-goals',
+  'intermittent-fasting-for-beginners',
+  'how-much-water-to-drink-weight-loss',
+  'walking-for-weight-loss-steps-per-day',
+  'combining-fasting-and-walking',
+  'find-group-ride-new-cyclist',
+  'road-gravel-mtb-cycling-guide',
+  'write-better-social-media-captions-ai',
+  'best-way-to-scan-documents-iphone',
+  'football-trivia-questions-quiz',
+  'daily-bible-study-habit-guide',
+  'best-educational-games-toddlers-1-4',
+];
+
+for (const slug of BLOG_SLUGS) ROUTES.push(`/blog/${slug}`);
+
 async function main() {
   const server = await preview({ preview: { port: PORT, strictPort: true } });
   const base = `http://localhost:${PORT}`;

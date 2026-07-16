@@ -1,3 +1,5 @@
+import { extraPosts } from './blogPostsExtra';
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -435,7 +437,7 @@ Anyone starting a weight loss journey, intermittent fasters who want to track hy
 
 export class BlogService {
   static async getAllPosts(): Promise<BlogPost[]> {
-    return [...localPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return [...localPosts, ...extraPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
   static async getPostBySlug(slug: string): Promise<BlogPost | null> {
