@@ -25,7 +25,7 @@ const AppDetail: React.FC = () => {
   const pageUrl = `${SITE}/apps/${slug}`;
 
   useSEO({
-    title: app ? `${app.title} — ${app.tagline ?? app.description}` : 'App — PG App Studios',
+    title: app ? (app.metaTitle ?? `${app.title} — ${app.tagline ?? app.description}`) : 'App — PG App Studios',
     description: app?.metaDescription ?? app?.description ?? '',
     canonical: pageUrl,
     ogImage: app ? `${SITE}${imgSrc(app.image)}` : undefined,
@@ -42,6 +42,16 @@ const AppDetail: React.FC = () => {
             downloadUrl: app.url,
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
             author: { '@type': 'Organization', name: 'PG App Studios' },
+            ...(app.rating
+              ? {
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: app.rating.value,
+                    ratingCount: app.rating.count,
+                    bestRating: 5,
+                  },
+                }
+              : {}),
           },
           {
             '@context': 'https://schema.org',
@@ -153,6 +163,11 @@ const AppDetail: React.FC = () => {
                 {p}
               </span>
             ))}
+            {app.rating && (
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs bg-pg-purple/15 text-pg-purple border border-pg-purple/40 font-semibold">
+                ★ {app.rating.value} · {app.rating.source}
+              </span>
+            )}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

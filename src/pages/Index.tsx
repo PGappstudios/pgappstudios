@@ -8,12 +8,12 @@ import AppCard from '@/components/AppCard';
 import PhoneMarquee from '@/components/PhoneMarquee';
 import { BlogService } from '@/lib/blogService';
 
-const featuredAppIds = [23, 31, 22, 25, 17];
+const featuredAppIds = [24, 23, 31, 22, 25, 17];
 
 const Index: React.FC = () => {
   useSEO({
-    title: 'PG App Studios | iOS Apps — Learn Portuguese, Pickleball, Fitness, Games & More',
-    description: 'PG App Studios builds iOS apps for everyday life — learn European Portuguese, find pickleball games, track fasting and more. Free on the App Store.',
+    title: 'Learn European Portuguese with Portugal Lifestyle Pro | PG App Studios',
+    description: 'Home of Portugal Lifestyle Pro — learn real European Portuguese with Portugal\'s culture and history built in. Plus pickleball, fitness and game apps.',
     canonical: 'https://www.pgappstudios.com/',
     jsonLd: {
       "@context": "https://schema.org",
@@ -67,7 +67,9 @@ const Index: React.FC = () => {
     };
   }, [recentPosts]);
 
-  const featuredApps = allApps.filter(app => featuredAppIds.includes(app.id));
+  const featuredApps = featuredAppIds
+    .map(id => allApps.find(app => app.id === id))
+    .filter((app): app is NonNullable<typeof app> => Boolean(app));
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -122,12 +124,15 @@ const Index: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-delay-3">
-              We build iOS apps for everyday life — learn European Portuguese, find pickleball courts, track your fasting, play arcade games, quiz your faith, and more. All free to download on the App Store.
+              Home of <strong className="text-white">Portugal Lifestyle Pro</strong> — the app that teaches real European Portuguese with Portugal's culture and history built in. Plus pickleball, fitness, games and more. All free on the App Store.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
-              <Link to="/our-apps" className="neon-button group">
-                <span className="z-10 relative">Browse All Apps</span>
+              <Link to="/apps/portugal-lifestyle-pro" className="neon-button group">
+                <span className="z-10 relative">Learn European Portuguese</span>
+              </Link>
+              <Link to="/our-apps" className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300 text-center">
+                Browse All Apps
               </Link>
             </div>
 
@@ -135,6 +140,74 @@ const Index: React.FC = () => {
             <p className="text-gray-500 text-sm animate-fade-in-delay-3">
               {allApps.filter(a => a.category === 'ios').length}+ iOS apps available now
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Flagship: Portugal Lifestyle Pro spotlight */}
+      <section className="py-20 px-6 relative overflow-hidden" aria-label="Portugal Lifestyle Pro — our flagship app">
+        <div className="absolute inset-0 bg-gradient-to-br from-pg-purple/10 via-transparent to-pg-blue/10"></div>
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-pg-purple font-semibold uppercase tracking-widest text-sm mb-4">Our flagship app</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Real European Portuguese.<br />
+              <span className="gradient-text">Real culture. Real history.</span>
+            </h2>
+            <p className="text-lg text-gray-300 mb-6">
+              Most apps teach Brazilian Portuguese — Duolingo doesn't offer European Portuguese at all.
+              <strong className="text-white"> Portugal Lifestyle Pro</strong> teaches the language the way it's
+              actually spoken in Portugal, with the culture, food, history and slang woven into every lesson.
+              No other app does that.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                'Genuine European Portuguese — never a Brazilian course with a flag swapped',
+                "Portugal's culture, history and traditions built into the lessons",
+                'Made for expats, movers, AIMA and the A2 citizenship level',
+                'Rated 4.7★ on the App Store · iOS & Android',
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-3 text-gray-300">
+                  <span className="text-pg-purple font-bold mt-0.5">✓</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/apps/portugal-lifestyle-pro" className="neon-button group">
+                <span className="z-10 relative">Discover Portugal Lifestyle Pro</span>
+              </Link>
+              <a
+                href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300 text-center"
+              >
+                Download on the App Store
+              </a>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-center" aria-hidden="true">
+            <div className="hero-phone" style={{ ['--tilt' as string]: '-4deg', animationDuration: '8s' }}>
+              <div className="phone-frame" style={{ width: '230px', transform: 'rotate(-4deg)' }}>
+                <div className="phone-screen">
+                  <div className="flex-1 flex items-center justify-center pt-8">
+                    <img
+                      src="/portugallifestylelogo.png"
+                      alt=""
+                      loading="lazy"
+                      width={180}
+                      height={180}
+                      className="w-[80%] aspect-square object-cover rounded-3xl shadow-2xl shadow-black/60"
+                    />
+                  </div>
+                  <div className="px-3 pb-5 pt-3 text-center bg-gradient-to-t from-black/70 to-transparent">
+                    <p className="text-white text-sm font-bold">Portugal Lifestyle Pro</p>
+                    <p className="text-pg-purple text-xs font-semibold mt-1">★ 4.7 · Learn it. Live it.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

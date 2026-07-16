@@ -28,6 +28,9 @@ export interface App {
   features?: AppFeature[];
   faqs?: AppFAQ[];
   keywords?: string;
+  metaTitle?: string;        // SERP title override when title+tagline runs long
+  // Real App Store rating (via iTunes lookup API) — update when it changes.
+  rating?: { value: number; count: number; source: string };
 }
 
 export const allApps: App[] = [
@@ -343,24 +346,31 @@ export const allApps: App[] = [
     initialsColor: "#006699",
     slug: "portugal-lifestyle-pro",
     appCategory: "EducationalApplication",
-    tagline: "Master European Portuguese — spoken in Portugal, not Brazil",
-    metaDescription: "Master real European Portuguese with immersive lessons, culture and everyday language. Built for expats and movers. On iOS and Android.",
+    metaTitle: "Portugal Lifestyle Pro — Learn Real European Portuguese & Culture",
+    tagline: "The only app that teaches real European Portuguese with the culture behind it",
+    metaDescription: "Learn real European Portuguese the way no other app teaches it — with Portugal's culture, history, food and slang built in. Rated 4.7★. On iOS and Android.",
     longDescription: [
-      "Portugal Lifestyle Pro helps you master real European Portuguese — the way it's actually spoken in Portugal, not Brazil. Immersive lessons, real culture, slang, food and everyday phrases give you the language you'll use from day one.",
-      "Most big apps teach Brazilian Portuguese, and Duolingo doesn't offer European Portuguese at all. Portugal Lifestyle Pro is built for Portugal — ideal if you're moving there, preparing for AIMA, or working toward the A2 citizenship level. Available on both iOS and Android."
+      "Portugal Lifestyle Pro teaches real European Portuguese — the way it's actually spoken in Portugal, not Brazil. Immersive lessons cover the pronunciation, slang, food and everyday phrases you'll use from day one, whether you're ordering a bica in Lisbon or chatting with neighbours in Porto.",
+      "What makes it different is what's around the language: Portugal's culture, history and way of life are woven into the lessons themselves. You don't just memorise words — you learn why the Portuguese say what they say, where the expressions come from, and the traditions behind them. No other language app teaches European Portuguese this way.",
+      "Most big apps teach Brazilian Portuguese, and Duolingo doesn't offer European Portuguese at all. Portugal Lifestyle Pro is built for Portugal — ideal if you're moving there, preparing for AIMA, or working toward the A2 citizenship level. Learners consistently rate it highly (4.7★ on the App Store) precisely because it teaches the real thing. Available on both iOS and Android."
     ],
     features: [
-      { title: "Genuinely European Portuguese", text: "Lisbon-and-Porto pronunciation, real spelling and vocabulary you'll actually hear." },
-      { title: "Everyday language first", text: "Lessons prioritise what you'll really say, not textbook filler." },
-      { title: "Culture and slang built in", text: "Understand the context behind the words to sound natural, not robotic." },
-      { title: "iOS and Android", text: "Learn on any phone, with your progress in sync wherever you go." }
+      { title: "Genuinely European Portuguese", text: "Lisbon-and-Porto pronunciation, real spelling and vocabulary you'll actually hear — never a Brazilian course with a flag swapped." },
+      { title: "Culture and history built in", text: "Portugal's traditions, food, places and history are part of the lessons — the context no other app teaches." },
+      { title: "Everyday language first", text: "Lessons prioritise what you'll really say — at the café, at AIMA, with neighbours — not textbook filler." },
+      { title: "Real slang, real speech", text: "Fixe, giro, bué — understand and use the expressions locals actually say." },
+      { title: "Made for expats and movers", text: "Built for people relocating to Portugal, preparing for AIMA appointments or the A2 citizenship level." },
+      { title: "iOS and Android", text: "Learn on any phone, with your progress wherever you go." }
     ],
     faqs: [
-      { q: "Does it teach European or Brazilian Portuguese?", a: "European Portuguese — the language as spoken in Portugal, including pronunciation, slang and culture. It is not a Brazilian course." },
+      { q: "Does it teach European or Brazilian Portuguese?", a: "European Portuguese — the language as spoken in Portugal, including pronunciation, slang and culture. It is not a Brazilian course, and unlike most big apps (Duolingo included), it's built specifically for Portugal." },
+      { q: "What makes Portugal Lifestyle Pro different from other Portuguese apps?", a: "It's the only app that teaches European Portuguese together with Portugal's culture and history — the traditions, food, places and context behind the language. Learners rate it 4.7★ on the App Store for exactly that reason." },
       { q: "Is it available on Android?", a: "Yes. Portugal Lifestyle Pro is on both the Apple App Store and Google Play." },
-      { q: "Will it help with the A2 citizenship level?", a: "It builds the everyday listening, reading and speaking skills the A2 CIPLE exam tests. It's a learning app rather than official exam prep, but a strong foundation." }
+      { q: "Will it help with the A2 citizenship level?", a: "It builds the everyday listening, reading and speaking skills the A2 CIPLE exam tests. It's a learning app rather than official exam prep, but a strong foundation." },
+      { q: "Is it good for complete beginners?", a: "Yes — it starts from greetings and essentials and builds up naturally, with culture woven in from the first lesson." }
     ],
-    keywords: "learn european portuguese app, european portuguese app, learn portuguese from portugal, portuguese for expats, portuguese not brazilian"
+    keywords: "learn european portuguese app, european portuguese app, portuguese culture app, learn portuguese from portugal, portuguese for expats, portuguese not brazilian, portugal history app",
+    rating: { value: 4.7, count: 6, source: "App Store (US)" }
   },
   {
     id: 20,
@@ -477,8 +487,10 @@ export const allApps: App[] = [
   }
 ];
 
-// Every app that has its own SEO landing page.
-export const appPages: App[] = allApps.filter((a) => Boolean(a.slug));
+// Every app that has its own SEO landing page — flagship first.
+export const appPages: App[] = allApps
+  .filter((a) => Boolean(a.slug))
+  .sort((a, b) => (a.slug === 'portugal-lifestyle-pro' ? -1 : b.slug === 'portugal-lifestyle-pro' ? 1 : 0));
 
 export function getAppBySlug(slug: string): App | undefined {
   return allApps.find((a) => a.slug === slug);
