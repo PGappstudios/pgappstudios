@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.pgappstudios.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.pgappstudios.com/our-apps</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.pgappstudios.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.pgappstudios.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <!-- Core pages -->
+  <url><loc>https://www.pgappstudios.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.pgappstudios.com/our-apps</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pgappstudios.com/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- App landing pages -->
+  <url><loc>https://www.pgappstudios.com/apps/portugal-lifestyle-pro</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/dinkup</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/gritvit</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/cyclebuddy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/fasting-and-walking</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/aquafasty-diet-plan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/voice-to-caption</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/docyscan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/megaconverter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/soccer-legends</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/basketball-legends</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/bible-test-your-faith</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/baby-learning-games</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pgappstudios.com/apps/portugal-lifestyle-learn-it</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://www.pgappstudios.com/blog/dinkup-pickleball-app</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/gritvit-fitness-dating-app</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/portugal-lifestyle-learn-european-portuguese</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/fasting-and-walking-app-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/voice-to-caption-ai-writer-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/soccer-legends-quiz-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/basketball-legends-quiz-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/bible-test-your-faith-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/baby-learning-games-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pgappstudios.com/blog/aquafasty-diet-plan-ios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

@@ -123,6 +123,7 @@ const Index: React.FC = () => {
                 initials={app.initials}
                 initialsColor={app.initialsColor}
                 isWebsite={app.category === 'web'}
+                slug={app.slug}
                 className="animate-on-scroll opacity-0"
               />
             ))}
