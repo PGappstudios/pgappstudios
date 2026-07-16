@@ -67,7 +67,7 @@ const AppCard: React.FC<AppCardProps> = ({
   return (
     <div
       className={cn(
-        "glass-card group h-full transition-all duration-500 hover:shadow-[0_0_20px_rgba(184,41,247,0.4)] opacity-0",
+        "glass-card group h-full transition-all duration-500 hover:shadow-[0_0_20px_rgba(184,41,247,0.4)]",
         className
       )}
     >
