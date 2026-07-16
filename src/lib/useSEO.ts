@@ -5,10 +5,11 @@ interface SEOProps {
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
   jsonLd?: object | object[];
 }
 
-export function useSEO({ title, description, canonical, ogImage, jsonLd }: SEOProps) {
+export function useSEO({ title, description, canonical, ogImage, ogType, jsonLd }: SEOProps) {
   useEffect(() => {
     // Title
     document.title = title;
@@ -39,6 +40,14 @@ export function useSEO({ title, description, canonical, ogImage, jsonLd }: SEOPr
         document.head.appendChild(link);
       }
       link.setAttribute('href', canonical);
+      // Keep social-card URLs in sync with the canonical (the static head
+      // hard-codes the homepage; without this every page shares one og:url).
+      setMeta('meta[property="og:url"]', 'content', canonical);
+      setMeta('meta[name="twitter:url"]', 'content', canonical);
+    }
+
+    if (ogType) {
+      setMeta('meta[property="og:type"]', 'content', ogType);
     }
 
     if (ogImage) {

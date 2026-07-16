@@ -13,6 +13,22 @@ const NotFound = () => {
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
+
+    // Keep unknown URLs out of the index (SPA fallback serves 200, so
+    // without this a soft-404 could get indexed).
+    document.title = "Page Not Found | PG App Studios";
+    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    const previous = robots.getAttribute("content");
+    robots.setAttribute("content", "noindex, follow");
+    return () => {
+      // Restore on client-side navigation away from the 404.
+      if (previous) robots.setAttribute("content", previous);
+    };
   }, [location.pathname]);
 
   return (

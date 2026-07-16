@@ -43,7 +43,7 @@ export const allApps: App[] = [
     slug: "aquafasty-diet-plan",
     appCategory: "HealthApplication",
     tagline: "Water, steps and fasting — one simple weight-loss tracker",
-    metaDescription: "Aquafasty combines hydration tracking, step counting and an intermittent fasting timer in one app. A simple, habit-first plan to support your weight-loss journey. Free on iOS.",
+    metaDescription: "Aquafasty combines water tracking, steps and an intermittent fasting timer in one simple, habit-first weight-loss app. Free on iOS.",
     longDescription: [
       "Aquafasty Diet Plan brings three core weight-loss habits — hydration, movement and intermittent fasting — into a single, easy tracker. Instead of juggling a water app, a step counter and a fasting timer, you see your whole day in one dashboard and stay on plan without app-switching.",
       "Hydration is the signature angle: staying well-watered supports your metabolism, curbs false hunger during fasting windows and keeps energy up while you cut back. Log your water, watch your steps climb and keep your eating window on track — a lightweight but complete system built on consistency, not crash dieting."
@@ -74,7 +74,7 @@ export const allApps: App[] = [
     slug: "baby-learning-games",
     appCategory: "EducationalApplication",
     tagline: "Safe, colorful learning games for toddlers ages 1–4",
-    metaDescription: "Baby Learning Games 1-4 is a collection of gentle, colorful educational mini-games for toddlers aged 1 to 4 — colors, shapes, animals and sounds. Safe screen time parents can feel good about.",
+    metaDescription: "Gentle, colorful learning games for toddlers aged 1–4 — colors, shapes, animals and sounds. Safe screen time parents can feel good about. Free on iOS.",
     longDescription: [
       "Baby Learning Games 1-4 is a collection of gentle, colorful mini-games designed for the youngest learners. Each game builds early-development basics — colors, shapes, animals, sounds and simple cause-and-effect — in a bright, tap-friendly interface little fingers can actually use.",
       "The games are intentionally simple and forgiving: no reading required, no complicated rules and no way to lose. Big touch targets, cheerful visuals and instant rewards keep toddlers engaged while gently building recognition and motor skills. For parents, it turns a few minutes of screen time into something purposeful — on a car ride, at a restaurant, or during a busy moment at home."
@@ -105,7 +105,7 @@ export const allApps: App[] = [
     slug: "basketball-legends",
     appCategory: "GameApplication",
     tagline: "The trivia game that tests your basketball IQ",
-    metaDescription: "Basketball Legends is a fun trivia game for hoops fans — quiz yourself on historic players, dynasties and iconic moments across every era. Settle the GOAT debate. Free on iOS.",
+    metaDescription: "Fun basketball trivia for hoops fans — historic players, dynasties and iconic moments from every era. Settle the GOAT debate. Free on iOS.",
     longDescription: [
       "Basketball Legends is a trivia game for hoops fans who live for the debate. It quizzes you on the legendary players, dynasties and unforgettable moments that shaped basketball — from the old-school greats to the modern superstars.",
       "The quiz format keeps sessions short and addictive — perfect for a quick round on a commute or head-to-head with friends who think they know ball better than you. Chase a high score, close your knowledge gaps and settle the GOAT arguments once and for all."
@@ -136,7 +136,7 @@ export const allApps: App[] = [
     slug: "bible-test-your-faith",
     appCategory: "LifestyleApplication",
     tagline: "A gentle daily Bible quiz to grow in scripture",
-    metaDescription: "Bible: Test Your Faith turns Bible study into a simple daily habit — thoughtful questions, meaningful verses and a gentle quiz to deepen your knowledge of scripture. Free on iOS.",
+    metaDescription: "Turn Bible study into a simple daily habit — thoughtful questions, meaningful verses and a gentle quiz to deepen your scripture knowledge. Free on iOS.",
     longDescription: [
       "Bible: Test Your Faith turns Bible study into a simple daily habit. Each day it serves thoughtful questions, meaningful verses and a gentle quiz designed to deepen your knowledge of scripture without pressure or gimmicks.",
       "The quiz is intentionally gentle — about growth and reflection, not competition. Questions draw you back into the text, verses give you something to carry through the day, and the daily rhythm builds consistency. Whether you're a lifelong reader or new to the Bible, the app meets you where you are."
@@ -165,7 +165,7 @@ export const allApps: App[] = [
     slug: "cyclebuddy",
     appCategory: "SportsApplication",
     tagline: "Find riders near you and turn solo miles into group rides",
-    metaDescription: "CycleBuddy helps cyclists find riders nearby, discover and join group rides, and chat with their crew. Road, gravel or MTB — the social app for finding people to ride with. Free on iOS.",
+    metaDescription: "CycleBuddy helps cyclists find riders nearby, join group rides and chat with their crew. Road, gravel or MTB. Free on iOS.",
     longDescription: [
       "CycleBuddy is the app that turns solo miles into group rides. It helps cyclists find riders nearby, discover and join group rides, and stay connected with their crew through built-in chat. Whether you ride road, gravel or MTB, the hardest part is often finding people to ride with at your pace — CycleBuddy solves that.",
       "Instead of hoping the local club's Facebook page is active, you can see who's riding near you, jump into planned group rides and coordinate details without the back-and-forth. Pace and skill awareness helps you find rides that match your level, so you're neither getting dropped nor soft-pedaling."
@@ -194,7 +194,7 @@ export const allApps: App[] = [
     slug: "dinkup",
     appCategory: "SportsApplication",
     tagline: "Find pickleball games and players near you",
-    metaDescription: "DinkUp is the pickleball app for finding games near you, matching with players at your skill level, and levelling up. Spend less time hunting for a game and more time on the court. Free on iOS.",
+    metaDescription: "DinkUp is the pickleball app for finding games near you and matching with players at your level. More court time, less group-chat chaos. Free on iOS.",
     longDescription: [
       "DinkUp is the community app built for pickleball players who want to spend less time hunting for a game and more time on the court. Find open games nearby, match with players at your skill level, and plug into the fastest-growing sport in the world — no more group-chat chaos or showing up to courts hoping someone's around.",
       "The app connects players to each other and to games, so it's easy to organize a session, join an existing one, or meet new partners at your pace. As you play more, you build a local crew and steadily level up — the social and competitive sides of pickleball in one place."
@@ -223,7 +223,7 @@ export const allApps: App[] = [
     slug: "docyscan",
     appCategory: "ProductivityApplication",
     tagline: "Scan, recognize and organize documents from your iPhone",
-    metaDescription: "DocyScan turns your iPhone into a document scanner with intelligent text recognition and simple organization. Scan receipts, contracts and paperwork and keep them tidy. Free on iOS.",
+    metaDescription: "DocyScan turns your iPhone into a document scanner with smart text recognition and easy organization. Scan receipts, contracts and more. Free on iOS.",
     longDescription: [
       "DocyScan turns your iPhone into a streamlined document scanner. Capture receipts, contracts, notes and paperwork, and let intelligent text recognition make them searchable and easy to reuse.",
       "Built-in organization keeps your scans tidy so you can find what you need later without digging through a camera roll. It's a fast, no-friction way to go paperless and keep important documents at your fingertips."
@@ -252,7 +252,7 @@ export const allApps: App[] = [
     slug: "fasting-and-walking",
     appCategory: "HealthApplication",
     tagline: "Pair intermittent fasting with daily walking",
-    metaDescription: "Fasting and Walking combines an intermittent fasting timer with daily walking to build simple, sustainable healthy habits. Two proven habits, one easy app. Free on iOS.",
+    metaDescription: "Combine an intermittent fasting timer with daily walking goals to build simple, sustainable healthy habits. Two proven habits, one app. Free on iOS.",
     longDescription: [
       "Fasting and Walking pairs two of the simplest, most sustainable health habits — intermittent fasting and daily walking — in one focused app. Track your fasting window and your steps together so both habits reinforce each other on the way to your wellness goals.",
       "There's no crash dieting and no complicated program: just a clear fasting timer, daily walking targets and visible progress that keeps you consistent. It's built for people who want a realistic routine they can actually stick to."
@@ -281,7 +281,7 @@ export const allApps: App[] = [
     slug: "megaconverter",
     appCategory: "UtilitiesApplication",
     tagline: "Convert any unit — measurements, data and more",
-    metaDescription: "MegaConverter is a powerful unit and data conversion tool for everyday measurements, scientific calculations and data sizes. Fast, accurate conversions in one app. Free on iOS.",
+    metaDescription: "Powerful unit and data conversion for everyday measurements, science and data sizes. Fast, accurate results in one app. Free on iOS.",
     longDescription: [
       "MegaConverter is a powerful, easy unit conversion tool covering everyday measurements, scientific calculations and data transformations. Convert length, weight, volume, temperature, data sizes and much more without hunting for a formula.",
       "A clean, fast interface gives you accurate results instantly, whether you're cooking, studying, travelling or working. It's the one converter to keep on your home screen for whenever the numbers don't line up."
@@ -312,7 +312,7 @@ export const allApps: App[] = [
     slug: "portugal-lifestyle-learn-it",
     appCategory: "EducationalApplication",
     tagline: "Learn real European Portuguese through culture and play",
-    metaDescription: "Portugal Lifestyle: Learn it teaches real European Portuguese — slang, culture, history, food and places — through fun mini-games. Learn the language the way it's actually spoken in Portugal. Free on iOS.",
+    metaDescription: "Learn real European Portuguese — slang, culture, history and food — through fun mini-games. The language as actually spoken in Portugal. Free on iOS.",
     longDescription: [
       "Portugal Lifestyle: Learn it teaches real European Portuguese — the language as it's actually spoken in Portugal, not Brazil. It weaves slang, culture, history, food and places into fun mini-games so learning feels like exploring the country.",
       "Instead of dry drills, you pick up everyday language in the context that makes it stick. It's a playful, culture-first way to build vocabulary and understanding, perfect for travellers, expats and anyone curious about Portugal."
@@ -344,7 +344,7 @@ export const allApps: App[] = [
     slug: "portugal-lifestyle-pro",
     appCategory: "EducationalApplication",
     tagline: "Master European Portuguese — spoken in Portugal, not Brazil",
-    metaDescription: "Portugal Lifestyle Pro teaches real European Portuguese with immersive lessons, real culture and everyday language. Ideal for expats and movers. Available on iOS and Android.",
+    metaDescription: "Master real European Portuguese with immersive lessons, culture and everyday language. Built for expats and movers. On iOS and Android.",
     longDescription: [
       "Portugal Lifestyle Pro helps you master real European Portuguese — the way it's actually spoken in Portugal, not Brazil. Immersive lessons, real culture, slang, food and everyday phrases give you the language you'll use from day one.",
       "Most big apps teach Brazilian Portuguese, and Duolingo doesn't offer European Portuguese at all. Portugal Lifestyle Pro is built for Portugal — ideal if you're moving there, preparing for AIMA, or working toward the A2 citizenship level. Available on both iOS and Android."
@@ -375,7 +375,7 @@ export const allApps: App[] = [
     slug: "soccer-legends",
     appCategory: "GameApplication",
     tagline: "The football trivia game for true fans",
-    metaDescription: "Soccer Legends is a fun football trivia game — quiz yourself on legendary players, epic moments and the greatest teams from every era of the beautiful game. Free on iOS.",
+    metaDescription: "Fun football trivia — legendary players, epic moments and great teams from every era of the beautiful game. Free on iOS.",
     longDescription: [
       "Soccer Legends is a trivia game for football fans who love to prove their knowledge. Quiz yourself on the legendary players, epic moments and greatest teams from every era of the beautiful game, from the classics to today's superstars.",
       "The quiz format keeps rounds short and addictive — great for a commute or a challenge with friends who reckon they know the game better. Chase a high score, learn a little history and settle the debates that never end."
@@ -406,7 +406,7 @@ export const allApps: App[] = [
     slug: "voice-to-caption",
     appCategory: "ProductivityApplication",
     tagline: "Speak it — get AI captions and hashtags for every platform",
-    metaDescription: "Voice To Caption: AI Writer turns your voice into polished, AI-powered social captions with smart hashtags, formatted for Instagram, TikTok, X, LinkedIn and Threads. Free on iOS.",
+    metaDescription: "Turn your voice into polished AI captions with smart hashtags for Instagram, TikTok, X, LinkedIn and Threads. Free on iOS.",
     longDescription: [
       "Voice To Caption: AI Writer turns what you say into ready-to-post social captions. Just speak your idea and the app writes a polished caption with smart hashtags, formatted for the platform you're posting to.",
       "It's built for creators, marketers and busy people who'd rather talk than type. Get platform-perfect captions for Instagram, TikTok, X, LinkedIn and Threads in seconds — no more staring at a blank caption box."
@@ -437,7 +437,7 @@ export const allApps: App[] = [
     slug: "gritvit",
     appCategory: "LifestyleApplication",
     tagline: "The dating app for people who love to train",
-    metaDescription: "GritVit is a fitness dating app that connects people through a shared passion for working out and an active lifestyle. Match with people who share your commitment to fitness.",
+    metaDescription: "GritVit is the fitness dating app connecting people through a shared passion for working out and an active lifestyle. Find your match.",
     longDescription: [
       "GritVit is a fitness dating app that connects people through a shared passion for working out and an active lifestyle. Instead of endless swiping on mismatched profiles, GritVit brings together people who actually value fitness — so your workouts and your dating life finally point in the same direction.",
       "Whether you're a gym regular, a runner or someone who just loves staying active, GritVit helps you meet partners who share your commitment. It's built for people who want a relationship that fits their active life, not one they have to fight against."

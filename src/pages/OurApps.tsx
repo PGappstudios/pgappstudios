@@ -41,9 +41,19 @@ const OurApps: React.FC = () => {
 
   useSEO({
     title: 'Our Apps | PG App Studios — iOS Apps on the App Store',
-    description: 'Browse all iOS apps by PG App Studios: Portugal Lifestyle, DinkUp (pickleball), GritVit (fitness dating), Fasting and Walking, Bible quiz, Soccer Legends, Basketball Legends, and more.',
+    description: 'Browse every iOS app by PG App Studios — Portugal Lifestyle, DinkUp, GritVit, Fasting and Walking, quizzes, games and more on the App Store.',
     canonical: 'https://www.pgappstudios.com/our-apps',
-    jsonLd: appJsonLd
+    jsonLd: [
+      appJsonLd,
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pgappstudios.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Our Apps", "item": "https://www.pgappstudios.com/our-apps" }
+        ]
+      }
+    ]
   });
 
   const [activeFilter, setActiveFilter] = useState<'all' | 'ios' | 'web'>('all');

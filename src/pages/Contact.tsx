@@ -8,6 +8,14 @@ const Contact: React.FC = () => {
     title: 'Contact PG App Studios | Get in Touch with Pedro Gregório',
     description: 'Contact PG App Studios — the team behind Portugal Lifestyle, DinkUp, GritVit, and more iOS apps. Reach out at pgmetastudios@gmail.com.',
     canonical: 'https://www.pgappstudios.com/contact',
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pgappstudios.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.pgappstudios.com/contact" }
+      ]
+    },
   });
   const observerRef = React.useRef<IntersectionObserver | null>(null);
 

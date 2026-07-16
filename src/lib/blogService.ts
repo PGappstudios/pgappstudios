@@ -29,7 +29,7 @@ const localPosts: BlogPost[] = [
     category: "Apps",
     featured: true,
     slug: "dinkup-pickleball-app",
-    metaDescription: "DinkUp is the best pickleball app for iOS. Find nearby courts, join open games, host tournaments with automatic brackets, track your ELO ranking, and connect with players in your city.",
+    metaDescription: "DinkUp is the pickleball app for iOS — find nearby courts, join open games, host tournaments and connect with players in your city.",
     metaKeywords: "pickleball app, pickleball courts near me, pickleball tournaments, DinkUp app, find pickleball games, pickleball ranking, pickleball community, iOS pickleball app",
     content: `# DinkUp: The All-in-One Pickleball App for Courts, Games & Tournaments
 
@@ -82,7 +82,7 @@ DinkUp is **free forever** for core features. The Pro tier unlocks unlimited gam
     category: "Apps",
     featured: true,
     slug: "gritvit-fitness-dating-app",
-    metaDescription: "GritVit is a fitness dating app that matches athletes using real workout data from Apple Health and Google Health Connect. No fake profiles — your fitness score speaks for itself.",
+    metaDescription: "GritVit is a fitness dating app that matches athletes using real workout data. No fake profiles — your fitness speaks for itself.",
     metaKeywords: "fitness dating app, dating app for athletes, GritVit, workout dating app, Apple Health dating, fitness score dating, athlete dating app, active lifestyle dating",
     content: `# GritVit: The Fitness Dating App That Matches Athletes by Workout Data
 
@@ -124,7 +124,7 @@ Fitness tracking is always free. Premium features unlock after completing a 7-da
     category: "Apps",
     featured: true,
     slug: "portugal-lifestyle-learn-european-portuguese",
-    metaDescription: "Portugal Lifestyle is the best app to learn European Portuguese. 456+ lessons from A1 to C2, interactive games, cultural content, AIMA visa guides, and offline mode. Download free on iOS and Android.",
+    metaDescription: "Learn European Portuguese with Portugal Lifestyle — lessons from A1 to C2, games, culture and offline mode. Free on iOS and Android.",
     metaKeywords: "learn European Portuguese, European Portuguese app, Portugal Lifestyle app, learn Portuguese Portugal, Portuguese language app, expat Portugal, move to Portugal, Portuguese lessons, CEFR Portuguese",
     content: `# Portugal Lifestyle: The Best App to Learn European Portuguese in 2026
 
@@ -174,7 +174,7 @@ District guides, Portuguese stories, cultural insights, and traditions.
     category: "Apps",
     featured: false,
     slug: "fasting-and-walking-app-ios",
-    metaDescription: "Fasting and Walking is a free iOS app for tracking intermittent fasting and daily steps together. Supports 12–72 hour fasts, OMAD, science-based fasting stages, hydration tracking, and step progress rings.",
+    metaDescription: "Track intermittent fasting and daily steps together — 12–72 hour fasts, OMAD, fasting stages and progress rings. Free on iOS.",
     metaKeywords: "intermittent fasting app, fasting tracker iOS, walking tracker app, fasting and walking app, intermittent fasting iPhone, OMAD tracker, fasting stages app, step counter app, weight loss app iOS",
     content: `# Fasting and Walking: Track Intermittent Fasting & Daily Steps Together
 
@@ -218,7 +218,7 @@ Core tracking is free. All Access available at €1.99 or €22.99.
     category: "Apps",
     featured: false,
     slug: "voice-to-caption-ai-writer-ios",
-    metaDescription: "Voice To Caption AI Writer is a free iOS app that converts your voice into AI-powered social media captions with smart hashtags for Instagram, TikTok, X, LinkedIn, and Threads.",
+    metaDescription: "Convert your voice into AI-powered social captions with smart hashtags for Instagram, TikTok, X, LinkedIn and Threads. Free on iOS.",
     metaKeywords: "voice to caption app, AI caption generator, social media caption app, Instagram caption generator, TikTok caption app, AI writer iOS, voice caption iPhone, hashtag generator app",
     content: `# Voice To Caption AI Writer: Turn Your Voice Into Social Media Captions Instantly
 
@@ -256,7 +256,7 @@ Content creators, social media managers, small business owners, and anyone who f
     category: "Apps",
     featured: false,
     slug: "soccer-legends-quiz-ios",
-    metaDescription: "Soccer Legends is a free iOS football quiz app featuring legendary players, trivia challenges, and the history of the beautiful game. Download free on the App Store.",
+    metaDescription: "A free iOS football quiz featuring legendary players, trivia challenges and the history of the beautiful game.",
     metaKeywords: "soccer quiz app, football quiz iPhone, Soccer Legends app, football trivia iOS, soccer legends game, football knowledge quiz, free football app iPhone, soccer trivia app",
     content: `# Soccer Legends: The Ultimate Football Quiz App for iPhone
 
@@ -296,7 +296,7 @@ Football fans of any age, kids learning the history of the game, competitive fri
     category: "Apps",
     featured: false,
     slug: "basketball-legends-quiz-ios",
-    metaDescription: "Basketball Legends is a free iOS quiz app featuring NBA legends, basketball trivia, and iconic moments from the history of the sport. Download free on the App Store.",
+    metaDescription: "A free iOS quiz app featuring NBA legends, basketball trivia and iconic moments from the history of the sport.",
     metaKeywords: "basketball quiz app, NBA trivia iOS, Basketball Legends app, basketball knowledge quiz, NBA legends game, hoops trivia iPhone, free basketball app, NBA quiz iPhone",
     content: `# Basketball Legends: The iOS Quiz App for NBA History & Hoops Trivia
 
@@ -333,7 +333,7 @@ A free iPhone quiz game covering the full history of professional basketball —
     category: "Apps",
     featured: false,
     slug: "bible-test-your-faith-ios",
-    metaDescription: "Bible: Test Your Faith is a free iOS app featuring daily Bible quiz questions, inspiring verses, and a gentle faith-building experience for Christians of all ages.",
+    metaDescription: "Daily Bible quiz questions, inspiring verses and a gentle faith-building experience for Christians of all ages. Free on iOS.",
     metaKeywords: "Bible quiz app, Bible test app, Christian quiz iOS, Bible verses app, faith app iPhone, daily Bible questions, Bible trivia app, Christian app iOS, Bible study quiz",
     content: `# Bible: Test Your Faith — Daily Bible Questions & Verses for iPhone
 
@@ -367,7 +367,7 @@ Regular churchgoers, parents looking for faith-based apps for children, new beli
     category: "Apps",
     featured: false,
     slug: "baby-learning-games-ios",
-    metaDescription: "Baby Learning Games 1-4 is a free iOS app with colorful educational mini-games for babies and toddlers ages 1-4. Safe, ad-free, and designed to spark early learning. Download on the App Store.",
+    metaDescription: "Colorful educational mini-games for babies and toddlers ages 1–4. Safe and designed to spark early learning. Free on iOS.",
     metaKeywords: "baby learning games app, toddler games iOS, educational app for babies, kids learning app iPhone, baby games iPhone, toddler educational app, learning games 1 year old, educational games toddler iOS",
     content: `# Baby Learning Games 1-4: Educational Mini-Games for Toddlers
 
@@ -405,7 +405,7 @@ Parents of babies and toddlers aged 1–4, grandparents, nursery and daycare wor
     category: "Apps",
     featured: false,
     slug: "aquafasty-diet-plan-ios",
-    metaDescription: "Aquafasty Diet Plan is a free iOS app for tracking water intake, daily steps, and intermittent fasting together. Smart hydration, clean eating support, and healthy habit tracking.",
+    metaDescription: "Track water intake, daily steps and intermittent fasting together — smart hydration and healthy habit tracking. Free on iOS.",
     metaKeywords: "hydration tracker app, water intake app iOS, fasting tracker app, diet plan iPhone, Aquafasty app, weight loss app iOS, intermittent fasting app, step tracker iPhone, healthy habits app",
     content: `# Aquafasty Diet Plan: Track Water, Steps & Fasting Together
 

@@ -47,6 +47,7 @@ const BlogPost = () => {
     title: post ? `${post.title} | PG App Studios Blog` : 'Blog | PG App Studios',
     description: post?.metaDescription || post?.excerpt || 'Guides and updates from PG App Studios.',
     canonical: postUrl,
+    ogType: 'article',
     jsonLd: post
       ? [
           {

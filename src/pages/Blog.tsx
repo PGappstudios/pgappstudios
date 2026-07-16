@@ -18,9 +18,17 @@ const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
   useSEO({
-    title: 'Blog | PG App Studios — iOS App Development Tips & News',
-    description: 'Read the PG App Studios blog for iOS app development insights, updates on our apps, and tips for building successful mobile applications.',
+    title: 'Blog | PG App Studios — Guides on Portuguese, Portugal, Pickleball & More',
+    description: 'Guides from PG App Studios — learn European Portuguese, move to Portugal, find pickleball games, build healthy habits, and get more from our apps.',
     canonical: 'https://www.pgappstudios.com/blog',
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pgappstudios.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pgappstudios.com/blog" }
+      ]
+    },
   });
 
   const [currentPage, setCurrentPage] = useState(1);

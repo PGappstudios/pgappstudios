@@ -12,7 +12,7 @@ const featuredAppIds = [23, 31, 22, 25, 17];
 const Index: React.FC = () => {
   useSEO({
     title: 'PG App Studios | iOS Apps — Learn Portuguese, Pickleball, Fitness, Games & More',
-    description: 'PG App Studios builds iOS apps used daily by real people. Download DinkUp (pickleball), Portugal Lifestyle (learn European Portuguese), Fasting & Walking, and more on the App Store.',
+    description: 'PG App Studios builds iOS apps for everyday life — learn European Portuguese, find pickleball games, track fasting and more. Free on the App Store.',
     canonical: 'https://www.pgappstudios.com/',
     jsonLd: {
       "@context": "https://schema.org",
@@ -21,7 +21,17 @@ const Index: React.FC = () => {
       "url": "https://www.pgappstudios.com",
       "logo": "https://www.pgappstudios.com/PGlogo.png",
       "description": "PG App Studios builds iOS apps used daily by real people — language learning, fitness, sports, games, and more.",
-      "founder": { "@type": "Person", "name": "Pedro Gregório" }
+      "founder": { "@type": "Person", "name": "Pedro Gregório" },
+      "email": "pgmetastudios@gmail.com",
+      "sameAs": [
+        "https://apps.apple.com/pt/developer/pedro-gregorio/id1738279962",
+        "https://x.com/PG_App_Studios",
+        "https://www.instagram.com/pg_app_studios",
+        "https://www.linkedin.com/in/pg-studios-5b0434353/",
+        "https://www.portugal-lifestyle.com/",
+        "https://www.dinkup.app/",
+        "https://www.gritvit.com/"
+      ]
     }
   });
 
