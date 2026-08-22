@@ -37,6 +37,8 @@ const ROUTES = [
   '/apps/basketball-legends',
   '/apps/bible-test-your-faith',
   '/apps/baby-learning-games',
+  '/apps/european-portuguese-quest',
+  '/apps/expats-in-portugal',
 ];
 
 // Blog posts (keep in sync with blogService.ts + blogPostsExtra batches).

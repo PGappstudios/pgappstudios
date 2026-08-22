@@ -245,6 +245,69 @@ export const allApps: App[] = [
     keywords: "document scanner app iphone, scan documents to pdf, text recognition scanner, receipt scanner app, paperless app"
   },
   {
+    id: 33,
+    title: "European Portuguese Quest",
+    description: "Learn European Portuguese in 5 minutes a day — daily challenges with word games, sentence building and real Portugal vocabulary. Fun, fast and genuinely European.",
+    image: "/epq-logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/pt/app/european-portuguese-quest/id6797298776?l=en-GB",
+    slug: "european-portuguese-quest",
+    appCategory: "EducationalApplication",
+    metaTitle: "European Portuguese Quest — Learn Portuguese in 5 Minutes a Day",
+    tagline: "Learn European Portuguese in 5 minutes a day",
+    metaDescription: "European Portuguese Quest makes learning Portugal's language a fun daily habit — 5-game daily challenges with real European Portuguese, not Brazilian. Free on iOS.",
+    longDescription: [
+      "European Portuguese Quest turns language learning into a daily habit you'll actually look forward to. Every day brings a new 5-game Daily Challenge: match words, guess translations, unscramble letters, build real sentences and pick the correct image — five minutes that add up fast.",
+      "Everything is built around authentic European Portuguese — the language as spoken in Portugal, not the Brazilian dialect most apps default to. Whether you're moving to Portugal, planning a trip to Lisbon or Porto, reconnecting with your roots, or just love languages, the Quest keeps you coming back one quick challenge at a time.",
+      "It pairs perfectly with Portugal Lifestyle Pro: use the Quest for your quick daily practice streak, and Portugal Lifestyle Pro for deeper lessons, culture and history."
+    ],
+    features: [
+      { title: "5-minute Daily Challenge", text: "Five quick games a day — word match, translations, unscramble, sentence builder and picture pick." },
+      { title: "Real European Portuguese", text: "Authentic vocabulary and spelling from Portugal — not a Brazilian course." },
+      { title: "Built as a habit", text: "Short, fun sessions designed to keep your streak alive without feeling like study." },
+      { title: "For travellers and movers", text: "Practical words you'll actually use in Lisbon, Porto and beyond." }
+    ],
+    faqs: [
+      { q: "Is European Portuguese Quest free?", a: "Yes, it's free to download on the App Store." },
+      { q: "Does it teach European or Brazilian Portuguese?", a: "European Portuguese — the language as spoken in Portugal. It's built around authentic European vocabulary and spelling." },
+      { q: "How long does a session take?", a: "About 5 minutes — each day brings a fresh 5-game challenge designed to fit into a coffee break." },
+      { q: "How is it different from Portugal Lifestyle Pro?", a: "The Quest is quick daily game practice; Portugal Lifestyle Pro goes deeper with immersive lessons, culture and history. They work great together." }
+    ],
+    keywords: "european portuguese game, learn portuguese 5 minutes a day, portuguese daily challenge, portuguese word games, learn european portuguese app"
+  },
+  {
+    id: 34,
+    title: "Expats In Portugal",
+    description: "A language-learning game where you live the story — walk through a 3D Portuguese town, talk to locals, and learn real European Portuguese one conversation at a time.",
+    image: "/expats-logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/pt/app/expats-in-portugal/id6797305678?l=en-GB",
+    slug: "expats-in-portugal",
+    appCategory: "EducationalApplication",
+    tagline: "Live the story. Learn the language.",
+    metaDescription: "Expats In Portugal is a story-driven language game — explore a 3D Portuguese town and learn real European Portuguese one conversation at a time. 21 chapters. Free on iOS.",
+    longDescription: [
+      "You've just landed in Portugal and you don't speak a word. Your hotel is somewhere in a little vila, the lady at the counter only speaks Portuguese, and your holiday tan is about to become a very real sunburn. Welcome to your new life.",
+      "Expats In Portugal is a language-learning game where you actually live the story. You walk through a sunny 3D Portuguese town, tap the people you meet, and learn real European Portuguese the way expats really learn it — one conversation at a time, across one continuous 21-chapter story.",
+      "It's the most immersive way into the language in our portfolio: where Portugal Lifestyle Pro teaches through lessons and culture, Expats In Portugal drops you into the situations themselves — the counter, the café, the neighbours — and lets the story pull you through."
+    ],
+    features: [
+      { title: "One story, 21 chapters", text: "A continuous story that follows your new life in Portugal — not a pile of random lessons." },
+      { title: "Explore a 3D Portuguese town", text: "Walk the streets, meet the locals, and learn from the conversations you'd really have." },
+      { title: "Real European Portuguese", text: "The language as it's actually spoken in Portugal, learned the way expats really learn it." },
+      { title: "Learning that feels like playing", text: "Progress through the story and the language comes with you, conversation by conversation." }
+    ],
+    faqs: [
+      { q: "Is Expats In Portugal free?", a: "Yes, it's free to download on the App Store." },
+      { q: "What kind of game is it?", a: "A story-driven language game: you explore a 3D Portuguese town, talk to characters, and learn European Portuguese through one continuous 21-chapter story." },
+      { q: "Is it good for people moving to Portugal?", a: "That's exactly who it's built for — the story follows a new arrival, so you learn the situations and phrases expats actually face." },
+      { q: "Does it teach European or Brazilian Portuguese?", a: "European Portuguese — the real language of Portugal, as used in everyday conversations." }
+    ],
+    keywords: "portuguese learning game, expat portugal app, story language game, learn portuguese game ios, european portuguese for expats"
+  },
+  {
     id: 25,
     title: "Fasting and Walking",
     description: "Combine intermittent fasting with daily walking to build healthy habits and reach your wellness goals.",
