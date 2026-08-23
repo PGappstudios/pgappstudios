@@ -36,6 +36,38 @@ export interface App {
 export const allApps: App[] = [
   // iOS Apps (A–Z)
   {
+    id: 35,
+    title: "Aftermath: Healing Companion",
+    description: "The companion that gets you through a breakup, job loss, grief or rejection — one small step a day. Daily check-ins, gentle readings, and a little plant that grows as you heal.",
+    image: "/aftermath-logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/pt/app/aftermath-healing-companion/id6796052485?l=en-GB",
+    slug: "aftermath-healing-companion",
+    appCategory: "HealthApplication",
+    tagline: "One small step a day, through the hard part",
+    metaTitle: "Aftermath — Healing Companion for Breakups, Grief & Loss",
+    metaDescription: "Aftermath helps you through a breakup, job loss, grief or rejection — one small step a day. Daily check-ins, gentle readings and a plant that grows as you heal. Free on iOS.",
+    longDescription: [
+      "Right now, something hurts. A breakup. A job that ended. Someone you lost. A door that closed. Aftermath is the companion that gets you through it — one small step a day.",
+      "Pick your situation — breakup or divorce, job loss, the death of a loved one, rejection, or a friendship that fell apart — and the whole app adapts: your program (30–90 days), the words you read, even the colors. Each day takes about a minute: check in with how your heart feels — storm, rain, clouds, clearing or sun — read a short daily passage written for exactly where you are, and take one tiny, doable step. Have a hard day? The app notices, and meets you there.",
+      "While you heal, your daily check-ins grow a small plant that sways, leafs and finally blooms. Miss a day and it droops — but it never dies, because healing isn't linear and your streak knows it. And for the 2 AM moments, there's the \"I'm struggling\" button."
+    ],
+    features: [
+      { title: "A program shaped to your loss", text: "Breakup, job loss, grief, rejection or a lost friendship — the 30–90 day program, words and colors adapt to your situation." },
+      { title: "One minute a day", text: "A weather check-in for your heart, a short reading for exactly where you are, and one tiny doable step." },
+      { title: "A plant that grows as you heal", text: "Daily check-ins grow it from sprout to bloom. Miss a day and it droops — it never dies." },
+      { title: "The \"I'm struggling\" button", text: "For the 2 AM moments — immediate comfort when the hard day arrives without warning." }
+    ],
+    faqs: [
+      { q: "Is Aftermath free?", a: "Yes, it's free to download on the App Store." },
+      { q: "What situations does it support?", a: "Breakup or divorce, job loss, the death of a loved one, rejection, and friendships that ended — the whole program adapts to what you're going through." },
+      { q: "How much time does it take each day?", a: "About one minute: a quick check-in, a short reading and one small step. Gentle by design." },
+      { q: "Is Aftermath a replacement for therapy?", a: "No. Aftermath is a supportive daily companion, not professional care. If you're struggling deeply, please also reach out to a mental-health professional or a support line." }
+    ],
+    keywords: "breakup recovery app, healing app, grief support app, get over a breakup, heartbreak app, job loss support, daily healing companion"
+  },
+  {
     id: 10,
     title: "Aquafasty Diet Plan",
     description: "Track water, steps & fasting with Aquafasty! Start your weight loss journey today with smart hydration, healthy habits, and clean eating support.",

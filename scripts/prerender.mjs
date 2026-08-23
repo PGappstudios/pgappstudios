@@ -23,6 +23,7 @@ const ROUTES = [
   '/our-apps',
   '/blog',
   '/contact',
+  '/apps/aftermath-healing-companion',
   '/apps/portugal-lifestyle-pro',
   '/apps/portugal-lifestyle-learn-it',
   '/apps/dinkup',
