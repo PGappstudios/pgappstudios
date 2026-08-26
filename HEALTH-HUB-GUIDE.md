@@ -93,7 +93,7 @@ Notes on the fields that matter most:
 
 ### Step 3: register the URL in two places
 
-1. `scripts/prerender.mjs`, add the slug to `HEALTH_APP_SLUGS`.
+1. `scripts/routes.mjs`, add the slug to `HEALTH_APP_SLUGS`.
 2. `public/sitemap.xml`, copy one of the `/health/apps/...` lines and change
    the slug and the `lastmod` date.
 
@@ -103,7 +103,7 @@ Notes on the fields that matter most:
 npm run build
 ```
 
-You should see your route in the prerender list. Then commit and push.
+You should see the static generation count include your route. Then commit and push.
 
 ---
 
@@ -157,7 +157,7 @@ Rules that keep the page working:
 - Health writing rule: say plainly that it is not medical care and point people
   to a professional. Both existing articles do this in the opening.
 
-Then add the slug to `HEALTH_GUIDE_SLUGS` in `scripts/prerender.mjs` and add a
+Then add the slug to `HEALTH_GUIDE_SLUGS` in `scripts/routes.mjs` and add a
 line to `public/sitemap.xml`, same as for apps.
 
 ---
