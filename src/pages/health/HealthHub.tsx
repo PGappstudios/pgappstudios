@@ -67,7 +67,7 @@ const HealthHub: React.FC = () => {
       {/* Problem first navigation */}
       <section className="h-wrap pb-6" aria-labelledby="find-your-app">
         <h2 id="find-your-app" className="text-center mb-3">What are you <span className="gradient-text">dealing with</span>?</h2>
-        <div className="w-24 h-1 bg-pg-purple mx-auto mb-5 rounded-full shadow-[0_0_10px_rgba(184,41,247,0.7)]" />
+        <div className="w-24 h-1 mx-auto mb-5 rounded-full" style={{ background: 'var(--h-accent)', opacity: 0.5 }} />
         <p className="h-muted text-center mb-10">Pick the sentence that sounds most like your week.</p>
 
         <div className="grid gap-5 sm:grid-cols-2">

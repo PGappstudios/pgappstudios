@@ -56,7 +56,7 @@ const HealthAbout: React.FC = () => {
             width={72}
             height={72}
             className="rounded-2xl flex-none"
-            style={{ width: 72, height: 72, boxShadow: '0 0 22px rgba(184,41,247,0.4)' }}
+            style={{ width: 72, height: 72, boxShadow: '0 8px 22px rgba(0,0,0,0.4)' }}
           />
           <div>
             <p className="font-semibold text-[17px]">Pedro Gregório</p>

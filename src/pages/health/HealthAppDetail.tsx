@@ -78,7 +78,7 @@ const HealthAppDetail: React.FC = () => {
           width={104}
           height={104}
           className="w-26 h-26 mx-auto rounded-3xl mb-6 hero-phone"
-          style={{ width: 104, height: 104, boxShadow: '0 0 30px rgba(184,41,247,0.45)' }}
+          style={{ width: 104, height: 104, boxShadow: '0 10px 30px rgba(0,0,0,0.45)' }}
         />
         <h1 className="max-w-2xl mx-auto animate-fade-in">
           <span className="gradient-text">{app.name}</span>

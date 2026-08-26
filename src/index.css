@@ -252,13 +252,33 @@
    neon purple accents, glass cards and the shared Inter type.
    ============================================================ */
 
+/* Calmer take on the studio gradient. Same idea, less neon. */
+body.health-mode {
+  background: linear-gradient(130deg, #171233 0%, #1d1740 28%, #141027 58%, #221a4a 88%, #171233 100%);
+  background-attachment: fixed;
+}
+body.health-mode::before {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.13) 0%, transparent 70%);
+}
+body.health-mode::after {
+  background: radial-gradient(circle, rgba(99, 132, 214, 0.10) 0%, transparent 70%);
+}
+
+/* Softer headline gradient than the studio's purple to hot pink. */
+.health-scope .gradient-text {
+  background-image: linear-gradient(to right, #A78BFA, #D8B4FE);
+}
+
 .health-scope {
   --h-text: #ffffff;
   --h-muted: #9ca3af;
   --h-line: rgba(255, 255, 255, 0.1);
-  --h-accent: #B829F7;
-  --h-accent-ink: #F72AA7;
-  --h-accent-soft: rgba(184, 41, 247, 0.12);
+  /* Same violet family as the studio, lower saturation and glow. This
+     section covers grief, breakups and addiction, so it stays quieter. */
+  --h-accent: #A78BFA;
+  --h-accent-ink: #C4B5FD;
+  --h-accent-soft: rgba(167, 139, 250, 0.12);
+  --h-glow: rgba(167, 139, 250, 0.22);
   --h-radius: 1rem;
   color: var(--h-text);
   font-size: 17px;
@@ -291,8 +311,8 @@
 }
 .h-card:hover {
   background: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 0 20px rgba(184, 41, 247, 0.4);
-  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--h-glow);
+  transform: translateY(-3px);
   text-decoration: none;
 }
 
@@ -308,15 +328,16 @@
 }
 .h-btn::before {
   content: ''; position: absolute; inset: 0; border-radius: 9999px;
-  background: linear-gradient(135deg, #B829F7, #F72AA7, #B829F7);
+  background: linear-gradient(135deg, #A78BFA, #C4B5FD);
   opacity: 0; transition: opacity .3s ease;
 }
 .h-btn:hover::before { opacity: 1; }
-.h-btn:hover { box-shadow: 0 0 22px rgba(184, 41, 247, .6); transform: translateY(-1px); }
+.h-btn:hover { box-shadow: 0 4px 18px rgba(167, 139, 250, .28); transform: translateY(-1px); }
 .h-btn > * { position: relative; z-index: 1; }
 .health-scope a.h-btn,
-.health-scope a.h-btn:hover,
 .health-scope a.h-btn:visited { color: #fff; text-decoration: none; }
+/* The hover fill is light, so the label flips to dark ink for contrast. */
+.h-btn:hover, .health-scope a.h-btn:hover { color: #1b1235; }
 
 .h-btn-quiet {
   display: inline-flex; align-items: center; gap: 8px;
@@ -333,7 +354,7 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(184, 41, 247, 0.25);
+  border: 1px solid rgba(167, 139, 250, 0.22);
   border-radius: var(--h-radius);
   padding: 20px 24px;
   font-size: 15.5px;
@@ -373,10 +394,10 @@
   background: #0b0518;
   width: 190px; flex: 0 0 auto;
   scroll-snap-align: center;
-  box-shadow: 0 0 22px rgba(184, 41, 247, 0.22);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4);
   transition: transform .35s ease, box-shadow .35s ease;
 }
-.h-shot:hover { transform: translateY(-8px); box-shadow: 0 0 34px rgba(184, 41, 247, 0.5); }
+.h-shot:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--h-glow); }
 .h-shots { display: flex; gap: 18px; overflow-x: auto; padding: 10px 2px 22px; scroll-snap-type: x mandatory; }
 
 .h-sticky-cta {
