@@ -7,6 +7,12 @@ import Footer from '@/components/Footer';
 import { BlogService, BlogPost as BlogPostType } from '@/lib/blogService';
 import { useSEO } from '@/lib/useSEO';
 
+/**
+ * Some older posts start their markdown with the article title as an H1, which
+ * duplicated the H1 the page already renders. Drop that first heading.
+ */
+const stripLeadingH1 = (md: string) => md.replace(/^\s*#\s+.*(\r?\n)+/, '');
+
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState<BlogPostType | null>(null);
@@ -304,7 +310,7 @@ const BlogPost = () => {
                   ),
                 }}
               >
-                {post.content}
+                {stripLeadingH1(post.content)}
               </ReactMarkdown>
             </div>
           </article>

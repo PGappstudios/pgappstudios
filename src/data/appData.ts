@@ -47,7 +47,7 @@ export const allApps: App[] = [
     appCategory: "HealthApplication",
     tagline: "One small step a day, through the hard part",
     metaTitle: "Aftermath — Healing Companion for Breakups, Grief & Loss",
-    metaDescription: "Aftermath helps you through a breakup, job loss, grief or rejection — one small step a day. Daily check-ins, gentle readings and a plant that grows as you heal. Free on iOS.",
+    metaDescription: "Get through a breakup, job loss or grief one small step a day: daily check-ins, gentle readings and a plant that grows as you heal. Free on iOS.",
     longDescription: [
       "Right now, something hurts. A breakup. A job that ended. Someone you lost. A door that closed. Aftermath is the companion that gets you through it — one small step a day.",
       "Pick your situation — breakup or divorce, job loss, the death of a loved one, rejection, or a friendship that fell apart — and the whole app adapts: your program (30–90 days), the words you read, even the colors. Each day takes about a minute: check in with how your heart feels — storm, rain, clouds, clearing or sun — read a short daily passage written for exactly where you are, and take one tiny, doable step. Have a hard day? The app notices, and meets you there.",
@@ -319,7 +319,7 @@ export const allApps: App[] = [
     slug: "expats-in-portugal",
     appCategory: "EducationalApplication",
     tagline: "Live the story. Learn the language.",
-    metaDescription: "Expats In Portugal is a story-driven language game — explore a 3D Portuguese town and learn real European Portuguese one conversation at a time. 21 chapters. Free on iOS.",
+    metaDescription: "A story-driven language game: explore a 3D Portuguese town and learn real European Portuguese one conversation at a time. 21 chapters. Free on iOS.",
     longDescription: [
       "You've just landed in Portugal and you don't speak a word. Your hotel is somewhere in a little vila, the lady at the counter only speaks Portuguese, and your holiday tan is about to become a very real sunburn. Welcome to your new life.",
       "Expats In Portugal is a language-learning game where you actually live the story. You walk through a sunny 3D Portuguese town, tap the people you meet, and learn real European Portuguese the way expats really learn it — one conversation at a time, across one continuous 21-chapter story.",
