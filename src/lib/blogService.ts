@@ -436,6 +436,11 @@ Anyone starting a weight loss journey, intermittent fasters who want to track hy
 ];
 
 export class BlogService {
+  /** Synchronous version, so prerendered markup and first client render match. */
+  static getAllPostsSync(): BlogPost[] {
+    return [...localPosts, ...extraPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }
+
   static async getAllPosts(): Promise<BlogPost[]> {
     return [...localPosts, ...extraPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }

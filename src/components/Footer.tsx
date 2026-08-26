@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img
                 src="/lovable-uploads/eee92472-0f2a-4f4e-a56e-d489de6b1130.png"
-                alt="PG App Studios"
+                alt=""
                 className="h-8 w-8"
               />
               <span className="text-white text-xl font-medium">PG App Studios</span>
@@ -92,8 +92,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} PG App Studios. All rights reserved.</p>
-          <p className="text-gray-600 text-xs">Built in Lisbon, Portugal 🇵🇹</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} PG App Studios. All rights reserved.</p>
+          <p className="text-gray-400 text-xs">Built in Lisbon, Portugal 🇵🇹</p>
         </div>
       </div>
     </footer>

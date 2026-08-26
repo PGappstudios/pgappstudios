@@ -38,6 +38,7 @@ const HealthShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }, []);
 
   return (
+    <>
     <div className="health-scope min-h-screen flex flex-col">
       <a href="#health-main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">
         Skip to content
@@ -68,9 +69,11 @@ const HealthShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div className="h-wrap py-14">
         <SupportNotice />
       </div>
-
-      <Footer />
     </div>
+    {/* Outside .health-scope on purpose: the shared footer keeps the studio's
+        dark styling, and the section's colour rules must not reach into it. */}
+    <Footer />
+    </>
   );
 };
 

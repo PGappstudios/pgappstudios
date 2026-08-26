@@ -37,11 +37,7 @@ const Index: React.FC = () => {
   });
 
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const [recentPosts, setRecentPosts] = React.useState<any[]>([]);
-
-  useEffect(() => {
-    BlogService.getAllPosts().then(posts => setRecentPosts(posts.slice(0, 3)));
-  }, []);
+  const [recentPosts] = React.useState<any[]>(() => BlogService.getAllPostsSync().slice(0, 3));
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver((entries) => {
