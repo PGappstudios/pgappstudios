@@ -32,8 +32,8 @@ const Blog = () => {
   });
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(() => BlogService.getAllPostsSync());
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Fetch blog posts on component mount

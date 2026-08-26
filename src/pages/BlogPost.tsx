@@ -15,8 +15,8 @@ const stripLeadingH1 = (md: string) => md.replace(/^\s*#\s+.*(\r?\n)+/, '');
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState<BlogPostType | null>(() => (id ? BlogService.getPostBySlugSync(id) : null));
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {

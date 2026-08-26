@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { isServer, setSSRHead } from './ssrHead';
 
 interface SEOProps {
   title: string;
@@ -10,6 +11,12 @@ interface SEOProps {
 }
 
 export function useSEO({ title, description, canonical, ogImage, ogType, jsonLd }: SEOProps) {
+  // Static generation has no document and never runs effects, so hand the
+  // data to the collector instead and let the build write the tags.
+  if (isServer) {
+    setSSRHead({ title, description, canonical, ogImage, ogType, jsonLd });
+  }
+
   useEffect(() => {
     // Title
     document.title = title;

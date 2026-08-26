@@ -6,6 +6,9 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  // Compare without a trailing slash: /our-apps and /our-apps/ are the same
+  // page, and treating them differently also broke hydration on static pages.
+  const path = location.pathname.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,11 +42,11 @@ const Navbar: React.FC = () => {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center space-x-8">
-          <NavLink to="/" active={location.pathname === "/"}>Home</NavLink>
-          <NavLink to="/our-apps" active={location.pathname === "/our-apps"}>Our Apps</NavLink>
-          <NavLink to="/health" active={location.pathname.startsWith("/health")}>Health</NavLink>
-          <NavLink to="/blog" active={location.pathname === "/blog"}>Blog</NavLink>
-          <NavLink to="/contact" active={location.pathname === "/contact"}>Contact</NavLink>
+          <NavLink to="/" active={path === "/"}>Home</NavLink>
+          <NavLink to="/our-apps" active={path === "/our-apps"}>Our Apps</NavLink>
+          <NavLink to="/health" active={path.startsWith("/health")}>Health</NavLink>
+          <NavLink to="/blog" active={path === "/blog"}>Blog</NavLink>
+          <NavLink to="/contact" active={path === "/contact"}>Contact</NavLink>
         </div>
 
         {/* Mobile menu button */}
@@ -68,11 +71,11 @@ const Navbar: React.FC = () => {
       {menuOpen && (
         <div className="md:hidden mt-4 pb-4 border-t border-white/10">
           <div className="flex flex-col space-y-4 pt-4 px-2">
-            <MobileNavLink to="/" active={location.pathname === "/"}>Home</MobileNavLink>
-            <MobileNavLink to="/our-apps" active={location.pathname === "/our-apps"}>Our Apps</MobileNavLink>
-            <MobileNavLink to="/health" active={location.pathname.startsWith("/health")}>Health</MobileNavLink>
-            <MobileNavLink to="/blog" active={location.pathname === "/blog"}>Blog</MobileNavLink>
-            <MobileNavLink to="/contact" active={location.pathname === "/contact"}>Contact</MobileNavLink>
+            <MobileNavLink to="/" active={path === "/"}>Home</MobileNavLink>
+            <MobileNavLink to="/our-apps" active={path === "/our-apps"}>Our Apps</MobileNavLink>
+            <MobileNavLink to="/health" active={path.startsWith("/health")}>Health</MobileNavLink>
+            <MobileNavLink to="/blog" active={path === "/blog"}>Blog</MobileNavLink>
+            <MobileNavLink to="/contact" active={path === "/contact"}>Contact</MobileNavLink>
           </div>
         </div>
       )}

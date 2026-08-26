@@ -445,6 +445,11 @@ export class BlogService {
     return [...localPosts, ...extraPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
+  /** Synchronous lookup, used for static rendering and first paint. */
+  static getPostBySlugSync(slug: string): BlogPost | null {
+    return this.getAllPostsSync().find(p => p.slug === slug || p.id === slug) || null;
+  }
+
   static async getPostBySlug(slug: string): Promise<BlogPost | null> {
     const posts = await this.getAllPosts();
     return posts.find(post => post.slug === slug || post.id === slug) || null;

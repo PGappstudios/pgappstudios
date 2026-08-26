@@ -58,7 +58,7 @@ const OurApps: React.FC = () => {
   });
 
   const [activeFilter, setActiveFilter] = useState<'all' | 'ios' | 'web'>('all');
-  const [visibleApps, setVisibleApps] = useState<App[]>([]);
+  const [visibleApps, setVisibleApps] = useState<App[]>(() => allApps);
   
   useEffect(() => {
     filterApps(activeFilter);
