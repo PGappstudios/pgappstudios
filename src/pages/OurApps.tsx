@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AppCard from '@/components/AppCard';
@@ -117,6 +118,34 @@ const OurApps: React.FC = () => {
         </div>
       </section>
       
+      {/* Health hub entry point */}
+      <section className="px-6 pb-2">
+        <div className="max-w-6xl mx-auto">
+          <Link
+            to="/health"
+            className="glass-card block p-6 md:p-7 hover:bg-white/10 transition-all duration-300 group"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex-1">
+                <p className="text-pg-purple text-xs font-semibold uppercase tracking-widest mb-2">
+                  PG Health
+                </p>
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-1">
+                  Looking for help with something harder?
+                </h2>
+                <p className="text-gray-400 text-sm md:text-base">
+                  Our health, fitness and mental health apps live together in one place, grouped by
+                  what you are actually going through.
+                </p>
+              </div>
+              <span className="text-pg-purple font-semibold whitespace-nowrap group-hover:text-pg-pink transition-colors">
+                Visit PG Health →
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Filter Tabs */}
       <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">

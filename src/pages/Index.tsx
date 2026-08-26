@@ -25,7 +25,7 @@ const Index: React.FC = () => {
       "founder": { "@type": "Person", "name": "Pedro Gregório" },
       "email": "pgmetastudios@gmail.com",
       "sameAs": [
-        "https://apps.apple.com/pt/developer/pedro-gregorio/id1738279962",
+        "https://apps.apple.com/pt/developer/pedro-gregorio/id1779930740",
         "https://x.com/PG_App_Studios",
         "https://www.instagram.com/pg_app_studios",
         "https://www.linkedin.com/in/pg-studios-5b0434353/",

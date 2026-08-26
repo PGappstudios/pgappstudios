@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               <span className="text-white text-xl font-medium">PG App Studios</span>
             </Link>
             <p className="text-gray-400 text-sm">
-              iOS apps for everyday life — language learning, fitness, sports, games, and more. All free on the App Store.
+              iOS apps for everyday life: language learning, fitness, sports, games and more. All free on the App Store.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="https://x.com/PG_App_Studios" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors" aria-label="X (Twitter)">
@@ -57,10 +57,10 @@ const Footer: React.FC = () => {
                 <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp — Pickleball</a>
+                <a href="https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp for Pickleball</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting & Walking</a>
+                <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting and Walking</a>
               </li>
               <li>
                 <Link to="/our-apps" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">View all on App Store →</Link>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">More Apps</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://www.gritvit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">GritVit — Fitness Dating</a>
+                <a href="https://www.gritvit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Gritvit Fitness Community</a>
               </li>
               <li>
                 <a href="https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Aquafasty Diet Plan</a>

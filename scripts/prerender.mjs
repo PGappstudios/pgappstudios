@@ -90,6 +90,17 @@ const BLOG_SLUGS = [
 
 for (const slug of BLOG_SLUGS) ROUTES.push(`/blog/${slug}`);
 
+// PG Health hub (/health). Keep in sync with src/data/healthData.ts
+// and src/data/healthArticles.ts.
+const HEALTH_APP_SLUGS = ['aftermath', 'fasting-and-walking', 'aquafasty', 'gritvit', 'cyclebuddy'];
+const HEALTH_GUIDE_SLUGS = [
+  'first-weeks-after-a-breakup',
+  'start-walking-and-fasting-without-overdoing-it',
+];
+ROUTES.push('/health', '/health/guides', '/health/about');
+for (const slug of HEALTH_APP_SLUGS) ROUTES.push(`/health/apps/${slug}`);
+for (const slug of HEALTH_GUIDE_SLUGS) ROUTES.push(`/health/guides/${slug}`);
+
 async function main() {
   const server = await preview({ preview: { port: PORT, strictPort: true } });
   const base = `http://localhost:${PORT}`;
