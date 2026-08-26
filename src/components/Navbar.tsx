@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center space-x-8">
           <NavLink to="/" active={location.pathname === "/"}>Home</NavLink>
           <NavLink to="/our-apps" active={location.pathname === "/our-apps"}>Our Apps</NavLink>
+          <NavLink to="/health" active={location.pathname.startsWith("/health")}>Health</NavLink>
           <NavLink to="/blog" active={location.pathname === "/blog"}>Blog</NavLink>
           <NavLink to="/contact" active={location.pathname === "/contact"}>Contact</NavLink>
         </div>
@@ -69,6 +70,7 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col space-y-4 pt-4 px-2">
             <MobileNavLink to="/" active={location.pathname === "/"}>Home</MobileNavLink>
             <MobileNavLink to="/our-apps" active={location.pathname === "/our-apps"}>Our Apps</MobileNavLink>
+            <MobileNavLink to="/health" active={location.pathname.startsWith("/health")}>Health</MobileNavLink>
             <MobileNavLink to="/blog" active={location.pathname === "/blog"}>Blog</MobileNavLink>
             <MobileNavLink to="/contact" active={location.pathname === "/contact"}>Contact</MobileNavLink>
           </div>

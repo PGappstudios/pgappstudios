@@ -1,7 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SUPPORT_NOTICE, SUPPORT_LINK } from '@/data/healthData';
+
+/**
+ * Reveals `.animate-on-scroll` elements as they enter the viewport, the same
+ * way the rest of the site does.
+ */
+export function useScrollReveal(deps: unknown[] = []) {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slide-up');
+            observerRef.current?.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const els = document.querySelectorAll('.animate-on-scroll');
+    els.forEach((el) => observerRef.current?.observe(el));
+    return () => els.forEach((el) => observerRef.current?.unobserve(el));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
+}
 
 /** Quiet, reusable notice. Calm styling on purpose, never a red alarm. */
 export const SupportNotice: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -28,8 +54,8 @@ export const Breadcrumbs: React.FC<{ trail: { label: string; to?: string }[] }> 
 );
 
 /**
- * Wraps every /health page. Swaps the studio's violet gradient for the calm
- * health palette while mounted, and restores it on the way out.
+ * Wraps every /health page. Uses the studio navbar, gradient background and
+ * footer so the section looks like the rest of pgappstudios.com.
  */
 const HealthShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -39,40 +65,19 @@ const HealthShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <>
-    <div className="health-scope min-h-screen flex flex-col">
-      <a href="#health-main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">
-        Skip to content
-      </a>
+      <div className="health-scope min-h-screen flex flex-col">
+        <Navbar />
+        <main id="health-main" className="flex-1 pt-24">
+          {children}
+        </main>
 
-      <header
-        className="sticky top-0 z-40 border-b"
-        style={{ background: 'var(--h-surface)', borderColor: 'var(--h-line)' }}
-      >
-        <div className="h-wrap flex items-center gap-6 h-16">
-          <Link to="/health" className="flex items-center gap-2.5 font-semibold" style={{ color: 'var(--h-text)' }}>
-            <img src="/PGlogo.png" alt="" width={30} height={30} className="rounded-lg" loading="eager" />
-            <span>
-              PG Health
-            </span>
-          </Link>
-          <nav className="ml-auto flex items-center gap-5 text-[15px]">
-            <Link to="/health" className="hidden sm:inline">Apps</Link>
-            <Link to="/health/guides">Guides</Link>
-            <Link to="/health/about">About</Link>
-            <Link to="/" className="h-muted hidden md:inline">All PG apps</Link>
-          </nav>
+        <div className="h-wrap py-14">
+          <SupportNotice />
         </div>
-      </header>
-
-      <main id="health-main" className="flex-1">{children}</main>
-
-      <div className="h-wrap py-14">
-        <SupportNotice />
       </div>
-    </div>
-    {/* Outside .health-scope on purpose: the shared footer keeps the studio's
-        dark styling, and the section's colour rules must not reach into it. */}
-    <Footer />
+      {/* Outside .health-scope on purpose: the shared footer keeps its own
+          styling, and the section's colour rules must not reach into it. */}
+      <Footer />
     </>
   );
 };

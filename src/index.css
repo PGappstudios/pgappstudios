@@ -190,6 +190,12 @@
   .phone-bob-item {
     animation: none !important;
   }
+
+  /* Never leave scroll revealed content invisible when animation is off. */
+  .animate-on-scroll {
+    opacity: 1 !important;
+    animation: none !important;
+  }
 }
 
 @layer utilities {
@@ -242,139 +248,145 @@
 
 /* ============================================================
    PG Health Hub (/health)
-   A calm, warm, light section that lives on the same domain but
-   reads as its own place. Scoped by body.health-mode so it fully
-   overrides the studio's violet gradient and aurora blobs.
+   Same look as the rest of pgappstudios.com: the studio gradient,
+   neon purple accents, glass cards and the shared Inter type.
    ============================================================ */
 
-body.health-mode {
-  background: #FBF9F6;
-  animation: none;
-  /* One consistent calm palette: this section is deliberately light so it
-     always reads as its own place next to the dark studio site. */
-  color-scheme: light;
-}
-body.health-mode::before,
-body.health-mode::after { display: none; }
-
-
 .health-scope {
-  --h-bg: #FBF9F6;
-  --h-surface: #FFFFFF;
-  --h-text: #23201D;
-  --h-muted: #6B6560;
-  --h-line: #E9E3DC;
-  --h-accent: #2F6F62;
-  --h-accent-ink: #235348;
-  --h-accent-soft: #E9F1EE;
-  --h-radius: 16px;
+  --h-text: #ffffff;
+  --h-muted: #9ca3af;
+  --h-line: rgba(255, 255, 255, 0.1);
+  --h-accent: #B829F7;
+  --h-accent-ink: #F72AA7;
+  --h-accent-soft: rgba(184, 41, 247, 0.12);
+  --h-radius: 1rem;
   color: var(--h-text);
   font-size: 17px;
   line-height: 1.65;
 }
 
-
-.health-scope h1, .health-scope h2, .health-scope h3 {
-  color: var(--h-text);
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-.health-scope h1 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; }
-.health-scope h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 650; }
-.health-scope h3 { font-size: 1.2rem; font-weight: 650; }
-.health-scope p { color: var(--h-text); }
+.health-scope h1,
+.health-scope h2,
+.health-scope h3 { color: #fff; letter-spacing: -0.02em; line-height: 1.15; font-weight: 700; }
+.health-scope h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); }
+.health-scope h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+.health-scope h3 { font-size: 1.2rem; }
+.health-scope p { color: #d1d5db; }
 .health-scope .h-muted { color: var(--h-muted); }
 
-.health-scope a { color: var(--h-accent-ink); }
-.health-scope a:hover { color: var(--h-accent); }
+.health-scope a { color: var(--h-accent); transition: color .3s ease; }
+.health-scope a:hover { color: var(--h-accent-ink); }
 
-.h-wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-.h-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.h-wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.h-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
+/* Glass card, matching .glass-card on the rest of the site */
 .h-card {
-  background: var(--h-surface);
-  border: 1px solid var(--h-line);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--h-radius);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition: transform .5s ease, box-shadow .5s ease, background .3s ease;
 }
 .h-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--h-accent);
-  box-shadow: 0 10px 30px rgba(35, 32, 29, .08);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 20px rgba(184, 41, 247, 0.4);
+  transform: translateY(-4px);
+  text-decoration: none;
 }
 
+/* Neon button, same treatment as .neon-button */
 .h-btn {
+  position: relative;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  background: var(--h-accent); color: #fff;
-  padding: 14px 26px; border-radius: 999px;
-  font-weight: 600; font-size: 16px; border: 0; cursor: pointer;
-  transition: background .2s ease, transform .2s ease;
+  padding: 13px 28px; border-radius: 9999px;
+  font-weight: 600; font-size: 16px; cursor: pointer;
+  color: #fff; border: 1px solid var(--h-accent);
+  background: transparent; overflow: hidden;
+  transition: box-shadow .3s ease, transform .2s ease;
 }
-.h-btn:hover { background: var(--h-accent-ink); color: #fff; text-decoration: none; transform: translateY(-1px); }
-/* `.health-scope a` is more specific than `.h-btn`, so anchors styled as
-   buttons need this or they inherit the link colour and lose contrast. */
+.h-btn::before {
+  content: ''; position: absolute; inset: 0; border-radius: 9999px;
+  background: linear-gradient(135deg, #B829F7, #F72AA7, #B829F7);
+  opacity: 0; transition: opacity .3s ease;
+}
+.h-btn:hover::before { opacity: 1; }
+.h-btn:hover { box-shadow: 0 0 22px rgba(184, 41, 247, .6); transform: translateY(-1px); }
+.h-btn > * { position: relative; z-index: 1; }
 .health-scope a.h-btn,
 .health-scope a.h-btn:hover,
-.health-scope a.h-btn:visited { color: #ffffff; }
+.health-scope a.h-btn:visited { color: #fff; text-decoration: none; }
+
 .h-btn-quiet {
   display: inline-flex; align-items: center; gap: 8px;
-  background: transparent; color: var(--h-accent-ink);
-  padding: 13px 24px; border-radius: 999px; font-weight: 600;
-  border: 1px solid var(--h-line);
+  padding: 12px 26px; border-radius: 0.5rem; font-weight: 600;
+  color: #fff; border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color .3s ease, color .3s ease;
 }
-.h-btn-quiet:hover { border-color: var(--h-accent); text-decoration: none; }
+.health-scope a.h-btn-quiet { color: #fff; }
+.h-btn-quiet:hover { border-color: var(--h-accent); color: var(--h-accent); text-decoration: none; }
+.health-scope a.h-btn-quiet:hover { color: var(--h-accent); }
 
+/* Support notice: quiet on purpose, never an alarm */
 .h-support {
-  background: var(--h-accent-soft);
-  border: 1px solid var(--h-line);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 41, 247, 0.25);
   border-radius: var(--h-radius);
   padding: 20px 24px;
-  color: var(--h-text);
   font-size: 15.5px;
 }
-.h-support p { margin: 0; color: var(--h-text); }
+.h-support p { margin: 0; color: var(--h-muted); }
 .h-support a { text-decoration: underline; }
 
-.h-crumbs { font-size: 14px; color: var(--h-muted); padding: 20px 0 0; }
-.h-crumbs a { color: var(--h-muted); }
+.h-crumbs { font-size: 14px; color: #6b7280; padding: 0; }
+.h-crumbs a { color: #6b7280; }
 .h-crumbs a:hover { color: var(--h-accent); }
 
-.h-prose { font-size: 17.5px; line-height: 1.75; }
-.h-prose h2 { margin: 2em 0 .6em; scroll-margin-top: 90px; }
+.h-prose { font-size: 17.5px; line-height: 1.8; color: #d1d5db; }
+.h-prose h2 { margin: 2em 0 .6em; scroll-margin-top: 100px; }
 .h-prose h3 { margin: 1.6em 0 .5em; }
-.h-prose p { margin: 0 0 1.15rem; }
+.h-prose p { margin: 0 0 1.15rem; color: #d1d5db; }
+.h-prose strong { color: #fff; }
 .h-prose ul, .h-prose ol { padding-left: 1.4em; margin: 0 0 1.2rem; }
 .h-prose li { margin: .45em 0; }
 .h-prose blockquote {
-  margin: 1.6rem 0; padding: 4px 0 4px 20px;
+  margin: 1.6rem 0; padding: 6px 0 6px 20px;
   border-left: 3px solid var(--h-accent);
   color: var(--h-muted); font-style: italic;
 }
 .h-prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 16px; }
 .h-prose th, .h-prose td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--h-line); }
-.h-prose th { background: var(--h-accent-soft); font-weight: 650; }
+.h-prose th { background: var(--h-accent-soft); color: #fff; font-weight: 650; }
 .h-prose img { border-radius: 12px; }
 
-.h-toc { position: sticky; top: 90px; font-size: 15px; }
-.h-toc a { display: block; padding: 6px 0; color: var(--h-muted); border-left: 2px solid var(--h-line); padding-left: 14px; }
+.h-toc { position: sticky; top: 100px; font-size: 15px; }
+.h-toc a { display: block; padding: 7px 0 7px 14px; color: var(--h-muted); border-left: 2px solid var(--h-line); }
 .h-toc a:hover { color: var(--h-accent); border-left-color: var(--h-accent); text-decoration: none; }
 
+/* App screenshots in a lit phone frame */
 .h-shot {
-  border-radius: 18px;
-  border: 1px solid var(--h-line);
-  background: var(--h-surface);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0b0518;
   width: 190px; flex: 0 0 auto;
   scroll-snap-align: center;
+  box-shadow: 0 0 22px rgba(184, 41, 247, 0.22);
+  transition: transform .35s ease, box-shadow .35s ease;
 }
-.h-shots { display: flex; gap: 16px; overflow-x: auto; padding: 6px 2px 18px; scroll-snap-type: x mandatory; }
+.h-shot:hover { transform: translateY(-8px); box-shadow: 0 0 34px rgba(184, 41, 247, 0.5); }
+.h-shots { display: flex; gap: 18px; overflow-x: auto; padding: 10px 2px 22px; scroll-snap-type: x mandatory; }
 
 .h-sticky-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   display: none; align-items: center; gap: 12px;
-  background: var(--h-surface);
-  border-top: 1px solid var(--h-line);
+  background: rgba(10, 1, 24, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-  box-shadow: 0 -4px 20px rgba(35,32,29,.08);
 }
 .h-sticky-cta .h-btn { flex: 1; }
 @media (max-width: 820px) {
@@ -384,11 +396,11 @@ body.health-mode::after { display: none; }
 
 .health-scope :focus-visible {
   outline: 3px solid var(--h-accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 6px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .h-card, .h-btn { transition: none; }
-  .h-card:hover, .h-btn:hover { transform: none; }
+  .h-card, .h-btn, .h-shot { transition: none; }
+  .h-card:hover, .h-btn:hover, .h-shot:hover { transform: none; }
 }

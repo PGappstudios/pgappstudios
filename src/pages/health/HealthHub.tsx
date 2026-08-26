@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HealthShell from '@/components/health/HealthShell';
+import HealthShell, { useScrollReveal } from '@/components/health/HealthShell';
 import { healthApps } from '@/data/healthData';
 import { healthArticles } from '@/data/healthArticles';
 import { useSEO } from '@/lib/useSEO';
@@ -42,6 +42,8 @@ const HealthHub: React.FC = () => {
     ],
   });
 
+  useScrollReveal();
+
   const latest = [...healthArticles]
     .sort((a, b) => (a.publishedDate < b.publishedDate ? 1 : -1))
     .slice(0, 4);
@@ -53,8 +55,10 @@ const HealthHub: React.FC = () => {
         <p className="uppercase tracking-widest text-[13px] font-semibold mb-5" style={{ color: 'var(--h-accent)' }}>
           From PG App Studios
         </p>
-        <h1 className="max-w-3xl mx-auto">Small apps that help you get through hard things.</h1>
-        <p className="h-muted text-lg md:text-xl max-w-2xl mx-auto mt-6">
+        <h1 className="max-w-3xl mx-auto animate-fade-in">
+          Small apps that help you <span className="gradient-text">get through hard things</span>.
+        </h1>
+        <p className="h-muted text-lg md:text-xl max-w-2xl mx-auto mt-6 animate-fade-in-delay-1">
           Health, fitness and mental health apps that ask for a minute a day, keep the promise small,
           and let you come back tomorrow. Start with whatever is heaviest right now.
         </p>
@@ -62,7 +66,8 @@ const HealthHub: React.FC = () => {
 
       {/* Problem first navigation */}
       <section className="h-wrap pb-6" aria-labelledby="find-your-app">
-        <h2 id="find-your-app" className="text-center mb-3">What are you dealing with?</h2>
+        <h2 id="find-your-app" className="text-center mb-3">What are you <span className="gradient-text">dealing with</span>?</h2>
+        <div className="w-24 h-1 bg-pg-purple mx-auto mb-5 rounded-full shadow-[0_0_10px_rgba(184,41,247,0.7)]" />
         <p className="h-muted text-center mb-10">Pick the sentence that sounds most like your week.</p>
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -71,7 +76,7 @@ const HealthHub: React.FC = () => {
               key={app.slug}
               to={`/health/apps/${app.slug}`}
               onClick={() => trackHealthNav({ target: app.slug, sourcePage: '/health' })}
-              className="h-card p-6 flex gap-5 items-start no-underline"
+              className="h-card p-6 flex gap-5 items-start no-underline animate-on-scroll opacity-0"
             >
               <img
                 src={app.icon}
@@ -128,7 +133,7 @@ const HealthHub: React.FC = () => {
               <Link
                 key={article.slug}
                 to={`/health/guides/${article.slug}`}
-                className="h-card p-6 no-underline"
+                className="h-card p-6 no-underline animate-on-scroll opacity-0"
               >
                 <p className="h-muted text-[13px] mb-2">
                   {article.publishedDate} · {article.readingMinutes} min read

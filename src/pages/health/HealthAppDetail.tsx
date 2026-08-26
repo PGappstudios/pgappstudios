@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import HealthShell, { Breadcrumbs } from '@/components/health/HealthShell';
+import HealthShell, { Breadcrumbs, useScrollReveal } from '@/components/health/HealthShell';
 import NotFound from '@/pages/NotFound';
 import { getHealthApp, healthApps } from '@/data/healthData';
 import { healthArticles } from '@/data/healthArticles';
@@ -47,6 +47,8 @@ const HealthAppDetail: React.FC = () => {
       : undefined,
   });
 
+  useScrollReveal([slug]);
+
   if (!app) return <NotFound />;
 
   const related = app.relatedApps
@@ -75,10 +77,12 @@ const HealthAppDetail: React.FC = () => {
           alt={`${app.name} app icon`}
           width={104}
           height={104}
-          className="w-26 h-26 mx-auto rounded-3xl mb-6"
-          style={{ width: 104, height: 104, border: '1px solid var(--h-line)' }}
+          className="w-26 h-26 mx-auto rounded-3xl mb-6 hero-phone"
+          style={{ width: 104, height: 104, boxShadow: '0 0 30px rgba(184,41,247,0.45)' }}
         />
-        <h1 className="max-w-2xl mx-auto">{app.name}</h1>
+        <h1 className="max-w-2xl mx-auto animate-fade-in">
+          <span className="gradient-text">{app.name}</span>
+        </h1>
         <p className="h-muted text-lg mt-4 max-w-xl mx-auto">{app.tagline}</p>
 
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
@@ -116,7 +120,7 @@ const HealthAppDetail: React.FC = () => {
         <h2 id="features" className="mb-6">What it does</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           {app.features.map((f) => (
-            <div key={f.title} className="h-card p-6">
+            <div key={f.title} className="h-card p-6 animate-on-scroll opacity-0">
               <h3 className="mb-2">{f.title}</h3>
               <p className="h-muted text-[15.5px]">{f.text}</p>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HealthShell, { Breadcrumbs } from '@/components/health/HealthShell';
+import HealthShell, { Breadcrumbs, useScrollReveal } from '@/components/health/HealthShell';
 import { healthArticles } from '@/data/healthArticles';
 import { getHealthApp } from '@/data/healthData';
 import { useSEO } from '@/lib/useSEO';
@@ -25,6 +25,8 @@ const HealthGuides: React.FC = () => {
     },
   });
 
+  useScrollReveal([]);
+
   const sorted = [...healthArticles].sort((a, b) => (a.publishedDate < b.publishedDate ? 1 : -1));
   const [page, setPage] = useState(1);
   const pages = Math.max(1, Math.ceil(sorted.length / PER_PAGE));
@@ -37,7 +39,7 @@ const HealthGuides: React.FC = () => {
       </div>
 
       <section className="h-wrap pt-8 pb-12">
-        <h1>Guides</h1>
+        <h1 className="animate-fade-in"><span className="gradient-text">Guides</span></h1>
         <p className="h-muted text-lg mt-4 max-w-2xl">
           Plain, practical writing about the things these apps are for. No jargon, no promises,
           nothing that pretends to replace a professional.
@@ -49,7 +51,7 @@ const HealthGuides: React.FC = () => {
           {visible.map((a) => {
             const app = getHealthApp(a.primaryApp);
             return (
-              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="h-card p-6 no-underline">
+              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="h-card p-6 no-underline animate-on-scroll opacity-0">
                 <p className="h-muted text-[13px] mb-2">
                   {a.publishedDate} · {a.readingMinutes} min read
                 </p>

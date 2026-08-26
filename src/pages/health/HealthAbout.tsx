@@ -47,7 +47,7 @@ const HealthAbout: React.FC = () => {
       </div>
 
       <section className="h-narrow pt-8 pb-14">
-        <h1>About PG Health</h1>
+        <h1 className="animate-fade-in">About <span className="gradient-text">PG Health</span></h1>
 
         <div className="flex items-center gap-5 mt-8 mb-10">
           <img
@@ -56,7 +56,7 @@ const HealthAbout: React.FC = () => {
             width={72}
             height={72}
             className="rounded-2xl flex-none"
-            style={{ width: 72, height: 72, border: '1px solid var(--h-line)' }}
+            style={{ width: 72, height: 72, boxShadow: '0 0 22px rgba(184,41,247,0.4)' }}
           />
           <div>
             <p className="font-semibold text-[17px]">Pedro Gregório</p>
