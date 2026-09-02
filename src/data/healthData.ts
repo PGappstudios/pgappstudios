@@ -88,7 +88,7 @@ export const healthApps: HealthApp[] = [
       { title: 'A button for the 2 AM moments', text: 'When the hard hour arrives without warning, there is one tap that meets you there.' },
       { title: 'Programs from 30 to 90 days', text: 'Long enough to carry you through the worst of it, short enough to feel possible today.' },
     ],
-    appStoreUrl: 'https://apps.apple.com/pt/app/aftermath-healing-companion/id6796052485?l=en-GB',
+    appStoreUrl: 'https://apps.apple.com/app/id6796052485',
     relatedApps: ['fasting-and-walking', 'cyclebuddy'],
     relatedArticles: ['first-weeks-after-a-breakup'],
     metaDescription:
@@ -115,7 +115,7 @@ export const healthApps: HealthApp[] = [
       { title: 'Progress and a goal date', text: 'See the trend rather than a single number, and a realistic date to aim at.' },
       { title: 'Hydration alongside it', text: 'Water sits next to fasting and steps, because it is the part people forget first.' },
     ],
-    appStoreUrl: 'https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB',
+    appStoreUrl: 'https://apps.apple.com/app/id6755205850',
     relatedApps: ['aquafasty', 'cyclebuddy'],
     relatedArticles: ['start-walking-and-fasting-without-overdoing-it'],
     metaDescription:
@@ -142,7 +142,7 @@ export const healthApps: HealthApp[] = [
       { title: 'Hydration front and centre', text: 'Water is tracked as a habit in its own right, because it makes everything else easier.' },
       { title: 'Streaks built to survive a bad day', text: 'Progress you can see, designed so one slip does not end the whole thing.' },
     ],
-    appStoreUrl: 'https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB',
+    appStoreUrl: 'https://apps.apple.com/app/id6746637395',
     relatedApps: ['fasting-and-walking', 'gritvit'],
     relatedArticles: ['start-walking-and-fasting-without-overdoing-it'],
     metaDescription:
@@ -169,7 +169,7 @@ export const healthApps: HealthApp[] = [
       { title: 'Leaderboards worth entering', text: 'Compete on numbers that were earned rather than typed in.' },
       { title: 'Your raw data stays yours', text: 'Only the summary is shared. The detail stays on your device.' },
     ],
-    appStoreUrl: 'https://apps.apple.com/pt/app/gritvit-fitness-community/id6761624974?l=en-GB',
+    appStoreUrl: 'https://apps.apple.com/app/id6761624974',
     relatedApps: ['cyclebuddy', 'fasting-and-walking'],
     relatedArticles: [],
     metaDescription:
@@ -196,7 +196,7 @@ export const healthApps: HealthApp[] = [
       { title: 'Plan your routes', text: 'Work out where you are going before you clip in.' },
       { title: 'Keep the crew together', text: 'Chat that holds the meet time, the route and the last minute changes.' },
     ],
-    appStoreUrl: 'https://apps.apple.com/pt/app/cyclebuddy/id6762289803?l=en-GB',
+    appStoreUrl: 'https://apps.apple.com/app/id6762289803',
     relatedApps: ['gritvit', 'fasting-and-walking'],
     relatedArticles: [],
     metaDescription:

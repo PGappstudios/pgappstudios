@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Top Apps</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
+                <a href="https://apps.apple.com/app/id6757080577" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Portugal Lifestyle Pro</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp for Pickleball</a>
+                <a href="https://apps.apple.com/app/id6760656546" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">DinkUp for Pickleball</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting and Walking</a>
+                <a href="https://apps.apple.com/app/id6755205850" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Fasting and Walking</a>
               </li>
               <li>
                 <Link to="/our-apps" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">View all on App Store →</Link>
@@ -76,13 +76,13 @@ const Footer: React.FC = () => {
                 <a href="https://www.gritvit.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Gritvit Fitness Community</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Aquafasty Diet Plan</a>
+                <a href="https://apps.apple.com/app/id6746637395" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Aquafasty Diet Plan</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Baby Learning Games</a>
+                <a href="https://apps.apple.com/app/id6754612338" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Baby Learning Games</a>
               </li>
               <li>
-                <a href="https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Bible Quiz</a>
+                <a href="https://apps.apple.com/app/id6753075938" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">Bible Quiz</a>
               </li>
               <li>
                 <a href="mailto:pgmetastudios@gmail.com" className="text-gray-400 hover:text-pg-purple transition-colors text-sm">pgmetastudios@gmail.com</a>

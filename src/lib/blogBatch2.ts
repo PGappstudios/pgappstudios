@@ -110,7 +110,7 @@ Do not try to memorise all of these at once. Pick two or three — fixe, pá, an
 
 Language is a living thing, and slang is where it lives most. Learn the rules, then learn how people actually break them. That is when Portuguese stops feeling like a subject and starts feeling like home.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**`
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**`
   },
   {
     id: "moving-to-portugal-from-us-2026",
@@ -202,7 +202,7 @@ Starting the language before you move gives you a huge head start. The catch is 
 
 That is exactly what **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** focuses on. It teaches European Portuguese from beginner up through the A2 level relevant to citizenship, with the everyday phrases you will actually use at Finanças, at the health centre, and in your neighbourhood. Learning even the basics before your first AIMA appointment makes the whole experience less intimidating.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Final advice
 
@@ -305,7 +305,7 @@ There is a common trap here: most language apps teach **Brazilian Portuguese** b
 
 **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** is built specifically for European Portuguese, taking you from beginner up through the A2 level that matters for citizenship — plus the everyday phrases you will use at AIMA, the bank, and around town. Whether you land on the D7 or the D8, starting the language now makes daily life and every future appointment smoother.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Bottom line
 
@@ -402,7 +402,7 @@ Getting a NIF is your first taste of Portuguese bureaucracy — and it will not 
 
 The key is learning **European Portuguese**, not the Brazilian variety most apps teach — different accent, different words. **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** focuses on European Portuguese specifically, from complete beginner through the **A2 level** relevant to citizenship, with the practical vocabulary you will use at Finanças, the bank, and around town. Learning a bit before your appointments turns intimidating errands into manageable ones.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## The bottom line
 
@@ -493,7 +493,7 @@ The immigration process is stressful enough without a language barrier on top. U
 
 The catch, as always, is that you need **European Portuguese** — the accent and vocabulary used in Portugal — not the Brazilian variety most apps default to. **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** is built for exactly this: European Portuguese from beginner through the A2 level, including the practical, bureaucratic vocabulary you will hear at AIMA, Finanças, and the health centre. Even a few weeks of study before your appointment can turn a nerve-wracking morning into a manageable one.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Final thoughts
 
@@ -595,7 +595,7 @@ Here is something budgets rarely capture: speaking Portuguese saves you money an
 
 You specifically want **European Portuguese**, not the Brazilian variety most apps teach. **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** focuses on European Portuguese from beginner through the **A2 level** that matters for citizenship, with everyday, practical vocabulary for shopping, renting, and daily life. Learning even the basics helps you live more like a local — and locals always pay less.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Bottom line
 

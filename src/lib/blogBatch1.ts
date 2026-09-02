@@ -80,7 +80,7 @@ Each of these takes the variety seriously, which already puts them ahead of the 
 
 If you want everything in one place on your phone, [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro) is worth a look. The app teaches European Portuguese specifically, not Brazilian, which matters because the most popular language app in the world does not offer European Portuguese at all. Portugal Lifestyle Pro gives you structured lessons, real vocabulary you will use in shops and appointments, and pronunciation focused on the sounds people actually make in Lisbon and Porto. It is built for the traveller, the new resident, and the person on the citizenship path who needs the Portugal variety and nothing else.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Common Beginner Mistakes to Avoid
 
@@ -164,7 +164,7 @@ The answer is simple: learn the variety of the place you are going. If your life
 
 This is the exact problem Portugal Lifestyle Pro was built to solve. The most downloaded language app on the planet does not even offer European Portuguese, so learners headed to Portugal are funneled toward Brazilian content by default. Portugal Lifestyle Pro teaches the Portugal variety specifically, with the vocabulary, the tu conjugations, the estar a fazer construction, and the closed European accent you will actually encounter. You can see how it is structured on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## The Bottom Line
 
@@ -218,7 +218,7 @@ The good news is that European Portuguese resources do exist, even if they are l
 
 For an all-in-one option on your phone built entirely around the Portugal variety, there is Portugal Lifestyle Pro. It exists precisely because the biggest app in the world leaves European Portuguese learners with nothing. The app teaches the European accent, the vocabulary you will actually use in Portuguese shops and appointments, the tu conjugations, and the estar a fazer construction, all aimed at travellers, new residents, and citizenship candidates. You can see how it is put together on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## The Takeaway
 
@@ -330,7 +330,7 @@ Pronunciation note: the emergency number in Portugal is 112, worth memorizing al
 
 Reading a list is a start, but travel phrases stick only when you hear them spoken by natives and say them out loud. That is where an app built for the Portugal variety helps. Portugal Lifestyle Pro teaches these exact everyday phrases with European pronunciation, so you learn the closed vowels and the sh sounds the right way from the beginning, instead of guessing from spelling. It is designed for travellers and new residents who want to sound natural in Portugal, not Brazil. Have a look at how it works on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## One Last Tip
 
@@ -415,7 +415,7 @@ Knowing the rules is not the same as producing the sounds. Here is how to build 
 
 Pronunciation is exactly where a Portugal-specific tool pays off, because guessing sounds from spelling leads you astray. Portugal Lifestyle Pro teaches European Portuguese with native audio, so you hear the closed vowels, the sh endings, and the nasal ao the way they are actually spoken in Portugal, not the more open Brazilian versions. For a beginner, hearing the real thing repeatedly is what makes the sounds stick. See how the lessons are built on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Be Patient With Your Mouth
 
@@ -499,7 +499,7 @@ For a complete beginner studying thirty to forty five minutes a day, plan on rou
 
 Consistent daily practice in the right variety is the whole battle, and that is where Portugal Lifestyle Pro fits. It teaches European Portuguese specifically, the exact variety the CIPLE exam uses, with native audio for the listening challenge and everyday vocabulary that maps closely to what A2 asks of you. For anyone preparing for citizenship, learning from Portugal-based material rather than Brazilian content removes a real handicap on the listening and speaking sections. You can see how the lessons are organized on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
 
 ## Final Word
 

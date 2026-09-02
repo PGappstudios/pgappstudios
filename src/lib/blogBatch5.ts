@@ -83,7 +83,7 @@ Whatever you choose, cycling is far better with company. Group rides keep you mo
 
 That is exactly what **CycleBuddy** was built for. It helps you find riders and group rides that match your discipline, pace, and location, whether you are a road roadie chasing miles, a gravel explorer hunting new routes, or a mountain biker looking for trail partners. Instead of guessing whether a ride will suit you, you can connect with cyclists who ride the way you do.
 
-**[Download CycleBuddy Free →](https://apps.apple.com/pt/app/cyclebuddy/id6762289803?l=en-GB)**
+**[Download CycleBuddy Free →](https://apps.apple.com/app/id6762289803)**
 
 Learn more about the app on the [CycleBuddy](/apps/cyclebuddy) page.
 
@@ -175,7 +175,7 @@ This is where an AI voice-to-caption tool changes the game. The average person s
 
 **Voice To Caption: AI Writer** does exactly this. You speak your thoughts, and the app transcribes and crafts a clean, ready-to-post caption, adapts the tone to the platform you are posting on, and adds relevant hashtags automatically. What used to take ten minutes of second-guessing becomes about thirty seconds of talking. You still bring the ideas and the personality. The app removes the friction of turning them into words.
 
-**[Download Voice To Caption Free →](https://apps.apple.com/pt/app/voice-to-caption-ai-writer/id6751542069?l=en-GB)**
+**[Download Voice To Caption Free →](https://apps.apple.com/app/id6751542069)**
 
 See how it works on the [Voice To Caption](/apps/voice-to-caption) page.
 
@@ -255,7 +255,7 @@ The built-in tools are fine for the occasional page. A dedicated scanner app ear
 
 This is where **DocyScan** fits in. It is built specifically for turning your iPhone into a proper document scanner, with automatic edge detection, clean output, text recognition so your documents become searchable, and easy export to PDF. Instead of juggling scattered scans across Notes and Files, you get a purpose-built workflow that keeps quality high and your documents organized in one place. For freelancers, students, and anyone chipping away at a paperless goal, a focused tool removes the everyday friction.
 
-**[Download DocyScan Free →](https://apps.apple.com/pt/app/docyscan/id6740208487?l=en-GB)**
+**[Download DocyScan Free →](https://apps.apple.com/app/id6740208487)**
 
 Find out more on the [DocyScan](/apps/docyscan) page.
 
@@ -373,7 +373,7 @@ Twenty questions is just a warm-up. If you enjoyed testing yourself, the fun rea
 
 That is exactly what **Soccer Legends** offers. It is a free iPhone football quiz packed with trivia covering the icons of every generation, from the classic greats to today's superstars. Whether you want to settle a debate with friends, learn the history of the game, or simply enjoy a quick mental challenge, it turns your football knowledge into a proper game you can play anywhere.
 
-**[Download Soccer Legends Free →](https://apps.apple.com/pt/app/soccer-legends/id6753688926?l=en-GB)**
+**[Download Soccer Legends Free →](https://apps.apple.com/app/id6753688926)**
 
 Check out the [Soccer Legends](/apps/soccer-legends) page to learn more.
 
@@ -462,7 +462,7 @@ Habits stick more easily when there is a small, enjoyable cue pulling you back e
 
 **Bible: Test Your Faith** is designed to do exactly that. It offers gentle daily Bible questions and inspiring verses that make returning to scripture feel light and rewarding rather than daunting. A few minutes of thoughtful questions can reinforce what you are reading, deepen your understanding over time, and give your daily habit a friendly anchor. It suits all ages and meets you wherever you are, whether you are just beginning or have read scripture for years.
 
-**[Download Bible: Test Your Faith Free →](https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB)**
+**[Download Bible: Test Your Faith Free →](https://apps.apple.com/app/id6753075938)**
 
 Learn more on the [Bible: Test Your Faith](/apps/bible-test-your-faith) page.
 
@@ -559,7 +559,7 @@ A well-rounded app bundles several of these into one safe place.
 
 If you would rather not piece together a dozen separate games, an app built specifically for this age range makes life easier. **Baby Learning Games 1-4** brings together colourful mini-games covering colours, shapes, numbers, letters, animals, and matching, all designed for tiny fingers and short attention spans. Crucially, it is built with safety first, with no ads shown to children, purchases protected from accidental taps, no social features or external links, and no data collection. It gives your toddler a genuinely educational, child-safe place to play and learn.
 
-**[Download Baby Learning Games Free →](https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB)**
+**[Download Baby Learning Games Free →](https://apps.apple.com/app/id6754612338)**
 
 Learn more on the [Baby Learning Games](/apps/baby-learning-games) page.
 

@@ -174,7 +174,7 @@ const Index: React.FC = () => {
                 <span className="z-10 relative">Discover Portugal Lifestyle Pro</span>
               </Link>
               <a
-                href="https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB"
+                href="https://apps.apple.com/app/id6757080577"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300 text-center"

@@ -92,7 +92,7 @@ Wherever you land, the single biggest upgrade to your experience is learning a b
 
 Brazilian Portuguese is everywhere online, but the European version sounds different and uses different words, so learning the right variant matters. That's exactly why we built **Portugal Lifestyle Pro** — real European Portuguese, practical phrases for daily life and immigration, taught in bite-sized lessons you can actually keep up with.
 
-**[Download Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/pt/app/portugal-lifestyle-pro/id6757080577?l=en-GB)**
+**[Download Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 Learn more about the app on our [Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro) page.
 
@@ -147,7 +147,7 @@ That's the whole idea behind **DinkUp**. It shows courts near you on a live map,
 
 For a beginner, that last part is huge. You can filter for games that welcome new players, so your first outing is with people who actually want to help you learn rather than a hyper-competitive group counting every point.
 
-**[Download DinkUp Free →](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB)**
+**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
 
 Check out everything it does on the [DinkUp](/apps/dinkup) page.
 
@@ -255,7 +255,7 @@ The last hurdle is simply finding people to play with, and this is where a lot o
 
 DinkUp shows you pickleball courts near you on a live map, lists open games you can join with a single tap, and lets you see the skill level of a game before you commit — so your very first outing can be with other beginners rather than a group of ringers. You can message players, find beginner-friendly sessions, and build up a regular crew as you improve.
 
-**[Download DinkUp Free →](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB)**
+**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
 
 See how it works on the [DinkUp](/apps/dinkup) page.
 
@@ -328,7 +328,7 @@ Half of good etiquette is just playing with people who match your level and vibe
 
 That's where **DinkUp** helps. It lets you find open games near you, see players' skill levels up front, and join sessions that fit — so you're matched with people at your speed instead of guessing. Honest skill ratings and well-balanced games make all this etiquette effortless, because everyone's on the same page from the first serve.
 
-**[Download DinkUp Free →](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB)**
+**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
 
 Learn more on the [DinkUp](/apps/dinkup) page.
 
@@ -400,7 +400,7 @@ This is exactly the headache **DinkUp** was built to remove. Instead of herding 
 
 Because players' skill levels are visible up front, balancing teams stops being guesswork. You can host a beginner-friendly session or a competitive one and get the right people in the door. And when you just want to play rather than organise, you can browse open games near you and join someone else's instead.
 
-**[Download DinkUp Free →](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB)**
+**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
 
 See how hosting works on the [DinkUp](/apps/dinkup) page.
 

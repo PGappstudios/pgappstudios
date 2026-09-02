@@ -39,7 +39,7 @@ Pickleball is the fastest-growing sport in the world — and finding games, cour
 
 DinkUp is a free pickleball app for iOS that centralizes your entire pickleball experience. Forget scrolling through Facebook groups or texting your local club — DinkUp gives you real-time court data, one-tap game joining, and professional tournament management right from your phone.
 
-**Download DinkUp free on the App Store:** [DinkUp on iOS](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB)
+**Download DinkUp free on the App Store:** [DinkUp on iOS](https://apps.apple.com/app/id6760656546)
 
 ## Key Features
 
@@ -69,7 +69,7 @@ After every match, your rank updates automatically. DinkUp also integrates DUPR 
 
 DinkUp is **free forever** for core features. The Pro tier unlocks unlimited game creation, global court access, and advanced statistics.
 
-**Download DinkUp free:** [App Store](https://apps.apple.com/pt/app/dinkup/id6760656546?l=en-GB) | [Visit DinkUp.app](https://www.dinkup.app/)`
+**Download DinkUp free:** [App Store](https://apps.apple.com/app/id6760656546) | [Visit DinkUp.app](https://www.dinkup.app/)`
   },
   {
     id: "gritvit-fitness-dating-app",
@@ -130,7 +130,7 @@ Fitness tracking is always free. Premium features unlock after completing a 7-da
 
 Most language apps teach Brazilian Portuguese. If you're moving to Portugal, already living there, or simply want to learn the real thing — **Portugal Lifestyle** is the app built for you.
 
-**Download free:** [iOS App Store](https://apps.apple.com/pt/app/portugal-lifestyle-learn-it/id6755307562?l=en-GB) | [Google Play](https://play.google.com/store/apps/details?id=com.pgappstudios.portugal_lifestyle_pro&pcampaignid=web_share) | [portugal-lifestyle.com](https://www.portugal-lifestyle.com/)
+**Download free:** [iOS App Store](https://apps.apple.com/app/id6755307562) | [Google Play](https://play.google.com/store/apps/details?id=com.pgappstudios.portugal_lifestyle_pro&pcampaignid=web_share) | [portugal-lifestyle.com](https://www.portugal-lifestyle.com/)
 
 ## Why European Portuguese Is Different
 
@@ -161,7 +161,7 @@ District guides, Portuguese stories, cultural insights, and traditions.
 - Cross-Device Sync (iPhone, iPad, Mac)
 - Native Speaker Pronunciation
 
-**[Download on the App Store →](https://apps.apple.com/pt/app/portugal-lifestyle-learn-it/id6755307562?l=en-GB)**`
+**[Download on the App Store →](https://apps.apple.com/app/id6755307562)**`
   },
   {
     id: "fasting-and-walking-app-ios",
@@ -180,7 +180,7 @@ District guides, Portuguese stories, cultural insights, and traditions.
 
 Two of the most effective health habits — intermittent fasting and daily walking — finally have a dedicated app.
 
-**Download free:** [Fasting and Walking on the App Store](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)
+**Download free:** [Fasting and Walking on the App Store](https://apps.apple.com/app/id6755205850)
 
 ## Fasting Features
 
@@ -205,7 +205,7 @@ Daily step goals with visual progress rings. Works with iPhone motion sensors �
 ## Free to Download
 Core tracking is free. All Access available at €1.99 or €22.99.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)**`
+**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**`
   },
   {
     id: "voice-to-caption-ai-writer-ios",
@@ -224,7 +224,7 @@ Core tracking is free. All Access available at €1.99 or €22.99.
 
 Just talk. AI does the rest.
 
-**Download free:** [Voice To Caption on the App Store](https://apps.apple.com/pt/app/voice-to-caption-ai-writer/id6751542069?l=en-GB)
+**Download free:** [Voice To Caption on the App Store](https://apps.apple.com/app/id6751542069)
 
 ## How It Works
 1. **Speak** — Record yourself talking about your post or idea
@@ -243,7 +243,7 @@ The average person speaks at 130 words per minute but types at 40. Speaking is 3
 ## Who It's For
 Content creators, social media managers, small business owners, and anyone who finds writing captions tedious.
 
-**[Download Voice To Caption Free →](https://apps.apple.com/pt/app/voice-to-caption-ai-writer/id6751542069?l=en-GB)**`
+**[Download Voice To Caption Free →](https://apps.apple.com/app/id6751542069)**`
   },
   {
     id: "soccer-legends-quiz-ios",
@@ -260,7 +260,7 @@ Content creators, social media managers, small business owners, and anyone who f
     metaKeywords: "soccer quiz app, football quiz iPhone, Soccer Legends app, football trivia iOS, soccer legends game, football knowledge quiz, free football app iPhone, soccer trivia app",
     content: `# Soccer Legends: The Ultimate Football Quiz App for iPhone
 
-**Download free:** [Soccer Legends on the App Store](https://apps.apple.com/pt/app/soccer-legends/id6753688926?l=en-GB)
+**Download free:** [Soccer Legends on the App Store](https://apps.apple.com/app/id6753688926)
 
 ## What Is Soccer Legends?
 A free iPhone football trivia and quiz game covering legendary players from every era — from Pelé and Maradona to Ronaldo and Messi.
@@ -283,7 +283,7 @@ A free iPhone football trivia and quiz game covering legendary players from ever
 ## Who It's For
 Football fans of any age, kids learning the history of the game, competitive friends settling debates, and anyone who loves sports trivia.
 
-**[Download Soccer Legends Free →](https://apps.apple.com/pt/app/soccer-legends/id6753688926?l=en-GB)**`
+**[Download Soccer Legends Free →](https://apps.apple.com/app/id6753688926)**`
   },
   {
     id: "basketball-legends-quiz-ios",
@@ -300,7 +300,7 @@ Football fans of any age, kids learning the history of the game, competitive fri
     metaKeywords: "basketball quiz app, NBA trivia iOS, Basketball Legends app, basketball knowledge quiz, NBA legends game, hoops trivia iPhone, free basketball app, NBA quiz iPhone",
     content: `# Basketball Legends: The iOS Quiz App for NBA History & Hoops Trivia
 
-**Download free:** [Basketball Legends on the App Store](https://apps.apple.com/pt/app/basketball-legends/id6753718461?l=en-GB)
+**Download free:** [Basketball Legends on the App Store](https://apps.apple.com/app/id6753718461)
 
 ## What Is Basketball Legends?
 A free iPhone quiz game covering the full history of professional basketball — from Russell and Wilt to LeBron and Giannis.
@@ -320,7 +320,7 @@ A free iPhone quiz game covering the full history of professional basketball —
 - Quick-play format perfect for short sessions
 - Free to play
 
-**[Download Basketball Legends Free →](https://apps.apple.com/pt/app/basketball-legends/id6753718461?l=en-GB)**`
+**[Download Basketball Legends Free →](https://apps.apple.com/app/id6753718461)**`
   },
   {
     id: "bible-test-your-faith-ios",
@@ -337,7 +337,7 @@ A free iPhone quiz game covering the full history of professional basketball —
     metaKeywords: "Bible quiz app, Bible test app, Christian quiz iOS, Bible verses app, faith app iPhone, daily Bible questions, Bible trivia app, Christian app iOS, Bible study quiz",
     content: `# Bible: Test Your Faith — Daily Bible Questions & Verses for iPhone
 
-**Download free:** [Bible: Test Your Faith on the App Store](https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB)
+**Download free:** [Bible: Test Your Faith on the App Store](https://apps.apple.com/app/id6753075938)
 
 ## What Is It?
 A gentle, encouraging iOS app that deepens your understanding of scripture through daily questions, inspiring verses, and faith-building quizzes for Christians of all ages.
@@ -354,7 +354,7 @@ Your phone is already in your hand dozens of times a day. Bible: Test Your Faith
 ## Who It's For
 Regular churchgoers, parents looking for faith-based apps for children, new believers building a foundation, lifelong Christians reinforcing their knowledge, and Bible study groups.
 
-**[Download Bible: Test Your Faith Free →](https://apps.apple.com/pt/app/bible-test-your-faith/id6753075938?l=en-GB)**`
+**[Download Bible: Test Your Faith Free →](https://apps.apple.com/app/id6753075938)**`
   },
   {
     id: "baby-learning-games-ios",
@@ -371,7 +371,7 @@ Regular churchgoers, parents looking for faith-based apps for children, new beli
     metaKeywords: "baby learning games app, toddler games iOS, educational app for babies, kids learning app iPhone, baby games iPhone, toddler educational app, learning games 1 year old, educational games toddler iOS",
     content: `# Baby Learning Games 1-4: Educational Mini-Games for Toddlers
 
-**Download free:** [Baby Learning Games 1-4 on the App Store](https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB)
+**Download free:** [Baby Learning Games 1-4 on the App Store](https://apps.apple.com/app/id6754612338)
 
 ## What Children Learn
 Colors, shapes, numbers, letters, animals, and matching & memory — all through interactive, visually engaging gameplay.
@@ -392,7 +392,7 @@ Colors, shapes, numbers, letters, animals, and matching & memory — all through
 ## Who It's For
 Parents of babies and toddlers aged 1–4, grandparents, nursery and daycare workers, and any caregiver wanting a child-safe educational alternative to videos.
 
-**[Download Baby Learning Games Free →](https://apps.apple.com/pt/app/baby-learning-games-1-4/id6754612338?l=en-GB)**`
+**[Download Baby Learning Games Free →](https://apps.apple.com/app/id6754612338)**`
   },
   {
     id: "aquafasty-diet-plan-ios",
@@ -409,7 +409,7 @@ Parents of babies and toddlers aged 1–4, grandparents, nursery and daycare wor
     metaKeywords: "hydration tracker app, water intake app iOS, fasting tracker app, diet plan iPhone, Aquafasty app, weight loss app iOS, intermittent fasting app, step tracker iPhone, healthy habits app",
     content: `# Aquafasty Diet Plan: Track Water, Steps & Fasting Together
 
-**Download free:** [Aquafasty Diet Plan on the App Store](https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB)
+**Download free:** [Aquafasty Diet Plan on the App Store](https://apps.apple.com/app/id6746637395)
 
 ## Why Three Habits Together?
 Water, movement, and meal timing interact synergistically. Tracking all three gives you a complete picture of your health habits and makes it harder to have an excuse for a bad day.
@@ -431,7 +431,7 @@ No clutter, no unnecessary features. Fast to check, easy to use every day.
 ## Who It's For
 Anyone starting a weight loss journey, intermittent fasters who want to track hydration and movement, people who struggle to drink enough water, fitness beginners building foundational habits.
 
-**[Download Aquafasty Free →](https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB)**`
+**[Download Aquafasty Free →](https://apps.apple.com/app/id6746637395)**`
   }
 ];
 

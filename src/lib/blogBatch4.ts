@@ -197,7 +197,7 @@ When in doubt, if it has calories, it counts. Keep the fasting window clean and 
 
 Tracking the hours in your head gets old fast, and this is where a tool earns its place. **Fasting and Walking** makes it dead simple to run a fast without watching the clock. You set your window, the app tracks your fasting hours, and it pairs your fasting with walking so your daily movement supports the whole effort. It takes the mental load off so you can just live your day.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)**
+**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
 
 Learn more about how it works: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -300,7 +300,7 @@ Every coffee gets matched with a glass of water. Every bathroom trip ends with a
 
 The simplest way to actually hit your water goal is to track it, because what gets measured gets done. This is where **Aquafasty** shines. It helps you build a hydration and diet routine you can actually keep, tracking your water alongside your eating so the whole picture works together instead of in isolation. Seeing your progress fill up during the day is a surprisingly strong nudge to reach for the bottle.
 
-**[Download Aquafasty Free →](https://apps.apple.com/pt/app/aquafasty-diet-plan/id6746637395?l=en-GB)**
+**[Download Aquafasty Free →](https://apps.apple.com/app/id6746637395)**
 
 See how it fits into your routine: [Aquafasty](/apps/aquafasty-diet-plan).
 
@@ -404,7 +404,7 @@ Think of it simply. Walking helps create a modest calorie deficit through moveme
 
 This is exactly why **Fasting and Walking** pairs the two on purpose. It tracks your walking alongside your fasting window so your movement and your eating pattern reinforce each other, giving you the full picture in one place instead of juggling separate apps. It keeps the whole thing simple, which is the only way habits last.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)**
+**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
 
 Discover how it works: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -497,7 +497,7 @@ As it becomes easy, you can extend your walks, tighten your fasting window towar
 
 The friction with any routine is tracking it and staying consistent, and this is where the right tool matters. **Fasting and Walking** was built for exactly this combination. It tracks your fasting window and your walking side by side, so instead of juggling two separate things, you see how they work together in one place. That single view is a genuine motivator, because you can watch both habits reinforcing each other day after day.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/pt/app/fasting-and-walking/id6755205850?l=en-GB)**
+**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
 
 Take a closer look: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -618,7 +618,7 @@ Rides are also usually labeled by pace or level. Pick one at or slightly below w
 
 Finding the right ride used to mean word of mouth and luck. **CycleBuddy** fixes that. It connects you with local riders and group rides that match your pace and style, so you can find a welcoming, appropriately paced ride near you instead of guessing. For a new cyclist, being able to see who you will ride with and what to expect before you show up takes the nerves right out of it.
 
-**[Download CycleBuddy Free →](https://apps.apple.com/pt/app/cyclebuddy/id6762289803?l=en-GB)**
+**[Download CycleBuddy Free →](https://apps.apple.com/app/id6762289803)**
 
 Learn more about it here: [CycleBuddy](/apps/cyclebuddy).
 
