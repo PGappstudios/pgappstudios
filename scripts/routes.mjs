@@ -24,6 +24,7 @@ const BASE = [
   '/apps/baby-learning-games',
   '/apps/european-portuguese-quest',
   '/apps/expats-in-portugal',
+  '/apps/kids-science-explorer',
 ];
 
 const BLOG_SLUGS = [

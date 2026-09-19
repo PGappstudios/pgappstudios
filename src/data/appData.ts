@@ -369,6 +369,41 @@ export const allApps: App[] = [
     keywords: "intermittent fasting and walking app, fasting timer app, walking app, healthy habits app, weight loss walking"
   },
   {
+    id: 36,
+    title: "Kids Science Explorer",
+    description: "Thirteen worlds of real science for ages 4 to 12, read aloud so kids can explore on their own. Games, kitchen table experiments, nine languages, fully offline.",
+    image: "/kids-science-logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6804652763",
+    slug: "kids-science-explorer",
+    appCategory: "EducationalApplication",
+    tagline: "Thirteen worlds of real science, read aloud",
+    metaTitle: "Kids Science Explorer — Science App for Ages 4 to 12",
+    metaDescription: "Thirteen worlds of real science for ages 4 to 12: read aloud, 10 games, 12 experiments, nine languages and fully offline. Free on iOS.",
+    longDescription: [
+      "Kids Science Explorer hands a curious child thirteen worlds of real science, from the solar system to dinosaurs to the human body. Every page is read aloud, so a child who cannot read yet can explore the whole app on their own.",
+      "Ten games teach something true rather than handing out points for tapping: drag the planets into orbit, build a body organ by organ, work out whether a dinosaur ate meat or plants, connect real stars into real constellations. Twelve experiments use things already in your cupboards, written in clear steps to do together with a grown up.",
+      "It grows with your child. Three reading levels mean a four year old and an eleven year old meet the same topic at the right depth, and nine languages are built in with a friendly voice reading every page. All of it works with no wifi, which makes it quality screen time for the car, the plane and the waiting room."
+    ],
+    features: [
+      { title: "Thirteen worlds to explore", text: "Space, the night sky, planet Earth, nature, dinosaurs, the human body, water, fire, energy, gravity, motion and machines, chemistry and a home lab." },
+      { title: "Every page read aloud", text: "A friendly voice reads everything, so children who cannot read yet still explore on their own." },
+      { title: "Ten games that teach", text: "Build orbits, assemble a body, feed the right dinosaur, draw real constellations. Each one teaches something true." },
+      { title: "Twelve kitchen table experiments", text: "Simple steps using what is already in your cupboards, made to do together with a grown up." },
+      { title: "Grows with your child", text: "Three reading levels, so a four year old and an eleven year old meet the same topic at the right depth." },
+      { title: "Works with no wifi", text: "Every word works offline, in nine languages including Spanish, French, German, Portuguese and Japanese." }
+    ],
+    faqs: [
+      { q: "What age is Kids Science Explorer for?", a: "It is built for ages 4 to 12. Three reading levels let younger and older children meet the same topic at the right depth." },
+      { q: "Does my child need to be able to read?", a: "No. Every page is read aloud by a friendly voice, so a child who cannot read yet can explore the whole app on their own." },
+      { q: "Does it work without internet?", a: "Yes, everything works fully offline, which makes it useful in the car, on a plane or in a waiting room." },
+      { q: "Which languages does it support?", a: "Nine, including English, Spanish, French, German, Portuguese, Italian, Chinese, Japanese and Hindi, each with a voice reading every page." },
+      { q: "Is it free?", a: "Yes, it is free to download on the App Store." }
+    ],
+    keywords: "science app for kids, kids science games, educational app ages 4 to 12, offline learning app for children, dinosaurs space human body app"
+  },
+  {
     id: 1,
     title: "MegaConverter: Unit & Data",
     description: "Powerful unit conversion tool for everyday measurements, scientific calculations, and data transformations.",
