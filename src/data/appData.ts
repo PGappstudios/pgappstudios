@@ -404,6 +404,41 @@ export const allApps: App[] = [
     keywords: "science app for kids, kids science games, educational app ages 4 to 12, offline learning app for children, dinosaurs space human body app"
   },
   {
+    id: 37,
+    title: "Kintsugi - Unbroken",
+    description: "A recovery app built on kintsugi: every clean day fuses a fragment of your broken vessel back with gold. Slip and the gold already placed stays. For alcohol, gambling, smoking, scrolling, or whatever you name yourself.",
+    image: "/kintsugi-logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6796292169",
+    slug: "kintsugi-unbroken",
+    appCategory: "HealthApplication",
+    tagline: "The cracks are where the gold goes",
+    metaTitle: "Kintsugi Unbroken — Quit Any Habit, Without the Shame",
+    metaDescription: "A recovery app built on kintsugi. Every clean day fills a crack with gold, and a slip never shatters it. Alcohol, gambling, smoking, scrolling.",
+    longDescription: [
+      "Most quit apps hand you a number that climbs, then a red screen when it falls to zero. So you delete the app and disappear. Unbroken is built on the opposite idea.",
+      "In Japan, broken pottery is repaired with gold. The cracks are not hidden, they are filled, and they become the strongest part of the bowl. On day one you are given a vessel in pieces. Every clean day you log, one fragment fuses back with a seam of liquid gold. Ninety days later it is whole, it moves to your gallery, and a new one begins. If you slip, the vessel does not shatter: the gold already placed stays, and the newest seam rests in bronze until tomorrow's check-in turns it gold again. Your streak resets, but your lifetime clean days and urges survived never do.",
+      "One app adapts to whatever you are leaving behind: alcohol, gambling, smoking and vaping, substances, social media, adrenaline, dishonesty, adult content, or something you name yourself. Pick more than one, because cross addiction is normal. A gold panic button sits one tap away on every screen, with paced breathing, the photo you chose, the commitment you signed, and an intervention built for your specific urge. Everything is written by people, works offline, and never leaves your device."
+    ],
+    features: [
+      { title: "A vessel that rebuilds in gold", text: "Every clean day fuses one fragment back with a seam of liquid gold. Ninety days to whole, then a new, more intricate one begins." },
+      { title: "A slip never shatters it", text: "The gold already placed stays. The newest seam rests in bronze until your next check-in turns it gold. Shame is designed out." },
+      { title: "One app, any habit", text: "Alcohol, gambling, smoking, substances, social media, adrenaline, dishonesty, adult content, or something you name. Pick more than one." },
+      { title: "The panic button", text: "One tap on any screen: paced breathing with haptics, your photo, your signed commitment, and an intervention built for your urge." },
+      { title: "Numbers that keep score properly", text: "Money recovered ticking up every second, urges survived, a gold calendar heatmap, and which triggers actually hit hardest." },
+      { title: "Private and offline", text: "Check-ins, journal, photo and signature never leave your device. No account, no feed, no AI, no cloud." }
+    ],
+    faqs: [
+      { q: "What habits does Unbroken work for?", a: "Alcohol, gambling, smoking and vaping, substances, social media, adrenaline, dishonesty and adult content, or anything you name yourself. You can track more than one at a time, because cross addiction is normal." },
+      { q: "What happens if I slip?", a: "The vessel does not shatter. The gold already placed stays, and the newest seam rests in bronze until your next check-in turns it gold again. Your streak resets, but your lifetime clean days and urges survived never do." },
+      { q: "Is my data private?", a: "Yes. Your check-ins, journal, photo and signature never leave your device. There is no account and no feed, and the app works offline." },
+      { q: "Is it free?", a: "It is free to download, and the crisis helplines are free either way. Full access requires a subscription, weekly or yearly, with the price shown before you buy." },
+      { q: "Is this treatment?", a: "No. Unbroken is a habit-change support tool, not medical care or treatment. If things get heavy, please talk to a real person: a doctor, a counsellor or a helpline." }
+    ],
+    keywords: "quit drinking app, gambling recovery app, quit smoking app, sobriety tracker, addiction recovery app, urge tracker, quit porn app"
+  },
+  {
     id: 1,
     title: "MegaConverter: Unit & Data",
     description: "Powerful unit conversion tool for everyday measurements, scientific calculations, and data transformations.",

@@ -89,10 +89,39 @@ export const healthApps: HealthApp[] = [
       { title: 'Programs from 30 to 90 days', text: 'Long enough to carry you through the worst of it, short enough to feel possible today.' },
     ],
     appStoreUrl: 'https://apps.apple.com/app/id6796052485',
-    relatedApps: ['fasting-and-walking', 'cyclebuddy'],
+    relatedApps: ['kintsugi-unbroken', 'fasting-and-walking'],
     relatedArticles: ['first-weeks-after-a-breakup'],
     metaDescription:
       'Aftermath is a gentle daily companion for a breakup, grief, job loss or rejection. One check in, one short reading, one small step a day. Free on iOS.',
+  },
+  {
+    slug: 'kintsugi-unbroken',
+    name: 'Kintsugi - Unbroken',
+    icon: '/health/kintsugi-unbroken-icon.png',
+    tagline: 'The cracks are where the gold goes',
+    problemHeadline: 'Quit something and watch what you rebuild',
+    problemSupport: 'Alcohol, gambling, smoking, scrolling, or something you name yourself.',
+    problemStatement:
+      'Most quit apps give you a number that climbs, then a red screen when it falls to zero, so you delete the app and disappear. Unbroken does the opposite. You start with a vessel in pieces, and every clean day fuses one fragment back with a seam of gold. If you slip, it does not shatter. The gold already there stays, and your lifetime clean days and urges survived are never taken away from you.',
+    screenshots: shots('kintsugi-unbroken', [
+      'Unbroken home screen showing the vessel rebuilding with gold seams',
+      'Unbroken panic button screen with paced breathing',
+      'Unbroken patterns screen showing which triggers hit hardest',
+      'Unbroken screen showing the habits the app adapts to',
+    ]),
+    features: [
+      { title: 'A vessel that rebuilds in gold', text: 'Every clean day you log fuses one fragment back with a seam of liquid gold. Ninety days later it is whole and a new one begins.' },
+      { title: 'A slip never shatters it', text: 'The gold already placed stays. The newest seam waits in bronze until your next check in turns it gold. Shame is designed out.' },
+      { title: 'One app, any habit', text: 'It adapts to what you are leaving behind, and you can track more than one, because cross addiction is normal.' },
+      { title: 'A panic button on every screen', text: 'One tap and the world goes quiet: paced breathing, your photo, the commitment you signed, and help built for your specific urge.' },
+      { title: 'Numbers worth watching', text: 'Money recovered ticking up every second you stay out, urges survived, and which triggers actually hit hardest.' },
+      { title: 'Private and offline', text: 'Your check ins, journal, photo and signature never leave your device. No account, no feed, no cloud.' },
+    ],
+    appStoreUrl: 'https://apps.apple.com/app/id6796292169',
+    relatedApps: ['aftermath', 'fasting-and-walking'],
+    relatedArticles: [],
+    metaDescription:
+      'Unbroken rebuilds a broken vessel in gold, one clean day at a time. For alcohol, gambling, smoking or scrolling. A slip never shatters it.',
   },
   {
     slug: 'fasting-and-walking',
@@ -203,29 +232,6 @@ export const healthApps: HealthApp[] = [
       'Cyclebuddy helps you find riders near you, plan routes and join group rides, so you never have to ride alone. Free on iOS.',
   },
 
-  // ---------------------------------------------------------------------
-  // WAITING ON A LIVE APP STORE LINK
-  // The brief lists a gambling and addiction app ("Stop gambling and watch
-  // the money add up"). Nothing matching it is live on the App Store yet, so
-  // it is not shown. When it ships, copy the block below, fill it in, drop
-  // the icon and screenshots into /public/health/ and it appears everywhere.
-  //
-  // {
-  //   slug: 'unbroken',
-  //   name: '',
-  //   icon: '/health/unbroken-icon.png',
-  //   tagline: '',
-  //   problemHeadline: 'Stop gambling and watch the money add up',
-  //   problemSupport: '',
-  //   problemStatement: '',
-  //   screenshots: shots('unbroken', ['', '', '', '']),
-  //   features: [{ title: '', text: '' }],
-  //   appStoreUrl: '',
-  //   relatedApps: ['aftermath'],
-  //   relatedArticles: [],
-  //   metaDescription: '',
-  // },
-  // ---------------------------------------------------------------------
 ];
 
 export const getHealthApp = (slug?: string): HealthApp | undefined =>

@@ -25,6 +25,7 @@ const BASE = [
   '/apps/european-portuguese-quest',
   '/apps/expats-in-portugal',
   '/apps/kids-science-explorer',
+  '/apps/kintsugi-unbroken',
 ];
 
 const BLOG_SLUGS = [
@@ -72,7 +73,7 @@ const BLOG_SLUGS = [
   'best-educational-games-toddlers-1-4',
 ];
 
-const HEALTH_APP_SLUGS = ['aftermath', 'fasting-and-walking', 'aquafasty', 'gritvit', 'cyclebuddy'];
+const HEALTH_APP_SLUGS = ['aftermath', 'kintsugi-unbroken', 'fasting-and-walking', 'aquafasty', 'gritvit', 'cyclebuddy'];
 
 const HEALTH_GUIDE_SLUGS = [
   'first-weeks-after-a-breakup',
