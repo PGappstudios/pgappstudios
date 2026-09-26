@@ -184,6 +184,16 @@ const AppDetail: React.FC = () => {
                 Get it on Google Play
               </a>
             )}
+            {app.websiteUrl && (
+              <a
+                href={app.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 border border-white/20 text-white rounded-lg hover:border-pg-purple hover:text-pg-purple transition-all duration-300"
+              >
+                Visit the website
+              </a>
+            )}
           </div>
         </div>
       </section>

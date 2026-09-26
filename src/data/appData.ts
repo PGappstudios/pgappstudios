@@ -17,6 +17,8 @@ export interface App {
   category: 'ios' | 'web' | 'both';
   url: string;
   androidUrl?: string;
+  /** Marketing site for the app, shown as a secondary link on its page. */
+  websiteUrl?: string;
   initials?: string;
   initialsColor?: string;
   // SEO landing-page fields (a page is generated for any app with a slug)
@@ -197,6 +199,7 @@ export const allApps: App[] = [
     platforms: ["iOS App"],
     category: "ios",
     url: "https://apps.apple.com/app/id6762289803",
+    websiteUrl: "https://www.cycle-buddy.app/",
     slug: "cyclebuddy",
     appCategory: "SportsApplication",
     tagline: "Find riders near you and turn solo miles into group rides",
@@ -633,6 +636,15 @@ export const allApps: App[] = [
   },
 
   // Websites (A–Z)
+  {
+    id: 38,
+    title: "CycleBuddy",
+    description: "The official CycleBuddy website — find cycling partners and group rides near you.",
+    image: "cyclebuddylogo.png",
+    platforms: ["Website"],
+    category: "web",
+    url: "https://www.cycle-buddy.app/"
+  },
   {
     id: 32,
     title: "DinkUp",
