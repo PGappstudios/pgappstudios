@@ -99,6 +99,43 @@ export const allApps: App[] = [
     keywords: "water tracker app, hydration and fasting app, intermittent fasting app, diet plan app, simple weight loss tracker"
   },
   {
+    id: 39,
+    title: "Baby Growth Tracker Pro",
+    description: "From the first positive test to the last toddler vaccine — WHO growth percentiles, your country's vaccine schedule, feed and nap reminders, and 100 sourced answers to the questions mothers ask at 3 AM.",
+    image: "/babygrowthlogo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6813825643",
+    slug: "baby-growth-tracker-pro",
+    appCategory: "HealthApplication",
+    tagline: "WHO growth charts, vaccine dates and every answer in one place",
+    metaTitle: "Baby Growth Tracker Pro — WHO Percentiles & Vaccine Schedule",
+    metaDescription: "Plot your baby on real WHO growth charts, get every vaccine with its due date for Portugal, the UK, the US or WHO, and track feeds, naps and milestones. Free on iOS.",
+    longDescription: [
+      "From the first positive test to the last toddler vaccine, Baby Growth Tracker Pro keeps every answer in one place. See the WHO growth chart your doctor actually reads, know which vaccine is due when, and plan the day without a 3 AM search. It is educational content, not medical advice — built for first-time mothers who want facts, not forums.",
+      "Pregnancy runs week by week: your baby's size and development, scans and tests to tick off, kick counting, and the warning signs that need a same-day call. After birth, type a weight and see the percentile instantly on real WHO Child Growth Standards for weight, length and head circumference, from birth to five years — with corrected age for babies born early.",
+      "Pick your country's immunisation schedule (Portugal, the United Kingdom, the United States, or the WHO template) and get every dose with its due date, what it protects against, what to expect afterwards, and one tap to mark it given. Feeds every three hours, medicine every eight, naps, tummy time and doctor visits arrive as notifications you can tick from the lock screen, and appointments can go straight into your iOS calendar.",
+      "There are short, sourced answers to the 100 questions everyone types at night, milestones with normal ranges instead of deadlines, notes and photos for each child, a switcher for siblings, and your own cycle tracking so you can ask for help on the harder days before they arrive. No account, no tracking — everything stays on your phone."
+    ],
+    features: [
+      { title: "Real WHO growth percentiles", text: "Weight, length and head circumference on the WHO Child Growth Standards, birth to five years, with corrected age for premature babies." },
+      { title: "Vaccines with real due dates", text: "Portugal, the United Kingdom, the United States or the WHO template — every dose, what it protects against, what to expect, one tap to mark it given." },
+      { title: "Pregnancy week by week", text: "Size and development each week, scans and tests to tick off, kick counting, and the warning signs that need a same-day call." },
+      { title: "A schedule that reminds you", text: "Feeds, medicine, naps, tummy time and appointments as notifications you can tick from the lock screen, with iOS calendar sync." },
+      { title: "100 questions mothers ask", text: "Short, sourced answers to the questions everyone types at night, plus a plain-language guide for every stage." },
+      { title: "Milestones, siblings and notes", text: "Milestones with normal ranges instead of deadlines, notes and photos per child, and a switcher for more than one baby." }
+    ],
+    faqs: [
+      { q: "Is Baby Growth Tracker Pro free?", a: "Yes, it's free to download. A Plus subscription unlocks the length and head circumference charts, monthly or yearly, cancel anytime." },
+      { q: "Which growth charts does it use?", a: "The WHO Child Growth Standards — the same reference most clinicians use — for weight, length and head circumference from birth to five years, with corrected age for babies born early." },
+      { q: "Which countries' vaccine schedules are included?", a: "Portugal, the United Kingdom and the United States, plus the WHO template. You pick your schedule and every dose is laid out with its due date." },
+      { q: "Is this medical advice?", a: "No. Baby Growth Tracker Pro is educational and explains what the numbers mean; it never diagnoses. Every screen carries that reminder, and decisions about you or your baby belong with your own clinician." },
+      { q: "Is my data private?", a: "Yes. There's no account and no tracking — everything you log stays on your phone." },
+      { q: "Can I track more than one child?", a: "Yes. Each child gets their own charts, milestones, notes and photos, and you switch between siblings in the app." }
+    ],
+    keywords: "baby growth tracker, WHO growth chart app, baby percentile calculator, vaccine schedule app, baby feeding tracker, pregnancy week by week app, newborn milestone tracker"
+  },
+  {
     id: 18,
     title: "Baby Learning Games 1 - 4",
     description: "Fun educational mini-games for babies and toddlers ages 1 to 4. Safe, colorful, and designed to spark early learning and joy.",
