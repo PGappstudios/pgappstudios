@@ -692,6 +692,42 @@ export const allApps: App[] = [
     url: "https://www.dinkup.app/"
   },
   {
+    id: 40,
+    title: "Nuke Globe",
+    description: "A nuclear strike simulator on a 3D Earth. Launch from any of 580 cities at any other, from Little Boy to the Tsar Bomba, and see the real blast radii, fallout plume, flight time and estimated casualties.",
+    image: "/nukeglobelogo.png",
+    platforms: ["Website"],
+    category: 'web',
+    url: "https://www.nukeglobe.com/",
+    slug: "nuke-globe",
+    appCategory: "GameApplication",
+    tagline: "Nuke any city from any city on a 3D Earth",
+    metaTitle: "Nuke Globe — Nuclear Strike Simulator on a 3D Earth",
+    metaDescription: "Free nuclear strike simulator in your browser: pick two of 580 cities, choose a warhead from Little Boy to the Tsar Bomba, and watch the real blast radii, fallout and casualty estimates.",
+    longDescription: [
+      "Nuke Globe is a free browser simulator built on a high-resolution 3D Earth. Pick a launch city and a target from 580 cities worldwide — by dropdown or by clicking the dots on the globe — choose a warhead, and watch the missile arc over the planet before the fireball lands.",
+      "What happens next is the point. The blast rings, the mushroom cloud and the downwind fallout plume are drawn on the globe, and underneath them the real numbers: flight time, fireball radius, the heavy blast and thermal radiation radii, and an estimated casualty count for that specific city. The radii come from the same airburst scaling laws used by published nuclear effects models; the casualty figures use a population density model built for each city.",
+      "The weapons run from Little Boy, the bomb dropped on Hiroshima in 1945, through modern warheads like the W87 and B83, up to the Tsar Bomba — the largest device ever detonated. Putting them on the same globe makes the jump in scale legible in a way a number on a page never does.",
+      "Alongside the simulator there are plain-language articles on how nuclear weapons actually work, which countries hold arsenals and how large they are, what happened at Hiroshima and Nagasaki, and what the civil defence guidance actually says to do. Nuke Globe is an educational toy and a history lesson, not a military tool: the rings are drawn exaggerated so they are visible at globe scale, while the figures in the table are the real ones."
+    ],
+    features: [
+      { title: "580 cities on a 3D Earth", text: "Pick a launch point and a target by dropdown or by clicking the globe, then watch the missile fly the real arc between them." },
+      { title: "Real blast and fallout modelling", text: "Fireball, heavy blast and thermal radii from published airburst scaling laws, plus a downwind fallout plume." },
+      { title: "Little Boy to the Tsar Bomba", text: "Compare 1945 fission bombs with modern warheads and the largest device ever detonated, on the same globe." },
+      { title: "Casualty estimates per city", text: "A population density model for each city turns the radii into an estimated human cost, shown with the flight time and yield." },
+      { title: "A global leaderboard", text: "Every strike is tallied, so you can see which cities the internet has targeted and launched from most." },
+      { title: "Articles that explain the science", text: "How fission and fusion work, who holds what arsenal, what happened in 1945, and what survival guidance actually says." }
+    ],
+    faqs: [
+      { q: "Is Nuke Globe free?", a: "Yes. It runs in any modern browser at nukeglobe.com with nothing to install and no account needed." },
+      { q: "Are the numbers real?", a: "The table figures are. Blast radii use published airburst scaling laws and casualties use a population density model per city. The rings drawn on the globe are exaggerated so they stay visible at planet scale — the table is the honest version." },
+      { q: "Is this a military or targeting tool?", a: "No. It uses only public, published nuclear effects data and city population figures. It exists to make the scale of these weapons understandable, which is the same reason the historical articles are there." },
+      { q: "Does it work on a phone?", a: "Yes, though the 3D globe is at its best on a laptop or desktop where you can see the blast radii and the data table side by side." },
+      { q: "Which weapons are included?", a: "From Little Boy and Fat Man of 1945 through modern warheads such as the W87 and B83, up to the 50 megaton Tsar Bomba." }
+    ],
+    keywords: "nuke simulator, nuclear blast radius map, nuke map, nuclear strike simulator, what if a nuke hit my city, tsar bomba simulator, nuclear weapon effects, 3d earth nuke game"
+  },
+  {
     id: 30,
     title: "Portugal Lifestyle",
     description: "The official website for Portugal Lifestyle — learn European Portuguese, explore culture, food, and places.",

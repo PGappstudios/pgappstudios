@@ -35,8 +35,12 @@ const AppDetail: React.FC = () => {
             '@context': 'https://schema.org',
             '@type': 'SoftwareApplication',
             name: app.title,
-            operatingSystem: app.platforms.includes('Android App') ? 'iOS, Android' : 'iOS',
-            applicationCategory: app.appCategory ?? 'MobileApplication',
+            operatingSystem: isWebsite
+              ? 'Any (web browser)'
+              : app.platforms.includes('Android App')
+                ? 'iOS, Android'
+                : 'iOS',
+            applicationCategory: app.appCategory ?? (isWebsite ? 'GameApplication' : 'MobileApplication'),
             description: app.metaDescription ?? app.description,
             url: pageUrl,
             downloadUrl: app.url,
