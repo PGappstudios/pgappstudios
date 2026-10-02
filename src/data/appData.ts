@@ -772,6 +772,15 @@ export const allApps: App[] = [
     platforms: ["Website"],
     category: "web",
     url: "https://www.portugal-lifestyle.com/"
+  },
+  {
+    id: 42,
+    title: "Star Seekers",
+    description: "The official Star Seekers website — two space shooters in one universe: Shard War and Star Seekers 2.",
+    image: "/starseekerslogo.png",
+    platforms: ["Website"],
+    category: "web",
+    url: "https://www.starseekersapp.com/"
   }
 ];
 
