@@ -23,6 +23,7 @@ const BASE = [
   '/apps/bible-test-your-faith',
   '/apps/baby-growth-tracker-pro',
   '/apps/nuke-globe',
+  '/apps/tidehook-fishing-tides',
   '/apps/baby-learning-games',
   '/apps/european-portuguese-quest',
   '/apps/expats-in-portugal',

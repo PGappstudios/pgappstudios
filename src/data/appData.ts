@@ -610,6 +610,43 @@ export const allApps: App[] = [
     keywords: "football quiz game, soccer trivia app, guess the footballer, football knowledge quiz, soccer quiz app"
   },
   {
+    id: 41,
+    title: "TideHook: Fishing Tides",
+    description: "Tide times, solunar bite windows and the right bait for 85 species — computed on your phone from 3,996 harmonic stations, so it works with no signal at the water.",
+    image: "/tidehooklogo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6809577914",
+    slug: "tidehook-fishing-tides",
+    appCategory: "SportsApplication",
+    tagline: "Know when the fish bite, anywhere, with no signal",
+    metaTitle: "TideHook — Offline Fishing Tide Times & Solunar Bite Windows",
+    metaDescription: "Real harmonic tide predictions from 3,996 stations, solunar bite windows, bait and rigs for 85 species and 1,339 fishing marks in 166 countries. Works fully offline on iOS.",
+    longDescription: [
+      "TideHook tells you when the fish bite, anywhere in the world, without a bar of signal. Tide times, solunar feeding periods and the right bait for 85 species are all computed on your phone, so the app still works at the end of a track on a headland where nothing else does.",
+      "The tides are the real thing. Every prediction is a harmonic calculation from 3,996 stations — the same maths behind the official tide tables, not a rough interpolation — and the engine has been checked against NOAA's published predictions to within 1.7 cm. You get the full curve for today and the week ahead, with the state of the tide described the way anglers actually say it: mid flood, top of the tide.",
+      "On top of that sit the things that decide whether a session is worth the drive. Solunar bite windows from the sun and moon show you the best two hours before you commit. A bait and rig guide for 85 species is written for real fishing — live nipper, peeler crab, ragworm, poddy mullet — with the rig and the tide state each fish wants. A map of 1,339 marks across 166 countries lets you filter by target species, see which spots have the right tide right now, and scrub forward through the next 24 hours to plan. Long press anywhere on the map for tides at a spot no app knows about.",
+      "The catch log closes the loop: it records tide, moon and coefficient with every fish, then tells you the conditions you personally catch in — your best tide state, your best time of day, your most productive bait, from your own data. Home screen widgets, tide alerts and 27 languages are included. Only the map tiles need a connection. TideHook is a fishing tool, not a navigation aid."
+    ],
+    features: [
+      { title: "Real harmonic tide predictions", text: "3,996 stations computed on device with the same maths as the official tables, verified against NOAA to within 1.7 cm." },
+      { title: "Solunar bite windows", text: "Sun and moon feeding periods show you the best two hour window before you commit to the drive." },
+      { title: "Bait and rigs for 85 species", text: "Live nipper, peeler crab, ragworm, poddy mullet — with the rig and the tide state that suits each fish." },
+      { title: "1,339 marks in 166 countries", text: "Filter by target species, see which spots have the right tide now, and scrub forward through the next 24 hours." },
+      { title: "A catch log that teaches you", text: "Logs tide, moon and coefficient with every fish, then shows the conditions you actually catch in." },
+      { title: "Works with no signal", text: "Tide engine, sun and moon maths, species guide and marks all live on your phone. Only map tiles need a connection." }
+    ],
+    faqs: [
+      { q: "Does TideHook work offline?", a: "Yes, and that's the point. The tide engine, solunar maths, species guide and fishing marks are all computed on your phone. Only the map tiles need a connection." },
+      { q: "What does TideHook cost?", a: "It's free to download and starts with a free trial. After the trial it needs a subscription or a one off lifetime unlock to keep working — there's no free tier beyond the trial. A two week trial is offered on the yearly plan where Apple supports it, and prices are shown in the app before you buy." },
+      { q: "How accurate are the tide times?", a: "They're real harmonic predictions from 3,996 stations, the same method the official tide tables use. The engine has been checked against NOAA's published predictions to within 1.7 cm." },
+      { q: "Can I add a spot that isn't in the app?", a: "Yes. Long press anywhere on the map and TideHook computes the tides for that point, so marks no app knows about still work." },
+      { q: "Can I use TideHook for navigation?", a: "No. It's a fishing planning tool, not a navigation aid — never use it for passage planning or safety at sea." },
+      { q: "Are there ads or do I need an account?", a: "Neither. No ads and no account, ever." }
+    ],
+    keywords: "fishing tide app, offline tide times, solunar calculator, best time to fish, tide chart app, fishing bait guide, fishing spots map, harmonic tide prediction"
+  },
+  {
     id: 17,
     title: "Voice To Caption: AI Writer",
     description: "Turn your voice into AI-powered captions with smart hashtags, perfectly formatted for Instagram, TikTok, X, LinkedIn, Threads, and more.",
