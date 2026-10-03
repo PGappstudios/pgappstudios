@@ -24,6 +24,7 @@ const BASE = [
   '/apps/baby-growth-tracker-pro',
   '/apps/nuke-globe',
   '/apps/star-seekers-2',
+  '/apps/star-seekers-shard-war',
   '/apps/tidehook-fishing-tides',
   '/apps/baby-learning-games',
   '/apps/european-portuguese-quest',

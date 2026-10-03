@@ -647,6 +647,45 @@ export const allApps: App[] = [
     keywords: "space shooter game iphone, arcade shooter no ads, offline space game, top down shooter ios, bullet hell iphone, alien invasion game, star seekers 2"
   },
   {
+    id: 44,
+    title: "Star Seekers: Shard War",
+    description: "Build a fleet, not a gun. Twelve wingmen fly beside you as your weapons, and one tap reshapes them into Spear, Ring or Wake. Five acts, ten bosses, 50 challenge levels. No ads, no energy, one purchase.",
+    image: "/shardwarlogo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6738390556",
+    websiteUrl: "https://www.starseekersapp.com/",
+    slug: "star-seekers-shard-war",
+    appCategory: "GameApplication",
+    tagline: "Build a fleet, not a gun",
+    metaTitle: "Star Seekers: Shard War — One Thumb Fleet Shooter, No Ads",
+    metaDescription: "A one thumb space shooter where your rescued wingmen are your weapons. Reshape the fleet into Spear, Ring or Wake, fuse rival pilots into capital ships, and fight five acts of the Shard War. Free to start, no ads.",
+    longDescription: [
+      "When the first Beacon Shard detonates, three war fleets die in eleven minutes. The survivors — human, reptilian and spirit — band together as the Ashwing, and Star Seekers: Shard War is what happens next. It is a space shooter where your weapons have names.",
+      "The twist is the fleet. Every pilot you rescue flies beside you as a weapon, twelve wingmen drawn from three factions, each firing differently depending on how you arrange them. One tap reshapes the formation: Spear focuses everything forward, Ring guards you from all sides, Wake trails behind you like a snake. Same twelve pilots, three completely different weapons, switchable mid fight.",
+      "Max out two pilots from rival factions and they fuse into a single capital ship — six Concord Fusions to discover. Lose a wingman and they drift as an escape pod; fly over them within eight seconds or they are gone for the rest of the run. It turns every fight into a choice between pressing the attack and going back for your people.",
+      "The war runs five acts, ten boss battles and four captains, with 50 hand made Shard Echo challenge levels on top — planets that bend your bullets, asteroid fields, boss rushes, three stars each. A Daily Sortie gives every pilot on Earth the same map and one shot at the leaderboard, and streak rewards build across the week to a Wreck Chest on day seven. Runs last about ten minutes.",
+      "It is made for one thumb: drag anywhere to fly, your fleet aims and fires on its own, and you concentrate on dodging, rescuing and choosing your build. Act 1, Captain Lyra and 10 Shard Echoes are free. One purchase unlocks the full war — no ads, no energy meter, and no currency for sale."
+    ],
+    features: [
+      { title: "Your wingmen are your weapons", text: "Twelve rescued pilots from three factions fly beside you, each firing differently in every formation." },
+      { title: "Spear, Ring and Wake", text: "One tap reshapes the fleet — focus fire forward, guard every side, or trail behind you like a snake." },
+      { title: "Concord Fusions", text: "Max out two pilots from rival factions and they fuse into a single capital ship. Six to discover." },
+      { title: "Go back for your people", text: "Shot down wingmen drift as escape pods. Reach them within eight seconds or lose them for the run." },
+      { title: "Five acts and 50 Shard Echoes", text: "Ten boss battles and four captains, plus hand made challenge levels with three stars each." },
+      { title: "One purchase, no ads, no energy", text: "Act 1, Captain Lyra and 10 Shard Echoes are free. One payment unlocks the full war — nothing else is for sale." }
+    ],
+    faqs: [
+      { q: "What does Star Seekers: Shard War cost?", a: "It's free to start — Act 1, Captain Lyra and 10 Shard Echoes are included. A single purchase unlocks the full war. There are no ads, no energy meter and no in-game currency for sale." },
+      { q: "How do the formations work?", a: "Your rescued wingmen fire alongside you, and one tap rearranges them. Spear focuses fire forward, Ring protects you from every direction, Wake trails behind you. The same fleet behaves like three different weapons." },
+      { q: "How long is a run?", a: "About ten minutes, so it fits into a break. There's also an Endless mode and Khar Oaths for longer sessions." },
+      { q: "Do I need two hands to play?", a: "No. It's built for one thumb — drag anywhere to fly and your fleet aims and fires on its own." },
+      { q: "Is this connected to Star Seekers 2?", a: "Yes. Shard War is the prequel, the war that started everything, and Star Seekers 2 is the campaign twenty years later. You can play either first, and the full story is at starseekersapp.com." },
+      { q: "What are Concord Fusions?", a: "Max out two pilots from rival factions and they merge into one capital ship. There are six secret fusions to find." }
+    ],
+    keywords: "space shooter iphone, fleet building game, one thumb shooter, no ads mobile game, roguelite space game, arcade shmup ios, star seekers shard war"
+  },
+  {
     id: 41,
     title: "TideHook: Fishing Tides",
     description: "Tide times, solunar bite windows and the right bait for 85 species — computed on your phone from 3,996 harmonic stations, so it works with no signal at the water.",
