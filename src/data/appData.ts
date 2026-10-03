@@ -610,6 +610,43 @@ export const allApps: App[] = [
     keywords: "football quiz game, soccer trivia app, guess the footballer, football knowledge quiz, soccer quiz app"
   },
   {
+    id: 43,
+    title: "Star Seekers 2: Space Shooter",
+    description: "A top-down arcade space shooter with 100 levels and a boss at the end of every one. Unlock starfighters, upgrade your firepower, and hold the line against the alien swarm. No ads, plays offline.",
+    image: "/starseekers2logo.png",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6759613787",
+    websiteUrl: "https://www.starseekersapp.com/",
+    slug: "star-seekers-2",
+    appCategory: "GameApplication",
+    tagline: "100 levels. A boss at the end of every one.",
+    metaTitle: "Star Seekers 2 — Arcade Space Shooter for iPhone, No Ads",
+    metaDescription: "A fast top-down space shooter with 100 levels, a boss at the end of every one, unlockable starfighters and upgradeable weapons. Free on iOS, no ads, plays offline.",
+    longDescription: [
+      "Star Seekers 2 is a top-down arcade space shooter built for people who grew up on the genre. You pilot a starfighter against waves of alien attackers, dodging fire and returning it, through 100 levels with a boss waiting at the end of every one. Enemy patterns evolve as you climb, so the difficulty comes from what the game asks of you, not from a timer or an energy meter.",
+      "Every run earns resources. Spend them on your guns, lasers and ship systems, or save toward unlocking a stronger starfighter with its own power and durability profile. Choosing the right ship for the mission ahead matters as much as your reflexes once the later galaxies start throwing real firepower at you.",
+      "The game sits inside the wider Star Seekers universe — the Shroud Reaches, the shattered Beacon, and the factions circling what's left of it. Star Seekers 2 is the campaign twenty years after the Shard War, a hunt for five beacon shards before the Hollow wakes up and starts eating stars again.",
+      "It is free, it has no ads, and it plays offline. That last combination is rare in arcade shooters, where the usual model is an interstitial between every death. Here the only thing between you and the next level is the boss."
+    ],
+    features: [
+      { title: "100 levels, 100 bosses", text: "A boss waits at the end of every level, with enemy patterns that evolve as you climb." },
+      { title: "Unlock and upgrade starfighters", text: "Earn resources from every run to improve guns, lasers and ship systems, or unlock a tougher ship." },
+      { title: "Fast top-down combat", text: "Smooth, responsive controls built for classic arcade shooter reflexes." },
+      { title: "No ads, ever", text: "Free to play with no interstitials between deaths — rare for an arcade shooter." },
+      { title: "Plays offline", text: "No connection needed, so it works on a plane, a train or anywhere with no signal." },
+      { title: "Part of a bigger universe", text: "Set in the Shroud Reaches twenty years after the Shard War, hunting five beacon shards before the Hollow wakes." }
+    ],
+    faqs: [
+      { q: "Is Star Seekers 2 free?", a: "Yes, it's free to download on the App Store, and there are no ads." },
+      { q: "Does it need an internet connection?", a: "No. Star Seekers 2 plays fully offline." },
+      { q: "How many levels are there?", a: "100, each ending in a boss fight, with enemy patterns that get harder as you progress." },
+      { q: "Do I need to play the first game first?", a: "No. Star Seekers 2 stands on its own. It's set twenty years after the Shard War in the same universe, and you can read the full story at starseekersapp.com." },
+      { q: "Can I unlock better ships?", a: "Yes. Resources earned from missions upgrade your weapons and systems or unlock stronger starfighters with different power and durability." }
+    ],
+    keywords: "space shooter game iphone, arcade shooter no ads, offline space game, top down shooter ios, bullet hell iphone, alien invasion game, star seekers 2"
+  },
+  {
     id: 41,
     title: "TideHook: Fishing Tides",
     description: "Tide times, solunar bite windows and the right bait for 85 species — computed on your phone from 3,996 harmonic stations, so it works with no signal at the water.",
