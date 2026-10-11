@@ -1,93 +1,60 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HealthShell, { Breadcrumbs, useScrollReveal } from '@/components/health/HealthShell';
-import { healthArticles } from '@/data/healthArticles';
 import { getHealthApp } from '@/data/healthData';
+import { guides } from '@/content/health';
 import { useSEO } from '@/lib/useSEO';
+import { SITE } from '@/data/catalog';
+import { HealthFrame } from '@/components/health/HealthFrame';
+import { Words } from '@/components/kit/Words';
+import { Breadcrumbs, breadcrumbLd } from '@/components/kit/Breadcrumbs';
+import { formatDate } from '@/components/blog/PostCard';
 
-const SITE = 'https://www.pgappstudios.com';
-const PER_PAGE = 9;
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Health', href: '/health' },
+  { name: 'Guides', href: '/health/guides' },
+];
 
-const HealthGuides: React.FC = () => {
+const HealthGuides = () => {
   useSEO({
-    title: 'Guides | PG Health',
+    title: 'Guides for Hard Weeks and Healthy Habits | PG Health',
     description:
       'Plain, practical guides on getting through a breakup, building gentle daily habits, fasting, walking and looking after yourself. Written by Pedro Gregório.',
     canonical: `${SITE}/health/guides`,
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Health', item: `${SITE}/health` },
-        { '@type': 'ListItem', position: 3, name: 'Guides', item: `${SITE}/health/guides` },
-      ],
-    },
+    jsonLd: breadcrumbLd(crumbs),
   });
 
-  useScrollReveal([]);
-
-  const sorted = [...healthArticles].sort((a, b) => (a.publishedDate < b.publishedDate ? 1 : -1));
-  const [page, setPage] = useState(1);
-  const pages = Math.max(1, Math.ceil(sorted.length / PER_PAGE));
-  const visible = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE);
-
   return (
-    <HealthShell>
-      <div className="h-wrap">
-        <Breadcrumbs trail={[{ label: 'Home', to: '/' }, { label: 'Health', to: '/health' }, { label: 'Guides' }]} />
-      </div>
-
-      <section className="h-wrap pt-8 pb-12">
-        <h1 className="animate-fade-in"><span className="gradient-text">Guides</span></h1>
-        <p className="h-muted text-lg mt-4 max-w-2xl">
-          Plain, practical writing about the things these apps are for. No jargon, no promises,
-          nothing that pretends to replace a professional.
-        </p>
+    <HealthFrame>
+      <section className="pb-12 pt-36 sm:pt-44">
+        <div className="container">
+          <Breadcrumbs items={crumbs} />
+          <h1 className="mt-6 text-display-lg font-semibold">
+            <Words text="*Guides*" now accentClass="serif-accent text-calm pr-[0.06em]" />
+          </h1>
+          <p className="mt-5 max-w-2xl animate-fade-up text-lg leading-relaxed text-fg-2 [animation-delay:200ms]">
+            Plain, practical writing about the things these apps are for. No jargon, no promises, nothing that pretends to
+            replace a professional.
+          </p>
+        </div>
       </section>
-
-      <section className="h-wrap pb-10">
-        <div className="grid gap-5 sm:grid-cols-2">
-          {visible.map((a) => {
+      <section className="container pb-8">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {guides.map((a, i) => {
             const app = getHealthApp(a.primaryApp);
             return (
-              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="h-card p-6 no-underline animate-on-scroll opacity-0">
-                <p className="h-muted text-[13px] mb-2">
-                  {a.publishedDate} · {a.readingMinutes} min read
+              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="spot group p-7" data-reveal style={{ ['--d' as string]: i }}>
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-fg-3">
+                  {formatDate(a.publishedDate)} · {a.readingMinutes} min read
                 </p>
-                <h2 className="text-[21px] mb-2">{a.title}</h2>
-                <p className="h-muted text-[15px] mb-4">{a.excerpt}</p>
-                {app && (
-                  <p className="text-[13.5px] font-semibold" style={{ color: 'var(--h-accent-ink)' }}>
-                    Goes with {app.name}
-                  </p>
-                )}
+                <h2 className="mt-3 text-2xl font-semibold tracking-[-0.02em] group-hover:text-calm">{a.title}</h2>
+                <p className="mt-3 text-[15px] leading-relaxed text-fg-2">{a.excerpt}</p>
+                {app && <p className="mt-5 text-[13.5px] font-medium text-calm">Goes with {app.name}</p>}
               </Link>
             );
           })}
         </div>
-
-        {pages > 1 && (
-          <nav className="flex gap-2 justify-center mt-10" aria-label="Pagination">
-            {Array.from({ length: pages }, (_, i) => i + 1).map((n) => (
-              <button
-                key={n}
-                onClick={() => setPage(n)}
-                aria-current={n === page ? 'page' : undefined}
-                className="px-4 py-2 rounded-full text-[15px] font-semibold"
-                style={{
-                  background: n === page ? 'var(--h-accent)' : 'transparent',
-                  color: n === page ? '#fff' : 'var(--h-muted)',
-                  border: '1px solid var(--h-line)',
-                }}
-              >
-                {n}
-              </button>
-            ))}
-          </nav>
-        )}
       </section>
-    </HealthShell>
+    </HealthFrame>
   );
 };
 

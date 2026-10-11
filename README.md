@@ -1,69 +1,39 @@
-# Welcome to your Lovable project
+# pgappstudios.com
 
-## Project info
+The website of PG App Studios, an independent iPhone app studio in Lisbon.
+React + Vite + TypeScript + Tailwind, statically generated at build time and
+hosted on Vercel (every push to `main` deploys in about a minute).
 
-**URL**: https://lovable.dev/projects/14c8dd04-e292-4e42-8e84-6712b10d663b
+## Everyday tasks
 
-## How can I edit this code?
+| I want to… | Do this |
+|---|---|
+| Add an app | Add an entry with a `slug` to `src/data/appData.ts`, put it on a shelf in `GROUP_OF` in `src/data/catalog.ts`, add `public/icons/<slug>.webp` and `public/screens/<slug>/1..4.webp` (+ `-sm.webp`). Its page, sitemap entry, footer link and cards appear automatically. |
+| Publish a blog post | Add `src/content/blog/<slug>.md` (copy any existing post for the frontmatter). Link the app with its App Store URL in the text and the post picks up that app's cover, promo card and colour. |
+| Publish a health guide | Add `src/content/health/<slug>.md`. See `HEALTH-HUB-GUIDE.md`. |
+| Refresh share images | `npm run build`, serve `dist/` on port 4791, then `npm run og`. Commit `public/og/`. |
 
-There are several ways of editing your application.
+Never delete a published post: correct it or redirect it in `vercel.json`.
 
-**Use Lovable**
+## How it works
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/14c8dd04-e292-4e42-8e84-6712b10d663b) and start prompting.
+- `npm run build` runs `tsc`, `vite build`, then `scripts/ssg.mjs`, which
+  renders every URL with `react-dom/server` into real HTML (title, meta,
+  canonical, social tags, JSON-LD, preloads), writes `dist/404.html` and
+  generates `dist/sitemap.xml` from the same data. It fails loudly if a page
+  breaks or two pages share a title.
+- Each page and each article is its own small JS chunk (`src/AppRoutes.tsx`).
+  Blog posts are compiled from markdown at build time
+  (`scripts/vite-plugin-md.mjs`), so no markdown parser ships to the browser.
+- Design tokens live in `tailwind.config.ts` and `src/index.css`. Each app's
+  accent colour (`src/data/appColors.json`) is taken from its icon.
+- Store clicks, including links inside blog posts, are tracked in GA4 as
+  `store_outbound_click` (`src/lib/interactions.ts`).
 
-Changes made via Lovable will be committed automatically to this repo.
+## Local development
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm install
+npm run dev        # http://localhost:8080
+npm run build      # full static build into dist/
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/14c8dd04-e292-4e42-8e84-6712b10d663b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)

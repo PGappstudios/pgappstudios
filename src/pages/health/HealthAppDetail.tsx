@@ -1,176 +1,163 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import HealthShell, { Breadcrumbs, useScrollReveal } from '@/components/health/HealthShell';
-import NotFound from '@/pages/NotFound';
-import { getHealthApp, healthApps } from '@/data/healthData';
-import { healthArticles } from '@/data/healthArticles';
+import { Link, useParams } from 'react-router-dom';
+import { getHealthApp, healthApps, type HealthApp } from '@/data/healthData';
+import { guides } from '@/content/health';
 import { useSEO } from '@/lib/useSEO';
-import { trackStoreClick } from '@/lib/track';
+import { SITE } from '@/data/catalog';
+import { HealthFrame, HealthIcon } from '@/components/health/HealthFrame';
+import { StoreButton } from '@/components/kit/StoreButton';
+import { Words } from '@/components/kit/Words';
+import { Breadcrumbs, breadcrumbLd } from '@/components/kit/Breadcrumbs';
+import { Arrow } from '@/components/kit/Icons';
+import NotFound from '@/pages/NotFound';
 
-const SITE = 'https://www.pgappstudios.com';
-
-const HealthAppDetail: React.FC = () => {
+const HealthAppDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const app = getHealthApp(slug);
-  const pageUrl = `${SITE}/health/apps/${slug}`;
+  if (!app) return <NotFound />;
+  return <Page key={app.slug} app={app} />;
+};
+
+function Page({ app }: { app: HealthApp }) {
+  const url = `${SITE}/health/apps/${app.slug}`;
+  const crumbs = [
+    { name: 'Home', href: '/' },
+    { name: 'Health', href: '/health' },
+    { name: app.name, href: `/health/apps/${app.slug}` },
+  ];
 
   useSEO({
-    title: app ? `${app.name}: ${app.tagline}` : 'App | PG Health',
-    description: app?.metaDescription ?? '',
-    canonical: pageUrl,
-    ogImage: app ? `${SITE}${app.icon}` : undefined,
-    jsonLd: app
-      ? [
-          {
-            '@context': 'https://schema.org',
-            '@type': 'SoftwareApplication',
-            name: app.name,
-            operatingSystem: app.playStoreUrl ? 'iOS, Android' : 'iOS',
-            applicationCategory: 'HealthApplication',
-            description: app.metaDescription,
-            url: pageUrl,
-            downloadUrl: app.appStoreUrl,
-            image: `${SITE}${app.icon}`,
-            offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-            author: { '@type': 'Organization', name: 'PG App Studios' },
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-              { '@type': 'ListItem', position: 2, name: 'Health', item: `${SITE}/health` },
-              { '@type': 'ListItem', position: 3, name: app.name, item: pageUrl },
-            ],
-          },
-        ]
-      : undefined,
+    // Long store names push the title past what Google shows; drop the subtitle then.
+    title: `${app.name}: ${app.tagline}`.length > 62 ? `${app.name.split(':')[0]}: ${app.tagline}` : `${app.name}: ${app.tagline}`,
+    description: app.metaDescription,
+    canonical: url,
+    ogImage: `${SITE}${app.icon}`,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': ['SoftwareApplication', 'MobileApplication'],
+        name: app.name,
+        operatingSystem: app.playStoreUrl ? 'iOS, Android' : 'iOS',
+        applicationCategory: 'HealthApplication',
+        description: app.metaDescription,
+        url,
+        downloadUrl: app.appStoreUrl,
+        image: `${SITE}${app.icon}`,
+        screenshot: app.screenshots.map((s) => SITE + s.src),
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+        author: { '@type': 'Organization', name: 'PG App Studios' },
+      },
+      breadcrumbLd(crumbs),
+    ],
   });
 
-  useScrollReveal([slug]);
-
-  if (!app) return <NotFound />;
-
-  const related = app.relatedApps
-    .map((s) => healthApps.find((a) => a.slug === s))
-    .filter((a): a is NonNullable<typeof a> => Boolean(a));
-
-  const articles = app.relatedArticles
-    .map((s) => healthArticles.find((x) => x.slug === s))
-    .filter((a): a is NonNullable<typeof a> => Boolean(a));
-
-  const store = (kind: 'app_store' | 'play_store') => () =>
-    trackStoreClick({ appName: app.name, store: kind, sourcePage: `/health/apps/${app.slug}` });
+  const related = app.relatedApps.map((s) => healthApps.find((a) => a.slug === s)).filter((a): a is HealthApp => Boolean(a));
+  const articles = guides.filter((g) => g.primaryApp === app.slug || app.relatedArticles.includes(g.slug));
 
   return (
-    <HealthShell>
-      <div className="h-wrap">
-        <Breadcrumbs
-          trail={[{ label: 'Home', to: '/' }, { label: 'Health', to: '/health' }, { label: app.name }]}
-        />
-      </div>
-
-      {/* Icon, tagline, primary download */}
-      <section className="h-wrap pt-8 pb-12 text-center">
-        <img
-          src={app.icon}
-          alt={`${app.name} app icon`}
-          width={104}
-          height={104}
-          className="w-26 h-26 mx-auto rounded-3xl mb-6 hero-phone"
-          style={{ width: 104, height: 104, boxShadow: '0 10px 30px rgba(0,0,0,0.45)' }}
-        />
-        <h1 className="max-w-2xl mx-auto animate-fade-in">
-          <span className="gradient-text">{app.name}</span>
-        </h1>
-        <p className="h-muted text-lg mt-4 max-w-xl mx-auto">{app.tagline}</p>
-
-        <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          <a className="h-btn" href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" onClick={store('app_store')}>
-            Download on the App Store
-          </a>
-          {app.playStoreUrl && (
-            <a className="h-btn-quiet" href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" onClick={store('play_store')}>
-              Get it on Google Play
-            </a>
-          )}
+    <HealthFrame>
+      <section className="pb-14 pt-36 sm:pt-44">
+        <div className="container text-center">
+          <div className="flex justify-center">
+            <Breadcrumbs items={crumbs} />
+          </div>
+          <HealthIcon app={app} size={104} className="mx-auto mt-10 animate-float shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_24px_60px_-14px_rgba(205,189,246,0.55)]" />
+          <h1 className="mx-auto mt-8 max-w-3xl text-display-md font-semibold sm:text-display-lg">
+            <Words text={app.name} now />
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl animate-fade-up font-serif text-2xl italic text-calm [animation-delay:200ms]">{app.tagline}</p>
+          <div className="mt-9 flex animate-fade-up flex-wrap justify-center gap-3 [animation-delay:350ms]">
+            <StoreButton href={app.appStoreUrl} app={app.name} size="lg" />
+            {app.playStoreUrl && <StoreButton href={app.playStoreUrl} kind="play" app={app.name} size="lg" />}
+          </div>
         </div>
       </section>
 
-      {/* Problem statement */}
-      <section className="h-narrow pb-14" aria-labelledby="what-this-is-for">
-        <h2 id="what-this-is-for" className="mb-4">What this is for</h2>
-        <p className="text-[18px] leading-relaxed">{app.problemStatement}</p>
+      <section className="container max-w-3xl pb-16" aria-labelledby="what-this-is-for">
+        <p className="eyebrow" data-reveal="fade">What this is for</p>
+        <h2 id="what-this-is-for" className="sr-only">
+          What this is for
+        </h2>
+        <p className="mt-5 text-xl leading-[1.7] text-fg sm:text-2xl" data-reveal>
+          {app.problemStatement}
+        </p>
       </section>
 
-      {/* Screenshots */}
       {app.screenshots.length > 0 && (
-        <section className="h-wrap pb-14" aria-labelledby="inside">
-          <h2 id="inside" className="mb-6">Inside the app</h2>
-          <div className="h-shots">
-            {app.screenshots.map((s) => (
-              <img key={s.src} src={s.src} alt={s.alt} loading="lazy" width={190} height={412} className="h-shot" />
+        <section className="container pb-16" aria-labelledby="inside">
+          <h2 id="inside" className="text-display-sm font-semibold" data-reveal>
+            Inside the app
+          </h2>
+          <div className="snap-row mt-8 lg:grid lg:grid-cols-4 lg:overflow-visible">
+            {app.screenshots.map((s, i) => (
+              <img
+                key={s.src}
+                src={s.src}
+                alt={s.alt}
+                loading="lazy"
+                decoding="async"
+                width={380}
+                height={824}
+                className="shot w-[62vw] max-w-[260px] shrink-0 lg:w-full lg:max-w-none"
+                data-reveal
+                style={{ ['--d' as string]: i }}
+              />
             ))}
           </div>
         </section>
       )}
 
-      {/* Features */}
-      <section className="h-wrap pb-14" aria-labelledby="features">
-        <h2 id="features" className="mb-6">What it does</h2>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {app.features.map((f) => (
-            <div key={f.title} className="h-card p-6 animate-on-scroll opacity-0">
-              <h3 className="mb-2">{f.title}</h3>
-              <p className="h-muted text-[15.5px]">{f.text}</p>
+      <section className="container pb-16" aria-labelledby="features">
+        <h2 id="features" className="text-display-sm font-semibold" data-reveal>
+          What it does
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {app.features.map((f, i) => (
+            <div key={f.title} className="spot p-7" data-reveal style={{ ['--d' as string]: i }}>
+              <h3 className="text-lg font-semibold tracking-[-0.02em]">{f.title}</h3>
+              <p className="mt-2 leading-relaxed text-fg-2">{f.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Related articles */}
       {articles.length > 0 && (
-        <section className="h-wrap pb-14" aria-labelledby="reading">
-          <h2 id="reading" className="mb-6">Worth reading</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+        <section className="container pb-16" aria-labelledby="reading">
+          <h2 id="reading" className="text-display-sm font-semibold">
+            Worth reading
+          </h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {articles.map((a) => (
-              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="h-card p-6 no-underline">
-                <p className="h-muted text-[13px] mb-2">{a.readingMinutes} min read</p>
-                <h3 className="mb-2">{a.title}</h3>
-                <p className="h-muted text-[15px]">{a.excerpt}</p>
+              <Link key={a.slug} to={`/health/guides/${a.slug}`} className="spot group p-7">
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-fg-3">{a.readingMinutes} min read</p>
+                <h3 className="mt-3 text-xl font-semibold tracking-[-0.02em] group-hover:text-calm">{a.title}</h3>
+                <p className="mt-2 text-[15px] text-fg-2">{a.excerpt}</p>
               </Link>
             ))}
           </div>
         </section>
       )}
 
-      {/* Related apps */}
       {related.length > 0 && (
-        <section className="h-wrap pb-14" aria-labelledby="also">
-          <h2 id="also" className="mb-6">Also from PG Health</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+        <section className="container pb-8" aria-labelledby="also">
+          <h2 id="also" className="text-display-sm font-semibold">
+            Also from PG Health
+          </h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {related.map((r) => (
-              <Link key={r.slug} to={`/health/apps/${r.slug}`} className="h-card p-6 flex gap-4 items-center no-underline">
-                <img src={r.icon} alt="" width={52} height={52} loading="lazy" className="rounded-xl flex-none w-13 h-13" style={{ width: 52, height: 52 }} />
-                <div>
-                  <h3 className="text-[17px] mb-1">{r.name}</h3>
-                  <p className="h-muted text-[14.5px]">{r.tagline}</p>
+              <Link key={r.slug} to={`/health/apps/${r.slug}`} className="spot group flex items-center gap-4 p-6">
+                <HealthIcon app={r} size={52} />
+                <div className="flex-1">
+                  <h3 className="font-semibold">{r.name}</h3>
+                  <p className="text-[14.5px] text-fg-2">{r.tagline}</p>
                 </div>
+                <Arrow size={16} className="text-fg-3 transition-transform group-hover:translate-x-1" />
               </Link>
             ))}
           </div>
         </section>
       )}
-
-      {/* Sticky download bar, mobile only */}
-      <div className="h-sticky-cta">
-        <img src={app.icon} alt="" width={40} height={40} className="rounded-xl" style={{ width: 40, height: 40 }} />
-        <a className="h-btn" href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" onClick={store('app_store')}>
-          Download free
-        </a>
-      </div>
-    </HealthShell>
+    </HealthFrame>
   );
-};
+}
 
 export default HealthAppDetail;

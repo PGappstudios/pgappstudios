@@ -78,6 +78,7 @@ export const allApps: App[] = [
     category: 'ios',
     url: "https://apps.apple.com/app/id6746637395",
     slug: "aquafasty-diet-plan",
+    metaTitle: "Aquafasty — Water, Steps & Fasting Weight-Loss Tracker",
     appCategory: "HealthApplication",
     tagline: "Water, steps and fasting — one simple weight-loss tracker",
     metaDescription: "Aquafasty combines water tracking, steps and an intermittent fasting timer in one simple, habit-first weight-loss app. Free on iOS.",
@@ -146,6 +147,7 @@ export const allApps: App[] = [
     initials: "BLG",
     initialsColor: "#FF9EC4",
     slug: "baby-learning-games",
+    metaTitle: "Baby Learning Games 1-4 — Toddler Learning Games App",
     appCategory: "EducationalApplication",
     tagline: "Safe, colorful learning games for toddlers ages 1–4",
     metaDescription: "Gentle, colorful learning games for toddlers aged 1–4 — colors, shapes, animals and sounds. Safe screen time parents can feel good about. Free on iOS.",
@@ -208,6 +210,7 @@ export const allApps: App[] = [
     initials: "BTYF",
     initialsColor: "#4A6EDB",
     slug: "bible-test-your-faith",
+    metaTitle: "Bible: Test Your Faith — Daily Bible Quiz & Verse App",
     appCategory: "LifestyleApplication",
     tagline: "A gentle daily Bible quiz to grow in scripture",
     metaDescription: "Turn Bible study into a simple daily habit — thoughtful questions, meaningful verses and a gentle quiz to deepen your scripture knowledge. Free on iOS.",
@@ -238,6 +241,7 @@ export const allApps: App[] = [
     url: "https://apps.apple.com/app/id6762289803",
     websiteUrl: "https://www.cycle-buddy.app/",
     slug: "cyclebuddy",
+    metaTitle: "CycleBuddy — Find Cycling Partners & Group Rides Near You",
     appCategory: "SportsApplication",
     tagline: "Find riders near you and turn solo miles into group rides",
     metaDescription: "CycleBuddy helps cyclists find riders nearby, join group rides and chat with their crew. Road, gravel or MTB. Free on iOS.",
@@ -479,6 +483,41 @@ export const allApps: App[] = [
     keywords: "quit drinking app, gambling recovery app, quit smoking app, sobriety tracker, addiction recovery app, urge tracker, quit porn app"
   },
   {
+    id: 45,
+    title: "Learn Spanish with Lola",
+    description: "The Spanish they actually speak in Spain, with the country behind it: 1,000+ words with real Castilian audio, 50 verbs, 30 slang expressions and all 17 regions.",
+    image: "/icons/learn-spanish-with-lola.webp",
+    platforms: ["iOS App"],
+    category: 'ios',
+    url: "https://apps.apple.com/app/id6802579473",
+    slug: "learn-spanish-with-lola",
+    appCategory: "EducationalApplication",
+    tagline: "Learn the Spanish they speak in Spain",
+    metaTitle: "Learn Spanish with Lola — Castilian Spanish & Culture of Spain",
+    metaDescription: "Learn the Spanish spoken in Spain: 1,000+ words with Castilian audio, 50 verbs in three tenses, slang, 10 games and all 17 regions of Spain. No account, on iOS.",
+    longDescription: [
+      "Learn Spanish with Lola teaches the Spanish they actually speak in Spain, and the country behind it. Most apps default to Latin American Spanish; Lola is built around Castilian pronunciation, vocabulary and the everyday habits that make the language make sense once you land.",
+      "There are over 1,000 words and phrases, each with real Castilian audio, phonetics and an example sentence; 50 essential verbs fully conjugated across present, past and future; and 30 slang expressions the textbooks leave out. Conversations are set where you'll need them: a restaurant, a taxi, a hotel, a shop.",
+      "Practice adapts to you. Flash cards bring back the words you got wrong, ten games are built from your own vocabulary, and a pronunciation test listens and scores you out loud. The whole app can be used in English, Portuguese, German, French, Italian, Russian, Ukrainian, Chinese, Japanese or Hindi.",
+      "The other half is Spain itself: all 17 regions with their cities, food, history and what not to miss, plus fiestas, flamenco, tapas, football and why dinner starts at ten. There's no account and no tracking, and your progress stays on your phone. It starts with a free trial, then continues with a subscription."
+    ],
+    features: [
+      { title: "Real Castilian Spanish", text: "1,000+ words and phrases with Castilian audio, phonetics and a real example sentence." },
+      { title: "50 verbs, three tenses", text: "The essential verbs fully conjugated across present, past and future." },
+      { title: "Slang and real conversations", text: "30 expressions textbooks skip, and dialogues set in restaurants, taxis, hotels and shops." },
+      { title: "10 games and a pronunciation test", text: "Games built from your own vocabulary, and a test that listens and scores you out loud." },
+      { title: "All 17 regions of Spain", text: "Cities, food, history and habits, from the Alhambra to a Galician seafood fair." },
+      { title: "Learn in your own language", text: "The app speaks ten languages, from English and Portuguese to Japanese and Hindi." }
+    ],
+    faqs: [
+      { q: "Does Lola teach Spanish from Spain or Latin America?", a: "Spain. Lola is built around Castilian Spanish: the pronunciation, vocabulary and slang you'll hear in Madrid, Málaga or Bilbao." },
+      { q: "What does it cost?", a: "It's free to download and starts with a free trial on the yearly plan, then continues with a subscription you can cancel any time in your Apple account settings." },
+      { q: "Can I use it if English isn't my first language?", a: "Yes. The whole app can be used in English, Portuguese, German, French, Italian, Russian, Ukrainian, Chinese, Japanese or Hindi." },
+      { q: "Do I need an account?", a: "No. There's no sign up, no email and no analytics. Your progress stays on your device." }
+    ],
+    keywords: "learn spanish from spain, castilian spanish app, spanish for spain travel, learn spanish app iphone, spanish culture app, spanish verbs app"
+  },
+  {
     id: 1,
     title: "MegaConverter: Unit & Data",
     description: "Powerful unit conversion tool for everyday measurements, scientific calculations, and data transformations.",
@@ -519,6 +558,7 @@ export const allApps: App[] = [
     initials: "PL",
     initialsColor: "#006699",
     slug: "portugal-lifestyle-learn-it",
+    metaTitle: "Portugal Lifestyle: Learn it — European Portuguese App",
     appCategory: "EducationalApplication",
     tagline: "Learn real European Portuguese through culture and play",
     metaDescription: "Learn real European Portuguese — slang, culture, history and food — through fun mini-games. The language as actually spoken in Portugal. Free on iOS.",
@@ -576,7 +616,7 @@ export const allApps: App[] = [
       { q: "Is it good for complete beginners?", a: "Yes — it starts from greetings and essentials and builds up naturally, with culture woven in from the first lesson." }
     ],
     keywords: "learn european portuguese app, european portuguese app, portuguese culture app, learn portuguese from portugal, portuguese for expats, portuguese not brazilian, portugal history app",
-    rating: { value: 4.7, count: 6, source: "App Store (US)" }
+    rating: { value: 4.8, count: 8, source: "App Store (US)" }
   },
   {
     id: 20,
@@ -659,7 +699,7 @@ export const allApps: App[] = [
     appCategory: "GameApplication",
     tagline: "Build a fleet, not a gun",
     metaTitle: "Star Seekers: Shard War — One Thumb Fleet Shooter, No Ads",
-    metaDescription: "A one thumb space shooter where your rescued wingmen are your weapons. Reshape the fleet into Spear, Ring or Wake, fuse rival pilots into capital ships, and fight five acts of the Shard War. Free to start, no ads.",
+    metaDescription: "One-thumb space shooter where rescued wingmen are your weapons. Reshape your fleet into Spear, Ring or Wake and fight the Shard War. Free to start, no ads.",
     longDescription: [
       "When the first Beacon Shard detonates, three war fleets die in eleven minutes. The survivors — human, reptilian and spirit — band together as the Ashwing, and Star Seekers: Shard War is what happens next. It is a space shooter where your weapons have names.",
       "The twist is the fleet. Every pilot you rescue flies beside you as a weapon, twelve wingmen drawn from three factions, each firing differently depending on how you arrange them. One tap reshapes the formation: Spear focuses everything forward, Ring guards you from all sides, Wake trails behind you like a snake. Same twelve pilots, three completely different weapons, switchable mid fight.",
@@ -697,7 +737,7 @@ export const allApps: App[] = [
     appCategory: "SportsApplication",
     tagline: "Know when the fish bite, anywhere, with no signal",
     metaTitle: "TideHook — Offline Fishing Tide Times & Solunar Bite Windows",
-    metaDescription: "Real harmonic tide predictions from 3,996 stations, solunar bite windows, bait and rigs for 85 species and 1,339 fishing marks in 166 countries. Works fully offline on iOS.",
+    metaDescription: "Real harmonic tide predictions from 3,996 stations, solunar bite windows, bait for 85 species and 1,339 fishing marks. Works fully offline on iPhone.",
     longDescription: [
       "TideHook tells you when the fish bite, anywhere in the world, without a bar of signal. Tide times, solunar feeding periods and the right bait for 85 species are all computed on your phone, so the app still works at the end of a track on a headland where nothing else does.",
       "The tides are the real thing. Every prediction is a harmonic calculation from 3,996 stations — the same maths behind the official tide tables, not a rough interpolation — and the engine has been checked against NOAA's published predictions to within 1.7 cm. You get the full curve for today and the week ahead, with the state of the tide described the way anglers actually say it: mid flood, top of the tide.",
@@ -733,6 +773,7 @@ export const allApps: App[] = [
     initials: "VC",
     initialsColor: "#9C4FE8",
     slug: "voice-to-caption",
+    metaTitle: "Voice To Caption — AI Captions & Hashtags From Your Voice",
     appCategory: "ProductivityApplication",
     tagline: "Speak it — get AI captions and hashtags for every platform",
     metaDescription: "Turn your voice into polished AI captions with smart hashtags for Instagram, TikTok, X, LinkedIn and Threads. Free on iOS.",
@@ -761,8 +802,9 @@ export const allApps: App[] = [
     description: "GritVit is a fitness dating app that connects people through their passion for working out and an active lifestyle.",
     image: "GritVit.png",
     platforms: ["iOS App", "Website"],
-    category: "web",
-    url: "https://www.gritvit.com/",
+    category: "ios",
+    url: "https://apps.apple.com/app/id6761624974",
+    websiteUrl: "https://www.gritvit.com/",
     slug: "gritvit",
     appCategory: "LifestyleApplication",
     tagline: "The dating app for people who love to train",
@@ -780,7 +822,7 @@ export const allApps: App[] = [
     faqs: [
       { q: "What is GritVit?", a: "GritVit is a fitness dating app that connects people through a shared love of working out and an active lifestyle." },
       { q: "Who is GritVit for?", a: "Anyone who values fitness and wants to meet partners who share that commitment — from gym regulars to runners and active people generally." },
-      { q: "Where can I get GritVit?", a: "Learn more and get started at gritvit.com." }
+      { q: "Where can I get GritVit?", a: "GritVit is on the App Store for iPhone, and you can learn more at gritvit.com." }
     ],
     keywords: "fitness dating app, dating app for gym goers, dating app for athletes, meet gym partners, active lifestyle dating"
   },
@@ -816,7 +858,7 @@ export const allApps: App[] = [
     appCategory: "GameApplication",
     tagline: "Nuke any city from any city on a 3D Earth",
     metaTitle: "Nuke Globe — Nuclear Strike Simulator on a 3D Earth",
-    metaDescription: "Free nuclear strike simulator in your browser: pick two of 580 cities, choose a warhead from Little Boy to the Tsar Bomba, and watch the real blast radii, fallout and casualty estimates.",
+    metaDescription: "Free nuclear strike simulator in your browser: pick two of 580 cities and a warhead from Little Boy to the Tsar Bomba, and see real blast radii and fallout.",
     longDescription: [
       "Nuke Globe is a free browser simulator built on a high-resolution 3D Earth. Pick a launch city and a target from 580 cities worldwide — by dropdown or by clicking the dots on the globe — choose a warhead, and watch the missile arc over the planet before the fireball lands.",
       "What happens next is the point. The blast rings, the mushroom cloud and the downwind fallout plume are drawn on the globe, and underneath them the real numbers: flight time, fireball radius, the heavy blast and thermal radiation radii, and an estimated casualty count for that specific city. The radii come from the same airburst scaling laws used by published nuclear effects models; the casualty figures use a population density model built for each city.",

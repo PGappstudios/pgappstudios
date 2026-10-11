@@ -42,7 +42,7 @@ export interface HealthApp {
   playStoreUrl?: string;
   /** Slugs of other health apps to cross promote */
   relatedApps: string[];
-  /** Slugs from healthArticles.ts */
+  /** Slugs of guides in src/content/health/ */
   relatedArticles: string[];
   metaDescription: string;
 }

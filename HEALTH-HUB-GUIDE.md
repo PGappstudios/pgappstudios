@@ -1,12 +1,12 @@
 # PG Health Hub: how to add an app or an article
 
-Everything in `/health` is driven by two files. You do not need a developer to
+Everything in `/health` is driven by data files. You do not need a developer to
 add an app or publish a guide, and you never touch the page code.
 
 | What you want to do | File to edit |
 |---|---|
 | Add or change an app | `src/data/healthData.ts` |
-| Publish a guide | `src/data/healthArticles.ts` |
+| Publish a guide | a new `.md` file in `src/content/health/` |
 | Change the support notice or helpline link | bottom of `src/data/healthData.ts` |
 
 **House style for this section: no dashes in anything a visitor reads.** Use
@@ -91,13 +91,10 @@ Notes on the fields that matter most:
 - `relatedApps` and `relatedArticles` are just slugs. They build the cross
   promotion blocks automatically.
 
-### Step 3: register the URL in two places
+### Step 3: build and push
 
-1. `scripts/routes.mjs`, add the slug to `HEALTH_APP_SLUGS`.
-2. `public/sitemap.xml`, copy one of the `/health/apps/...` lines and change
-   the slug and the `lastmod` date.
-
-### Step 4: build and push
+The page, its route and its sitemap entry are created automatically from
+`healthData.ts`. There is nothing else to register.
 
 ```bash
 npm run build
@@ -109,20 +106,22 @@ You should see the static generation count include your route. Then commit and p
 
 ## Publish a new article
 
-Open `src/data/healthArticles.ts` and add one object to `healthArticles`:
+Create a markdown file in `src/content/health/`, named after the slug, for
+example `src/content/health/first-weeks-after-a-breakup.md`:
 
-```ts
-{
-  slug: 'first-weeks-after-a-breakup',
-  title: 'What To Do In The First Weeks After A Breakup',
-  metaDescription: 'What the first weeks actually feel like, and the small things that help.',
-  excerpt: 'A plain description of the shape of the first weeks, and what tends to help.',
-  publishedDate: '2026-08-12',
-  updatedDate: '2026-08-12',
-  readingMinutes: 7,
-  primaryApp: 'aftermath',              // the app the CTA points at
-  relatedApps: ['fasting-and-walking'],
-  body: `
+```md
+---
+slug: first-weeks-after-a-breakup
+title: What To Do In The First Weeks After A Breakup
+metaDescription: What the first weeks actually feel like, and the small things that help.
+excerpt: A plain description of the shape of the first weeks, and what tends to help.
+publishedDate: '2026-08-12'
+updatedDate: '2026-08-12'
+readingMinutes: 7
+primaryApp: aftermath
+relatedApps:
+  - fasting-and-walking
+---
 Opening paragraph. No H1 here, the page prints the title for you.
 
 ## First section heading
@@ -134,31 +133,22 @@ Normal paragraphs, **bold**, lists:
 
 > A short quote or an idea worth pausing on.
 
-| Column | Column |
-|:---|:---|
-| a | b |
-
 ## Second section heading
 
 More writing.
-`,
-},
 ```
 
 Rules that keep the page working:
 
-- **Never put a backtick inside `body`.** The text lives inside backticks, so
-  one stray backtick breaks the build.
 - **Do not add app links or download buttons in the body.** The page inserts
-  one app block a third of the way down and one at the end, automatically. That
-  is deliberate: more than two starts to feel like an advert.
+  one app block before the third `##` section and one at the end,
+  automatically. More than two starts to feel like an advert.
 - Use `##` for main sections. The table of contents on the right builds itself
   from them.
 - Health writing rule: say plainly that it is not medical care and point people
   to a professional. Both existing articles do this in the opening.
 
-Then add the slug to `HEALTH_GUIDE_SLUGS` in `scripts/routes.mjs` and add a
-line to `public/sitemap.xml`, same as for apps.
+The page, its route and its sitemap entry appear automatically on the next build.
 
 ---
 
@@ -184,8 +174,9 @@ npm run build          # builds and prerenders every route
 npx vite preview       # opens a local server, visit /health
 ```
 
-If your new page shows up in the prerender list at the end of the build, it is
-live and indexable. After deploying, submit the sitemap once in Google Search
+The build prints how many pages it wrote and fails loudly if any page is
+broken. `dist/sitemap.xml` is generated from the same data, so it is always
+complete. After deploying, submit the sitemap once in Google Search
 Console so the new URLs get picked up faster.
 
 ---

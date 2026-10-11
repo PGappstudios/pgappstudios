@@ -1,55 +1,41 @@
-
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Link } from 'react-router-dom';
+import { useSEO } from '@/lib/useSEO';
+import { products } from '@/data/catalog';
+import { AppIcon } from '@/components/kit/AppIcon';
+import { Arrow } from '@/components/kit/Icons';
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-
-    // Keep unknown URLs out of the index (SPA fallback serves 200, so
-    // without this a soft-404 could get indexed).
-    document.title = "Page Not Found | PG App Studios";
-    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
-    if (!robots) {
-      robots = document.createElement("meta");
-      robots.setAttribute("name", "robots");
-      document.head.appendChild(robots);
-    }
-    const previous = robots.getAttribute("content");
-    robots.setAttribute("content", "noindex, follow");
-    return () => {
-      // Restore on client-side navigation away from the 404.
-      if (previous) robots.setAttribute("content", previous);
-    };
-  }, [location.pathname]);
-
+  useSEO({
+    title: 'Page not found | PG App Studios',
+    description: 'This page does not exist. Browse our apps or read the blog instead.',
+    noindex: true,
+  });
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
-      <div className="flex-grow flex items-center justify-center px-6 py-24 bg-hero-pattern">
-        <div className="text-center">
-          <h1 className="text-9xl font-bold gradient-text animate-pulse-glow mb-6">404</h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Page Not Found</h2>
-          <p className="text-gray-400 mb-8 max-w-md mx-auto">
-            The page you are looking for doesn't exist or has been moved.
-          </p>
-          <Link to="/" className="neon-button group">
-            <span className="z-10 relative">Return to Home</span>
+    <section className="relative overflow-hidden pb-24 pt-40 sm:pt-48">
+      <div className="container text-center">
+        <p className="font-serif text-[clamp(6rem,20vw,14rem)] italic leading-none text-gradient">404</p>
+        <h1 className="mt-4 text-display-sm font-semibold">This page wandered off.</h1>
+        <p className="mx-auto mt-4 max-w-md text-lg text-fg-2">It may have moved, or the link was mistyped. One of these might be what you were after.</p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Link to="/" className="btn-primary">
+            Back home <Arrow size={16} />
+          </Link>
+          <Link to="/our-apps" className="btn-ghost">
+            Browse apps
+          </Link>
+          <Link to="/blog" className="btn-ghost">
+            Read the blog
           </Link>
         </div>
+        <div className="mx-auto mt-14 flex max-w-xl flex-wrap justify-center gap-2">
+          {products.slice(0, 12).map((a) => (
+            <Link key={a.slug} to={`/apps/${a.slug}`} className="transition-transform hover:-translate-y-1">
+              <AppIcon app={a} size={44} />
+            </Link>
+          ))}
+        </div>
       </div>
-      
-      <Footer />
-    </div>
+    </section>
   );
 };
 

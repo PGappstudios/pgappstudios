@@ -1,332 +1,217 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { BlogService, BlogPost as BlogPostType } from '@/lib/blogService';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useSEO } from '@/lib/useSEO';
-
-/**
- * Some older posts start their markdown with the article title as an H1, which
- * duplicated the H1 the page already renders. Drop that first heading.
- */
-const stripLeadingH1 = (md: string) => md.replace(/^\s*#\s+.*(\r?\n)+/, '');
+import { SITE } from '@/data/catalog';
+import { getPost, postBody, relatedPosts, type PostMeta } from '@/content/blog';
+import type { Body } from '@/content/lazyBody';
+import { PostCard, PostCover, formatDate, relatedApp } from '@/components/blog/PostCard';
+import { AppPromo, ReadingProgress, StudioBox, Toc } from '@/components/blog/ArticleParts';
+import { Breadcrumbs, breadcrumbLd } from '@/components/kit/Breadcrumbs';
+import { faqLd } from '@/components/kit/Faq';
+import { Arrow, Clock, LinkedInLogo, XLogo } from '@/components/kit/Icons';
+import NotFound from './NotFound';
 
 const BlogPost = () => {
-  const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<BlogPostType | null>(() => (id ? BlogService.getPostBySlugSync(id) : null));
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { id = '' } = useParams();
+  const post = getPost(id);
+  if (!post) return <NotFound />;
+  return <Article key={post.slug} post={post} />;
+};
 
+function useBody(slug: string): Body | undefined {
+  const [body, setBody] = useState(() => postBody.get(slug));
   useEffect(() => {
-    const fetchPost = async () => {
-      if (!id) {
-        setError('No post ID provided');
-        setLoading(false);
-        return;
-      }
+    if (!body) postBody.preload(slug).then(setBody);
+  }, [slug, body]);
+  return body;
+}
 
-      try {
-        setLoading(true);
-        setError(null);
-        const fetchedPost = await BlogService.getPostBySlug(id);
-        
-        if (!fetchedPost) {
-          setError('Post not found');
-        } else {
-          setPost(fetchedPost);
-        }
-      } catch (err) {
-        setError('Failed to load blog post. Please try again later.');
-        console.error('Error fetching blog post:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+function Article({ post }: { post: PostMeta }) {
+  const body = useBody(post.slug);
+  const app = relatedApp(post);
+  const url = `${SITE}/blog/${post.slug}`;
+  const crumbs = [
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: '/blog' },
+    { name: post.title, href: `/blog/${post.slug}` },
+  ];
+  const [before, after] = body ? splitPromo(body.html) : ['', ''];
 
-    fetchPost();
-  }, [id]);
-
-  const postUrl = post ? `https://www.pgappstudios.com/blog/${post.slug}` : 'https://www.pgappstudios.com/blog';
   useSEO({
-    title: post ? `${post.title} | PG App Studios Blog` : 'Blog | PG App Studios',
-    description: post?.metaDescription || post?.excerpt || 'Guides and updates from PG App Studios.',
-    canonical: postUrl,
+    title: post.seoTitle ?? (post.title.length <= 44 ? `${post.title} | PG App Studios` : post.title),
+    description: post.metaDescription || post.excerpt,
+    canonical: url,
     ogType: 'article',
-    jsonLd: post
-      ? [
-          {
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.title,
-            description: post.metaDescription || post.excerpt,
-            datePublished: post.date,
-            dateModified: post.date,
-            author: { '@type': 'Organization', name: 'PG App Studios' },
-            publisher: {
-              '@type': 'Organization',
-              name: 'PG App Studios',
-              logo: { '@type': 'ImageObject', url: 'https://www.pgappstudios.com/PGlogo.png' },
-            },
-            mainEntityOfPage: postUrl,
-            url: postUrl,
-            keywords: post.metaKeywords,
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pgappstudios.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.pgappstudios.com/blog' },
-              { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
-            ],
-          },
-        ]
-      : undefined,
+    ogImage: `${SITE}/og/blog/${post.slug}.png`,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.metaDescription || post.excerpt,
+        image: `${SITE}/og/blog/${post.slug}.png`,
+        datePublished: post.date,
+        dateModified: post.updatedDate || post.date,
+        author: { '@type': 'Organization', name: 'PG App Studios', url: `${SITE}/about` },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PG App Studios',
+          url: SITE,
+          logo: { '@type': 'ImageObject', url: `${SITE}/icon-512.png`, width: 512, height: 512 },
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        articleSection: post.category,
+        keywords: post.metaKeywords || post.tags.join(', '),
+        wordCount: post.wordCount,
+        inLanguage: 'en',
+        ...(app ? { about: { '@type': 'SoftwareApplication', name: app.title, url: `${SITE}/apps/${app.slug}` } } : {}),
+      },
+      breadcrumbLd(crumbs),
+      ...(body?.faq.length ? [faqLd(body.faq)] : []),
+    ],
   });
 
-  const getCategoryColor = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'apps':
-        return 'bg-pg-purple/20 text-pg-purple border border-pg-purple/30';
-      case 'development':
-        return 'bg-pg-cyan/20 text-pg-cyan border border-pg-cyan/30';
-      case 'technology':
-        return 'bg-pg-blue/20 text-pg-blue border border-pg-blue/30';
-      default:
-        return 'bg-pg-pink/20 text-pg-pink border border-pg-pink/30';
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex flex-col bg-pg-dark">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center pt-20">
-          <div className="text-center">
-            <div className="w-16 h-16 border-4 border-pg-purple border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-white text-lg font-medium">Loading blog post...</p>
-            <p className="text-gray-400 text-sm mt-2">Fetching content from GitHub</p>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (error || !post) {
-    return (
-      <div className="min-h-screen flex flex-col bg-pg-dark">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center pt-20 px-6">
-          <div className="text-center max-w-md">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h2 className="text-xl font-bold text-white mb-3">Post Not Found</h2>
-            <p className="text-gray-400 mb-6">{error || 'The blog post you\'re looking for doesn\'t exist.'}</p>
-            <Link to="/blog" className="neon-button group">
-              <span className="z-10 relative">Back to Blog</span>
-            </Link>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
+  const share = encodeURIComponent(url);
+  const related = relatedPosts(post);
 
   return (
-    <div className="min-h-screen flex flex-col bg-pg-dark">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 bg-hero-pattern">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-pg-purple/20 rounded-full blur-[100px]" />
-        </div>
-        
-        <div className="max-w-4xl mx-auto relative z-10">
-          {/* Back to Blog */}
-          <div className="mb-8">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center text-gray-400 hover:text-pg-purple transition-colors group"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Blog
-            </Link>
+    <article>
+      <ReadingProgress target="#article-body" />
+
+      <header className="relative overflow-hidden pb-12 pt-32 sm:pt-40">
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] bg-[radial-gradient(50%_60%_at_50%_0%,rgba(196,181,253,0.14),transparent)]" />
+        <div className="container max-w-4xl">
+          <Breadcrumbs items={crumbs.slice(0, 2)} />
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <span className="chip">{post.category}</span>
+            <span className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-fg-3">
+              <Clock size={13} /> {post.readTime} min read
+            </span>
           </div>
-
-          {/* Post Header */}
-          <div className="text-center space-y-6">
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(post.category)}`}>
-                {post.category}
+          <h1 className="mt-6 animate-fade-up text-display-md font-semibold sm:text-display-lg">{post.title}</h1>
+          <p className="mt-6 animate-fade-up text-xl leading-relaxed text-fg-2 [animation-delay:150ms]">{post.excerpt}</p>
+          <div className="mt-8 flex animate-fade-up flex-wrap items-center gap-x-4 gap-y-2 text-sm text-fg-2 [animation-delay:250ms]">
+            <span className="flex items-center gap-2">
+              <span className="grid h-7 w-7 place-items-center rounded-lg bg-fg text-ink-950">
+                <span className="font-serif text-base italic leading-none">pg</span>
               </span>
-              <span className="text-gray-400 text-sm">{post.readTime} min read</span>
-              <span className="text-gray-400 text-sm">
-                {new Date(post.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </span>
-            </div>
-            
-            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              {post.title}
-            </h1>
-            
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              {post.excerpt}
-            </p>
-            
-            <div className="flex items-center justify-center text-gray-400">
-              <span className="font-medium">By {post.author}</span>
-            </div>
-
-            {/* Tags */}
-            {post.tags && post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 justify-center pt-4">
-                {post.tags.map((tag) => (
-                  <span 
-                    key={tag} 
-                    className="px-3 py-1 bg-white/5 text-gray-300 rounded-full text-sm border border-white/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              PG App Studios
+            </span>
+            <span className="text-fg-3">·</span>
+            <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {post.updatedDate && post.updatedDate !== post.date && (
+              <>
+                <span className="text-fg-3">·</span>
+                <span>Updated {formatDate(post.updatedDate)}</span>
+              </>
             )}
           </div>
         </div>
-      </section>
+        <div className="container mt-12 max-w-5xl">
+          <PostCover post={post} large className="aspect-[2/1] animate-fade-up [animation-delay:300ms]" />
+        </div>
+      </header>
 
-      {/* Blog Content */}
-      <section className="py-20 px-6 bg-pg-dark relative flex-1">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,41,247,0.05)_0%,rgba(10,1,24,0)_70%)]"></div>
-        <div className="max-w-4xl mx-auto relative z-10">
-          <article className="glass-card p-8 md:p-12">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]}
-                components={{
-                  h1: ({ children }) => (
-                    <h1 className="text-3xl font-bold text-white mt-8 mb-6 first:mt-0 border-b border-white/10 pb-4">
-                      {children}
-                    </h1>
-                  ),
-                  h2: ({ children }) => (
-                    <h2 className="text-2xl font-bold text-white mt-8 mb-4 first:mt-0">
-                      {children}
-                    </h2>
-                  ),
-                  h3: ({ children }) => (
-                    <h3 className="text-xl font-bold text-white mt-6 mb-3">
-                      {children}
-                    </h3>
-                  ),
-                  h4: ({ children }) => (
-                    <h4 className="text-lg font-bold text-white mt-4 mb-2">
-                      {children}
-                    </h4>
-                  ),
-                  p: ({ children }) => (
-                    <p className="text-gray-300 mb-6 leading-relaxed text-base">
-                      {children}
-                    </p>
-                  ),
-                  ul: ({ children }) => (
-                    <ul className="text-gray-300 mb-6 pl-6 space-y-2 list-disc">
-                      {children}
-                    </ul>
-                  ),
-                  ol: ({ children }) => (
-                    <ol className="text-gray-300 mb-6 pl-6 space-y-2 list-decimal">
-                      {children}
-                    </ol>
-                  ),
-                  li: ({ children }) => (
-                    <li className="text-gray-300 leading-relaxed">
-                      {children}
+      <div className="container grid max-w-6xl gap-12 pb-16 lg:grid-cols-[1fr_250px]">
+        <div id="article-body" className="min-w-0">
+          {body && body.toc.filter((t) => t.depth === 2).length > 2 && (
+            <details className="surface mb-10 px-5 py-4 lg:hidden">
+              <summary className="cursor-pointer font-mono text-[11px] uppercase tracking-[0.16em] text-fg-2">On this page</summary>
+              <ol className="mt-3 space-y-2 text-[15px]">
+                {body.toc
+                  .filter((t) => t.depth === 2)
+                  .map((t) => (
+                    <li key={t.id}>
+                      <a href={`#${t.id}`} className="text-fg-2 hover:text-fg">
+                        {t.text}
+                      </a>
                     </li>
-                  ),
-                  strong: ({ children }) => (
-                    <strong className="text-white font-semibold">
-                      {children}
-                    </strong>
-                  ),
-                  em: ({ children }) => (
-                    <em className="text-gray-200 italic">
-                      {children}
-                    </em>
-                  ),
-                  code: ({ children }) => (
-                    <code className="bg-white/10 text-pg-cyan px-2 py-1 rounded text-sm border border-white/20">
-                      {children}
-                    </code>
-                  ),
-                  pre: ({ children }) => (
-                    <pre className="bg-white/5 text-gray-300 p-6 rounded-lg overflow-x-auto mb-6 border border-white/10">
-                      {children}
-                    </pre>
-                  ),
-                  blockquote: ({ children }) => (
-                    <blockquote className="border-l-4 border-pg-purple pl-6 my-6 text-gray-300 italic bg-white/5 py-4 rounded-r-lg">
-                      {children}
-                    </blockquote>
-                  ),
-                  a: ({ href, children }) => (
-                    <a 
-                      href={href} 
-                      className="text-pg-purple hover:text-pg-pink underline transition-colors" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      {children}
-                    </a>
-                  ),
-                  table: ({ children }) => (
-                    <div className="overflow-x-auto mb-6">
-                      <table className="w-full border-collapse border border-white/20 rounded-lg overflow-hidden">
-                        {children}
-                      </table>
-                    </div>
-                  ),
-                  th: ({ children }) => (
-                    <th className="border border-white/20 px-4 py-2 bg-white/10 text-white font-semibold text-left">
-                      {children}
-                    </th>
-                  ),
-                  td: ({ children }) => (
-                    <td className="border border-white/20 px-4 py-2 text-gray-300">
-                      {children}
-                    </td>
-                  ),
-                }}
-              >
-                {stripLeadingH1(post.content)}
-              </ReactMarkdown>
-            </div>
-          </article>
+                  ))}
+              </ol>
+            </details>
+          )}
 
-          {/* Navigation */}
-          <div className="mt-12 text-center">
-            <Link to="/blog" className="neon-button group">
-              <span className="z-10 relative">Back to All Posts</span>
-            </Link>
+          {body ? (
+            <>
+              <div className="prose-pg is-first" dangerouslySetInnerHTML={{ __html: before }} />
+              {app && after && <AppPromo app={app} />}
+              {after && <div className="prose-pg mt-[1.25em]" dangerouslySetInnerHTML={{ __html: after }} />}
+            </>
+          ) : (
+            <div className="max-w-prose space-y-4" aria-busy="true">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div key={i} className="h-4 animate-pulse rounded bg-white/[0.06]" style={{ width: `${70 + ((i * 37) % 30)}%` }} />
+              ))}
+            </div>
+          )}
+
+          {/* Tags + share */}
+          <div className="mt-14 flex max-w-prose flex-wrap items-center justify-between gap-6 border-t border-white/[0.08] pt-8">
+            <ul className="flex flex-wrap gap-2">
+              {post.tags.map((t) => (
+                <li key={t} className="chip">
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-center gap-1">
+              <span className="mr-2 font-mono text-[11px] uppercase tracking-[0.14em] text-fg-3">Share</span>
+              <a
+                href={`https://x.com/intent/post?url=${share}&text=${encodeURIComponent(post.title)}`}
+                target="_blank"
+                rel="noopener"
+                aria-label="Share on X"
+                className="grid h-9 w-9 place-items-center rounded-full text-fg-2 hover:bg-white/[0.07] hover:text-fg"
+              >
+                <XLogo size={15} />
+              </a>
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${share}`}
+                target="_blank"
+                rel="noopener"
+                aria-label="Share on LinkedIn"
+                className="grid h-9 w-9 place-items-center rounded-full text-fg-2 hover:bg-white/[0.07] hover:text-fg"
+              >
+                <LinkedInLogo size={15} />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-10 max-w-prose">
+            <StudioBox />
           </div>
         </div>
-      </section>
 
-      <Footer />
-    </div>
+        <aside className="hidden lg:block">
+          <div className="sticky top-28 space-y-8">
+            {body && <Toc items={body.toc} />}
+            {app && <AppPromo app={app} compact />}
+          </div>
+        </aside>
+      </div>
+
+      {related.length > 0 && (
+        <section className="container pb-8 pt-16">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-t border-white/[0.07] pt-12">
+            <h2 className="text-display-sm font-semibold">Keep reading</h2>
+            <Link to="/blog" className="btn-link">
+              All guides <Arrow size={16} className="arrow" />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-x-6 gap-y-12 md:grid-cols-3">
+            {related.map((p, i) => (
+              <PostCard key={p.slug} post={p} index={i} />
+            ))}
+          </div>
+        </section>
+      )}
+    </article>
   );
-};
+}
+
+function splitPromo(html: string): [string, string] {
+  const i = html.indexOf('<!--app-promo-->');
+  return i === -1 ? [html, ''] : [html.slice(0, i), html.slice(i + '<!--app-promo-->'.length)];
+}
 
 export default BlogPost;
