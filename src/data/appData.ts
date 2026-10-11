@@ -294,31 +294,37 @@ export const allApps: App[] = [
   {
     id: 4,
     title: "DocyScan",
-    description: "Streamlined document scanning solution with intelligent text recognition and organization features.",
+    description: "Paper in, searchable PDF out in about four seconds. Pages are straightened, cleaned and read on your iPhone, so you can find any document later by a word written on it.",
     image: "/DocyScan.png",
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/app/id6740208487",
     slug: "docyscan",
-    appCategory: "ProductivityApplication",
-    tagline: "Scan, recognize and organize documents from your iPhone",
-    metaDescription: "DocyScan turns your iPhone into a document scanner with smart text recognition and easy organization. Scan receipts, contracts and more. Free on iOS.",
+    appCategory: "BusinessApplication",
+    tagline: "Scan it, find it by any word on it",
+    metaTitle: "DocyScan — PDF Scanner & OCR for iPhone, Private by Design",
+    metaDescription: "Scan invoices, receipts and contracts into clean, searchable PDFs in seconds. On-device text recognition, folders, business cards to Contacts. No account, no cloud.",
     longDescription: [
-      "DocyScan turns your iPhone into a streamlined document scanner. Capture receipts, contracts, notes and paperwork, and let intelligent text recognition make them searchable and easy to reuse.",
-      "Built-in organization keeps your scans tidy so you can find what you need later without digging through a camera roll. It's a fast, no-friction way to go paperless and keep important documents at your fingertips."
+      "DocyScan turns paper into clean, searchable PDFs in about four seconds. Point your iPhone at a page and it is straightened, cropped, cleaned and read, so you can find it later by any word written on it. It is built for people who deal with paper all day: invoices, receipts, contracts, letters and business cards.",
+      "Every scan comes out with straight edges and no shadows. Pick Enhanced, Black and White or Grayscale, or keep the original, and add pages to a document any time. Every word on every page is read on your iPhone the moment you scan, so searching for a name, an invoice number or an amount brings up the right document.",
+      "Send a real PDF, not a photo: share it, print it or save it to Files. Folders for invoices, receipts, contracts and personal documents are ready on your first run, and a whole folder exports as one PDF. Scan a business card and DocyScan lifts the name, company, email and phone into Contacts in one tap. Put a date on a contract or a renewal and get a nudge before it matters.",
+      "There is no account and no cloud. Scans, text and folders stay on your iPhone, and text recognition runs on the device, so it works with no signal. No ads. DocyScan is free to use; DocyScan Pro removes the limits and adds search inside scans, searchable PDF export, business cards to Contacts, reminders and folder export."
     ],
     features: [
-      { title: "Fast document scanning", text: "Capture clean, sharp scans of any document straight from your iPhone camera." },
-      { title: "Intelligent text recognition", text: "Turn scans into recognized text so documents are searchable and reusable." },
-      { title: "Simple organization", text: "Keep scans tidy and easy to find instead of lost in your camera roll." },
-      { title: "Go paperless", text: "Digitize receipts, contracts and paperwork and keep them at your fingertips." }
+      { title: "Point. Scan. Done.", text: "Pages are straightened, cropped and cleaned before you've put the paper down." },
+      { title: "Find it by what's written on it", text: "Every word on every page is searchable: a name, an invoice number, an amount." },
+      { title: "A real PDF, not a photo", text: "Share, print or save to Files. Pro exports searchable PDFs any reader and Spotlight can search." },
+      { title: "Filed from day one", text: "Ready-made folders for invoices, receipts, contracts and personal papers; export a folder as one PDF." },
+      { title: "Business cards to Contacts", text: "Name, company, email and phone lifted off the card and saved in one tap." },
+      { title: "Nothing leaves your iPhone", text: "No account, no cloud, no ads. Text recognition runs on the device, even with no signal." }
     ],
     faqs: [
-      { q: "Is DocyScan free?", a: "Yes, it's free to download on the App Store." },
-      { q: "Does DocyScan recognize text in scans?", a: "Yes — it includes intelligent text recognition so your scanned documents become searchable." },
-      { q: "What can I scan with it?", a: "Receipts, contracts, notes, forms and any paper document you want to digitize and organize." }
+      { q: "Is DocyScan free?", a: "DocyScan is free to download and free to use. DocyScan Pro removes the limits and adds search inside scans, searchable PDF export, business cards to Contacts, reminders and folder export, with monthly and yearly plans you can cancel any time." },
+      { q: "Can I search the text inside my scans?", a: "Yes. Every word on every page is read on your iPhone when you scan, so you can find a document by a name, a number or an amount." },
+      { q: "Are my documents uploaded anywhere?", a: "No. There is no account and no cloud. Scans, text and folders stay on your iPhone, and text recognition runs on the device." },
+      { q: "What can I scan?", a: "Invoices, receipts, contracts, letters, forms and business cards — anything on paper you want as a clean PDF." }
     ],
-    keywords: "document scanner app iphone, scan documents to pdf, text recognition scanner, receipt scanner app, paperless app"
+    keywords: "pdf scanner app iphone, document scanner ocr, scan receipts to pdf, searchable pdf scanner, business card scanner, private document scanner"
   },
   {
     id: 33,
@@ -519,33 +525,38 @@ export const allApps: App[] = [
   },
   {
     id: 1,
-    title: "MegaConverter: Unit & Data",
-    description: "Powerful unit conversion tool for everyday measurements, scientific calculations, and data transformations.",
+    title: "Mega Converter: Unit, Currency",
+    description: "Every converter a professional reaches for, in one app: 36 categories, 198 units, live exchange rates and 15 specialist tools ordinary converters skip. No ads, works offline.",
     image: "/lovable-uploads/579945c0-96f2-4360-a099-7f302844ec77.png",
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/app/id6738279962",
     slug: "megaconverter",
     appCategory: "UtilitiesApplication",
-    metaTitle: "MegaConverter: Unit & Data Converter for iPhone",
-    tagline: "Convert any unit — measurements, data and more",
-    metaDescription: "Powerful unit and data conversion for everyday measurements, science and data sizes. Fast, accurate results in one app. Free on iOS.",
+    tagline: "Every unit, one app, no ads",
+    metaTitle: "Mega Converter — Unit, Currency & Pro Converter App",
+    metaDescription: "36 categories, 198 units and 15 pro tools: live currency rates, AWG wire sizes, SMPTE timecode, cups to grams, HEX to CMYK and time zones. No ads, works offline.",
     longDescription: [
-      "MegaConverter is a powerful, easy unit conversion tool covering everyday measurements, scientific calculations and data transformations. Convert length, weight, volume, temperature, data sizes and much more without hunting for a formula.",
-      "A clean, fast interface gives you accurate results instantly, whether you're cooking, studying, travelling or working. It's the one converter to keep on your home screen for whenever the numbers don't line up."
+      "Mega Converter puts every converter a professional reaches for in one app: 36 categories, 198 units and 15 specialist tools that ordinary converter apps skip. It is built for people who convert for a living — trades, engineers, designers, video editors, developers and cooks — and there is not a single ad in it.",
+      "The basics are all there: length, weight, temperature, volume, area, speed and time, plus pressure, torque, power, force, energy, density, flow and fuel economy. Live exchange rates cover 30 currencies and are cached, so they keep working offline.",
+      "Then come the tools other apps leave out: AWG wire sizes against millimetres for the job site, SMPTE timecode at every frame rate with drop frame handled correctly, cups to grams for 25 real ingredients with oven temperatures, time zones compared city by city, colours across HEX, RGB, HSL and CMYK with contrast checks, and binary, octal, decimal and hex with a 32-bit view.",
+      "Conversion factors follow SI and NIST definitions, exact where an exact definition exists, and every tool works with no signal. Each result shares as a clean text summary with the working and the source. The whole catalogue is free to browse; Mega Converter Pro unlocks every category and tool, monthly or yearly."
     ],
     features: [
-      { title: "Everyday measurements", text: "Length, weight, volume, temperature and more — converted instantly." },
-      { title: "Data & tech units", text: "Convert data sizes and technical units alongside standard measurements." },
-      { title: "Fast and accurate", text: "A clean interface delivers precise results the moment you type." },
-      { title: "One app for it all", text: "Skip the web searches — every conversion you need in a single tool." }
+      { title: "36 categories, 198 units", text: "From length and temperature to torque, density, flow and fuel economy." },
+      { title: "Live exchange rates", text: "30 currencies, cached so conversions keep working offline." },
+      { title: "Made for editors and trades", text: "SMPTE timecode with drop frame, and AWG wire sizes against millimetres." },
+      { title: "Colour and code", text: "HEX, RGB, HSL and CMYK with contrast checks; binary, octal, decimal and hex with a 32-bit view." },
+      { title: "Kitchen and time zones", text: "Cups to grams for 25 real ingredients, oven temperatures, and cities compared at a glance." },
+      { title: "Accurate, private, ad-free", text: "SI and NIST factors, no ads, every tool works with no signal." }
     ],
     faqs: [
-      { q: "Is MegaConverter free?", a: "Yes, it's free to download on the App Store." },
-      { q: "What can it convert?", a: "Everyday measurements (length, weight, volume, temperature), data sizes and many scientific and technical units." },
-      { q: "Does it work offline?", a: "Core conversions are calculated on-device — check the App Store listing for full details." }
+      { q: "Is Mega Converter free?", a: "It's free to download and the whole catalogue is free to browse. Mega Converter Pro unlocks every category and tool, billed monthly or yearly, and you can cancel any time in your Apple Account settings." },
+      { q: "Does it work offline?", a: "Yes. Every tool works with no signal, and currency rates are cached so they keep working offline." },
+      { q: "How accurate are the conversions?", a: "Conversion factors follow SI and NIST definitions, exact where an exact definition exists." },
+      { q: "Are there ads?", a: "No. There is not a single ad in the app." }
     ],
-    keywords: "unit converter app, measurement converter, data size converter, conversion calculator, metric to imperial"
+    keywords: "unit converter app iphone, currency converter offline, awg wire size converter, smpte timecode calculator, cups to grams converter, hex to cmyk converter"
   },
   {
     id: 22,
