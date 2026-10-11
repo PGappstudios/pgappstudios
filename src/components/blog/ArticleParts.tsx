@@ -102,7 +102,7 @@ export function AppPromo({ app, compact }: { app: App; compact?: boolean }) {
         <div className={cn('mt-4 flex flex-wrap items-center gap-3', compact && 'flex-col items-start')}>
           <StoreButton href={app.url} app={app.title} />
           <Link to={`/apps/${app.slug}`} className="btn-link text-sm">
-            Learn more <Arrow size={14} className="arrow" />
+            About {shortName(app)} <Arrow size={14} className="arrow" />
           </Link>
         </div>
       </div>

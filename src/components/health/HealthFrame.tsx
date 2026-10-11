@@ -64,7 +64,7 @@ export function HealthAppCta({ app, end }: { app: HealthApp; end?: boolean }) {
       </div>
       <div className="flex flex-wrap items-center gap-3">
         <Link to={`/health/apps/${app.slug}`} className="btn-ghost text-sm">
-          Learn more
+          About {app.name.split(':')[0]}
         </Link>
         <StoreButton href={app.appStoreUrl} app={app.name} />
       </div>
