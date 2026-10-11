@@ -10,6 +10,9 @@ export interface SEOProps {
   jsonLd?: object | object[];
   /** Keep the page out of search results (404s) */
   noindex?: boolean;
+  lang?: 'en' | 'de';
+  /** Language versions of this page, for hreflang */
+  alternates?: { lang: string; href: string }[];
 }
 
 const DEFAULT_OG = 'https://www.pgappstudios.com/og/default.png';
@@ -20,14 +23,16 @@ const DEFAULT_OG = 'https://www.pgappstudios.com/og/default.png';
  * document.head when the user navigates between pages.
  */
 export function useSEO(props: SEOProps) {
-  const { title, description, canonical, ogImage = DEFAULT_OG, ogType = 'website', jsonLd, noindex } = props;
+  const { title, description, canonical, ogImage = DEFAULT_OG, ogType = 'website', jsonLd, noindex, lang = 'en', alternates } = props;
 
-  if (isServer) setSSRHead({ title, description, canonical, ogImage, ogType, jsonLd, noindex });
+  if (isServer) setSSRHead({ title, description, canonical, ogImage, ogType, jsonLd, noindex, lang, alternates });
+  const alt = JSON.stringify(alternates ?? null);
 
   const ld = JSON.stringify(jsonLd ?? null);
 
   useEffect(() => {
     document.title = title;
+    document.documentElement.lang = lang;
 
     const setMeta = (attr: 'name' | 'property', key: string, value: string) => {
       let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
@@ -49,6 +54,16 @@ export function useSEO(props: SEOProps) {
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', ogImage);
     setMeta('name', 'robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1');
+    setMeta('property', 'og:locale', lang === 'de' ? 'de_DE' : 'en_US');
+
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((l) => l.remove());
+    for (const a of JSON.parse(alt) ?? []) {
+      const l = document.createElement('link');
+      l.rel = 'alternate';
+      l.hreflang = a.lang;
+      l.href = a.href;
+      document.head.appendChild(l);
+    }
 
     if (canonical) {
       let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
@@ -75,5 +90,5 @@ export function useSEO(props: SEOProps) {
         document.head.appendChild(s);
       }
     }
-  }, [title, description, canonical, ogImage, ogType, ld, noindex]);
+  }, [title, description, canonical, ogImage, ogType, ld, noindex, lang, alt]);
 }

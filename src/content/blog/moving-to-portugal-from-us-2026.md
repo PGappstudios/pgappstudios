@@ -113,3 +113,5 @@ Three things separate the smooth moves from the stressful ones:
 3. **Learn the language.** It is the difference between surviving in Portugal and actually living there.
 
 Portugal rewards people who show up prepared and patient. Get your documents in order, verify every rule against official sources, start learning Portuguese now, and the move becomes a lot less daunting than it looks from across the Atlantic.
+
+Planning from somewhere else? See our guides for moving from [the UK](/blog/moving-to-portugal-from-uk-2026), [Germany](/blog/moving-to-portugal-from-germany-2026) and [Australia](/blog/moving-to-portugal-from-australia-2026), or start at our [Moving to Portugal hub](/moving-to-portugal).

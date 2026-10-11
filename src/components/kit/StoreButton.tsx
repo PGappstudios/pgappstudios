@@ -1,5 +1,6 @@
 import { Apple, GooglePlay, Globe, ArrowUpRight } from './Icons';
 import { cn } from '@/lib/utils';
+import { UI, type Lang } from '@/lib/i18n';
 
 type Kind = 'app-store' | 'play' | 'web';
 
@@ -11,6 +12,7 @@ export function StoreButton({
   label,
   className,
   size = 'md',
+  lang = 'en',
 }: {
   href: string;
   kind?: Kind;
@@ -18,9 +20,11 @@ export function StoreButton({
   label?: string;
   className?: string;
   size?: 'md' | 'lg';
+  lang?: Lang;
 }) {
-  const top = kind === 'app-store' ? 'Download on the' : kind === 'play' ? 'Get it on' : 'Visit the';
-  const main = label ?? (kind === 'app-store' ? 'App Store' : kind === 'play' ? 'Google Play' : 'website');
+  const s = UI[lang].store;
+  const [top, fallback] = kind === 'app-store' ? s.appStore : kind === 'play' ? s.play : s.web;
+  const main = label ?? fallback;
   return (
     <a
       href={href}

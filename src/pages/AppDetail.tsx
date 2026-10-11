@@ -27,6 +27,8 @@ import { AppCard } from '@/components/apps/AppCard';
 import { PostCard, relatedApp } from '@/components/blog/PostCard';
 import NotFound from './NotFound';
 import { cn } from '@/lib/utils';
+import { UI, GROUP_LABEL_DE, type Lang } from '@/lib/i18n';
+import { appsDe, deSlugs } from '@/data/appData.de';
 
 /** Plain-language notices some apps must always carry. */
 const NOTICE: Record<string, string> = {
@@ -38,27 +40,45 @@ const NOTICE: Record<string, string> = {
   'tidehook-fishing-tides': 'TideHook is a fishing planning tool, not a navigation aid. Never use it for passage planning or safety at sea.',
 };
 
-const AppDetail = () => {
+const AppDetail = ({ lang = 'en' }: { lang?: Lang }) => {
   const { slug = '' } = useParams();
-  const app = getProduct(slug);
-  if (!app) return <NotFound />;
-  return <AppPage key={slug} app={app} />;
+  const base = getProduct(slug);
+  if (!base || (lang === 'de' && !appsDe[slug])) return <NotFound />;
+  const de = lang === 'de' ? appsDe[slug] : undefined;
+  const app: App = de ? { ...base, ...de } : base;
+  return <AppPage key={`${lang}-${slug}`} app={app} lang={lang} />;
 };
 
-function AppPage({ app }: { app: App }) {
+function AppPage({ app, lang }: { app: App; lang: Lang }) {
+  const t = UI[lang];
+  const de = lang === 'de' ? appsDe[app.slug!] : undefined;
+  const prefix = lang === 'de' ? '/de' : '';
+  const hasDe = Boolean(appsDe[app.slug!]);
   const name = shortName(app);
   const store = isStoreApp(app);
   const shots = screensFor(app);
   const group = groupById(groupOf(app));
-  const url = `${SITE}/apps/${app.slug}`;
-  const crumbs = [
-    { name: 'Home', href: '/' },
-    { name: 'Apps', href: '/our-apps' },
-    { name, href: `/apps/${app.slug}` },
-  ];
-  const related = appsInGroup(groupOf(app)).filter((a) => a.slug !== app.slug).slice(0, 3);
+  const url = `${SITE}${prefix}/apps/${app.slug}`;
+  const crumbs =
+    lang === 'de'
+      ? [
+          { name: t.home, href: '/de' },
+          { name: t.apps, href: '/de' },
+          { name, href: `/de/apps/${app.slug}` },
+        ]
+      : [
+          { name: t.home, href: '/' },
+          { name: t.apps, href: '/our-apps' },
+          { name, href: `/apps/${app.slug}` },
+        ];
+  const related =
+    lang === 'de'
+      ? deSlugs.filter((s) => s !== app.slug).map((s) => getProduct(s)!).slice(0, 3)
+      : appsInGroup(groupOf(app)).filter((a) => a.slug !== app.slug).slice(0, 3);
   const id = storeId(app);
-  const articles = posts.filter((p) => (id && p.appIds.includes(id)) || relatedApp(p)?.slug === app.slug).slice(0, 3);
+  const articles = lang === 'de' ? [] : posts.filter((p) => (id && p.appIds.includes(id)) || relatedApp(p)?.slug === app.slug).slice(0, 3);
+  const notice = de ? de.notice : NOTICE[app.slug!];
+  const groupLabel = lang === 'de' ? GROUP_LABEL_DE[group.id] : group.label;
   const showRating = app.rating && app.rating.count >= 5;
   const isHealth = groupOf(app) === 'health';
 
@@ -67,6 +87,14 @@ function AppPage({ app }: { app: App }) {
     description: app.metaDescription ?? app.description,
     canonical: url,
     ogImage: `${SITE}/og/apps/${app.slug}.png`,
+    lang,
+    alternates: hasDe
+      ? [
+          { lang: 'en', href: `${SITE}/apps/${app.slug}` },
+          { lang: 'de', href: `${SITE}/de/apps/${app.slug}` },
+          { lang: 'x-default', href: `${SITE}/apps/${app.slug}` },
+        ]
+      : undefined,
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -74,6 +102,7 @@ function AppPage({ app }: { app: App }) {
         name: app.title,
         description: app.metaDescription ?? app.description,
         url,
+        inLanguage: lang,
         image: SITE + iconFor(app),
         ...(shots.length ? { screenshot: shots.map((s) => SITE + s) } : {}),
         operatingSystem: store ? (app.androidUrl ? 'iOS, Android' : 'iOS') : 'Any (web browser)',
@@ -124,10 +153,10 @@ function AppPage({ app }: { app: App }) {
             <div className="mt-8 flex animate-fade-up items-center gap-4">
               <AppIcon app={app} size={84} eager className="shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_50px_-12px_rgb(var(--glow)/0.6)]" />
               <div className="flex flex-wrap gap-2">
-                <Link to={`/our-apps#${group.id}`} className="chip hover:border-white/25 hover:text-fg">
-                  {group.label}
+                <Link to={lang === 'de' ? '/de' : `/our-apps#${group.id}`} className="chip hover:border-white/25 hover:text-fg">
+                  {groupLabel}
                 </Link>
-                <span className="chip">{store ? (app.androidUrl ? 'iPhone & Android' : 'iPhone') : 'Web'}</span>
+                <span className="chip">{store ? (app.androidUrl ? t.iphoneAndroid : t.iphone) : t.web}</span>
               </div>
             </div>
             <h1 className="mt-7 text-display-lg font-semibold">
@@ -142,12 +171,12 @@ function AppPage({ app }: { app: App }) {
 
             <div ref={heroCta} className="mt-9 flex animate-fade-up flex-wrap items-center gap-3 [animation-delay:450ms]">
               {store ? (
-                <StoreButton href={app.url} app={app.title} size="lg" />
+                <StoreButton href={app.url} app={app.title} size="lg" lang={lang} />
               ) : (
-                <StoreButton href={app.url} kind="web" app={app.title} label={`Open ${name}`} size="lg" />
+                <StoreButton href={app.url} kind="web" app={app.title} label={t.open(name)} size="lg" lang={lang} />
               )}
-              {app.androidUrl && <StoreButton href={app.androidUrl} kind="play" app={app.title} size="lg" />}
-              {app.websiteUrl && <StoreButton href={app.websiteUrl} kind="web" app={app.title} size="lg" />}
+              {app.androidUrl && <StoreButton href={app.androidUrl} kind="play" app={app.title} size="lg" lang={lang} />}
+              {app.websiteUrl && <StoreButton href={app.websiteUrl} kind="web" app={app.title} size="lg" lang={lang} />}
             </div>
 
             <div className="mt-7 flex animate-fade-up flex-wrap items-center gap-x-5 gap-y-2 text-sm text-fg-2 [animation-delay:550ms]">
@@ -159,12 +188,11 @@ function AppPage({ app }: { app: App }) {
                     ))}
                   </span>
                   <strong className="text-fg">{app.rating!.value.toFixed(1)}</strong>
-                  <span className="text-fg-3">
-                    from {app.rating!.count} ratings · {app.rating!.source}
-                  </span>
+                  <span className="text-fg-3">{t.fromRatings(app.rating!.count, app.rating!.source)}</span>
                 </span>
               )}
-              <span>{store ? 'Free to download' : 'Free in your browser'}</span>
+              <span>{store ? t.freeToDownload : t.freeInBrowser}</span>
+              {de && <span className="text-fg-3">{de.languageNote}</span>}
             </div>
           </div>
 
@@ -180,11 +208,11 @@ function AppPage({ app }: { app: App }) {
         </div>
       </section>
 
-      {NOTICE[app.slug!] && (
+      {notice && (
         <div className="container -mt-4 pb-6">
           <p className="mx-auto flex max-w-3xl items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-relaxed text-fg-2">
-            <span aria-hidden className="mt-0.5 font-mono text-xs text-fg-3">NOTE</span>
-            {NOTICE[app.slug!]}
+            <span aria-hidden className="mt-0.5 font-mono text-xs uppercase text-fg-3">{t.note}</span>
+            {notice}
           </p>
         </div>
       )}
@@ -193,13 +221,13 @@ function AppPage({ app }: { app: App }) {
       {shots.length > 0 && (
         <section className="relative py-16 sm:py-20" aria-label={`${name} screenshots`}>
           <div className="container">
-            <p className="eyebrow" data-reveal="fade">A look inside</p>
+            <p className="eyebrow" data-reveal="fade">{t.lookInside}</p>
             <div className="snap-row mt-8 lg:grid lg:grid-cols-4 lg:overflow-visible">
               {shots.map((s, i) => (
                 <img
                   key={s}
                   src={s}
-                  alt={`${name} screenshot ${i + 1}`}
+                  alt={t.screenshot(name, i + 1)}
                   width={600}
                   height={1300}
                   loading="lazy"
@@ -219,8 +247,8 @@ function AppPage({ app }: { app: App }) {
         <section className="relative py-16 sm:py-24">
           <div className="container grid gap-10 lg:grid-cols-[1fr_1.6fr]">
             <div className="lg:sticky lg:top-32 lg:self-start">
-              <p className="eyebrow" data-reveal="fade">About the app</p>
-              <Words as="h2" text={`Why *${name}*`} className="mt-5 text-display-md font-semibold" />
+              <p className="eyebrow" data-reveal="fade">{t.aboutTheApp}</p>
+              <Words as="h2" text={t.why(name)} className="mt-5 text-display-md font-semibold" />
             </div>
             <div className="space-y-6 text-lg leading-[1.8] text-fg-2 [&>p:first-child]:text-xl [&>p:first-child]:text-fg">
               {app.longDescription.map((p, i) => (
@@ -234,7 +262,7 @@ function AppPage({ app }: { app: App }) {
       ) : null}
 
       {/* ------------------------------------------------------- Features */}
-      {app.features?.length ? <FeatureStory app={app} shots={shots} /> : null}
+      {app.features?.length ? <FeatureStory app={app} shots={shots} lang={lang} /> : null}
 
       {/* ------------------------------------------------------------ FAQ */}
       {app.faqs?.length ? (
@@ -242,7 +270,7 @@ function AppPage({ app }: { app: App }) {
           <div className="container grid gap-10 lg:grid-cols-[1fr_1.6fr]">
             <div>
               <p className="eyebrow" data-reveal="fade">FAQ</p>
-              <Words as="h2" text="Questions, *answered.*" className="mt-5 text-display-md font-semibold" />
+              <Words as="h2" text={t.faqTitle} className="mt-5 text-display-md font-semibold" />
             </div>
             <Faq items={app.faqs} />
           </div>
@@ -257,13 +285,13 @@ function AppPage({ app }: { app: App }) {
             <div className="relative">
               <AppIcon app={app} size={96} className="mx-auto animate-float" />
               <h2 className="mx-auto mt-8 max-w-2xl text-display-sm font-semibold">
-                {store ? `Get ${name} on your iPhone` : `Try ${name} now`}
+                {store ? t.ctaStore(name) : t.ctaWeb(name)}
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-fg-2">{app.tagline}</p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                {store ? <StoreButton href={app.url} app={app.title} size="lg" /> : <StoreButton href={app.url} kind="web" app={app.title} label={`Open ${name}`} size="lg" />}
-                {app.androidUrl && <StoreButton href={app.androidUrl} kind="play" app={app.title} size="lg" />}
-                {app.websiteUrl && <StoreButton href={app.websiteUrl} kind="web" app={app.title} size="lg" />}
+                {store ? <StoreButton href={app.url} app={app.title} size="lg" lang={lang} /> : <StoreButton href={app.url} kind="web" app={app.title} label={t.open(name)} size="lg" lang={lang} />}
+                {app.androidUrl && <StoreButton href={app.androidUrl} kind="play" app={app.title} size="lg" lang={lang} />}
+                {app.websiteUrl && <StoreButton href={app.websiteUrl} kind="web" app={app.title} size="lg" lang={lang} />}
               </div>
             </div>
           </div>
@@ -298,19 +326,19 @@ function AppPage({ app }: { app: App }) {
           <div className="container">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="eyebrow" data-reveal="fade">{group.label}</p>
-                <h2 className="mt-5 text-display-sm font-semibold">You might also like</h2>
+                <p className="eyebrow" data-reveal="fade">{groupLabel}</p>
+                <h2 className="mt-5 text-display-sm font-semibold">{t.youMightLike}</h2>
               </div>
-              <Link to={`/our-apps#${group.id}`} className="btn-link">
-                See the shelf <Arrow size={16} className="arrow" />
+              <Link to={lang === 'de' ? '/de' : `/our-apps#${group.id}`} className="btn-link">
+                {t.seeShelf} <Arrow size={16} className="arrow" />
               </Link>
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((a, i) => (
-                <AppCard key={a.slug} app={a} index={i} />
+                <AppCard key={a.slug} app={a} index={i} lang={lang} />
               ))}
             </div>
-            {isHealth && (
+            {isHealth && lang === 'en' && (
               <p className="mt-10 text-fg-2">
                 Looking for support with something specific?{' '}
                 <Link to="/health" className="text-fg underline decoration-brand/50 underline-offset-4 hover:decoration-brand">
@@ -334,7 +362,7 @@ function AppPage({ app }: { app: App }) {
         <AppIcon app={app} size={40} />
         <span className="min-w-0 flex-1 text-sm font-semibold leading-tight">{name}</span>
         <a href={app.url} target="_blank" rel="noopener" data-app={app.title} tabIndex={bar ? 0 : -1} className="btn-primary min-h-[40px] px-5 text-sm">
-          {store ? 'Get' : 'Open'}
+          {store ? t.get : t.open('').trim()}
         </a>
       </div>
     </div>
@@ -345,7 +373,8 @@ function AppPage({ app }: { app: App }) {
  * Features beside a sticky phone that changes screenshot as you scroll through
  * them (desktop). On phones it is a simple stack of cards.
  */
-function FeatureStory({ app, shots }: { app: App; shots: string[] }) {
+function FeatureStory({ app, shots, lang }: { app: App; shots: string[]; lang: Lang }) {
+  const t = UI[lang];
   const [active, setActive] = useState(0);
   const refs = useRef<(HTMLDivElement | null)[]>([]);
   const features = app.features ?? [];
@@ -366,8 +395,8 @@ function FeatureStory({ app, shots }: { app: App; shots: string[] }) {
   return (
     <section className="relative py-16 sm:py-24">
       <div className="container">
-        <p className="eyebrow" data-reveal="fade">What you get</p>
-        <Words as="h2" text={`Everything inside *${shortName(app)}.*`} className="mt-5 max-w-3xl text-display-md font-semibold" />
+        <p className="eyebrow" data-reveal="fade">{t.whatYouGet}</p>
+        <Words as="h2" text={t.everythingInside(shortName(app))} className="mt-5 max-w-3xl text-display-md font-semibold" />
         <div className={cn('mt-14 grid gap-10', shots.length && 'lg:grid-cols-[1fr_1.15fr]')}>
           {shots.length > 0 && (
             <div className="hidden lg:block">

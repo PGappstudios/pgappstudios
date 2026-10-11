@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Close, Menu } from '@/components/kit/Icons';
 import { cn } from '@/lib/utils';
+import { langOf } from '@/lib/i18n';
+import { deSlugs } from '@/data/appData.de';
 
 const NAV = [
   { to: '/our-apps', label: 'Apps' },
@@ -11,9 +13,51 @@ const NAV = [
   { to: '/contact', label: 'Contact' },
 ];
 
-export function Logo({ className }: { className?: string }) {
+const NAV_DE = [
+  { to: '/de', label: 'Apps auf Deutsch' },
+  { to: '/our-apps', label: 'Alle Apps' },
+  { to: '/blog', label: 'Blog' },
+  { to: '/contact', label: 'Kontakt' },
+];
+
+/** The same page in the other language, if there is one. */
+export function counterpart(path: string): string | null {
+  if (path === '/') return '/de';
+  if (path === '/de') return '/';
+  const en = path.match(/^\/apps\/([^/]+)$/);
+  if (en && deSlugs.includes(en[1])) return `/de/apps/${en[1]}`;
+  const de = path.match(/^\/de\/apps\/([^/]+)$/);
+  if (de) return `/apps/${de[1]}`;
+  return null;
+}
+
+function LangSwitch({ path }: { path: string }) {
+  const other = counterpart(path);
+  if (!other) return null;
+  const de = langOf(path) === 'de';
   return (
-    <Link to="/" className={cn('group flex items-center gap-2.5', className)}>
+    <div className="flex items-center rounded-full border border-white/10 p-0.5 font-mono text-[11px] uppercase tracking-[0.1em]" role="group" aria-label="Language">
+      {de ? (
+        <Link to={other} hrefLang="en" lang="en" className="rounded-full px-2.5 py-1.5 text-fg-2 hover:text-fg">
+          EN
+        </Link>
+      ) : (
+        <span className="rounded-full bg-white/10 px-2.5 py-1.5 text-fg" aria-current="true">EN</span>
+      )}
+      {de ? (
+        <span className="rounded-full bg-white/10 px-2.5 py-1.5 text-fg" aria-current="true">DE</span>
+      ) : (
+        <Link to={other} hrefLang="de" lang="de" className="rounded-full px-2.5 py-1.5 text-fg-2 hover:text-fg">
+          DE
+        </Link>
+      )}
+    </div>
+  );
+}
+
+export function Logo({ className, to = '/' }: { className?: string; to?: string }) {
+  return (
+    <Link to={to} className={cn('group flex items-center gap-2.5', className)}>
       <span aria-hidden className="relative grid h-8 w-8 place-items-center overflow-hidden rounded-[10px] bg-fg text-ink-950 shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_6px_20px_-6px_rgba(196,181,253,0.7)]">
         <span className="font-serif text-[19px] italic leading-none">pg</span>
       </span>
@@ -43,7 +87,10 @@ export function SiteHeader() {
   }, [open]);
 
   const path = pathname.replace(/\/+$/, '') || '/';
-  const isActive = (to: string) => path === to || path.startsWith(to + '/') || (to === '/our-apps' && path.startsWith('/apps/'));
+  const de = langOf(path) === 'de';
+  const nav = de ? NAV_DE : NAV;
+  const isActive = (to: string) =>
+    path === to || (to !== '/de' && path.startsWith(to + '/')) || (to === '/our-apps' && path.startsWith('/apps/')) || (to === '/de' && path.startsWith('/de/'));
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
@@ -55,10 +102,10 @@ export function SiteHeader() {
             : 'border-transparent bg-transparent'
         )}
       >
-        <Logo />
+        <Logo to={de ? '/de' : '/'} />
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
-          {NAV.map((n) => (
+          {nav.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
@@ -73,8 +120,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link to="/our-apps" className="btn-primary hidden min-h-[40px] px-4 text-[14px] sm:inline-flex" data-magnetic>
-            Get the apps
+          <LangSwitch path={path} />
+          <Link to={de ? '/de' : '/our-apps'} className="btn-primary hidden min-h-[40px] px-4 text-[14px] sm:inline-flex" data-magnetic>
+            {de ? 'Zu den Apps' : 'Get the apps'}
           </Link>
           <button
             type="button"
@@ -96,7 +144,7 @@ export function SiteHeader() {
         )}
       >
         <nav aria-label="Mobile" className="flex flex-col">
-          {NAV.map((n, i) => (
+          {nav.map((n, i) => (
             <NavLink
               key={n.to}
               to={n.to}
@@ -110,8 +158,8 @@ export function SiteHeader() {
               <span className="font-mono text-xs text-fg-3">0{i + 1}</span>
             </NavLink>
           ))}
-          <Link to="/our-apps" className="btn-primary mt-3 w-full">
-            Get the apps
+          <Link to={de ? '/de' : '/our-apps'} className="btn-primary mt-3 w-full">
+            {de ? 'Zu den Apps' : 'Get the apps'}
           </Link>
         </nav>
       </div>

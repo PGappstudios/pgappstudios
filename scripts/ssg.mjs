@@ -53,7 +53,11 @@ function injectHead(template, head, url, preloads) {
     html = upsert(html, /<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${escapeAttr(head.ogImage)}" />`);
   }
 
+  html = html.replace(/<html lang="[^"]*">/, `<html lang="${head.lang || 'en'}">`);
+  html = upsert(html, /<meta property="og:locale" content="[^"]*"\s*\/?>/, `<meta property="og:locale" content="${head.lang === 'de' ? 'de_DE' : 'en_US'}" />`);
+
   const extra = [];
+  for (const a of head.alternates ?? []) extra.push(`<link rel="alternate" hreflang="${a.lang}" href="${escapeAttr(a.href)}" />`);
   for (const href of preloads) extra.push(`<link rel="modulepreload" crossorigin href="${href}" />`);
   if (head.jsonLd) {
     const blocks = Array.isArray(head.jsonLd) ? head.jsonLd : [head.jsonLd];

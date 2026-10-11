@@ -6,6 +6,7 @@ import { products } from '@/data/catalog';
 import { posts, postBody } from '@/content/blog';
 import { guides, guideBody } from '@/content/health';
 import { healthApps } from '@/data/healthData';
+import { deSlugs } from '@/data/appData.de';
 
 /** Loads every page chunk and article body so rendering never suspends. */
 export async function prepare() {
@@ -43,6 +44,9 @@ export function siteRoutes(): SitemapEntry[] {
     ...products.map((a) => ({ url: `/apps/${a.slug}`, lastmod: today, priority: a.slug === 'portugal-lifestyle-pro' ? 0.95 : 0.8 })),
     { url: '/blog', lastmod: newestPost, priority: 0.8 },
     ...posts.map((p) => ({ url: `/blog/${p.slug}`, lastmod: p.updatedDate || p.date, priority: 0.7 })),
+    { url: '/moving-to-portugal', lastmod: today, priority: 0.85 },
+    { url: '/de', lastmod: today, priority: 0.7 },
+    ...deSlugs.map((s) => ({ url: `/de/apps/${s}`, lastmod: today, priority: 0.6 })),
     { url: '/about', lastmod: today, priority: 0.6 },
     { url: '/contact', lastmod: today, priority: 0.5 },
     { url: '/health', lastmod: today, priority: 0.8 },

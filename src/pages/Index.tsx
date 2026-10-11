@@ -65,6 +65,11 @@ const Index = () => {
     title: 'PG App Studios | iPhone Apps for Everyday Life, Made in Lisbon',
     description: `Independent app studio in Lisbon. ${STATS.appsOnStore} iPhone apps for everyday life: learn European Portuguese, track your baby's growth, plan fishing tides and more.`,
     canonical: `${SITE}/`,
+    alternates: [
+      { lang: 'en', href: `${SITE}/` },
+      { lang: 'de', href: `${SITE}/de` },
+      { lang: 'x-default', href: `${SITE}/` },
+    ],
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -175,6 +180,11 @@ const Index = () => {
                 {flagship.androidUrl && <StoreButton href={flagship.androidUrl} kind="play" app={flagship.title} />}
                 <Link to={`/apps/${flagship.slug}`} className="btn-link ml-2">
                   Why it's different <Arrow size={16} className="arrow" />
+                </Link>
+              </div>
+              <div className="mt-8 border-t border-white/10 pt-6" data-reveal style={{ ['--d' as string]: 5 }}>
+                <Link to="/moving-to-portugal" className="btn-link text-[15px]">
+                  Moving to Portugal from the US, UK, Germany or Australia? Start here <Arrow size={16} className="arrow" />
                 </Link>
               </div>
             </div>

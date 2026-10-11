@@ -10,6 +10,9 @@ export interface HeadData {
   ogType?: 'website' | 'article';
   jsonLd?: object | object[];
   noindex?: boolean;
+  lang?: 'en' | 'de';
+  /** hreflang alternates, e.g. [{ lang: 'en', href }, { lang: 'de', href }] */
+  alternates?: { lang: string; href: string }[];
 }
 
 let current: HeadData | null = null;
