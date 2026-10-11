@@ -12,7 +12,7 @@ export function Words({
   className,
   now,
   delay = 0,
-  accentClass = 'serif-accent text-gradient pr-[0.06em]',
+  accentClass = 'serif-accent text-gradient',
 }: {
   text: string;
   as?: keyof JSX.IntrinsicElements;

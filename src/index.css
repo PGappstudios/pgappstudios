@@ -80,6 +80,14 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    /* The gradient is only painted inside the element's box. Display
+       headlines use a tight line-height, so letters that hang below the line
+       (y, p, g) and italic overhangs would be cut off. Grow the painted box
+       without moving anything. */
+    padding: 0.06em 0.1em 0.22em;
+    margin: -0.06em -0.1em -0.22em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   /* The editorial accent: an italic serif word inside a sans headline */
