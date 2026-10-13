@@ -14,9 +14,9 @@ const DeHome = () => {
   const others = iosApps.filter((a) => !appsDe[a.slug!]);
 
   useSEO({
-    title: 'PG App Studios: iPhone-Apps auf Deutsch, gemacht in Lissabon',
+    title: 'PG App Studios: iPhone-Apps auf Deutsch, gemacht an der Algarve',
     description:
-      'Unabhängiges App-Studio aus Lissabon. iPhone-Apps auf Deutsch: Gezeiten zum Angeln, Babywachstum nach WHO, Wissenschaft für Kinder und Spanisch für Spanien.',
+      'Unabhängiges App-Studio von der Algarve. iPhone-Apps auf Deutsch: Gezeiten zum Angeln, Babywachstum nach WHO, Wissenschaft für Kinder und Spanisch für Spanien.',
     canonical: `${SITE}/de`,
     lang: 'de',
     alternates: [
@@ -47,7 +47,7 @@ const DeHome = () => {
 
         <div className="container relative">
           <div className="max-w-[640px]">
-            <p className="eyebrow animate-fade-up">Unabhängiges App-Studio · Lissabon, Portugal</p>
+            <p className="eyebrow animate-fade-up">Unabhängiges App-Studio · Algarve, Portugal</p>
             <h1 className="mt-6 text-display-lg font-semibold">
               <Words text="Apps, die man" now /> <Words text="*jeden Tag öffnet.*" now delay={160} />
             </h1>
@@ -101,7 +101,7 @@ const DeHome = () => {
         </Link>
         <div className="surface flex flex-col p-8" data-reveal style={{ ['--d' as string]: 1 }}>
           <p className="eyebrow">Über uns</p>
-          <h2 className="mt-5 text-display-sm font-semibold">Ein kleines Studio in Lissabon</h2>
+          <h2 className="mt-5 text-display-sm font-semibold">Ein kleines Studio an der Algarve</h2>
           <p className="mt-3 leading-relaxed text-fg-2">
             PG App Studios ist ein unabhängiges App-Studio, gegründet und geführt von Pedro Gregório. Jede App beginnt mit
             einem Problem aus dem Alltag und versucht, genau dieses eine Problem gut zu lösen.

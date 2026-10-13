@@ -47,7 +47,7 @@ const PRINCIPLES = [
   {
     n: '04',
     title: 'Small studio, close to you',
-    text: 'Designed, written and shipped from Lisbon. Email us and you reach the person who built the app.',
+    text: 'Designed, written and shipped from the Algarve. Email us and you reach the person who built the app.',
   },
 ];
 
@@ -62,8 +62,8 @@ const Index = () => {
   const latest = [...posts.filter((p) => p.featured), ...posts.filter((p) => !p.featured)].slice(0, 3);
 
   useSEO({
-    title: 'PG App Studios | iPhone Apps for Everyday Life, Made in Lisbon',
-    description: `Independent app studio in Lisbon. ${STATS.appsOnStore} iPhone apps for everyday life: learn European Portuguese, track your baby's growth, plan fishing tides and more.`,
+    title: 'PG App Studios | Everyday iPhone Apps, Made in the Algarve',
+    description: `Independent app studio in the Algarve, Portugal. ${STATS.appsOnStore} iPhone apps for everyday life: learn European Portuguese, track your baby's growth, plan fishing tides and more.`,
     canonical: `${SITE}/`,
     alternates: [
       { lang: 'en', href: `${SITE}/` },
@@ -103,7 +103,7 @@ const Index = () => {
 
         <div className="container relative">
           <div className="max-w-[640px]">
-            <p className="eyebrow animate-fade-up">Independent app studio · Lisbon, Portugal</p>
+            <p className="eyebrow animate-fade-up">Independent app studio · Algarve, Portugal</p>
             <h1 className="mt-6 text-display-xl font-semibold">
               <Words text="Apps people" now />{' '}
               <Words text="*open every day.*" now delay={180} />

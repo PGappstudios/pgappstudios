@@ -26,7 +26,7 @@ export interface HealthApp {
   slug: string;
   /** Exact App Store name */
   name: string;
-  /** Square icon in /public/health/ */
+  /** Square icon (current App Store icon from public/icons) */
   icon: string;
   /** Max 60 characters */
   tagline: string;
@@ -62,25 +62,36 @@ export interface HealthArticle {
   body: string;
 }
 
-const shots = (slug: string, alts: string[]): HealthScreenshot[] =>
-  alts.map((alt, i) => ({ src: `/health/${slug}-shot${i + 1}.webp`, alt }));
+/**
+ * Health slugs map to the main app pages, so the hub always shows the same
+ * current App Store screenshots and icon as /apps/<slug> (public/screens,
+ * public/icons). Update those once and both sections follow.
+ */
+const PRODUCT: Record<string, { slug: string; label: string }> = {
+  aftermath: { slug: 'aftermath-healing-companion', label: 'Aftermath' },
+  'kintsugi-unbroken': { slug: 'kintsugi-unbroken', label: 'Kintsugi' },
+  'fasting-and-walking': { slug: 'fasting-and-walking', label: 'Fasting and Walking' },
+  aquafasty: { slug: 'aquafasty-diet-plan', label: 'Aquafasty' },
+  gritvit: { slug: 'gritvit', label: 'Gritvit' },
+  cyclebuddy: { slug: 'cyclebuddy', label: 'Cyclebuddy' },
+};
+
+const shots = (slug: string): HealthScreenshot[] =>
+  [1, 2, 3, 4].map((n) => ({ src: `/screens/${PRODUCT[slug].slug}/${n}.webp`, alt: `${PRODUCT[slug].label} app screenshot ${n}` }));
+
+const icon = (slug: string) => `/icons/${PRODUCT[slug].slug}.webp`;
 
 export const healthApps: HealthApp[] = [
   {
     slug: 'aftermath',
     name: 'Aftermath: Healing Companion',
-    icon: '/health/aftermath-icon.png',
+    icon: icon('aftermath'),
     tagline: 'One small step a day, through the hard part',
     problemHeadline: 'Get through the first weeks after a loss',
     problemSupport: 'A breakup, a death, a job that ended, a friendship that fell apart.',
     problemStatement:
       'Right now something hurts and the days feel very long. Aftermath asks for one minute: you check in with how your heart feels, read something short written for exactly where you are, and take one small step you can actually manage. The whole app adapts to your situation, so the words meet you where you are instead of somewhere you are not yet.',
-    screenshots: shots('aftermath', [
-      'Aftermath candle screen for remembering someone you lost',
-      'Aftermath home screen with the daily check in',
-      'Aftermath journey screen showing progress through the program',
-      'Aftermath no contact tracker screen',
-    ]),
+    screenshots: shots('aftermath'),
     features: [
       { title: 'A program shaped to your loss', text: 'Breakup or divorce, grief, job loss, rejection, or a friendship that ended. The program, the words and the colours all adapt.' },
       { title: 'One minute a day', text: 'Check in with how your heart feels, read a short passage for that exact feeling, then take one small step.' },
@@ -97,18 +108,13 @@ export const healthApps: HealthApp[] = [
   {
     slug: 'kintsugi-unbroken',
     name: 'Kintsugi - Unbroken',
-    icon: '/health/kintsugi-unbroken-icon.png',
+    icon: icon('kintsugi-unbroken'),
     tagline: 'The cracks are where the gold goes',
     problemHeadline: 'Quit something and watch what you rebuild',
     problemSupport: 'Alcohol, gambling, smoking, scrolling, or something you name yourself.',
     problemStatement:
       'Most quit apps give you a number that climbs, then a red screen when it falls to zero, so you delete the app and disappear. Unbroken does the opposite. You start with a vessel in pieces, and every clean day fuses one fragment back with a seam of gold. If you slip, it does not shatter. The gold already there stays, and your lifetime clean days and urges survived are never taken away from you.',
-    screenshots: shots('kintsugi-unbroken', [
-      'Unbroken home screen showing the vessel rebuilding with gold seams',
-      'Unbroken panic button screen with paced breathing',
-      'Unbroken patterns screen showing which triggers hit hardest',
-      'Unbroken screen showing the habits the app adapts to',
-    ]),
+    screenshots: shots('kintsugi-unbroken'),
     features: [
       { title: 'A vessel that rebuilds in gold', text: 'Every clean day you log fuses one fragment back with a seam of liquid gold. Ninety days later it is whole and a new one begins.' },
       { title: 'A slip never shatters it', text: 'The gold already placed stays. The newest seam waits in bronze until your next check in turns it gold. Shame is designed out.' },
@@ -126,18 +132,13 @@ export const healthApps: HealthApp[] = [
   {
     slug: 'fasting-and-walking',
     name: 'Fasting and Walking',
-    icon: '/health/fasting-and-walking-icon.png',
+    icon: icon('fasting-and-walking'),
     tagline: 'Fasting and daily steps in one place',
     problemHeadline: 'Move every day, even on the bad ones',
     problemSupport: 'Two habits that hold each other up, tracked together.',
     problemStatement:
       'Most people try to change everything at once and last about a week. Fasting and Walking keeps it to two habits that support each other: a clear eating window and a step goal you can actually hit today. Clean screens, no shouting, no plan you have to recover from.',
-    screenshots: shots('fasting-and-walking', [
-      'Fasting and Walking main screen showing the fasting timer and daily steps',
-      'Fasting and Walking progress screen',
-      'Fasting and Walking goal date screen',
-      'Fasting and Walking step tracking screen',
-    ]),
+    screenshots: shots('fasting-and-walking'),
     features: [
       { title: 'A clear fasting timer', text: 'Start your window and see exactly where you are, without doing arithmetic in your head.' },
       { title: 'Daily step tracking', text: 'Your movement adds up in one view, so a slow day is still a day that counted.' },
@@ -153,18 +154,13 @@ export const healthApps: HealthApp[] = [
   {
     slug: 'aquafasty',
     name: 'Aquafasty: Diet & Fasting',
-    icon: '/health/aquafasty-icon.png',
+    icon: icon('aquafasty'),
     tagline: 'Get past day nine of any diet plan',
     problemHeadline: 'Drink more water and eat better',
     problemSupport: 'Seven plans, five small missions every morning.',
     problemStatement:
       'Diets do not really fail. People stop doing them, usually around day nine. Aquafasty is built for that day: you pick a plan, you get five small missions each morning, and you keep a streak that is worth protecting. Small enough to do when motivation has already left the building.',
-    screenshots: shots('aquafasty', [
-      'Aquafasty home screen with the daily plan',
-      'Aquafasty progress screen',
-      'Aquafasty streaks screen',
-      'Aquafasty diet plans screen',
-    ]),
+    screenshots: shots('aquafasty'),
     features: [
       { title: 'Seven plans to choose from', text: 'Pick the eating approach that fits your life rather than one the app picked for you.' },
       { title: 'Five small missions a day', text: 'Every morning gives you a short list you can finish, not a lecture you have to survive.' },
@@ -180,18 +176,13 @@ export const healthApps: HealthApp[] = [
   {
     slug: 'gritvit',
     name: 'Gritvit: Fitness Community',
-    icon: '/health/gritvit-icon.png',
+    icon: icon('gritvit'),
     tagline: 'A fitness community where training is verified',
     problemHeadline: 'Train with people who actually show up',
     problemSupport: 'Every athlete proves they train with real health data.',
     problemStatement:
       'Anyone can say they train. Gritvit asks for proof. Every athlete in the community verifies their training with real health data from their own device, so the people you meet are the people genuinely doing the work, not the ones with the best photos.',
-    screenshots: shots('gritvit', [
-      'Gritvit community screen',
-      'Gritvit athlete profile with verified training data',
-      'Gritvit leaderboard screen',
-      'Gritvit home screen',
-    ]),
+    screenshots: shots('gritvit'),
     features: [
       { title: 'Training you can verify', text: 'Real health data from your device backs up what every profile claims.' },
       { title: 'A community of people who train', text: 'Meet people whose week actually looks like yours.' },
@@ -207,18 +198,13 @@ export const healthApps: HealthApp[] = [
   {
     slug: 'cyclebuddy',
     name: 'Cyclebuddy',
-    icon: '/health/cyclebuddy-icon.png',
+    icon: icon('cyclebuddy'),
     tagline: 'Find riders, plan routes, never ride alone',
     problemHeadline: 'Ride with people instead of alone',
     problemSupport: 'Riders near you, at your pace, on your kind of route.',
     problemStatement:
       'Most cyclists ride solo, and usually not by choice. Finding someone at the right time, pace and route is genuinely hard. Cyclebuddy puts the local riding community in one place so you can find riders, plan routes and actually get out with people.',
-    screenshots: shots('cyclebuddy', [
-      'Cyclebuddy screen showing riders nearby',
-      'Cyclebuddy route planning screen',
-      'Cyclebuddy group ride screen',
-      'Cyclebuddy chat screen',
-    ]),
+    screenshots: shots('cyclebuddy'),
     features: [
       { title: 'Find riders near you', text: 'See who rides where you ride, and at a pace that matches yours.' },
       { title: 'Join group rides', text: 'Plans you can join instead of another solo weekend.' },

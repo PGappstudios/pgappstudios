@@ -73,7 +73,7 @@ const MovingToPortugal = () => {
           </h1>
           <p className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-fg-2 [animation-delay:300ms]">
             Practical guides for Americans, Brits, Germans and Australians: which visa, which office, which order, and how to
-            learn the Portuguese people actually speak here. Written in Lisbon.
+            learn the Portuguese people actually speak here. Written in the Algarve.
           </p>
         </div>
       </section>

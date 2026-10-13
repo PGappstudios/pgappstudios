@@ -1,6 +1,6 @@
 # pgappstudios.com
 
-The website of PG App Studios, an independent iPhone app studio in Lisbon.
+The website of PG App Studios, an independent iPhone app studio in the Algarve, Portugal.
 React + Vite + TypeScript + Tailwind, statically generated at build time and
 hosted on Vercel (every push to `main` deploys in about a minute).
 

@@ -26,8 +26,8 @@ export function SiteFooter() {
             <Logo to={de ? '/de' : '/'} />
             <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-fg-2">
               {de
-                ? 'Ein unabhängiges App-Studio in Lissabon, Portugal. Wir entwickeln iPhone-Apps für den Alltag, vom Portugiesischlernen bis zum Angelausflug morgen früh.'
-                : "An independent app studio in Lisbon, Portugal. We design and build iPhone apps for everyday life, from learning European Portuguese to planning tomorrow's fishing trip."}
+                ? 'Ein unabhängiges App-Studio an der Algarve, Portugal. Wir entwickeln iPhone-Apps für den Alltag, vom Portugiesischlernen bis zum Angelausflug morgen früh.'
+                : "An independent app studio in the Algarve, Portugal. We design and build iPhone apps for everyday life, from learning European Portuguese to planning tomorrow's fishing trip."}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <a href={DEVELOPER_URL} target="_blank" rel="noopener" className="btn-ghost min-h-[40px] px-4 text-sm">
@@ -100,7 +100,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fg-3">{de ? 'Gemacht in Lissabon' : 'Made in Lisbon'}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fg-3">{de ? 'Gemacht an der Algarve' : 'Made in the Algarve'}</p>
             <p className="mt-4 text-[14px] leading-relaxed text-fg-2">
               {de
                 ? 'Unsere Gesundheits-Apps sind informative und unterstützende Werkzeuge, keine medizinische Beratung.'

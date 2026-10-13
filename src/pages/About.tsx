@@ -15,9 +15,9 @@ const crumbs = [
 
 const About = () => {
   useSEO({
-    title: 'About PG App Studios | Independent iPhone App Studio in Lisbon',
+    title: 'About PG App Studios | Independent App Studio in the Algarve',
     description:
-      'PG App Studios is an independent app studio in Lisbon, Portugal, founded by Pedro Gregório. We design and build iPhone apps for everyday life.',
+      'PG App Studios is an independent app studio in the Algarve, Portugal, founded by Pedro Gregório. We design and build iPhone apps for everyday life.',
     canonical: `${SITE}/about`,
     jsonLd: [
       breadcrumbLd(crumbs),
@@ -31,7 +31,7 @@ const About = () => {
           name: 'PG App Studios',
           url: SITE,
           logo: `${SITE}/icon-512.png`,
-          foundingLocation: { '@type': 'Place', name: 'Lisbon, Portugal' },
+          foundingLocation: { '@type': 'Place', name: 'Algarve, Portugal' },
           founder: { '@type': 'Person', name: 'Pedro Gregório', jobTitle: 'Founder' },
           email: 'pgmetastudios@gmail.com',
           sameAs: [DEVELOPER_URL, ...SOCIALS.map((s) => s.href)],
@@ -47,7 +47,7 @@ const About = () => {
         <div className="container">
           <Breadcrumbs items={crumbs} />
           <h1 className="mt-6 max-w-5xl text-display-lg font-semibold">
-            <Words text="A small studio making" now /> <Words text="*everyday apps* from Lisbon." now delay={220} />
+            <Words text="A small studio making" now /> <Words text="*everyday apps* in the Algarve." now delay={220} />
           </h1>
         </div>
       </section>
@@ -78,7 +78,7 @@ const About = () => {
 
         <div className="space-y-6 text-lg leading-[1.8] text-fg-2">
           <p className="text-xl leading-[1.7] text-fg" data-reveal>
-            PG App Studios is an independent app studio in the Lisbon area of Portugal, founded and run by Pedro Gregório. We
+            PG App Studios is an independent app studio in the Algarve, in the south of Portugal, founded and run by Pedro Gregório. We
             design and build iPhone apps for people who find their apps in the App Store, not on developer forums.
           </p>
           <p data-reveal>

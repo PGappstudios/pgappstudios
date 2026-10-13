@@ -19,31 +19,22 @@ detail page, the sitemap entry and the cross links all update by themselves.
 
 ## Add a new app
 
-### Step 1: put the images in place
+### Step 1: make sure the app has a main app page
 
-Drop these into `public/health/`:
+The hub reuses the icon and the four screenshots from the app's main page
+(`public/icons/<slug>.webp` and `public/screens/<slug>/1..4.webp`), so the two
+sections can never drift apart. If the app is already on pgappstudios.com
+there is nothing to do; otherwise add it there first (see `README.md`).
 
-- `your-slug-icon.png` (square, 512px is plenty)
-- `your-slug-shot1.webp` … `your-slug-shot4.webp` (screenshots)
+Then add the health slug to the `PRODUCT` map at the top of
+`src/data/healthData.ts`, pointing at the main page slug and a short label:
 
-Quick way to get them straight from your own App Store listing, replacing the
-id with your app's id:
-
-```bash
-curl -s "https://itunes.apple.com/lookup?id=6796052485&country=pt" | python3 -m json.tool | grep -E "artworkUrl512|screenshotUrls" -A6
+```ts
+aftermath: { slug: 'aftermath-healing-companion', label: 'Aftermath' },
 ```
 
-Download the icon, convert it to PNG and compress it:
-
-```bash
-cd public/health
-curl -s -o your-slug-icon.jpg "PASTE_artworkUrl512_HERE"
-sips -s format png your-slug-icon.jpg --out your-slug-icon.png && rm your-slug-icon.jpg
-pngquant --quality=70-90 --force --ext .png your-slug-icon.png
-```
-
-For screenshots, take a `screenshotUrls` link and swap the ending
-`320x480bb.jpg` for `600x0w.webp`, then save it as `your-slug-shot1.webp`.
+When you refresh an app's screenshots, replace the files in
+`public/screens/<slug>/` and both the app page and the hub update.
 
 ### Step 2: add the entry
 
@@ -54,19 +45,14 @@ complete filled in example you can copy:
 {
   slug: 'aftermath',
   name: 'Aftermath: Healing Companion',
-  icon: '/health/aftermath-icon.png',
+  icon: icon('aftermath'),
   tagline: 'One small step a day, through the hard part',   // 60 characters max
   problemHeadline: 'Get through the first weeks after a loss',
   problemSupport: 'A breakup, a death, a job that ended, a friendship that fell apart.',
   problemStatement:
     'Right now something hurts and the days feel very long. Aftermath asks for one minute: ' +
     'you check in with how your heart feels, read something short, and take one small step.',
-  screenshots: shots('aftermath', [
-    'Aftermath candle screen for remembering someone you lost',
-    'Aftermath home screen with the daily check in',
-    'Aftermath journey screen showing progress through the program',
-    'Aftermath no contact tracker screen',
-  ]),
+  screenshots: shots('aftermath'),
   features: [
     { title: 'A program shaped to your loss', text: 'The program, the words and the colours all adapt.' },
     { title: 'One minute a day', text: 'A check in, a short reading, one small step.' },
@@ -86,8 +72,8 @@ Notes on the fields that matter most:
   feature. "Get through the first weeks after a loss" beats "Healing tools".
 - `problemStatement` should sound like you are talking to one person who is
   having a bad week.
-- The `shots()` helper takes your slug and the alt text for each screenshot, in
-  order. Alt text is not optional: it is what a screen reader announces.
+- `shots()` and `icon()` take the health slug and pull the current files from
+  the main app page, with alt text written for screen readers.
 - `relatedApps` and `relatedArticles` are just slugs. They build the cross
   promotion blocks automatically.
 

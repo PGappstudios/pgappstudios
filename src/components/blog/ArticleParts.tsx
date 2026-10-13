@@ -122,7 +122,7 @@ export function StudioBox() {
       <div className="flex-1">
         <p className="font-semibold text-fg">Written by PG App Studios</p>
         <p className="mt-1 text-[15px] leading-relaxed text-fg-2">
-          An independent app studio in Lisbon run by Pedro Gregório. We write about the problems our apps solve, from
+          An independent app studio in the Algarve run by Pedro Gregório. We write about the problems our apps solve, from
           learning European Portuguese to raising a toddler.
         </p>
       </div>

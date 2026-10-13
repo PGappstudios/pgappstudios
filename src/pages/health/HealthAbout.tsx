@@ -16,7 +16,7 @@ const HealthAbout = () => {
   useSEO({
     title: 'About PG Health and Pedro Gregório',
     description:
-      'Who builds these health apps, why they exist, and what they will never try to be. PG Health is made by Pedro Gregório in Lisbon, Portugal.',
+      'Who builds these health apps, why they exist, and what they will never try to be. PG Health is made by Pedro Gregório in the Algarve, Portugal.',
     canonical: `${SITE}/health/about`,
     jsonLd: [
       {
@@ -30,7 +30,7 @@ const HealthAbout = () => {
           jobTitle: 'Founder, PG App Studios',
           email: 'pgmetastudios@gmail.com',
           url: `${SITE}/health/about`,
-          address: { '@type': 'PostalAddress', addressLocality: 'Lisbon', addressCountry: 'PT' },
+          address: { '@type': 'PostalAddress', addressRegion: 'Algarve', addressCountry: 'PT' },
           worksFor: { '@type': 'Organization', name: 'PG App Studios', url: SITE },
         },
       },
@@ -52,7 +52,7 @@ const HealthAbout = () => {
             </span>
             <div>
               <p className="text-lg font-semibold">Pedro Gregório</p>
-              <p className="text-[15px] text-fg-2">Founder, PG App Studios. Lisbon, Portugal.</p>
+              <p className="text-[15px] text-fg-2">Founder, PG App Studios. Algarve, Portugal.</p>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const HealthAbout = () => {
       <section className="container max-w-3xl pb-12">
         <div className="prose-pg is-first max-w-none">
           <p>
-            I am Pedro Gregório. I build small iOS apps on my own from just outside Lisbon, and PG Health is the part of that work
+            I am Pedro Gregório. I build small iOS apps on my own from the Algarve, and PG Health is the part of that work
             that deals with the harder things: grief, breakups, starting to move again, drinking enough water, showing up when you
             do not feel like it.
           </p>

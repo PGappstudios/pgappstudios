@@ -109,7 +109,7 @@ const defaultCard = () => {
   return shell(
     `<div style="position:absolute;right:56px;top:80px;width:430px;display:grid;grid-template-columns:repeat(4,92px);gap:20px;transform:rotate(-6deg)">${icons}</div>
      <div style="position:absolute;left:64px;top:84px;width:640px">
-       <div class="mono">Independent app studio · Lisbon</div>
+       <div class="mono">Independent app studio · Algarve</div>
        <div style="margin-top:26px;font-size:100px;font-weight:600;letter-spacing:-.05em;line-height:.95">Apps people <span class="serif grad" style="font-size:108px">open every day.</span></div>
      </div>${brandRow}`
   );

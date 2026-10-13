@@ -92,7 +92,7 @@ const HealthHub = () => {
         </div>
         <div className="space-y-5 text-lg leading-[1.8] text-fg-2">
           <p data-reveal>
-            I build these on my own, from Lisbon. Every app here started with something I or someone close to me was going
+            I build these on my own, from the Algarve. Every app here started with something I or someone close to me was going
             through, and a wish that the thing in my pocket would be quieter and kinder about it.
           </p>
           <p data-reveal>

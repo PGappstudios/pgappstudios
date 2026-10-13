@@ -58,7 +58,7 @@ const Contact = () => {
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fg-3">Email</p>
             <p className="mt-3 break-all text-2xl font-semibold tracking-[-0.02em] sm:text-4xl">pgmetastudios@gmail.com</p>
-            <p className="mt-3 text-fg-2">Lisbon, Portugal</p>
+            <p className="mt-3 text-fg-2">Algarve, Portugal</p>
           </div>
         </a>
 
