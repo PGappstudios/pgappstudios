@@ -131,6 +131,7 @@ export const glowFor = (app: App): string => {
 const WEBSITE_ICON: Record<string, string> = {
   'https://www.cycle-buddy.app/': '/icons/cyclebuddy.webp',
   'https://www.dinkup.app/': '/icons/dinkup.webp',
+  'https://www.mesadeportugal.com/': '/icons/mesa-de-portugal.webp',
   'https://www.portugal-lifestyle.com/': '/icons/portugal-lifestyle-learn-it.webp',
   'https://www.starseekersapp.com/': '/icons/star-seekers-shard-war.webp',
 };

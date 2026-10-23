@@ -894,6 +894,15 @@ export const allApps: App[] = [
     keywords: "nuke simulator, nuclear blast radius map, nuke map, nuclear strike simulator, what if a nuke hit my city, tsar bomba simulator, nuclear weapon effects, 3d earth nuke game"
   },
   {
+    id: 46,
+    title: "Mesa de Portugal",
+    description: "Portuguese home cooking: traditional recipes, air fryer versions of the classics, and the made-in-Portugal cookware to cook them.",
+    image: "/icons/mesa-de-portugal.webp",
+    platforms: ["Website"],
+    category: "web",
+    url: "https://www.mesadeportugal.com/"
+  },
+  {
     id: 30,
     title: "Portugal Lifestyle",
     description: "The official website for Portugal Lifestyle — learn European Portuguese, explore culture, food, and places.",
