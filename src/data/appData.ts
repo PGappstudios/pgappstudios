@@ -894,6 +894,15 @@ export const allApps: App[] = [
     keywords: "nuke simulator, nuclear blast radius map, nuke map, nuclear strike simulator, what if a nuke hit my city, tsar bomba simulator, nuclear weapon effects, 3d earth nuke game"
   },
   {
+    id: 47,
+    title: "Human Skills",
+    description: "Practical self-reliance for when the systems stop working: growing food, finding water, making fire, first aid and more, in free lessons and games in six languages.",
+    image: "/icons/human-skills.webp",
+    platforms: ["Website"],
+    category: "web",
+    url: "https://www.humanskillsguide.com/"
+  },
+  {
     id: 46,
     title: "Mesa de Portugal",
     description: "Portuguese home cooking: traditional recipes, air fryer versions of the classics, and the made-in-Portugal cookware to cook them.",
