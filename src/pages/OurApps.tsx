@@ -152,7 +152,7 @@ const OurApps = () => {
           <div className="border-t border-white/[0.07] pt-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fg-3">Websites</p>
             <h2 className="mt-3 text-display-sm font-semibold">Our websites</h2>
-            <p className="mt-2 max-w-xl text-fg-2">Companion sites with guides, stories and more about the apps.</p>
+            <p className="mt-2 max-w-xl text-fg-2">Websites we run: companion sites for our apps, plus standalone guides and recipes.</p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {websites.map((w, i) => (

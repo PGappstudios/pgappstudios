@@ -896,7 +896,7 @@ export const allApps: App[] = [
   {
     id: 47,
     title: "Human Skills",
-    description: "Practical self-reliance for when the systems stop working: growing food, finding water, making fire, first aid and more, in free lessons and games in six languages.",
+    description: "A free website of practical guides to self-reliance: growing food, finding water, making fire, first aid and more, in six languages.",
     image: "/icons/human-skills.webp",
     platforms: ["Website"],
     category: "web",
