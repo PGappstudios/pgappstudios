@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Connecting Threads | PG App Studios</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:48px 24px;max-width:560px;margin:auto;color:#222}</style>
+</head>
+<body>
+<h2>Connecting Threads</h2>
+<p id="msg">Passing the sign-in back to PG HQ on this Mac.</p>
+<script>
+// Threads only returns sign-ins to https addresses, so this page hands the answer to the
+// PG HQ listener on this computer (localhost). Nothing is stored or sent anywhere else.
+(function () {
+  var q = new URLSearchParams(location.search), out = new URLSearchParams();
+  ["code", "state", "error", "error_reason", "error_description"].forEach(function (k) {
+    if (q.get(k)) out.set(k, q.get(k));
+  });
+  if (!out.get("state")) {
+    document.getElementById("msg").textContent = "This page is only used by PG HQ while connecting Threads.";
+    return;
+  }
+  location.replace("http://localhost:8767/threads/callback?" + out.toString());
+})();
+</script>
+</body>
+</html>
