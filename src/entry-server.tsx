@@ -49,6 +49,8 @@ export function siteRoutes(): SitemapEntry[] {
     ...deSlugs.map((s) => ({ url: `/de/apps/${s}`, lastmod: today, priority: 0.6 })),
     { url: '/about', lastmod: today, priority: 0.6 },
     { url: '/contact', lastmod: today, priority: 0.5 },
+    { url: '/privacy', lastmod: '2026-10-28', priority: 0.3 },
+    { url: '/terms', lastmod: '2026-10-28', priority: 0.3 },
     { url: '/health', lastmod: today, priority: 0.8 },
     { url: '/health/guides', lastmod: guides[0]?.updatedDate ?? today, priority: 0.7 },
     { url: '/health/about', lastmod: today, priority: 0.5 },

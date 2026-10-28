@@ -84,6 +84,8 @@ export function SiteFooter() {
               <li><Link to="/de" className="text-fg-2 hover:text-fg" hrefLang="de" lang="de">Apps auf Deutsch</Link></li>
               <li><Link to="/about" className="text-fg-2 hover:text-fg">About</Link></li>
               <li><Link to="/contact" className="text-fg-2 hover:text-fg">Contact</Link></li>
+              <li><Link to="/privacy" className="text-fg-2 hover:text-fg">Privacy</Link></li>
+              <li><Link to="/terms" className="text-fg-2 hover:text-fg">Terms</Link></li>
             </ul>
           </div>
           <div>
