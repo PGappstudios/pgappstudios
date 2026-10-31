@@ -138,35 +138,39 @@ export const allApps: App[] = [
   },
   {
     id: 18,
-    title: "Baby Learning Games 1 - 4",
-    description: "Fun educational mini-games for babies and toddlers ages 1 to 4. Safe, colorful, and designed to spark early learning and joy.",
-    image: "babylearninglogo.png",
+    title: "Baby Games: Toddler Learning",
+    description: "Short, happy learning games for babies and toddlers aged 1 to 4, led by Bo, a friendly bear who talks to your child. Animals, first words, colours, shapes, numbers and letters. No ads, works offline.",
+    image: "/icons/baby-learning-games.webp",
     platforms: ["iOS App"],
     category: 'ios',
     url: "https://apps.apple.com/app/id6754612338",
-    initials: "BLG",
-    initialsColor: "#FF9EC4",
     slug: "baby-learning-games",
-    metaTitle: "Baby Learning Games 1-4 — Toddler Learning Games App",
     appCategory: "EducationalApplication",
-    tagline: "Safe, colorful learning games for toddlers ages 1–4",
-    metaDescription: "Gentle, colorful learning games for toddlers aged 1–4 — colors, shapes, animals and sounds. Safe screen time parents can feel good about. Free on iOS.",
+    tagline: "Learning games for ages 1 to 4, with Bo the bear",
+    metaTitle: "Baby Games: Toddler Learning Games for Ages 1-4, With Bo",
+    metaDescription: "Toddler learning games led by Bo the bear: animal sounds, first words, colours, shapes, numbers and letter tracing for ages 1 to 4. No ads, works offline.",
     longDescription: [
-      "Baby Learning Games 1-4 is a collection of gentle, colorful mini-games designed for the youngest learners. Each game builds early-development basics — colors, shapes, animals, sounds and simple cause-and-effect — in a bright, tap-friendly interface little fingers can actually use.",
-      "The games are intentionally simple and forgiving: no reading required, no complicated rules and no way to lose. Big touch targets, cheerful visuals and instant rewards keep toddlers engaged while gently building recognition and motor skills. For parents, it turns a few minutes of screen time into something purposeful — on a car ride, at a restaurant, or during a busy moment at home."
+      "Baby Games is a set of short, happy learning games for babies and toddlers aged 1 to 4, led by Bo, a friendly bear who talks to your child. Every day Bo picks a Play Time of 5 to 10 minutes made for your child's age, then hands out a sticker for the sticker book, so screen time has a clear start and a clear end.",
+      "Children learn 18 animals with their real sounds, 21 first words (food, toys, vehicles and things at home), 8 colours and 8 shapes, numbers 1 to 10 and counting, and the alphabet, with letter tracing for 3 and 4 year olds. Twelve games are made for little hands: picture cards that say the name out loud, find-it games where Bo asks and your child taps, who-makes-this-sound, balloon pop, memory pairs, shadow matching, feeding Bo the food he asks for, count and tap, sort by colour, an animal xylophone, tap-to-colour pages and tracing.",
+      "Everything is built for toddlers: big buttons, no reading, no timers and no losing. A wrong tap gets gentle help, never a buzzer, and games use hold-to-exit so little fingers don't leave by accident. Bo speaks six languages: English, Portuguese, Spanish, French, German and Italian.",
+      "For parents there are three age levels (1 to 2, 2 to 3 and 3 to 4 years), a view of words learned, minutes played and day streaks, and a parent area behind a grown-up check. There are no ads and no tracking, it works offline on planes and in the car, and it runs on iPhone and iPad. All games unlock with a subscription."
     ],
     features: [
-      { title: "Built for ages 1–4", text: "Content and controls designed specifically for toddlers — nothing too hard, nothing too easy." },
-      { title: "Early-learning basics", text: "Colors, shapes, animals and sounds introduced through playful, repeatable games." },
-      { title: "Toddler-friendly controls", text: "Big touch targets and forgiving gameplay made for little fingers — no reading needed." },
-      { title: "Rewarding feedback", text: "Bright visuals and cheerful responses keep young learners happily engaged." }
+      { title: "Bo, a bear who talks to your child", text: "A friendly guide who asks, praises and helps, so no reading is needed." },
+      { title: "A daily Play Time for their age", text: "5 to 10 minutes chosen for your child, ending with a sticker for the sticker book." },
+      { title: "12 games for little hands", text: "Picture cards, sounds, balloon pop, memory, shadows, counting, colouring, a xylophone and tracing." },
+      { title: "First words, colours and numbers", text: "18 animals with real sounds, 21 first words, 8 colours, 8 shapes and numbers 1 to 10." },
+      { title: "Letter tracing for 3 to 4 year olds", text: "Trace letters and numbers as they get ready for preschool." },
+      { title: "No ads, no tracking, offline", text: "Safe for toddlers on planes, in the car and at grandma's, on iPhone and iPad." }
     ],
     faqs: [
-      { q: "What age is Baby Learning Games for?", a: "It's designed for toddlers from 1 to 4 years old, with simple games suited to early development." },
-      { q: "Is it safe for young children?", a: "Yes — the games are built to be gentle, simple and age-appropriate, with no way to 'lose' and easy controls for little hands." },
-      { q: "Do children need to read to play?", a: "No. The games rely on visuals, colors and sounds, so no reading is required." }
+      { q: "What age is Baby Games for?", a: "Babies and toddlers from 1 to 4 years old, with three age levels: 1 to 2, 2 to 3 and 3 to 4." },
+      { q: "Does my child need to read?", a: "No. Bo talks your child through every game, with big buttons and no reading, timers or losing." },
+      { q: "Are there ads?", a: "No. There are no ads and no tracking, and the parent area and purchases sit behind a grown-up check." },
+      { q: "Does it work offline?", a: "Yes. Everything works with no connection, so it's ready for planes, car journeys and waiting rooms." },
+      { q: "What does it cost?", a: "It's free to download, and all games unlock with a subscription that you can cancel any time in your Apple ID settings." }
     ],
-    keywords: "toddler learning games, baby games for 1 year old, educational games for toddlers, games for 2 year olds, learning app for toddlers"
+    keywords: "toddler learning games, baby games for 1 year old, learning games for 2 year olds, preschool games iphone, toddler games no ads, offline games for toddlers"
   },
   {
     id: 21,

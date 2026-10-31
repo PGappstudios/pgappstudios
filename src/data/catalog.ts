@@ -146,7 +146,7 @@ const SHORT: Record<string, string> = {
   'star-seekers-shard-war': 'Shard War',
   'star-seekers-2': 'Star Seekers 2',
   'portugal-lifestyle-learn-it': 'Portugal Lifestyle: Learn it',
-  'baby-learning-games': 'Baby Learning Games',
+  'baby-learning-games': 'Baby Games',
   'bible-test-your-faith': 'Bible: Test Your Faith',
   'learn-spanish-with-lola': 'Lola',
 };

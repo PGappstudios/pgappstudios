@@ -6,6 +6,7 @@ excerpt: >-
   guide to choosing good learning games, the skills that matter by age, and
   healthy screen time.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-07-10'
 readTime: 7
 category: Parenting
@@ -100,11 +101,11 @@ A well-rounded app bundles several of these into one safe place.
 
 ## A Safe, All-in-One Option
 
-If you would rather not piece together a dozen separate games, an app built specifically for this age range makes life easier. **Baby Learning Games 1-4** brings together colourful mini-games covering colours, shapes, numbers, letters, animals, and matching, all designed for tiny fingers and short attention spans. Crucially, it is built with safety first, with no ads shown to children, purchases protected from accidental taps, no social features or external links, and no data collection. It gives your toddler a genuinely educational, child-safe place to play and learn.
+If you would rather not piece together a dozen separate games, an app built specifically for this age range makes life easier. **Baby Games** is led by Bo, a friendly bear who talks your child through 12 short games covering animal sounds, first words, colours, shapes, numbers and letter tracing. Each day Bo picks a 5 to 10 minute Play Time for your child's age and ends it with a sticker, so stopping is easy. There are no ads, no tracking and no reading needed, purchases sit behind a grown-up check, and it works offline.
 
-**[Download Baby Learning Games Free →](https://apps.apple.com/app/id6754612338)**
+**[Get Baby Games on the App Store →](https://apps.apple.com/app/id6754612338)**
 
-Learn more on the [Baby Learning Games](/apps/baby-learning-games) page.
+Learn more on the [Baby Games](/apps/baby-learning-games) page, or read our full guide to [Baby Games and Bo the bear](/blog/baby-learning-games-ios).
 
 ## The Takeaway
 
