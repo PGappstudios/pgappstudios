@@ -1,56 +1,88 @@
 ---
 seoTitle: 'GritVit: The Fitness Dating App Built on Workout Data'
 slug: gritvit-fitness-dating-app
-title: 'GritVit: The Fitness Dating App That Matches Athletes by Workout Data'
+title: 'GritVit: The Fitness Dating App Where Your Training Is Verified'
 excerpt: >-
-  GritVit is a dating app for serious athletes that matches people based on
-  verified fitness data — not just photos. Your workouts prove who you are.
+  On other apps anyone can write "gym 5x a week". On GritVit, your training is
+  verified with real Apple Health data. How it works, what's free, and how it
+  keeps matches real.
 author: PG App Studios
 date: '2026-04-10'
+updatedDate: '2026-10-31'
 readTime: 7
-category: Apps
+category: Fitness
 tags:
   - Fitness
   - Dating
-  - iOS
-  - Android
-  - Athletes
-  - Health
-  - Apps
-featured: true
+  - Gym
+  - Running
+  - Apple Health
+featured: false
 metaDescription: >-
-  GritVit is a fitness dating app that matches athletes using real workout data.
-  No fake profiles — your fitness speaks for itself.
+  GritVit is the dating app for people who actually train: workouts verified
+  with Apple Health, a Fitness Score and Trust Level, and matching by sport.
 metaKeywords: >-
-  fitness dating app, dating app for athletes, GritVit, workout dating app,
-  Apple Health dating, fitness score dating, athlete dating app, active
-  lifestyle dating
+  fitness dating app, dating app for gym goers, dating app for athletes,
+  dating app for runners, active singles app, gritvit
 ---
-# GritVit: The Fitness Dating App That Matches Athletes by Workout Data
+Every dating app has profiles that say "gym five times a week" or "love running". On most of them, nobody checks. **GritVit** is built on a simple idea: if fitness matters to you, it should be verified, so everyone you meet is the real deal.
 
-What if your next match was based on how hard you train — not just how good your photos are? That's the idea behind **GritVit**, the fitness dating app that matches serious athletes using verified workout data.
+## How it works
 
-GritVit reads your real workout history from **Apple Health** and **Google Health Connect** and calculates a **Fitness Score** that reflects how consistently and seriously you train.
+1. **Connect Apple Health.** GritVit reads your workouts, steps and active minutes.
+2. **Get your scores.** You get a **Fitness Score** from 0 to 100 and a **Trust Level** from L1 to L5, built from your own data.
+3. **Hit one weekly goal to unlock matches**: 150 active minutes, 4 workouts in 2 weeks, or 50,000 steps. Already active? You unlock on day one.
+4. **Keep training to keep matching.** If you stop training, your matches pause, so everyone in your deck is active right now.
 
-## How GritVit Works
+## Match on what you love doing
 
-### Your Fitness Score (0–100)
-Calculated from eight real training signals: resting heart rate (20%), workout frequency (18%), cardio volume (12%), recency (10%), daily steps (10%), active calories (8%), longest session (6%), and daily distance (6%).
+Running, gym, padel, climbing, cycling, yoga and more. Profiles are ranked by **shared sports, similar fitness and distance**, so you see people whose routine looks like yours: the person who'll join your Sunday long run, not just someone who once owned trainers.
 
-### Trust Level System (L1–L5)
-- L1–L4: Based on accumulated workout history
-- L5 (Elite): Requires 30 consecutive days of wearable data with zero breaks
+## What's free
 
-### Privacy First
-Your raw workout data never leaves your device. Only aggregated scores are uploaded.
+GritVit is free forever for the essentials:
 
-## Who Is GritVit For?
-Runners who train 5x/week, CrossFit athletes, gym regulars, and daily trainers with wearables — anyone tired of matching with people who claim to be "active" but never actually train.
+- A verified profile and athlete card
+- Likes every day
+- Matching and **unlimited chat**
+- Personal records and your coach
 
-## Global Leaderboards
-Compete across 10 categories: longest session, longest run, streaks, most active calories, and more.
+**GritVit Pro** adds seeing who already liked you (and matching instantly), unlimited likes and rewinding your last pass. It's available monthly, yearly or as a one-time lifetime purchase. Pro never skips the fitness gate: everyone earns their matches.
 
-## Free vs Premium
-Fitness tracking is always free. Premium features unlock after completing a 7-day challenge: 50,000 steps, 40km, 200 active minutes.
+## Safe by design
 
-**[Join the GritVit Whitelist →](https://www.gritvit.com/)**
+- Chat only opens after a **mutual like**.
+- You can report or block anyone in one tap, and abusive messages are filtered.
+- Your **raw health data is never shown** to other users, never sold and never shared.
+
+**[Get GritVit on the App Store →](https://apps.apple.com/app/id6761624974)**
+
+You can also learn more at [gritvit.com](https://www.gritvit.com/).
+
+## Why fitness-first matching works
+
+Shared routines make relationships easier to fit into real life. If you train at 6 a.m., spend weekends on the trails or plan holidays around races, a partner who does the same understands your schedule instead of competing with it. Verification means you skip the profiles that only look active in photos.
+
+Read more in [why fitness dating apps are growing](/blog/why-fitness-dating-apps-growing) and our guide to [meeting a gym partner with shared goals](/blog/meet-gym-partner-shared-goals).
+
+## FAQ
+
+### How does GritVit verify fitness?
+
+It reads your workouts, steps and active minutes from Apple Health, then builds a Fitness Score (0 to 100) and Trust Level (L1 to L5) from that data.
+
+### Is GritVit free?
+
+Yes. Verified profiles, daily likes, matching and unlimited chat are free forever. GritVit Pro adds seeing who liked you, unlimited likes and rewind.
+
+### What do I need to do to unlock matches?
+
+Hit one weekly goal: 150 active minutes, 4 workouts in 2 weeks, or 50,000 steps. If you're already active, you unlock on day one.
+
+### Can other people see my health data?
+
+No. Your raw health data is never shown to other users, never sold and never shared.
+
+### Which sports can I match on?
+
+Running, gym, padel, climbing, cycling, yoga and more. Profiles are ranked by shared sports, similar fitness and distance.

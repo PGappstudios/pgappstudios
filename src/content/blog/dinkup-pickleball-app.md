@@ -1,66 +1,89 @@
 ---
 seoTitle: 'DinkUp: Pickleball App for Courts, Games & Tournaments'
 slug: dinkup-pickleball-app
-title: 'DinkUp: The All-in-One Pickleball App for Courts, Games & Tournaments'
+title: 'DinkUp: The All-in-One Pickleball App for Courts, Games and Tournaments'
 excerpt: >-
-  DinkUp is the pickleball app that does everything — find courts, join games,
-  run tournaments, and connect with your local pickleball community.
+  DinkUp puts open games, courts, tournaments, rankings and your local
+  pickleball community in one app. Here's what it does, what's free, and how to
+  get the most out of it.
 author: PG App Studios
 date: '2026-04-11'
+updatedDate: '2026-10-31'
 readTime: 7
-category: Apps
+category: Pickleball
 tags:
   - Pickleball
   - Sports
-  - iOS
-  - Apps
-  - Community
   - Tournaments
+  - Community
+  - Courts
 featured: true
 metaDescription: >-
-  DinkUp is the pickleball app for iOS — find nearby courts, join open games,
-  host tournaments and connect with players in your city.
+  DinkUp is the pickleball app for finding open games and courts near you,
+  running tournaments, climbing city rankings and connecting with players.
 metaKeywords: >-
-  pickleball app, pickleball courts near me, pickleball tournaments, DinkUp app,
-  find pickleball games, pickleball ranking, pickleball community, iOS
-  pickleball app
+  pickleball app, pickleball courts near me, find pickleball games,
+  pickleball tournament app, pickleball rankings, dupr, dinkup
 ---
-# DinkUp: The All-in-One Pickleball App for Courts, Games & Tournaments
+Pickleball is easy to learn and addictive to play. Organising it is the hard part: group texts that go nowhere, courts you didn't know existed, tournaments run on spreadsheets. **DinkUp** puts all of that in one app, so you spend less time arranging games and more time playing them.
 
-Pickleball is the fastest-growing sport in the world — and finding games, courts, and players just got a whole lot easier. **DinkUp** is the iOS app built specifically for the pickleball community, putting courts, games, tournaments, and players all in one place.
+## Find games and players
 
-## What Is DinkUp?
+Browse **open games near you** with the court, time, skill range and available spots. Join with one tap, or create your own game and fill it up. You can also find players by name, message them directly or challenge them to a game.
 
-DinkUp is a free pickleball app for iOS that centralizes your entire pickleball experience. Forget scrolling through Facebook groups or texting your local club — DinkUp gives you real-time court data, one-tap game joining, and professional tournament management right from your phone.
+## Discover courts
 
-**Download DinkUp free on the App Store:** [DinkUp on iOS](https://apps.apple.com/app/id6760656546)
+An interactive map shows **pickleball, tennis and padel courts** near you, with ratings, open or closed status and distance. Players drop **Community Pins** to share hidden gems and practice walls that don't appear on any map.
 
-## Key Features
+## Run and join tournaments
 
-### Find Courts Near You
-DinkUp's live map shows every pickleball, tennis, and padel court near you with real-time crowd levels and which players are currently on court.
+Create or join tournaments in **Single Elimination** or **Round Robin** formats. Track matches on a live bracket, record scores and see the winner crowned in real time. It works for anything from a casual club round robin to a competitive local event.
 
-### Join Open Games Instantly
-Browse open games in your area with court details, skill levels, and player availability. Join any game with a single tap or create your own in seconds.
+## Rankings and DUPR
 
-### Host & Play in Tournaments
-- Single Elimination and Round Robin formats
-- Automatic bracket generation with bye handling
-- Live leaderboards tracking wins, losses, and points
-- In-app notifications for all participants
+DinkUp has its own **ELO-style ranking**. Win games, place in tournaments and climb your city leaderboard; your rank updates live after every result.
 
-### ELO Ranking & City Leaderboards
-After every match, your rank updates automatically. DinkUp also integrates DUPR ratings for players who use the standard pickleball rating system.
+You can add your **DUPR rating** to your profile now. Full automatic sync is planned once DUPR API access is approved.
 
-### Connect with Your Community
-- Direct messaging between players
-- Community feed for sharing highlights
-- Group creation for regular crews and clubs
-- Browse player profiles by skill level
-- "Dinks" reputation scoring system
+## Community and reputation
 
-## Free vs Pro
+Join **group chats** for your local scene and message players directly. The **Dinks** reputation score lets players give a thumbs-up to people who bring good energy, so you can see who shows up, plays fair and is good to share a court with.
 
-DinkUp is **free forever** for core features. The Pro tier unlocks unlimited game creation, global court access, and advanced statistics.
+## What's free and what's Pro
 
-**Download DinkUp free:** [App Store](https://apps.apple.com/app/id6760656546) | [Visit DinkUp.app](https://www.dinkup.app/)
+DinkUp is **free forever for casual players**. **Pro** adds unlimited games, unlimited court discovery worldwide, tournament hosting, full leaderboards, detailed stats and early access to new features.
+
+**[Get DinkUp on the App Store →](https://apps.apple.com/app/id6760656546)**
+
+Learn more at [dinkup.app](https://www.dinkup.app/).
+
+## Getting the most out of DinkUp
+
+1. **Set your skill level honestly.** Better-matched games are more fun for everyone.
+2. **Drop pins for courts you love.** It helps new players find them.
+3. **Host a weekly game.** A regular slot builds a crew faster than anything else.
+4. **Give Dinks.** Good court etiquette is contagious.
+
+New to the game? Start with our [pickleball for beginners guide](/blog/pickleball-for-beginners-guide), brush up on [pickleball etiquette](/blog/pickleball-etiquette-rules), and read [how to find pickleball players near you](/blog/how-to-find-pickleball-players-near-you) and [how to organise a pickleball game](/blog/how-to-organize-pickleball-game).
+
+## FAQ
+
+### Is DinkUp free?
+
+Yes, DinkUp is free forever for casual players. Pro unlocks unlimited games, worldwide court discovery, tournament hosting, full leaderboards and detailed stats.
+
+### Can I find pickleball courts near me with DinkUp?
+
+Yes. The map shows pickleball, tennis and padel courts near you with ratings, open or closed status and distance, plus community-shared spots.
+
+### Does DinkUp support tournaments?
+
+Yes. You can create or join Single Elimination and Round Robin tournaments with live brackets and score tracking. Hosting is a Pro feature.
+
+### Does DinkUp work with DUPR?
+
+You can add your DUPR rating to your profile now. Automatic sync is planned once DUPR API access is approved.
+
+### How do DinkUp rankings work?
+
+DinkUp uses an ELO-style ranking that updates after every result, with city leaderboards.

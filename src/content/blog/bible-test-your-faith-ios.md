@@ -1,48 +1,96 @@
 ---
-seoTitle: 'Bible: Test Your Faith, the Daily Bible Quiz App'
+seoTitle: 'Bible Quiz & Daily Verse: A Calm Daily Bible App'
 slug: bible-test-your-faith-ios
-title: 'Bible: Test Your Faith — The iOS App for Daily Bible Questions & Verses'
+title: 'Bible Quiz & Daily Verse: A Calm Daily Bible Habit for iPhone'
 excerpt: >-
-  Strengthen your faith with daily Bible questions, inspiring verses, and a
-  gentle quiz experience designed for all ages. Free on iPhone.
+  A Bible verse every morning on your Home Screen, and three gentle games to
+  help it stick: a quiz, a missing-word game and a private Test of Faith. Here's
+  how the app works and who it's for.
 author: PG App Studios
 date: '2026-04-03'
-readTime: 4
-category: Apps
+updatedDate: '2026-10-31'
+readTime: 6
+category: Faith
 tags:
   - Bible
   - Faith
-  - Religion
-  - Quiz
-  - iOS
-  - Christian
-  - Devotional
+  - Daily Verse
+  - Bible Quiz
+  - Christian Apps
 featured: false
 metaDescription: >-
-  Daily Bible quiz questions, inspiring verses and a gentle faith-building
-  experience for Christians of all ages. Free on iOS.
+  Bible Quiz & Daily Verse puts a verse on your Home Screen every morning, with
+  a Bible quiz, a missing-word game and a private Test of Faith. No ads.
 metaKeywords: >-
-  Bible quiz app, Bible test app, Christian quiz iOS, Bible verses app, faith
-  app iPhone, daily Bible questions, Bible trivia app, Christian app iOS, Bible
-  study quiz
+  bible quiz app, daily bible verse app, verse of the day widget, bible trivia
+  app, scripture memory app, christian app iphone, bible games
 ---
-# Bible: Test Your Faith — Daily Bible Questions & Verses for iPhone
+Most Bible apps try to do everything. **Bible Quiz & Daily Verse** does one thing well: it gives you a verse every morning, then three short, gentle ways to help it stay with you through the day. It was built by one person who wanted a daily habit that felt calm instead of noisy, and there are no ads anywhere in it.
 
-**Download free:** [Bible: Test Your Faith on the App Store](https://apps.apple.com/app/id6753075938)
+## A verse every morning, free forever
 
-## What Is It?
-A gentle, encouraging iOS app that deepens your understanding of scripture through daily questions, inspiring verses, and faith-building quizzes for Christians of all ages.
+The **Verse of the Day** is free forever, from the World English Bible. It sits on your Home Screen and Lock Screen as a widget, so you see it before you have opened a single app. You can set a daily reminder for the time that suits you, keep a streak that counts the days you show up, and share any verse as a beautiful card.
 
-## Features
-- Daily Bible questions spanning Old and New Testament
-- Inspiring scripture verses for daily encouragement
-- All-ages design — accessible for beginners, challenging for experienced readers
-- Topics: Old Testament history, New Testament teachings, life of Jesus, Epistles, Psalms, Proverbs, Prophets, Revelation
+Every verse is real scripture, quoted word for word and never paraphrased.
 
-## Why Use It?
-Your phone is already in your hand dozens of times a day. Bible: Test Your Faith turns those moments into brief, meaningful encounters with scripture. Five minutes of daily Bible questions adds up to significant knowledge growth over weeks and months.
+## Three games to help it stick
 
-## Who It's For
-Regular churchgoers, parents looking for faith-based apps for children, new believers building a foundation, lifelong Christians reinforcing their knowledge, and Bible study groups.
+When you have two more minutes, there are three ways to go deeper:
 
-**[Download Bible: Test Your Faith Free →](https://apps.apple.com/app/id6753075938)**
+### Bible Quiz
+
+Read a verse and name who said or wrote it. Every answer explains itself, so a wrong guess teaches you something instead of just ending your round.
+
+### Word Game
+
+One word is missing from the verse. Fill it in, and the verse starts living in your memory. It is a simple version of a technique people have used to memorise scripture for centuries: recalling a word, not just rereading it.
+
+### Test of Faith
+
+Honest questions about prayer, forgiveness, scripture and compassion, answered privately on your phone. There is no score to be ashamed of, just a picture of where you are and one small step you could take.
+
+## Built to be easy to use
+
+- **Works with no signal at all**, on a plane or in a basement.
+- **Large, clear handwriting-style type** that older eyes can actually read.
+- **Light and dark mode**, and no account to create.
+- **Answers are checked**, so you are not learning something wrong.
+
+## What's free and what's Premium
+
+The daily verse, the widgets, reminders and streaks stay free. A subscription unlocks all three games and everything added later, and it starts with a free trial. You can cancel any time from your Apple account settings.
+
+**[Get Bible Quiz & Daily Verse on the App Store →](https://apps.apple.com/app/id6753075938)**
+
+## Building a daily Bible habit
+
+A verse on your Home Screen is a great start. A few habits help it grow:
+
+1. **Same time, same place.** Read with your morning coffee or before bed.
+2. **Read it twice.** Once quickly, once slowly. Notice one word that stands out.
+3. **Carry it into the day.** Come back to the verse at lunch and see if you can recall it.
+4. **Keep it small.** Two minutes every day beats an hour once a month.
+
+For a fuller routine, read our guide on [how to build a daily Bible study habit that sticks](/blog/daily-bible-study-habit-guide).
+
+## FAQ
+
+### Is Bible Quiz & Daily Verse free?
+
+The Verse of the Day, widgets, reminders and streaks are free forever. A subscription with a free trial unlocks the three games.
+
+### Which Bible translation does it use?
+
+The World English Bible, quoted word for word.
+
+### Does it work offline?
+
+Yes. It works with no signal at all, so you can use it on a plane or anywhere without wifi.
+
+### Are there ads?
+
+No. There are no ads anywhere in the app, and no account to create.
+
+### Can I put the verse on my Home Screen?
+
+Yes. There are Home Screen and Lock Screen widgets that show the Verse of the Day.
