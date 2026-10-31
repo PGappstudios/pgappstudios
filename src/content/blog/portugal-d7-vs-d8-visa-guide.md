@@ -6,6 +6,7 @@ excerpt: >-
   suit very different people. Here's a clear, honest comparison to help you
   choose.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-11-01'
 readTime: 7
 category: Portugal
@@ -104,8 +105,28 @@ There is a common trap here: most language apps teach **Brazilian Portuguese** b
 
 **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** is built specifically for European Portuguese, taking you from beginner up through the A2 level that matters for citizenship — plus the everyday phrases you will use at AIMA, the bank, and around town. Whether you land on the D7 or the D8, starting the language now makes daily life and every future appointment smoother.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## Bottom line
 
 The D7 and D8 are not competitors — they are tools for different situations. Match the visa to the *type* of income you have, verify the current thresholds with official sources, get professional help for anything ambiguous, and start learning European Portuguese in parallel. Do those things and you set yourself up for a move that actually works.
+
+## FAQ
+
+### What is the difference between the D7 and D8 visa?
+
+The D7 is for passive income such as pensions, rental or investment income. The D8 is for people working remotely for employers or clients outside Portugal.
+
+### Which visa has the higher income requirement?
+
+The D8, typically around four times the Portuguese minimum wage. The D7 is tied to the minimum wage itself. Check current figures when you apply.
+
+### Can I work in Portugal on a D7 visa?
+
+The D7 is designed around passive income. If your main income is remote work, the D8 is usually the better fit. Check with an immigration lawyer for your case.
+
+## Keep reading
+
+- [How to get a NIF in Portugal](/blog/how-to-get-nif-portugal)
+- [AIMA appointment guide](/blog/aima-appointment-guide-portugal)
+- [Moving to Portugal hub](/moving-to-portugal)

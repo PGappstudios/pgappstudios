@@ -7,6 +7,7 @@ excerpt: >-
   what these words actually mean and how to use them without sounding like a
   textbook.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-10-06'
 readTime: 7
 category: Language
@@ -122,4 +123,23 @@ Do not try to memorise all of these at once. Pick two or three — fixe, pá, an
 
 Language is a living thing, and slang is where it lives most. Learn the rules, then learn how people actually break them. That is when Portuguese stops feeling like a subject and starts feeling like home.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
+
+## FAQ
+
+### Is Portuguese slang different in Portugal and Brazil?
+
+Very. Most everyday slang is completely different, so learn slang from Portugal if you live there.
+
+### Should beginners learn slang?
+
+Learn the basics first, then a handful of common expressions. Slang helps you understand people, even if you use it sparingly.
+
+### Where do I hear Portuguese slang?
+
+With friends, on Portuguese TV and podcasts, and in cafés. It varies between regions too.
+
+## Keep reading
+
+- [50 essential phrases for travellers](/blog/essential-european-portuguese-phrases-travellers)
+- [European Portuguese pronunciation guide](/blog/european-portuguese-pronunciation-guide)

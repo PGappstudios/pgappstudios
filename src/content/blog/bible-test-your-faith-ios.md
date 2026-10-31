@@ -94,3 +94,8 @@ No. There are no ads anywhere in the app, and no account to create.
 ### Can I put the verse on my Home Screen?
 
 Yes. There are Home Screen and Lock Screen widgets that show the Verse of the Day.
+
+## Keep reading
+
+- [Bible Quiz & Daily Verse app page](/apps/bible-test-your-faith)
+- [How to build a daily Bible study habit](/blog/daily-bible-study-habit-guide)

@@ -6,6 +6,7 @@ excerpt: >-
   people move, which visas to look at, the paperwork order, and a realistic
   timeline.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-10-19'
 readTime: 8
 category: Portugal
@@ -102,7 +103,7 @@ Starting the language before you move gives you a huge head start. The catch is 
 
 That is exactly what **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** focuses on. It teaches European Portuguese from beginner up through the A2 level relevant to citizenship, with the everyday phrases you will actually use at Finanças, at the health centre, and in your neighbourhood. Learning even the basics before your first AIMA appointment makes the whole experience less intimidating.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## Final advice
 
@@ -115,3 +116,21 @@ Three things separate the smooth moves from the stressful ones:
 Portugal rewards people who show up prepared and patient. Get your documents in order, verify every rule against official sources, start learning Portuguese now, and the move becomes a lot less daunting than it looks from across the Atlantic.
 
 Planning from somewhere else? See our guides for moving from [the UK](/blog/moving-to-portugal-from-uk-2026), [Germany](/blog/moving-to-portugal-from-germany-2026) and [Australia](/blog/moving-to-portugal-from-australia-2026), or start at our [Moving to Portugal hub](/moving-to-portugal).
+
+## FAQ
+
+### Do Americans need a visa to move to Portugal?
+
+Yes. To live in Portugal you need a national residence visa, such as the D7 or D8, before you travel, then a residence permit from AIMA.
+
+### How long can Americans stay in Portugal without a visa?
+
+Up to 90 days in any 180-day period across the Schengen area as a visitor.
+
+### Which visa is best for remote workers?
+
+Usually the D8 digital nomad visa, which has a higher income requirement than the D7.
+
+### Do I need to speak Portuguese to live in Portugal?
+
+Not for residency, but citizenship requires A2 Portuguese, and daily life is much easier with it.

@@ -7,6 +7,7 @@ excerpt: >-
   paperwork. Registration with the Câmara, NIF, healthcare, your car, your
   pension and the language, in the order you'll need them.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-10-11'
 readTime: 8
 category: Portugal
@@ -98,3 +99,21 @@ Make sure it is **European Portuguese**. Most courses teach Brazilian Portuguese
 7. A head start on European Portuguese.
 
 Coming from elsewhere? Read our guides for moving from [the US](/blog/moving-to-portugal-from-us-2026), [the UK](/blog/moving-to-portugal-from-uk-2026) and [Australia](/blog/moving-to-portugal-from-australia-2026), or start at our [Moving to Portugal hub](/moving-to-portugal).
+
+## FAQ
+
+### Do Germans need a visa to live in Portugal?
+
+No. As EU citizens, Germans can live and work in Portugal freely. After three months you register with your local Câmara Municipal.
+
+### What is the EU registration certificate?
+
+The Certificado de Registo de Cidadão da União Europeia, issued by the Câmara Municipal where you live. It is valid for five years.
+
+### Is my German driving licence valid in Portugal?
+
+Yes. It is an EU licence, so there is no need to exchange it.
+
+### How do I access healthcare in Portugal?
+
+Register at your local Centro de Saúde for a número de utente. German statutory pensioners should ask their Krankenkasse about the S1 form.

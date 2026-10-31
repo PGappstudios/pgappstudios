@@ -6,6 +6,7 @@ excerpt: >-
   classics to the modern game. Answers included. How many can you get without
   peeking?
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-06-23'
 readTime: 6
 category: Games
@@ -111,10 +112,29 @@ Twenty questions is just a warm-up. If you enjoyed testing yourself, the fun rea
 
 That is exactly what **Soccer Legends** offers. It is a free iPhone football quiz packed with trivia covering the icons of every generation, from the classic greats to today's superstars. Whether you want to settle a debate with friends, learn the history of the game, or simply enjoy a quick mental challenge, it turns your football knowledge into a proper game you can play anywhere.
 
-**[Download Soccer Legends Free →](https://apps.apple.com/app/id6753688926)**
+**[Get Soccer Legends on the App Store →](https://apps.apple.com/app/id6753688926)**
 
 Check out the [Soccer Legends](/apps/soccer-legends) page to learn more.
 
 ## Final Whistle
 
 Football is a shared language, and trivia is one of the best ways to celebrate it. Share these questions with friends, see who tops the leaderboard, and keep learning. The history of the game is enormous, and there is always another legend, another final, and another unforgettable moment waiting to be discovered.
+
+## FAQ
+
+### What are good football trivia questions?
+
+Mix eras and difficulty: World Cup winners, famous records, legendary players and memorable finals.
+
+### Which country won the first World Cup?
+
+Uruguay, which hosted and won the first FIFA World Cup in 1930.
+
+### How can I get better at football trivia?
+
+Learn the World Cup history, the big records and the legends of each era. Quiz apps help you practise little and often.
+
+## Keep reading
+
+- [40 basketball trivia questions](/blog/basketball-trivia-questions-with-answers)
+- [Soccer Legends: the football quiz app](/blog/soccer-legends-quiz-ios)

@@ -7,6 +7,7 @@ excerpt: >-
   from the UK looks like now: the 90/180 rule, which visa to use, healthcare,
   pensions, driving and the paperwork order.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-10-11'
 readTime: 9
 category: Portugal
@@ -115,3 +116,21 @@ That is what **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** is built
 5. Start learning European Portuguese now. It is the one step nobody regrets doing early.
 
 Planning from somewhere else? See our guides for moving from [the US](/blog/moving-to-portugal-from-us-2026), [Germany](/blog/moving-to-portugal-from-germany-2026) and [Australia](/blog/moving-to-portugal-from-australia-2026), or start at our [Moving to Portugal hub](/moving-to-portugal).
+
+## FAQ
+
+### Do British citizens need a visa to live in Portugal?
+
+Yes, since Brexit. You need a national residence visa such as the D7 or D8 before you travel, unless you were already legally resident before the end of 2020.
+
+### Can UK pensioners use the NHS S1 form in Portugal?
+
+If you receive the UK State Pension, ask NHS Overseas Healthcare Services about the S1 form, which gives access to Portuguese state healthcare.
+
+### Can I keep driving on my UK licence?
+
+As a visitor, yes. Once resident, you are expected to exchange it for a Portuguese licence through IMT within the deadline that applies.
+
+### How long can Brits stay in Portugal without a visa?
+
+90 days in any 180-day period across the Schengen area.

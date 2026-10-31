@@ -6,6 +6,7 @@ excerpt: >-
   groceries, transport and dining — plus how Lisbon and Porto compare to the
   interior.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-12-10'
 readTime: 7
 category: Portugal
@@ -109,8 +110,27 @@ Here is something budgets rarely capture: speaking Portuguese saves you money an
 
 You specifically want **European Portuguese**, not the Brazilian variety most apps teach. **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** focuses on European Portuguese from beginner through the **A2 level** that matters for citizenship, with everyday, practical vocabulary for shopping, renting, and daily life. Learning even the basics helps you live more like a local — and locals always pay less.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## Bottom line
 
 Portugal can still be an affordable place to live in 2026 — but only if you make deliberate choices. Housing in central Lisbon or Porto will stretch your budget; step outside those hotspots and costs drop fast. Eat local, use public transport, rent before you buy, keep a buffer for the bureaucracy, and learn the language. Do that, and Portugal delivers a quality of life that is hard to match for the money. Just remember every figure here is a rough guide — check current prices for wherever you are headed.
+
+## FAQ
+
+### Is Portugal still cheap to live in?
+
+It can be, but it depends heavily on where you live. Central Lisbon and Porto have become expensive, while smaller cities and the interior remain much cheaper.
+
+### What is the biggest cost in Portugal?
+
+Rent, especially in Lisbon, Porto and the Algarve coast.
+
+### Is it cheaper to live outside Lisbon?
+
+Usually yes. Rent and everyday costs are often noticeably lower in smaller cities and inland towns.
+
+## Keep reading
+
+- [Best places to live in Portugal](/blog/best-places-to-live-portugal-expats)
+- [Moving to Portugal hub](/moving-to-portugal)

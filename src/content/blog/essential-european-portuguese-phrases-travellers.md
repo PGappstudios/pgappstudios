@@ -6,6 +6,7 @@ excerpt: >-
   The fifty European Portuguese phrases that actually get you through a trip to
   Portugal, grouped by situation with pronunciation notes.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-08-28'
 readTime: 7
 category: Language
@@ -117,8 +118,27 @@ Pronunciation note: the emergency number in Portugal is 112, worth memorizing al
 
 Reading a list is a start, but travel phrases stick only when you hear them spoken by natives and say them out loud. That is where an app built for the Portugal variety helps. Portugal Lifestyle Pro teaches these exact everyday phrases with European pronunciation, so you learn the closed vowels and the sh sounds the right way from the beginning, instead of guessing from spelling. It is designed for travellers and new residents who want to sound natural in Portugal, not Brazil. Have a look at how it works on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## One Last Tip
 
 You will get the sounds wrong at first, and that is completely fine. What matters is the attempt. Lead with "bom dia," add a "por favor," and finish with "obrigado," and you will find Portugal opens up to you in a way it never does for the traveller who only points and speaks English. Boa viagem.
+
+## FAQ
+
+### How do you say thank you in Portuguese?
+
+Obrigado if you are a man, obrigada if you are a woman. It agrees with the speaker, not the person you are thanking.
+
+### Do people in Portugal speak English?
+
+Many do, especially younger people and in tourist areas. A few words of Portuguese still go a long way and are always appreciated.
+
+### Is Brazilian Portuguese OK to use in Portugal?
+
+You will be understood, but some everyday words differ, and European Portuguese phrases sound more natural to locals.
+
+## Keep reading
+
+- [European Portuguese pronunciation guide](/blog/european-portuguese-pronunciation-guide)
+- [European Portuguese slang](/blog/european-portuguese-slang-guide)

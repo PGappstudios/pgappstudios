@@ -5,6 +5,7 @@ excerpt: >-
   Lisbon, Porto, Cascais, the Algarve, Braga, Coimbra and Madeira compared — the
   vibe, cost and lifestyle of each, plus who they suit best.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-12-23'
 readTime: 8
 category: Portugal
@@ -109,3 +110,22 @@ Learn more about the app on our [Portugal Lifestyle Pro](/apps/portugal-lifestyl
 ## Final thought
 
 There's no single "best" place, only the best place for you. Sketch out what you actually want — city or coast, buzz or calm, big international crowd or full immersion — and match it to the list above. Then spend a little time with the language before you arrive. Portugal rewards the people who meet it halfway.
+
+## FAQ
+
+### Where do most expats live in Portugal?
+
+Lisbon and its coast, Porto, the Algarve and the Silver Coast are the most popular, with growing communities inland and on Madeira.
+
+### What is the cheapest region for expats?
+
+The interior and smaller cities usually offer the lowest rents and living costs.
+
+### Is the Algarve good for expats?
+
+It has a mild climate, large English-speaking communities and good services, but rents near the coast are higher and some towns are quiet in winter.
+
+## Keep reading
+
+- [Cost of living in Portugal 2026](/blog/cost-of-living-portugal-2026)
+- [Moving to Portugal hub](/moving-to-portugal)

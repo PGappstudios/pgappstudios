@@ -92,3 +92,9 @@ No. Recordings are turned into text and deleted. There's no account and no sign-
 ### Is Voice To Caption free?
 
 It's free to try. A subscription unlocks unlimited captions, messages, emails and listings.
+
+## Keep reading
+
+- [Voice To Caption app page](/apps/voice-to-caption)
+- [How to write better social media captions](/blog/write-better-social-media-captions-ai)
+- [The best way to scan documents on your iPhone](/blog/best-way-to-scan-documents-iphone)

@@ -6,6 +6,7 @@ excerpt: >-
   the 10,000-steps target, realistic goals that actually work, and how to build
   the habit for good.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-04-19'
 readTime: 7
 category: Health
@@ -98,7 +99,7 @@ Think of it simply. Walking helps create a modest calorie deficit through moveme
 
 This is exactly why **Fasting and Walking** pairs the two on purpose. It tracks your walking alongside your fasting window so your movement and your eating pattern reinforce each other, giving you the full picture in one place instead of juggling separate apps. It keeps the whole thing simple, which is the only way habits last.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
+**[Get Fasting and Walking on the App Store →](https://apps.apple.com/app/id6755205850)**
 
 Discover how it works: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -111,3 +112,22 @@ If you have been inactive for a while or have any health concerns, ease in and c
 Walking is the most accessible weight-loss tool there is. Forget the pressure of hitting exactly 10,000 steps. Find your current average, add a little each week, and turn a daily walk into a ritual you actually enjoy.
 
 Pair those steps with reasonable eating and you have a combination that is gentle, sustainable, and genuinely effective. No gym, no gear, no drama. Just put one foot in front of the other, keep at it, and let the steps add up.
+
+## FAQ
+
+### How many steps a day to lose weight?
+
+There is no magic number. Many people aim for 7,000 to 10,000 steps, but adding steps above your current baseline is what counts, together with diet.
+
+### Is walking enough to lose weight?
+
+Walking helps, especially combined with eating changes. It is also easy to sustain, which matters most.
+
+### When is the best time to walk?
+
+Whenever you will do it consistently. A short walk after meals is an easy habit that also helps with blood sugar.
+
+## Keep reading
+
+- [Combining fasting and walking](/blog/combining-fasting-and-walking)
+- [Intermittent fasting for beginners](/blog/intermittent-fasting-for-beginners)

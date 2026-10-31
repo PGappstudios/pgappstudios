@@ -6,6 +6,7 @@ excerpt: >-
   actually helps, how much to aim for, why we confuse thirst with hunger, and
   easy ways to drink more.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-04-06'
 readTime: 7
 category: Health
@@ -95,7 +96,7 @@ Every coffee gets matched with a glass of water. Every bathroom trip ends with a
 
 The simplest way to actually hit your water goal is to track it, because what gets measured gets done. This is where **Aquafasty** shines. It helps you build a hydration and diet routine you can actually keep, tracking your water alongside your eating so the whole picture works together instead of in isolation. Seeing your progress fill up during the day is a surprisingly strong nudge to reach for the bottle.
 
-**[Download Aquafasty Free →](https://apps.apple.com/app/id6746637395)**
+**[Get Aquafasty on the App Store →](https://apps.apple.com/app/id6746637395)**
 
 See how it fits into your routine: [Aquafasty](/apps/aquafasty-diet-plan).
 
@@ -110,3 +111,22 @@ And remember, water supports weight loss, it does not replace the fundamentals. 
 Drinking enough water is the lowest-effort, highest-return habit in your weight loss toolkit. Aim for roughly two liters a day, more when you are active, drink a glass before meals, and use water to test whether a craving is real hunger or just thirst.
 
 Keep a bottle in sight, track it so it sticks, and let this quiet habit support everything else you are doing. It will not do the work for you, but it makes all the other work easier.
+
+## FAQ
+
+### How much water should I drink a day?
+
+Needs vary with body size, activity and climate. Many adults do well with around 2 to 3 litres a day from all drinks and food; your urine colour is a useful guide.
+
+### Does drinking water help weight loss?
+
+It can help indirectly: thirst is easily mistaken for hunger, and water before meals can make you feel fuller.
+
+### Can you drink too much water?
+
+Yes, though it is rare. Spread your intake through the day rather than drinking large amounts at once.
+
+## Keep reading
+
+- [Intermittent fasting for beginners](/blog/intermittent-fasting-for-beginners)
+- [Aquafasty: the diet app built for day nine](/blog/aquafasty-diet-plan-ios)

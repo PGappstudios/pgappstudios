@@ -6,6 +6,7 @@ excerpt: >-
   appointments are for, the backlog reality, how to prepare, and the vocabulary
   you'll need.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-11-27'
 readTime: 7
 category: Portugal
@@ -98,8 +99,27 @@ The immigration process is stressful enough without a language barrier on top. U
 
 The catch, as always, is that you need **European Portuguese** — the accent and vocabulary used in Portugal — not the Brazilian variety most apps default to. **[Portugal Lifestyle Pro](/apps/portugal-lifestyle-pro)** is built for exactly this: European Portuguese from beginner through the A2 level, including the practical, bureaucratic vocabulary you will hear at AIMA, Finanças, and the health centre. Even a few weeks of study before your appointment can turn a nerve-wracking morning into a manageable one.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## Final thoughts
 
 AIMA is the gatekeeper of your legal status in Portugal, and yes, the backlog has made it a source of real frustration. But the people who navigate it best are not the lucky ones — they are the prepared ones. Verify the current process through official AIMA channels, keep your documents complete and current, learn the key Portuguese vocabulary, and go in organised and calm. The system is slow, but it does move — and preparation is how you make sure that when your turn comes, you are ready.
+
+## FAQ
+
+### What is AIMA?
+
+AIMA is Portugal's agency for immigration and asylum, which replaced SEF in 2023. It handles residence permits and renewals.
+
+### What should I bring to my AIMA appointment?
+
+Originals and copies of everything: passport, visa, proof of address, proof of income, health insurance and any documents listed in your appointment notice.
+
+### Why are AIMA appointments so hard to get?
+
+Demand has far outstripped capacity, so waits can be long. Prepare your documents early and check for new slots regularly.
+
+## Keep reading
+
+- [How to get a NIF in Portugal](/blog/how-to-get-nif-portugal)
+- [Moving to Portugal hub](/moving-to-portugal)

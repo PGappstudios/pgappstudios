@@ -5,6 +5,7 @@ excerpt: >-
   The unwritten rules of pickleball — calling lines fairly, paddle tapping,
   open-play rotation, skill honesty and safety. Fun, real, and worth knowing.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-01-31'
 readTime: 7
 category: Pickleball
@@ -74,10 +75,29 @@ Half of good etiquette is just playing with people who match your level and vibe
 
 That's where **DinkUp** helps. It lets you find open games near you, see players' skill levels up front, and join sessions that fit — so you're matched with people at your speed instead of guessing. Honest skill ratings and well-balanced games make all this etiquette effortless, because everyone's on the same page from the first serve.
 
-**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
+**[Get DinkUp on the App Store →](https://apps.apple.com/app/id6760656546)**
 
 Learn more on the [DinkUp](/apps/dinkup) page.
 
 ## Play well, be cool
 
 Master the ten rules above and you've got the social side of pickleball completely sorted. Call lines fair, tap paddles, respect the rotation, keep people safe, and leave the place tidy. Do that and you'll never be short of a game — because the best thing you can bring to a court isn't a fancy paddle, it's being someone everyone wants to play with. See you out there.
+
+## FAQ
+
+### What are the basic rules of pickleball etiquette?
+
+Call the score before serving, make fair line calls, wait for points to finish before crossing courts, and rotate fairly at open play.
+
+### Who makes line calls in pickleball?
+
+In recreational play, each team calls the lines on its own side, and the benefit of the doubt goes to the opponent.
+
+### Is it rude to only play with friends at open play?
+
+It can be. Open play works best when everyone rotates partners and welcomes new players.
+
+## Keep reading
+
+- [Pickleball for beginners](/blog/pickleball-for-beginners-guide)
+- [How to organise a pickleball game](/blog/how-to-organize-pickleball-game)

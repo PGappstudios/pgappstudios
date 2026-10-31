@@ -5,6 +5,7 @@ excerpt: >-
   New to pickleball? Here's the plain-English guide to the rules, scoring, the
   kitchen, the gear you actually need, and how to find your first game.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-01-18'
 readTime: 8
 category: Pickleball
@@ -92,10 +93,29 @@ The last hurdle is simply finding people to play with, and this is where a lot o
 
 DinkUp shows you pickleball courts near you on a live map, lists open games you can join with a single tap, and lets you see the skill level of a game before you commit — so your very first outing can be with other beginners rather than a group of ringers. You can message players, find beginner-friendly sessions, and build up a regular crew as you improve.
 
-**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
+**[Get DinkUp on the App Store →](https://apps.apple.com/app/id6760656546)**
 
 See how it works on the [DinkUp](/apps/dinkup) page.
 
 ## The bottom line
 
 Pickleball rewards you almost immediately. Learn the serve, the two-bounce rule, the kitchen and the basics of scoring, grab a cheap paddle and proper shoes, and get yourself into a beginner-friendly game. Within a few sessions the rules will be second nature and you'll be hooked like the rest of us. Welcome to the fastest-growing sport around — go play.
+
+## FAQ
+
+### Is pickleball easy to learn?
+
+Yes. Most people can rally within their first session. Strategy and shot control take longer to master.
+
+### What do I need to start playing pickleball?
+
+A paddle, a few pickleballs, court shoes and a court. Many courts lend paddles to beginners.
+
+### What is the kitchen in pickleball?
+
+The non-volley zone, the area within 7 feet of the net on each side. You can't volley the ball while standing in it.
+
+## Keep reading
+
+- [Pickleball etiquette rules](/blog/pickleball-etiquette-rules)
+- [How to find pickleball players near you](/blog/how-to-find-pickleball-players-near-you)

@@ -117,3 +117,9 @@ Yes. Everything works offline, so it's ready for flights, car journeys and anywh
 ### How long should a toddler play?
 
 Bo's daily Play Time lasts 5 to 10 minutes and ends with a sticker, which gives a natural, easy stopping point.
+
+## Keep reading
+
+- [Baby Games app page](/apps/baby-learning-games)
+- [12 easy science experiments for kids at home](/blog/easy-science-experiments-for-kids-at-home)
+- [Baby growth percentiles explained](/blog/baby-growth-percentiles-explained)

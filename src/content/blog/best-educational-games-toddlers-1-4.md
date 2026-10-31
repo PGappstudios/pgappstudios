@@ -110,3 +110,22 @@ Learn more on the [Baby Games](/apps/baby-learning-games) page, or read our full
 ## The Takeaway
 
 The best educational games for toddlers are simple, safe, and focused, with big buttons, instant encouragement, and a clear learning goal. Match the skills to your child's age, keep sessions short, and play alongside them whenever you can. Choose safety over flash every time, and remember that the richest learning still happens through blocks, books, and time with you. Used wisely, a good learning game is a small but genuinely helpful part of your toddler's day.
+
+## FAQ
+
+### How much screen time is OK for toddlers?
+
+Many health organisations recommend little or no screen time under two, apart from video calls, and limited, good-quality content with an adult for two to five year olds.
+
+### What makes a toddler game educational?
+
+Simple goals, real words and sounds, gentle feedback, no ads, and content matched to the child's age.
+
+### Are toddler apps safe?
+
+Choose apps with no ads, no chat, no external links and purchases behind a grown-up check.
+
+## Keep reading
+
+- [Baby Games with Bo the bear](/blog/baby-learning-games-ios)
+- [12 easy science experiments for kids](/blog/easy-science-experiments-for-kids-at-home)

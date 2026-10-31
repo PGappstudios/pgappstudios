@@ -5,6 +5,7 @@ excerpt: >-
   A practical guide to organizing doubles or open play — picking a court and
   time, balancing skill levels, and how an app kills the group-chat chaos.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-02-13'
 readTime: 7
 category: Pickleball
@@ -73,7 +74,7 @@ This is exactly the headache **DinkUp** was built to remove. Instead of herding 
 
 Because players' skill levels are visible up front, balancing teams stops being guesswork. You can host a beginner-friendly session or a competitive one and get the right people in the door. And when you just want to play rather than organise, you can browse open games near you and join someone else's instead.
 
-**[Download DinkUp Free →](https://apps.apple.com/app/id6760656546)**
+**[Get DinkUp on the App Store →](https://apps.apple.com/app/id6760656546)**
 
 See how hosting works on the [DinkUp](/apps/dinkup) page.
 
@@ -91,3 +92,22 @@ See how hosting works on the [DinkUp](/apps/dinkup) page.
 ## Go run a great session
 
 Organising pickleball comes down to being clear and being decisive: pick the format, lock the court and time, get real commitments, balance the levels, and send one solid confirmation. Do that and your sessions run smoothly week after week. And when you're tired of being everyone's unpaid event planner, let an app carry the logistics so you can get back to the only part that actually matters — playing. Now go set up your next game.
+
+## FAQ
+
+### How do I organise a regular pickleball game?
+
+Pick a fixed day, time and court, set a skill range, and use one place to manage sign-ups so nobody gets lost in group chats.
+
+### How many players do I need?
+
+Four for doubles. Inviting a few extras covers last-minute dropouts and lets people rotate.
+
+### What is a round robin?
+
+A format where everyone plays with or against everyone else, which suits social games and small tournaments.
+
+## Keep reading
+
+- [How to find pickleball players near you](/blog/how-to-find-pickleball-players-near-you)
+- [Pickleball etiquette rules](/blog/pickleball-etiquette-rules)

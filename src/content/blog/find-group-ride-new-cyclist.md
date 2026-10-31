@@ -6,6 +6,7 @@ excerpt: >-
   where to find local rides, what to expect, the etiquette that matters, and how
   to spot no-drop rides.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-05-15'
 readTime: 7
 category: Cycling
@@ -112,7 +113,7 @@ Rides are also usually labeled by pace or level. Pick one at or slightly below w
 
 Finding the right ride used to mean word of mouth and luck. **CycleBuddy** fixes that. It connects you with local riders and group rides that match your pace and style, so you can find a welcoming, appropriately paced ride near you instead of guessing. For a new cyclist, being able to see who you will ride with and what to expect before you show up takes the nerves right out of it.
 
-**[Download CycleBuddy Free →](https://apps.apple.com/app/id6762289803)**
+**[Get CycleBuddy on the App Store →](https://apps.apple.com/app/id6762289803)**
 
 Learn more about it here: [CycleBuddy](/apps/cyclebuddy).
 
@@ -121,3 +122,21 @@ Learn more about it here: [CycleBuddy](/apps/cyclebuddy).
 Your first group ride is a rite of passage, and the cycling community is far friendlier than your nerves are telling you. Find a ride through your local shop, a club, or an app, look for a no-drop ride at your level, and show up early ready to learn.
 
 Hold your line, watch the experienced riders, and do not skip the coffee. Everyone at that ride was new once. Take the leap, and you will wonder why you waited so long.
+
+## FAQ
+
+### What is a no-drop ride?
+
+A group ride where nobody is left behind: the group waits at junctions and the leader keeps the pace manageable for everyone.
+
+### How fast are beginner group rides?
+
+It varies by club. Look for rides labelled beginner, social or no-drop, and ask the organiser about the average pace.
+
+### What should I bring on my first group ride?
+
+A helmet, water, a snack, a spare tube and tools, and your phone. Arrive a few minutes early to introduce yourself.
+
+## Keep reading
+
+- [Road vs gravel vs MTB](/blog/road-gravel-mtb-cycling-guide)

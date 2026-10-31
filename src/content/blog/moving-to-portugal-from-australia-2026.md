@@ -6,6 +6,7 @@ excerpt: >-
   in the wrong order. Visas, police checks and apostilles, healthcare, money and
   the language, planned from the other side of the world.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-10-11'
 readTime: 8
 category: Portugal
@@ -100,3 +101,21 @@ The language is also what turns Portugal from a long holiday into a home. Make s
 5. Start European Portuguese now.
 
 Planning from somewhere else? See our guides for moving from [the US](/blog/moving-to-portugal-from-us-2026), [the UK](/blog/moving-to-portugal-from-uk-2026) and [Germany](/blog/moving-to-portugal-from-germany-2026), or start at our [Moving to Portugal hub](/moving-to-portugal).
+
+## FAQ
+
+### Do Australians need a visa to live in Portugal?
+
+Yes. You need a national residence visa such as the D7 or D8 before you travel, then a residence permit from AIMA.
+
+### How long can Australians stay in Portugal as tourists?
+
+90 days in any 180-day period across the whole Schengen area.
+
+### What documents need an apostille?
+
+Australian public documents used in Portugal, such as your AFP police check and birth or marriage certificates, generally need an apostille from DFAT.
+
+### How long does the process take?
+
+Six months to a year from first document to residence card is common.

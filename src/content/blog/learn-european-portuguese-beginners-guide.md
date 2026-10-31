@@ -5,6 +5,7 @@ excerpt: >-
   A realistic, step-by-step roadmap for taking European Portuguese from zero to
   a confident A2, with the resources and habits that actually work.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-07-20'
 readTime: 8
 category: Language
@@ -88,7 +89,7 @@ Each of these takes the variety seriously, which already puts them ahead of the 
 
 If you want everything in one place on your phone, [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro) is worth a look. The app teaches European Portuguese specifically, not Brazilian, which matters because the most popular language app in the world does not offer European Portuguese at all. Portugal Lifestyle Pro gives you structured lessons, real vocabulary you will use in shops and appointments, and pronunciation focused on the sounds people actually make in Lisbon and Porto. It is built for the traveller, the new resident, and the person on the citizenship path who needs the Portugal variety and nothing else.
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## Common Beginner Mistakes to Avoid
 
@@ -101,3 +102,27 @@ If you want everything in one place on your phone, [our Portugal Lifestyle Pro p
 ## Keep It Human
 
 Learning a language is a long relationship, not a sprint. Some days it clicks and some days you forget the word for bread. That is normal. Pick a plan, keep showing up, and let the small daily wins stack. Portugal, and its language, reward the people who stay patient.
+
+## FAQ
+
+### How long does it take to learn European Portuguese?
+
+Reaching a basic A2 level commonly takes several months of steady daily study. Conversational fluency takes longer and depends on how much you speak and listen.
+
+### Is European Portuguese harder than Brazilian Portuguese?
+
+Not harder, but the pronunciation is less open and vowels are often swallowed, so listening takes more practice. Grammar is largely the same.
+
+### What level do I need for Portuguese citizenship?
+
+A2, usually proven with the CIPLE exam.
+
+### What is the best way to start?
+
+Learn the sound system early, build a small daily vocabulary habit, and make sure your materials teach European Portuguese, not Brazilian.
+
+## Keep reading
+
+- [A2 Portuguese citizenship test guide](/blog/a2-portuguese-citizenship-test-guide)
+- [European vs Brazilian Portuguese](/blog/european-vs-brazilian-portuguese-differences)
+- [Learn Portuguese in 5 minutes a day](/blog/learn-portuguese-5-minutes-a-day)

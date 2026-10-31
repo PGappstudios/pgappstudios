@@ -5,6 +5,7 @@ excerpt: >-
   The short answer is no, and here is what that means for anyone learning
   Portuguese for Portugal, plus what to use instead.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2025-08-15'
 readTime: 6
 category: Language
@@ -59,8 +60,27 @@ The good news is that European Portuguese resources do exist, even if they are l
 
 For an all-in-one option on your phone built entirely around the Portugal variety, there is Portugal Lifestyle Pro. It exists precisely because the biggest app in the world leaves European Portuguese learners with nothing. The app teaches the European accent, the vocabulary you will actually use in Portuguese shops and appointments, the tu conjugations, and the estar a fazer construction, all aimed at travellers, new residents, and citizenship candidates. You can see how it is put together on [our Portugal Lifestyle Pro page](/apps/portugal-lifestyle-pro).
 
-**[Download Portugal Lifestyle Pro Free →](https://apps.apple.com/app/id6757080577)**
+**[Get Portugal Lifestyle Pro on the App Store →](https://apps.apple.com/app/id6757080577)**
 
 ## The Takeaway
 
 Duolingo is a solid app, and if you are learning Portuguese for Brazil it is a perfectly good place to start. But for Portugal, it teaches the wrong variety, and no setting fixes that. Use it for habit and motivation if you like, but pair it with, or replace it with, a resource built for European Portuguese. Match your learning to your destination and the language starts working for you instead of against you.
+
+## FAQ
+
+### Is Duolingo Portuguese Brazilian or European?
+
+Its Portuguese course is based on Brazilian Portuguese, as explained above. That can change, so check the course description in the app.
+
+### Can I use Duolingo if I'm moving to Portugal?
+
+It can help with basic vocabulary, but you will need European Portuguese materials for pronunciation and the everyday words used in Portugal.
+
+### What apps teach European Portuguese?
+
+Look for apps that state clearly that they teach European Portuguese, with audio recorded in Portugal. Our own apps, Portugal Lifestyle Pro and European Portuguese Quest, teach only European Portuguese.
+
+## Keep reading
+
+- [European vs Brazilian Portuguese](/blog/european-vs-brazilian-portuguese-differences)
+- [How to learn European Portuguese in 2026](/blog/learn-european-portuguese-beginners-guide)

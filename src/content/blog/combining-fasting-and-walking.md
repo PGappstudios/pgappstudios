@@ -6,6 +6,7 @@ excerpt: >-
   something special. Here's why they pair so well, how fasted walking works, and
   a simple weekly routine to start.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-05-02'
 readTime: 7
 category: Health
@@ -89,7 +90,7 @@ As it becomes easy, you can extend your walks, tighten your fasting window towar
 
 The friction with any routine is tracking it and staying consistent, and this is where the right tool matters. **Fasting and Walking** was built for exactly this combination. It tracks your fasting window and your walking side by side, so instead of juggling two separate things, you see how they work together in one place. That single view is a genuine motivator, because you can watch both habits reinforcing each other day after day.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
+**[Get Fasting and Walking on the App Store →](https://apps.apple.com/app/id6755205850)**
 
 Take a closer look: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -108,3 +109,22 @@ This routine is gentle, but a few common-sense points keep it that way.
 Fasting and walking work so well together because they are both gentle, both sustainable, and both nudge you toward a healthy deficit from different angles. Add in fasted walking, keep it low intensity, and follow a simple weekly rhythm you can actually maintain.
 
 Start easy, hydrate, get your doctor's okay if you have any health concerns, and let the two habits build on each other. No extremes required. Just a walk and a well-timed eating window, done consistently, quietly doing their work.
+
+## FAQ
+
+### Can I walk while fasting?
+
+For most healthy people, light to moderate walking during a fast is fine. Stop and eat if you feel dizzy or unwell.
+
+### Is it better to walk before or after eating?
+
+Both work. A short walk after a meal is easy to build into your day; a walk in a fasting window can help the time pass.
+
+### Should I talk to a doctor first?
+
+Yes, especially if you have a medical condition, take medication, are pregnant or plan longer fasts.
+
+## Keep reading
+
+- [Walking for weight loss](/blog/walking-for-weight-loss-steps-per-day)
+- [Fasting and Walking app guide](/blog/fasting-and-walking-app-ios)

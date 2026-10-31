@@ -7,6 +7,7 @@ excerpt: >-
   what it is, the popular schedules, how to ease in gently, and what actually
   breaks a fast.
 author: PG App Studios
+updatedDate: '2026-10-31'
 date: '2026-03-24'
 readTime: 8
 category: Health
@@ -106,7 +107,7 @@ When in doubt, if it has calories, it counts. Keep the fasting window clean and 
 
 Tracking the hours in your head gets old fast, and this is where a tool earns its place. **Fasting and Walking** makes it dead simple to run a fast without watching the clock. You set your window, the app tracks your fasting hours, and it pairs your fasting with walking so your daily movement supports the whole effort. It takes the mental load off so you can just live your day.
 
-**[Download Fasting and Walking Free →](https://apps.apple.com/app/id6755205850)**
+**[Get Fasting and Walking on the App Store →](https://apps.apple.com/app/id6755205850)**
 
 Learn more about how it works: [Fasting and Walking](/apps/fasting-and-walking).
 
@@ -123,3 +124,22 @@ Learn more about how it works: [Fasting and Walking](/apps/fasting-and-walking).
 Intermittent fasting is one of the simplest eating patterns to try because you are not counting calories or banning foods. You are just choosing your hours. Start with 14:10, ease in over a couple of weeks, keep your fasting window clean, and stay hydrated.
 
 Give it a fair month before you judge it. And if you have any health condition, get your doctor's blessing first. Done gently and patiently, it can become a sustainable rhythm rather than a grind.
+
+## FAQ
+
+### What is the best intermittent fasting schedule for beginners?
+
+Start with 12 hours overnight, then move to 14 and 16:8 over a couple of weeks as it feels comfortable.
+
+### What breaks a fast?
+
+Anything with meaningful calories. Water, black coffee and plain tea are generally considered fine.
+
+### Is intermittent fasting safe?
+
+For many healthy adults, yes, but talk to your doctor first, and avoid it if you are pregnant, breastfeeding, have diabetes or a history of eating disorders.
+
+## Keep reading
+
+- [Combining fasting and walking](/blog/combining-fasting-and-walking)
+- [How much water to drink for weight loss](/blog/how-much-water-to-drink-weight-loss)
