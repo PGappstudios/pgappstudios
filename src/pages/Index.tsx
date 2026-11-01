@@ -19,6 +19,7 @@ import { Words } from '@/components/kit/Words';
 import { SectionHead } from '@/components/kit/Section';
 import { StoreButton } from '@/components/kit/StoreButton';
 import { AppIcon } from '@/components/kit/AppIcon';
+import { BrandMark } from '@/components/kit/BrandMark';
 import { CountUp } from '@/components/kit/CountUp';
 import { Apple, Arrow, Star } from '@/components/kit/Icons';
 import { ScreenWall } from '@/components/apps/ScreenWall';
@@ -293,6 +294,13 @@ const Index = () => {
               title="Small apps, *made with care.*"
               sub="PG App Studios is an independent studio run by Pedro Gregório. Four rules shape everything we ship."
             />
+            <div className="mt-8 flex items-center gap-4" data-reveal="fade">
+              <BrandMark size={56} alt="Pedro Gregório" />
+              <div>
+                <p className="font-semibold text-fg">Pedro Gregório</p>
+                <p className="text-sm text-fg-3">Founder · Algarve, Portugal</p>
+              </div>
+            </div>
             <Link to="/about" className="btn-link mt-8" data-reveal="fade">
               About the studio <Arrow size={16} className="arrow" />
             </Link>

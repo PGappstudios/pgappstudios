@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BrandMark } from '@/components/kit/BrandMark';
 import { healthApps } from '@/data/healthData';
 import { useSEO } from '@/lib/useSEO';
 import { SITE } from '@/data/catalog';
@@ -47,9 +48,7 @@ const HealthAbout = () => {
             <Words text="About" now /> <Words text="*PG Health*" now delay={120} accentClass="serif-accent text-calm pr-[0.06em]" />
           </h1>
           <div className="mt-10 flex items-center gap-4">
-            <span className="grid h-16 w-16 place-items-center rounded-2xl bg-fg text-ink-950">
-              <span className="font-serif text-3xl italic leading-none">pg</span>
-            </span>
+            <BrandMark size={64} alt="Pedro Gregório" />
             <div>
               <p className="text-lg font-semibold">Pedro Gregório</p>
               <p className="text-[15px] text-fg-2">Founder, PG App Studios. Algarve, Portugal.</p>

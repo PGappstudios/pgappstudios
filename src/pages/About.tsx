@@ -31,6 +31,7 @@ const About = () => {
           name: 'PG App Studios',
           url: SITE,
           logo: `${SITE}/icon-512.png`,
+          image: `${SITE}/brand/portrait-800.webp`,
           foundingLocation: { '@type': 'Place', name: 'Algarve, Portugal' },
           founder: { '@type': 'Person', name: 'Pedro Gregório', jobTitle: 'Founder' },
           email: 'pgmetastudios@gmail.com',
@@ -53,8 +54,25 @@ const About = () => {
       </section>
 
       <section className="container grid gap-14 pb-24 lg:grid-cols-[1fr_1.3fr]">
-        <div className="lg:sticky lg:top-32 lg:self-start">
-          <div className="surface grid grid-cols-5 gap-3 p-5" data-reveal="scale">
+        <div>
+          <figure className="surface relative overflow-hidden" data-reveal="scale">
+            <img
+              src="/brand/portrait-800.webp"
+              srcSet="/brand/portrait-500.webp 500w, /brand/portrait-800.webp 800w"
+              sizes="(min-width: 1024px) 480px, 100vw"
+              width={800}
+              height={874}
+              alt="The PG App Studios logo: a portrait of founder Pedro Gregório drawn in points of light"
+              className="block h-auto w-full"
+            />
+            <figcaption className="px-6 pb-6 pt-2 sm:absolute sm:inset-x-0 sm:bottom-0 sm:bg-gradient-to-t sm:from-ink-950 sm:via-ink-950/80 sm:to-transparent sm:pt-20">
+              <p className="text-2xl font-semibold tracking-[-0.03em] text-fg">
+                Turning ideas into <span className="font-serif font-normal italic text-gradient">everyday apps.</span>
+              </p>
+              <p className="mt-2 text-sm text-fg-2">Pedro Gregório, founder · Made in the Algarve</p>
+            </figcaption>
+          </figure>
+          <div className="surface mt-6 grid grid-cols-5 gap-3 p-5" data-reveal="scale">
             {iosApps.slice(0, 15).map((a, i) => (
               <Link key={a.slug} to={`/apps/${a.slug}`} className="transition-transform duration-300 ease-spring hover:-translate-y-1 hover:scale-105" style={{ transitionDelay: `${i * 10}ms` }}>
                 <AppIcon app={a} size={64} className="h-auto w-full" />

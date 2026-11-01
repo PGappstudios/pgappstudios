@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BrandMark } from '@/components/kit/BrandMark';
 import { Link, useParams } from 'react-router-dom';
 import { useSEO } from '@/lib/useSEO';
 import { SITE } from '@/data/catalog';
@@ -92,9 +93,7 @@ function Article({ post }: { post: PostMeta }) {
           <p className="mt-6 animate-fade-up text-xl leading-relaxed text-fg-2 [animation-delay:150ms]">{post.excerpt}</p>
           <div className="mt-8 flex animate-fade-up flex-wrap items-center gap-x-4 gap-y-2 text-sm text-fg-2 [animation-delay:250ms]">
             <span className="flex items-center gap-2">
-              <span className="grid h-7 w-7 place-items-center rounded-lg bg-fg text-ink-950">
-                <span className="font-serif text-base italic leading-none">pg</span>
-              </span>
+              <BrandMark size={28} />
               PG App Studios
             </span>
             <span className="text-fg-3">·</span>

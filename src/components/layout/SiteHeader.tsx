@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BrandMark } from '@/components/kit/BrandMark';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Close, Menu } from '@/components/kit/Icons';
 import { cn } from '@/lib/utils';
@@ -58,9 +59,7 @@ function LangSwitch({ path }: { path: string }) {
 export function Logo({ className, to = '/' }: { className?: string; to?: string }) {
   return (
     <Link to={to} className={cn('group flex items-center gap-2.5', className)}>
-      <span aria-hidden className="relative grid h-8 w-8 place-items-center overflow-hidden rounded-[10px] bg-fg text-ink-950 shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_6px_20px_-6px_rgba(196,181,253,0.7)]">
-        <span className="font-serif text-[19px] italic leading-none">pg</span>
-      </span>
+      <BrandMark size={32} className="transition-transform duration-300 ease-spring group-hover:scale-110" />
       <span className="text-[15px] font-semibold tracking-[-0.02em] text-fg">
         PG App Studios
       </span>

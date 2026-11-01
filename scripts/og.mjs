@@ -25,6 +25,7 @@ const cat = await import('/tmp/pg-catalog.mjs?' + Date.now());
 const font = (p) => 'data:font/woff2;base64,' + fs.readFileSync(p).toString('base64');
 const GEIST = font('node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2');
 const SERIF_I = font('node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2');
+const MARK = 'data:image/png;base64,' + fs.readFileSync('scripts/assets/brand-mark.png').toString('base64');
 const MONO = font('node_modules/@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2');
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -43,12 +44,12 @@ html,body{width:1200px;height:630px;background:#07070A;color:#F4F3F8;font-family
 .serif{font-family:S;font-style:italic;font-weight:400;letter-spacing:-.01em}
 .grad{background:linear-gradient(92deg,#C4B5FD,#F0ABFC 45%,#FDBA74);-webkit-background-clip:text;color:transparent}
 .brand{position:absolute;left:64px;bottom:52px;display:flex;align-items:center;gap:14px;font-size:22px;font-weight:600;letter-spacing:-.02em}
-.mark{width:44px;height:44px;border-radius:13px;background:#F4F3F8;color:#07070A;display:grid;place-items:center;font-family:S;font-style:italic;font-size:28px;line-height:1}
+.mark{width:48px;height:48px;border-radius:30%;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 8px 24px -8px rgba(165,180,252,.7)}
 .icon{border-radius:22.5%;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 20px 50px -12px rgba(0,0,0,.8)}
 .shot{position:absolute;width:250px;border-radius:24px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 80px -20px rgba(0,0,0,.9)}
 </style></head><body><div class="bg"></div><div class="grid"></div>${body}</body></html>`;
 
-const brandRow = `<div class="brand"><div class="mark">pg</div>PG App Studios<span class="mono" style="margin-left:10px">pgappstudios.com</span></div>`;
+const brandRow = `<div class="brand"><img class="mark" src="${MARK}">PG App Studios<span class="mono" style="margin-left:10px">pgappstudios.com</span></div>`;
 
 const triplet = (hex) => [0, 2, 4].map((i) => parseInt(hex.replace('#', '').slice(i, i + 2), 16)).join(' ');
 
@@ -116,12 +117,9 @@ const defaultCard = () => {
 };
 
 const iconHtml = (size) => `<!doctype html><html><head><style>
-@font-face{font-family:S;src:url(${SERIF_I}) format('woff2');font-style:italic}
-html,body{margin:0;width:${size}px;height:${size}px;background:transparent}
-.m{width:${size}px;height:${size}px;border-radius:${size * 0.225}px;background:radial-gradient(120% 120% at 20% 0%,#2a2340,#07070A 70%);display:grid;place-items:center;overflow:hidden;position:relative}
-.m:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 80% 100%,rgba(240,171,252,.35),transparent 70%)}
-.t{font-family:S;font-style:italic;font-size:${size * 0.62}px;line-height:1;color:transparent;background:linear-gradient(110deg,#E9E2FF,#F0ABFC 55%,#FDBA74);-webkit-background-clip:text;transform:translateY(-4%);position:relative}
-</style></head><body><div class="m"><span class="t">pg</span></div></body></html>`;
+html,body{margin:0;width:${size}px;height:${size}px;background:#07070A}
+img{display:block;width:${size}px;height:${size}px}
+</style></head><body><img src="${MARK}"></body></html>`;
 
 const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
 const page = await browser.newPage();

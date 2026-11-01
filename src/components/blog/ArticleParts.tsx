@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BrandMark } from '@/components/kit/BrandMark';
 import { Link } from 'react-router-dom';
 import type { App } from '@/data/appData';
 import { glowFor, shortName, screensFor } from '@/data/catalog';
@@ -116,9 +117,7 @@ export function AppPromo({ app, compact }: { app: App; compact?: boolean }) {
 export function StudioBox() {
   return (
     <div className="surface flex flex-col gap-5 p-6 sm:flex-row sm:items-center">
-      <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-fg text-ink-950">
-        <span className="font-serif text-3xl italic leading-none">pg</span>
-      </span>
+      <BrandMark size={56} />
       <div className="flex-1">
         <p className="font-semibold text-fg">Written by PG App Studios</p>
         <p className="mt-1 text-[15px] leading-relaxed text-fg-2">
