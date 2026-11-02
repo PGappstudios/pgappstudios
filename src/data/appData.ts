@@ -898,6 +898,15 @@ export const allApps: App[] = [
     keywords: "nuke simulator, nuclear blast radius map, nuke map, nuclear strike simulator, what if a nuke hit my city, tsar bomba simulator, nuclear weapon effects, 3d earth nuke game"
   },
   {
+    id: 48,
+    title: "Baby Growth Club",
+    description: "Free WHO baby growth calculator, playable demos of our baby and kids apps, practical parenting guides and the monthly baby essentials.",
+    image: "/icons/baby-growth-club.webp",
+    platforms: ["Website"],
+    category: "web",
+    url: "https://www.babygrowthclub.com/"
+  },
+  {
     id: 47,
     title: "Human Skills",
     description: "A free website of practical guides to self-reliance: growing food, finding water, making fire, first aid and more, in six languages.",

@@ -129,6 +129,7 @@ export const glowFor = (app: App): string => {
 
 /** Square icon for a marketing website card: the icon of the app it belongs to. */
 const WEBSITE_ICON: Record<string, string> = {
+  'https://www.babygrowthclub.com/': '/icons/baby-growth-club.webp',
   'https://www.cycle-buddy.app/': '/icons/cyclebuddy.webp',
   'https://www.dinkup.app/': '/icons/dinkup.webp',
   'https://www.humanskillsguide.com/': '/icons/human-skills.webp',
