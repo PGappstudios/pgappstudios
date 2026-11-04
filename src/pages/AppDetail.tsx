@@ -11,6 +11,7 @@ import {
   groupOf,
   iconFor,
   isStoreApp,
+  bannerFor,
   screensFor,
   shortName,
   storeId,
@@ -57,6 +58,7 @@ function AppPage({ app, lang }: { app: App; lang: Lang }) {
   const name = shortName(app);
   const store = isStoreApp(app);
   const shots = screensFor(app);
+  const banner = bannerFor(app);
   const group = groupById(groupOf(app));
   const url = `${SITE}${prefix}/apps/${app.slug}`;
   const crumbs =
@@ -222,7 +224,21 @@ function AppPage({ app, lang }: { app: App; lang: Lang }) {
         <section className="relative py-16 sm:py-20" aria-label={`${name} screenshots`}>
           <div className="container">
             <p className="eyebrow" data-reveal="fade">{t.lookInside}</p>
-            <div className="snap-row mt-8 lg:grid lg:grid-cols-4 lg:overflow-visible">
+            {banner && (
+              <img
+                src={banner.src}
+                srcSet={`${banner.srcSm} 800w, ${banner.src} 1600w`}
+                sizes="(min-width: 1280px) 1240px, 100vw"
+                alt={banner.alt}
+                width={1600}
+                height={686}
+                loading="lazy"
+                decoding="async"
+                className="mt-8 block h-auto w-full rounded-3xl border border-white/10"
+                data-reveal="scale"
+              />
+            )}
+            <div className={cn('snap-row mt-8 lg:grid lg:overflow-visible', shots.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4')}>
               {shots.map((s, i) => (
                 <img
                   key={s}
@@ -234,7 +250,7 @@ function AppPage({ app, lang }: { app: App; lang: Lang }) {
                   decoding="async"
                   className="shot w-[62vw] max-w-[280px] shrink-0 transition-transform duration-500 ease-out hover:-translate-y-2 lg:w-full lg:max-w-none"
                   data-reveal
-                  style={{ ['--d' as string]: i }}
+                  style={{ ['--d' as string]: i % 5 }}
                 />
               ))}
             </div>
@@ -378,6 +394,7 @@ function FeatureStory({ app, shots, lang }: { app: App; shots: string[]; lang: L
   const [active, setActive] = useState(0);
   const refs = useRef<(HTMLDivElement | null)[]>([]);
   const features = app.features ?? [];
+  const shown = features[active]?.shot ?? active % shots.length;
 
   useEffect(() => {
     if (!shots.length || !('IntersectionObserver' in window)) return;
@@ -416,7 +433,7 @@ function FeatureStory({ app, shots, lang }: { app: App; shots: string[]; lang: L
                       className={cn(
                         'shot transition-all duration-700 ease-out',
                         i === 0 ? 'relative' : 'absolute inset-0',
-                        i === active % shots.length ? 'scale-100 opacity-100' : 'scale-[0.97] opacity-0'
+                        i === shown ? 'scale-100 opacity-100' : 'scale-[0.97] opacity-0'
                       )}
                     />
                   ))}
@@ -431,10 +448,8 @@ function FeatureStory({ app, shots, lang }: { app: App; shots: string[]; lang: L
                 ref={(el) => (refs.current[i] = el)}
                 data-i={i}
                 data-reveal
-                className={cn(
-                  'spot p-7 transition-colors duration-500 lg:min-h-[180px]',
-                  shots.length && i === active ? 'lg:border-white/20 lg:bg-white/[0.05]' : ''
-                )}
+                data-active={shots.length > 0 && i === active}
+                className="spot p-7 transition-colors duration-500 data-[active=true]:lg:border-white/20 data-[active=true]:lg:bg-white/[0.05] lg:min-h-[180px]"
               >
                 <p className="font-mono text-xs text-fg-3">{String(i + 1).padStart(2, '0')}</p>
                 <h3 className="mt-3 text-xl font-semibold tracking-[-0.02em]">{f.title}</h3>

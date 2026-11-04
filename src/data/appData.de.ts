@@ -99,12 +99,12 @@ export const appsDe: Record<string, AppDe> = {
       'Gemacht fürs Auto, den Flieger und das Wartezimmer: komplett offline, nichts zu laden, nichts, was ohne Netz abbricht. Keine Werbung, keine Datensammlung, kein Chat und keine Links ins offene Internet. Ein Abo deckt über die Familienfreigabe die ganze Familie ab.',
     ],
     features: [
-      { title: 'Dreizehn Welten', text: 'Weltraum, Nachthimmel, Erde, Natur, Dinosaurier, Körper, Wasser, Feuer, Energie, Schwerkraft, Maschinen, Chemie und ein Heimlabor.' },
-      { title: 'Zehn Lernspiele', text: 'Jedes Spiel bringt etwas Wahres bei, statt Punkte fürs Tippen zu verteilen.' },
-      { title: 'Zwölf Küchenexperimente', text: 'Mit Dingen aus dem Schrank, Schritt für Schritt gemeinsam mit einem Erwachsenen.' },
-      { title: 'Drei Lesestufen', text: 'Dasselbe Thema in der richtigen Tiefe für jedes Alter von 4 bis 12.' },
-      { title: 'Auf Deutsch vorgelesen', text: 'Neun Sprachen, jede mit einer Stimme, die jede Seite vorliest.' },
-      { title: 'Sicher gebaut', text: 'Offline, keine Werbung, keine Daten, kein Chat, keine Links nach draußen.' },
+      { title: 'Dreizehn Welten', text: 'Weltraum, Nachthimmel, Erde, Natur, Dinosaurier, Körper, Wasser, Feuer, Energie, Schwerkraft, Maschinen, Chemie und ein Heimlabor.', shot: 0 },
+      { title: 'Zehn Lernspiele', text: 'Jedes Spiel bringt etwas Wahres bei, statt Punkte fürs Tippen zu verteilen.', shot: 3 },
+      { title: 'Zwölf Küchenexperimente', text: 'Mit Dingen aus dem Schrank, Schritt für Schritt gemeinsam mit einem Erwachsenen.', shot: 7 },
+      { title: 'Drei Lesestufen', text: 'Dasselbe Thema in der richtigen Tiefe für jedes Alter von 4 bis 12.', shot: 6 },
+      { title: 'Auf Deutsch vorgelesen', text: 'Neun Sprachen, jede mit einer Stimme, die jede Seite vorliest.', shot: 8 },
+      { title: 'Sicher gebaut', text: 'Offline, keine Werbung, keine Daten, kein Chat, keine Links nach draußen.', shot: 9 },
     ],
     faqs: [
       { q: 'Für welches Alter ist die App?', a: 'Für Kinder von 4 bis 12 Jahren. Drei Lesestufen passen die Tiefe an das Alter an.' },

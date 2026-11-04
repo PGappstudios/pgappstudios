@@ -1,6 +1,8 @@
 export interface AppFeature {
   title: string;
   text: string;
+  /** Index into the app's screens to show beside this feature. */
+  shot?: number;
 }
 
 export interface AppFAQ {
@@ -441,12 +443,12 @@ export const allApps: App[] = [
       "It grows with your child. Three reading levels mean a four year old and an eleven year old meet the same topic at the right depth, and nine languages are built in with a friendly voice reading every page. All of it works with no wifi, which makes it quality screen time for the car, the plane and the waiting room."
     ],
     features: [
-      { title: "Thirteen worlds to explore", text: "Space, the night sky, planet Earth, nature, dinosaurs, the human body, water, fire, energy, gravity, motion and machines, chemistry and a home lab." },
-      { title: "Every page read aloud", text: "A friendly voice reads everything, so children who cannot read yet still explore on their own." },
-      { title: "Ten games that teach", text: "Build orbits, assemble a body, feed the right dinosaur, draw real constellations. Each one teaches something true." },
-      { title: "Twelve kitchen table experiments", text: "Simple steps using what is already in your cupboards, made to do together with a grown up." },
-      { title: "Grows with your child", text: "Three reading levels, so a four year old and an eleven year old meet the same topic at the right depth." },
-      { title: "Works with no wifi", text: "Every word works offline, in nine languages including Spanish, French, German, Portuguese and Japanese." }
+      { title: "Thirteen worlds to explore", text: "Space, the night sky, planet Earth, nature, dinosaurs, the human body, water, fire, energy, gravity, motion and machines, chemistry and a home lab.", shot: 0 },
+      { title: "Every page read aloud", text: "A friendly voice reads everything, so children who cannot read yet still explore on their own.", shot: 8 },
+      { title: "Ten games that teach", text: "Build orbits, assemble a body, feed the right dinosaur, draw real constellations. Each one teaches something true.", shot: 3 },
+      { title: "Twelve kitchen table experiments", text: "Simple steps using what is already in your cupboards, made to do together with a grown up.", shot: 7 },
+      { title: "Grows with your child", text: "Three reading levels, so a four year old and an eleven year old meet the same topic at the right depth.", shot: 6 },
+      { title: "Works with no wifi", text: "Every word works offline, in nine languages including Spanish, French, German, Portuguese and Japanese.", shot: 9 }
     ],
     faqs: [
       { q: "What age is Kids Science Explorer for?", a: "It is built for ages 4 to 12. Three reading levels let younger and older children meet the same topic at the right depth." },

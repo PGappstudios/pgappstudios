@@ -114,9 +114,21 @@ export const iconFor = (app: App) =>
   app.slug ? `/icons/${app.slug}.webp` : app.image.startsWith('/') ? app.image : `/${app.image}`;
 
 /** Real App Store screenshots. Web products and marketing sites have none. */
+/** Apps with more than the standard four screens in /screens/<slug>/. */
+const SCREEN_COUNT: Record<string, number> = { 'kids-science-explorer': 10 };
+
 export const screensFor = (app: App, size: 'lg' | 'sm' = 'lg'): string[] => {
   if (!app.slug || !isStoreApp(app)) return [];
-  return [1, 2, 3, 4].map((n) => `/screens/${app.slug}/${n}${size === 'sm' ? '-sm' : ''}.webp`);
+  const count = SCREEN_COUNT[app.slug] ?? 4;
+  return Array.from({ length: count }, (_, i) => i + 1).map((n) => `/screens/${app.slug}/${n}${size === 'sm' ? '-sm' : ''}.webp`);
+};
+
+/** Wide store header art, for the apps that have one. */
+const BANNERS: Record<string, string> = { 'kids-science-explorer': 'Dinosaurs, topics and the human body in Kids Science Explorer' };
+
+export const bannerFor = (app: App): { src: string; srcSm: string; alt: string } | undefined => {
+  const alt = BANNERS[app.slug ?? ''];
+  return alt ? { src: `/screens/${app.slug}/banner.webp`, srcSm: `/screens/${app.slug}/banner-sm.webp`, alt } : undefined;
 };
 
 export const accentFor = (app: App): string => (colors as Record<string, string>)[app.slug ?? ''] ?? '#C4B5FD';
