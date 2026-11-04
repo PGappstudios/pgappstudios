@@ -117,10 +117,14 @@ export const iconFor = (app: App) =>
 /** Apps with more than the standard four screens in /screens/<slug>/. */
 const SCREEN_COUNT: Record<string, number> = { 'kids-science-explorer': 10 };
 
+/** Bump when an app's screens are replaced under the same names: /screens is cached for a week. */
+const SCREEN_REV: Record<string, number> = { 'kids-science-explorer': 2 };
+
 export const screensFor = (app: App, size: 'lg' | 'sm' = 'lg'): string[] => {
   if (!app.slug || !isStoreApp(app)) return [];
   const count = SCREEN_COUNT[app.slug] ?? 4;
-  return Array.from({ length: count }, (_, i) => i + 1).map((n) => `/screens/${app.slug}/${n}${size === 'sm' ? '-sm' : ''}.webp`);
+  const rev = SCREEN_REV[app.slug] ? `?v=${SCREEN_REV[app.slug]}` : '';
+  return Array.from({ length: count }, (_, i) => i + 1).map((n) => `/screens/${app.slug}/${n}${size === 'sm' ? '-sm' : ''}.webp${rev}`);
 };
 
 /** Wide store header art, for the apps that have one. */
